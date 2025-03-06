@@ -1,4 +1,4 @@
-# Desafios para profissionais juniores e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
+# Desafios para profissionais junior e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
 
 Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos.
 
