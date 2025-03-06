@@ -1,11 +1,25 @@
 cff-version: 1.0.1
 message: Por favor, cite o repositório utilizando estes metadados.
-title: Repositório modelo para a disciplina de Projeto em Ciência de Dados I - Sistemas Inteligentes.
-authors:
+title: Challenges for Junior Professionals and Microenterprises in the Use of Data and Technology, Generative AI and LLM’S.
+Repositório modelo para a disciplina de Projeto em Ciência de Dados I - Sistemas Inteligentes.
+
+Authors:
    - name-suffix: Professor
     affiliation: PUC Minas
     family-names: de Paula
     given-names: Hugo
+
+   - name-suffix: Aluno
+    affiliation: PUC Minas
+    family-names: dos Santos
+    given-names: Thiago
+    email: tdvrsantos@sga.pucminas.br
+
+Region:
+   -country: Brazil
+    state: Minas Gerais
+    city: Belo Horizonte
+
 keywords:
   - Ciência de Dados
   - Jupyter Notebooks
