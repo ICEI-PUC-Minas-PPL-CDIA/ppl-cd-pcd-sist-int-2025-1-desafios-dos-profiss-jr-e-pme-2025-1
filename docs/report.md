@@ -72,12 +72,12 @@ A IA Generativa representa uma inovação essencial para o crescimento tecnológ
 Público-Alvo
 A aplicação será utilizada principalmente por dois perfis principais: profissionais juniores da área de tecnologia e inteligência artificial e microempresas que trabalham com dados e tecnologias e buscam adotar IA Generativa.
 
-	Profissionais Juniores em IA e Tecnologia:
+Profissionais Juniores em IA e Tecnologia:
 Estudantes e recém-formados em Ciência de Dados, Inteligência Artificial, Análise e Desenvolvimento de Sistemas, entre outros
 Possuem conhecimentos básicos ou intermediários sobre IA, mas enfrentam barreiras como exigência de experiência prévia e acesso
 Buscar informações sobre habilidades valorizadas no mercado, oportunidades de capacitação e formas de entrada no setor de IA Generativ
 
-	Microempresas e Pequenos Negócios:
+Microempresas e Pequenos Negócios:
 Pequenos empreendedores e startups que desejam incorporar IA Generativa 
 Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplicativo
 Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
