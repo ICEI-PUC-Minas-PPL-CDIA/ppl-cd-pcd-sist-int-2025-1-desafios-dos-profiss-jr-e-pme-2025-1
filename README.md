@@ -5,7 +5,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto. Lembrando qu
 ## Integrantes
 
 * Thiago Domingos Venturim Ribeiro dos Santos 
-* Nome completo do aluno 2
+* Caio César de Oliveira
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
