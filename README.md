@@ -4,7 +4,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto. Lembrando qu
 
 ## Integrantes
 
-* Thiago Domingos Venturim Ribeiro dos Santos 
+* Thiago Domingos Venturim Ribeiro dos Santos -  tdvrsantos@sga.pucminas.br -
 * Caio César de Oliveira
 * Nome completo do aluno 3
 * Nome completo do aluno 4
