@@ -1,6 +1,6 @@
-# Nome do projeto
+# Desafios para profissionais juniores e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto. Lembrando que o objeto é desenvolver um sistema inteligente. Você deve mencionar o produto que está sendo desenvolvido, e não o que se espera obter com este produto.
+Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos.
 
 ## Integrantes
 
