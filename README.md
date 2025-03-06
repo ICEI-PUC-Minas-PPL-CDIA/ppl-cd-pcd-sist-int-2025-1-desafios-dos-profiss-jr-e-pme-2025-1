@@ -6,7 +6,7 @@ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de
 
 * Thiago Domingos Venturim Ribeiro dos Santos -  tdvrsantos@sga.pucminas.br -
 * Caio César de Oliveira
-* Nome completo do aluno 3
+* Caio Baltar Souza Mayllart
 * Nome completo do aluno 4
 
 ## Professor
