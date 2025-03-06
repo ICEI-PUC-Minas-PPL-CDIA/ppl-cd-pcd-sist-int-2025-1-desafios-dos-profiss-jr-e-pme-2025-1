@@ -25,4 +25,6 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
     * Indução do primeiro modelo do agente inteligente.
 * 0.0.1
     * Trabalhando na preparação dos dados.
+         * Sprint 1
+           
 
