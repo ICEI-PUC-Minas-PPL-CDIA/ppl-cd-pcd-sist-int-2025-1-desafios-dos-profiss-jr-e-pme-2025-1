@@ -1,7 +1,6 @@
-# TITULO DO PROJETO
+# Challenges for Junior Professionals and Microenterprises in the Use of Data and Technology, Generative AI and LLM’S.
 
-
-**Nome completo do Aluno 1, email do aluno 1**
+**Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
 **Nome completo do Aluno 2, email do aluno 2**
 
@@ -11,7 +10,7 @@
 
 Professores:
 
-** Prof. Nome do Prof 1 **
+** Prof. Hugo Bastos de Paula **
 ** Prof. Nome do Prof 2 **
 
 ---
@@ -30,7 +29,7 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## Introdução
 
-A introdução deve apresentar de dois a quatro parágrafos de contextualização do trabalho. 
+A Inteligência Artificial Generativa transformou profundamente diversos setores, impulsionando a automação e a inovação na criação de conteúdo. Modelos avançados, como os Large Language Models (LLMs), vêm sendo incorporados ao cotidiano de empresas e profissionais, ampliando possibilidades e redefinindo o uso de dados no mercado de tecnologia. No entanto, apesar do avanço dessas soluções, sua adoção ainda enfrenta barreiras significativas, especialmente para profissionais juniores e microempresas no Brasil.
 
 ###    Contextualização
 
@@ -39,16 +38,9 @@ A **contextualização** deve ser desenvolvida de algo mais genérico para algo 
 A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
 
 ###    Problema
+O objetivo desta análise é identificar e compreender os desafios que profissionais juniores e microempresas enfrentam no uso de tecnologias e IA Generativa. Para isso, buscamos responder às seguintes questões com base em dados: quais são os principais desafios enfrentados por profissionais juniores no uso de IA Generativa? Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas? Como a adoção da IA Generativa impacta a competitividade das microempresas? Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
 
-Nesse momento você deve apresentar o problema que seu agente pretende resolver. 
-No entanto, não é a hora de comentar sobre a aplicação.
-Descreva também o contexto em que essa aplicação será usada, se  houver: 
-empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, 
-pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve 
-sucintamente apresentar o cenário de problema da empresa. A empresa só deve ser citada 
-explicitamente se o aluno tiver autorização para tal.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -56,18 +48,12 @@ explicitamente se o aluno tiver autorização para tal.
 
 ###    Objetivo geral
 
-Nesta seção deve-se escrever um pequeno parágrafo ou frase com o **objetivo geral** 
-do trabalho. O objetivo deve ser bem direto, específico e definido com verbos de 
-ação (elaborar, propor, avaliar, comparar etc.). No caso deste projeto, o objetivo é
-"desenvolver um sistema inteligente para ...". O seu objetivo geral deve ser uma
-pergunta orientada a dados. Ou seja, ela deve incluir de forma geral os dados em que
-os modelos irão se basear para atingir o objetivo.
+Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos
 
 ####    Objetivos específicos
 
-Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde 
-você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar 
-no seu trabalho.
+Avaliar o impacto da adoção da IA ​​Generativa na competitividade de microempresas.
+Investigar os fatores que influenciam a valorização profissional na área, como experiência, habilidades e acesso a ferramentas.
 
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
@@ -75,12 +61,7 @@ no seu trabalho.
 
 ###    Justificativas
 
-Mostre também as **justificativas** para o  desenvolvimento do seu trabalho e, caso deseje, 
-destaque alguma contribuição do trabalho.
-
-A justific ativa deve descrever a importância ou a motivação para o desenvolvimento do 
-sistema inteligente escolhido. Indique as razões pelas quais você escolheu seus objetivos 
-específicos ou as razões para aprofundar em certos aspectos do software.
+A IA Generativa representa uma inovação essencial para o crescimento tecnológico e econômico, mas seu acesso ainda é desigual. Profissionais juniores encontram-se para ingressar na área devido a dificuldades elevadas, enquanto microempresas sofrem com limitações financeiras e estruturais. Compreender esses desafios e sugerir soluções pode contribuir para um mercado mais inclusivo, fomentando inovação, oportunidades de trabalho e competitividade no Brasil.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
@@ -88,12 +69,18 @@ específicos ou as razões para aprofundar em certos aspectos do software.
 
 
 ##    Público alvo
+Público-Alvo
+A aplicação será utilizada principalmente por dois perfis principais: profissionais juniores da área de tecnologia e inteligência artificial e microempresas que trabalham com dados e tecnologias e buscam adotar IA Generativa.
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. 
-O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários 
-na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos 
-usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+	Profissionais Juniores em IA e Tecnologia:
+Estudantes e recém-formados em Ciência de Dados, Inteligência Artificial, Análise e Desenvolvimento de Sistemas, entre outros
+Possuem conhecimentos básicos ou intermediários sobre IA, mas enfrentam barreiras como exigência de experiência prévia e acesso
+Buscar informações sobre habilidades valorizadas no mercado, oportunidades de capacitação e formas de entrada no setor de IA Generativ
+
+	Microempresas e Pequenos Negócios:
+Pequenos empreendedores e startups que desejam incorporar IA Generativa 
+Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplicativo
+Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, 
 diagramas de personas e mapa de stakeholders.
@@ -203,27 +190,8 @@ Uma conclusão deve ter 3 partes:
 
 # REFERÊNCIAS
 
-Como um projeto de sistema inteligente não requer revisão bibliográfica, 
-a inclusão das referências não é obrigatória. No entanto, caso você 
-tenha utilizado referências na introdução ou deseje 
-incluir referências relacionadas às tecnologias, padrões, ou metodologias 
-que serão usadas no seu trabalho, relacione-as de acordo com a ABNT.
 
-Verifique no link abaixo como devem ser as referências no padrão ABNT:
-
-http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
-
-Por exemplo:
-
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
+**[1]** Kaggle: State of  Data Brazil-2023, o mapeamento mais completo do mercado brasileiro de dados [Data Hackers + Bain]. Disponível em: https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data. Acesso em: 01 mar. 2025.
 
 
 
