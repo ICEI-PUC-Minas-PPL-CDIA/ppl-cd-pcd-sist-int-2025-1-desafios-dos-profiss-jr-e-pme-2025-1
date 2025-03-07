@@ -101,13 +101,53 @@ diagramas de personas e mapa de stakeholders.
 
 ###    Dicionário de dados
 
-Apresente uma descrição das bases de dados a serem utilizadas. 
-Dicionários de dados devem conter as bases de dados, os nomes dos atributos 
-com seu significado, seu tipo (inteiro, real, textual, categórico, etc).
+**State of Data Brazil 2023**
 
-Este projeto deve utilizar pelo menos duas fontes de dados. Uma fonte principal e 
-uma fonte para enriquecimentos dos dados principais.
 
+ * Fatores Pessoais e Demográficos:
+Idade →('P1_a ', 'Idade')
+Faixa etária →('P1_a_1 ', 'Faixa idade')
+Gênero →('P1_b ', 'Genero')
+Cor/Raça/Etnia →('P1_c ', 'Cor/raca/etnia')
+PCD (Pessoa com Deficiência) →('P1_d ', 'PCD')
+Experiência profissional prejudicada (discriminação) →('P1_e ', 'experiencia_profissional_prejudicada')
+
+ * Educação e Qualificações:
+Nível de escolaridade →('P2_a ', 'Escolaridade')
+Área de formação →('P2_b ', 'Área de formação')
+Universidade frequentada (pública ou privada) →('P2_c ', 'Tipo de instituição de ensino superior')
+Certificações e cursos adicionais →('P2_d ', 'Possui certificações na área de dados?')
+Idiomas estrangeiros falados e usados no trabalho →('P2_f ', 'Idiomas utilizados no trabalho')
+
+ * Experiência e Carreira:
+Tempo de experiência profissional geral →('P3_a ', 'Tempo de experiência profissional')
+Tempo de experiência na área de dados →('P3_b ', 'Tempo de experiência na área de dados')
+Carga atual →('P4_a ', 'Cargo atual')
+Nível de antiguidade →('P4_b ', 'Nível de senioridade')
+Participação em projetos estratégicos ou de inovação →('P4_c ', 'Participa de projetos estratégicos?')
+Publicações acadêmicas ou técnicas →('P4_d ', 'Publica artigos técnicos ou científicos?')
+Contribuições em projetos open source →('P4_e ', 'Contribui para projetos open-source?')
+Mentoria ou orientação de outros profissionais →('P4_f ', 'Atua como mentor ou instrutor?')
+
+ * Empresa e Ambiente de Trabalho:
+Setor da empresa →('P5_a ', 'Setor de atuação da empresa')
+Tamanho da empresa →('P5_b ', 'Tamanho da empresa')
+Tipo de organização →('P5_c ', 'Tipo de contrato de trabalho')
+Horas semanais trabalhadas →('P5_d ', 'Carga horária semanal')
+Trabalho remoto, híbrido ou presencial →('P5_e ', 'Modelo de trabalho')
+Localização da empresa (cidade/estado) →('P5_f ', 'Localização da empresa')
+Benefícios recebidos →('P5_g ', 'Benefícios recebidos')
+Plano de carreira estruturado →('P5_h ', 'Possui plano de carreira na empresa?')
+Número de promoções recebidas →('P5_i ', 'Já foi promovido na empresa atual?')
+
+ * Habilidades e Ferramentas:
+Linguagens de programação utilizadas →('P6_a ', 'Linguagens de programação utilizadas')
+Ferramentas de BI utilizadas →('P6_b ', 'Ferramentas de BI utilizadas')
+Computação em Nuvem →('P6_c ', 'Experiência com Cloud Computing')
+Experiência com Machine Learning e IA →('P6_d ', 'Trabalha com Machine Learning?')
+Experiência com Big Data →('P6_e ', 'Experiência com Big Data?')
+Utilização de técnicas avançadas de estatística e modelagem →('P6_f ', 'Utiliza técnicas avançadas de estatística?')
+Familiaridade com engenharia de dados e ETL →('P6_g ', 'Experiência com ETL e pipelines de dados')
 
 ###    Descrição de dados
 
