@@ -104,23 +104,37 @@ diagramas de personas e mapa de stakeholders.
 **State of Data Brazil 2023**
 
 
-		*Fatores Pessoais e Demográficos:
-*Idade:('P1_a ', 'Idade');
-	*Faixa etária: ('P1_a_1 ', 'Faixa idade');
-*Gênero: ('P1_b ', 'Genero');
-*Cor/Raça/Etnia: ('P1_c ', 'Cor/raca/etnia')
-*PCD (Pessoa com Deficiência): ('P1_d ', 'PCD')
-*Experiência profissional prejudicada (discriminação): ('P1_e', 'experiencia_profissional_prejudicada')
-	*('P1_e_1 ', 'Não acredito que minha experiência profissional esteja afetada')
- 	*('P1_e_2 ', 'Experiência prejudicada devido a minha Cor Raça Etnia')
-  	*('P1_e_3 ', 'Experiência prejudicada devido a minha identidade de gênero')
- 
- * Educação e Qualificações:
-Nível de escolaridade →('P2_a ', 'Escolaridade')
-Área de formação →('P2_b ', 'Área de formação')
-Universidade frequentada (pública ou privada) →('P2_c ', 'Tipo de instituição de ensino superior')
-Certificações e cursos adicionais →('P2_d ', 'Possui certificações na área de dados?')
-Idiomas estrangeiros falados e usados no trabalho →('P2_f ', 'Idiomas utilizados no trabalho')
+
+|   Atribuição   | Tipo de dado  |                      Descrição                                    |
+| -------------  | ------------- |------------------------------------------------------------       |
+| P1_a           |   Inteiro    |   Idade do participante.    |
+| P1_a_1         |   Categórico        | Indica ausência de idade informada.     |
+| P1_b           |   categórico    | Gênero do participante.                 | 
+| P1_c           |   Categórico   | Cor/raça/etnia do participante.    | 
+| P1_d  |   Categórico    | Se uma pessoa se identifica como PCD (Pessoa com Deficiência).|
+| P1_e |   Categórico  | 	Experiência profissional foi prejudicada? |
+| P1_e_1 |    Categórico     |   Não acredita que sua experiência foi afetada.  |
+| P1_e_2 |    Categórico    |Experiência prejudicada por Cor/Raça/Etnia. |
+| P1_e_3 |    Categórico | Experiência prejudicada por Identidade de Gênero. |
+| P1_e_4  |    Categórico  | 	Experiência prejudicada por ser PCD.  |
+| P1_f  |   Categórico    | Aspectos da carreira que foram prejudicados.  |
+| P1_f_1  |   Categórico    |Número de oportunidades de emprego/vagas recebidas. |
+| P1_f_2  |   Categórico  |Senioridade das vagas recebidas em relação à experiência.  |
+| P1_f_3 |   Categórico  | Aprovação em processos seletivos/entrevistas.  |
+| P1_f_4 |   Categórico  | Oportunidades de progressão na carreira.   |
+| P1_f_5 |   Categórico  | Velocidade de progressão na carreira.  |
+| P1_f_6 |   Categórico  |  Nível de cobrança/trabalho e estresse no trabalho. |
+| P1_f_7 |   Categórico  | Atenção dada às opiniões e ideias dos participantes. |
+| P1_f_8  |   Categórico    | 	Relação com membros da empresa no ambiente de trabalho.  |
+| P1_f_9  |   Categórico    |	Relacionamento com membros da empresa em momentos de integração e fóruns de trabalho. |
+| P1_g  |   Categórico    | O participante vive no Brasil? |
+| P1_i |   Categórico    | 	Estado onde o participante mora. |
+| P1_i_1 |   Texto    | Indicação da cidade onde mora.   |
+| P1_i_2  |   Categórico    |	Região do Brasil onde mora (Norte, Nordeste, etc. |
+| P1_j	 |   Categórico    | O participante mudou de estado ao longo da vida?.   |
+| P1_k  |   Categórico    | Região de origem do participante.  |
+| P1_l  |   Categórico    | Nível de ensino concluído.   |
+|P1_m  |   Categórico    |Área de Formação.  |
 
  * Experiência e Carreira:
 Tempo de experiência profissional geral →('P3_a ', 'Tempo de experiência profissional')
