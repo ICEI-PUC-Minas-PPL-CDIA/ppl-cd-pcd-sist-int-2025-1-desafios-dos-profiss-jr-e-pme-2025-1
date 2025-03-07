@@ -104,14 +104,17 @@ diagramas de personas e mapa de stakeholders.
 **State of Data Brazil 2023**
 
 
- * Fatores Pessoais e Demográficos:
-Idade →('P1_a ', 'Idade')
-Faixa etária →('P1_a_1 ', 'Faixa idade')
-Gênero →('P1_b ', 'Genero')
-Cor/Raça/Etnia →('P1_c ', 'Cor/raca/etnia')
-PCD (Pessoa com Deficiência) →('P1_d ', 'PCD')
-Experiência profissional prejudicada (discriminação) →('P1_e ', 'experiencia_profissional_prejudicada')
-
+		*Fatores Pessoais e Demográficos:
+*Idade:('P1_a ', 'Idade');
+	*Faixa etária: ('P1_a_1 ', 'Faixa idade');
+*Gênero: ('P1_b ', 'Genero');
+*Cor/Raça/Etnia: ('P1_c ', 'Cor/raca/etnia')
+*PCD (Pessoa com Deficiência): ('P1_d ', 'PCD')
+*Experiência profissional prejudicada (discriminação): ('P1_e', 'experiencia_profissional_prejudicada')
+	*('P1_e_1 ', 'Não acredito que minha experiência profissional esteja afetada')
+ 	*('P1_e_2 ', 'Experiência prejudicada devido a minha Cor Raça Etnia')
+  	*('P1_e_3 ', 'Experiência prejudicada devido a minha identidade de gênero')
+ 
  * Educação e Qualificações:
 Nível de escolaridade →('P2_a ', 'Escolaridade')
 Área de formação →('P2_b ', 'Área de formação')
@@ -124,7 +127,7 @@ Tempo de experiência profissional geral →('P3_a ', 'Tempo de experiência pro
 Tempo de experiência na área de dados →('P3_b ', 'Tempo de experiência na área de dados')
 Carga atual →('P4_a ', 'Cargo atual')
 Nível de antiguidade →('P4_b ', 'Nível de senioridade')
-Participação em projetos estratégicos ou de inovação →('P4_c ', 'Participa de projetos estratégicos?')
+Participação em projetos estratégicos ou de inovação →('P4_ ', 'Participa de projetos estratégicos?')
 Publicações acadêmicas ou técnicas →('P4_d ', 'Publica artigos técnicos ou científicos?')
 Contribuições em projetos open source →('P4_e ', 'Contribui para projetos open-source?')
 Mentoria ou orientação de outros profissionais →('P4_f ', 'Atua como mentor ou instrutor?')
