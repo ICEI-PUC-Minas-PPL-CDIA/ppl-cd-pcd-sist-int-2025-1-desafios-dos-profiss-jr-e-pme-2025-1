@@ -2,9 +2,11 @@
 
 **Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Caio César de Oliveira, email do aluno 2**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**Caio Baltar Souza Mayllart, email do aluno 3**
+
+**Gabriel Fernandes Souza 3, email do aluno 3**
 
 ---
 
