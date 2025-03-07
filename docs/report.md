@@ -103,8 +103,8 @@ diagramas de personas e mapa de stakeholders.
 
 **State of Data Brazil 2023**
 
-
-
+|Parte 1 - Dados demográficos Parte|
+| --------------------------------------------------------------------------------------------------|
 |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
 | P1_a           |   Inteiro    |   Idade do participante.    |
