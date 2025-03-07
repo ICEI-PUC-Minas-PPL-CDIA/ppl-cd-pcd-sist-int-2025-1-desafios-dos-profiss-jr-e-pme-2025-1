@@ -12,7 +12,7 @@
 
 Professores:
 
-** Prof. Hugo Bastos de Paula **
+**Prof. Hugo Bastos de Paula vi**
 ** Prof. Nome do Prof 2 **
 
 ---
@@ -43,7 +43,7 @@ Esse cenário reforça a necessidade de analisar as dificuldades enfrentadas por
 
 Diante desse contexto, este estudo busca explorar os desafios e oportunidades da IA Generativa para profissionais juniores e microempresas no Brasil. Por meio da análise de dados do mercado de trabalho e do ecossistema empreendedor, pretende-se desenvolver um sistema inteligente que forneça insights e recomendações para facilitar a adoção dessas tecnologias, promovendo um ambiente mais acessível e inclusivo.
 ###    Problema
-O objetivo desta análise é identificar e compreender os desafios que profissionais juniores e microempresas enfrentam no uso de tecnologias e IA Generativa. Para isso, buscamos responder às seguintes questões com base em dados: quais são os principais desafios enfrentados por profissionais juniores no uso de IA Generativa? Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas? Como a adoção da IA Generativa impacta a competitividade das microempresas? Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
+O objetivo desta análise é identificar e compreender os desafios que profissionais juniores e microempresas enfrentam no uso de tecnologias e IA Generativa. Para isso, buscamos responder às seguintes questões com base em dados: quais são as principais satisfações dos profissionais boas ou rins? Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas? Como a adoção da IA Generativa impacta a competitividade das microempresas? Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
 
 
 
