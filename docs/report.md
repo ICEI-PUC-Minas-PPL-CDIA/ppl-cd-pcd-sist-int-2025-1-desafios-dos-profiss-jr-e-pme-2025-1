@@ -103,7 +103,7 @@ diagramas de personas e mapa de stakeholders.
 
 **State of Data Brazil 2023**
 
-		* Parte 1: Dados Demograficos
+		Parte 1: Dados Demograficos
 
 |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
@@ -136,35 +136,30 @@ diagramas de personas e mapa de stakeholders.
 | P1_l  |   Categórico    | Nível de ensino concluído.   |
 |P1_m  |   Categórico    |Área de Formação.  |
 
- * Experiência e Carreira:
-Tempo de experiência profissional geral →('P3_a ', 'Tempo de experiência profissional')
-Tempo de experiência na área de dados →('P3_b ', 'Tempo de experiência na área de dados')
-Carga atual →('P4_a ', 'Cargo atual')
-Nível de antiguidade →('P4_b ', 'Nível de senioridade')
-Participação em projetos estratégicos ou de inovação →('P4_ ', 'Participa de projetos estratégicos?')
-Publicações acadêmicas ou técnicas →('P4_d ', 'Publica artigos técnicos ou científicos?')
-Contribuições em projetos open source →('P4_e ', 'Contribui para projetos open-source?')
-Mentoria ou orientação de outros profissionais →('P4_f ', 'Atua como mentor ou instrutor?')
+		Parte 2 - Dados sobre carreira 
 
- * Empresa e Ambiente de Trabalho:
-Setor da empresa →('P5_a ', 'Setor de atuação da empresa')
-Tamanho da empresa →('P5_b ', 'Tamanho da empresa')
-Tipo de organização →('P5_c ', 'Tipo de contrato de trabalho')
-Horas semanais trabalhadas →('P5_d ', 'Carga horária semanal')
-Trabalho remoto, híbrido ou presencial →('P5_e ', 'Modelo de trabalho')
-Localização da empresa (cidade/estado) →('P5_f ', 'Localização da empresa')
-Benefícios recebidos →('P5_g ', 'Benefícios recebidos')
-Plano de carreira estruturado →('P5_h ', 'Possui plano de carreira na empresa?')
-Número de promoções recebidas →('P5_i ', 'Já foi promovido na empresa atual?')
 
- * Habilidades e Ferramentas:
-Linguagens de programação utilizadas →('P6_a ', 'Linguagens de programação utilizadas')
-Ferramentas de BI utilizadas →('P6_b ', 'Ferramentas de BI utilizadas')
-Computação em Nuvem →('P6_c ', 'Experiência com Cloud Computing')
-Experiência com Machine Learning e IA →('P6_d ', 'Trabalha com Machine Learning?')
-Experiência com Big Data →('P6_e ', 'Experiência com Big Data?')
-Utilização de técnicas avançadas de estatística e modelagem →('P6_f ', 'Utiliza técnicas avançadas de estatística?')
-Familiaridade com engenharia de dados e ETL →('P6_g ', 'Experiência com ETL e pipelines de dados')
+
+		Parte 3 - Desafios dos gestores de tempos de dados
+
+
+
+ 		Parte 4 - Conhecimentos na área de dados 
+
+
+ 
+		Parte 5 - Objetivos na área de dados 
+
+
+  
+ 		Parte 6 - Conhecimentos em Engenharia de Dados/DE Parte 
+
+   
+   		Parte 7 - Conhecimentos em Análise de Dados/DA 
+     
+     
+     
+     		Parte 8 - Conhecimentos em Ciências de Dados/DS
 
 ###    Descrição de dados
 
