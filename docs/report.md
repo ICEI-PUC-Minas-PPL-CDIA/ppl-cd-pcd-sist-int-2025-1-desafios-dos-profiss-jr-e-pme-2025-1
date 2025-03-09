@@ -181,7 +181,66 @@ diagramas de personas e mapa de stakeholders.
 
 		Parte 3 - Desafios dos gestores de tempos de dados
 
-
+|Atributo	|Tipo de dado	|Descrição|
+| -------------  | ------------- |------------------------------------------------------------       |
+|P3_a	|Numérico|	Qual o número aproximado de pessoas que atuam com dados na sua empresa hoje?|
+|P3_b	|Texto|	Quais esses papéis/cargas fazem parte do tempo (ou capítulo) de dados da sua empresa?|
+|P3_b_1	|Categórico|	Engenheiro de Análise.|
+|P3_b_2	|Categórico|	Engenharia de Dados/Engenheiro de Dados.|
+|P3_b_3	|Categórico|	Analista de Dados/Analista de Dados.|
+|P3_b_4	|Categórico|	Cientista de Dados/Cientista de Dados.|
+|P3_b_5	|Categórico|	Administrador de banco de dados/DBA.|
+|P3_b_6	|Categórico|	Analista de Business Intelligence/BI.|
+|P3_b_7	|Categórico|	Arquiteto de Dados/Data Architect.|
+|P3_b_8	|Categórico|	Gerente de Produto de Dados/DPM.|
+|P3_b_9	|Categórico|	Analista de Negócios.|
+|P3_c	Texto	Quais essas responsabilidades fazem parte da sua rotina atual de trabalho como gestor?|
+|P3_c_1	|Categórico|	Pensar na visão de longo prazo de dados da empresa e fortalecimento da cultura analítica da companhia.|
+|P3_c_2	|Categórico|	Organização de treinamentos e iniciativas com o objetivo de aumentar a maturidade analítica das áreas de negócios.|
+|P3_c_3	|Categórico|	Atração, seleção e contratação de talentos para o tempo de dados.|
+|P3_c_4	|Categórico|	Decisão sobre contratação de ferramentas e tecnologias relacionadas a dados.|
+|P3_c_5	|Categórico|	Sou gestor da equipe responsável pela engenharia de dados e por manter o Data Lake da empresa como fonte única dos dados, garantindo a qualidade e confiabilidade da informação.|
+|P3_c_6	|Categórico|	Sou gestor da equipe responsável pela entrega de dados, estudos, relatórios e dashboards para as áreas de negócio da empresa.|
+|P3_c_7	|Categórico|	Sou gestor da equipe responsável por iniciativas e projetos envolvidos Inteligência Artificial e Machine Learning.|
+|P3_c_8	|Categórico|	Apesar de ser gestor ainda atuo na parte técnica, construindo soluções/análises/modelos etc.|
+|P3_c_9	|Categórico|	Gestão de projetos de dados, cuidando das etapas, equipes envolvidas, atingimento dos objetivos etc.|
+|P3_c_10	|Categórico|	Gestão de produtos de dados, cuidando da visão dos produtos, backlog, feedback de usuários etc.|
+|P3_c_11	|Categórico|	Gestão de pessoas, apoio no desenvolvimento das pessoas, evolução de carreira.|
+|P3_d	|Texto|	Quais são os 3 maiores desafios que você tem como gestor no momento atual?|
+|P3_d_1	|Categórico|	a Contratar novos talentos.|
+|P3_d_2	|Categórico|	b Reter talentos.|
+|P3_d_3	|Categórico|	c Convencer a empresa a aumentar os investimentos na área de dados.|
+|P3_d_4	|Categórico|	Gestão de equipes no ambiente remoto.|
+|P3_d_5	|Categórico|	e Gestão de projetos envolvendo áreas multidisciplinares da empresa.|
+|P3_d_6	|Categórico|	f Organizar as informações e garantir a qualidade e confiabilidade.|
+|P3_d_7	|Categórico|	G Conseguir processar e armazenar um alto volume de dados.|
+|P3_d_8	|Categórico|	h Conseguir gerar valor para as áreas de negócios através de estudos e experimentos.|
+|P3_d_9	|Categórico|	Desenvolver e manter modelos de Machine Learning em produção.|
+|P3_d_10	|Categórico|	j Gerenciar a expectativa das áreas de negócio em relação às entregas das equipes de dados.|
+|P3_d_11	|Categórico|	k Garantir a manutenção dos projetos e modelos em produção, em meio ao crescimento da empresa.|
+|P3_d_12	|Categórico|	Conseguir levar inovação para a empresa através dos dados.|
+|P3_d_13	|Categórico|	Garantir retorno do investimento (ROI) em projetos de dados.|
+|P3_d_14	|Categórico|	Dividir o tempo entre entregas técnicas e gestão.|
+|P3_e	|Categórico|	AI Generativa é uma prioridade em sua empresa?|
+|P3_f	|Texto|	Tipos de uso de IA Generativa e LLMs na empresa|
+|P3_f_1	|Categórico|	Colaboradores usando IA generativa de forma independente e descentralizada|
+|P3_f_2	|Categórico|	Direcionamento centralizado do uso de IA generativa|
+|P3_f_3	|Categórico|	Desenvolvedores utilizando Copilotos|
+|P3_f_4	|Categórico|	AI Generativa e LLMs para melhorar produtos externos|
+|P3_f_5	|Categórico|	AI Generativa e LLMs para melhorar produtos internos para os colaboradores|
+|P3_f_6	|Categórico|	IA Generativa e LLMs como principal frente do negócio|
+|P3_f_7	|Categórico|	IA Generativa e LLMs não é prioridade|
+|P3_f_8	|Categórico|	Não sei opinar sobre o uso de IA Generativa e LLMs na empresa|
+|P3_g	|Texto|	Motivos que levam a empresa a não usar IA Genrativa e LLMs|
+|P3_g_1	|Categórico|	Falta de compreensão dos casos de uso|
+|P3_g_2	|Categórico|	Falta de confiabilidade das saídas (alucinação dos modelos)|
+|P3_g_3	|Categórico|	Incerteza em relação à regulamentação|
+|P3_g_4	|Categórico|	Preocupações com segurança e privacidade de dados|
+|P3_g_5	|Categórico|	Retorno sobre investimento (ROI) não comprovado de IA Generativa|
+|P3_g_6	|Categórico|	Dados da empresa não estão prontos para uso de IA Generativa|
+|P3_g_7	|Categórico|	Falta de expertise ou falta de recursos|
+|P3_g_8	|Categórico|	Alta direção da empresa não vê valor ou não vê como prioridade|
+|P3_g_9	|Categórico|	Preocupações com propriedade intelectual|
 
  		Parte 4 - Conhecimentos na área de dados 
 
