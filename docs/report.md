@@ -370,8 +370,13 @@ diagramas de personas e mapa de stakeholders.
 		Parte 5 - Objetivos na área de dados 
 
 
-  
- 		Parte 6 - Conhecimentos em Engenharia de Dados/DE Parte 
+  |   Atribuição   | Tipo de dado  |                      Descrição                                    |
+| -------------  | ------------- |------------------------------------------------------------       |
+ | P5_a	 | Texto | 	Qual seu objetivo na área de dados? | 
+ | P5_b	 | Texto | 	Qual oportunidade você está buscando? | 
+ | P5_c	 | Numérico | 	Há quanto tempo você busca uma oportunidade na área de dados? (meses/anos) | 
+ | P5_d	 | Texto | 	Como tem sido a busca por uma oportunidade na área de dados? | 
+ 		Parte 6 - Conhecimentos em Engenharia de Dados/DE Parte  | 
 
 
    
