@@ -243,14 +243,135 @@ diagramas de personas e mapa de stakeholders.
 |P3_g_9	|Categórico|	Preocupações com propriedade intelectual|
 
  		Parte 4 - Conhecimentos na área de dados 
-
-
+Atributo	Tipo de dado	Descrição
+|P4_a	|Categórico|	Mesmo que esse não seja sua carga formal, você considera que sua atuação no dia a dia, reflete algumas das opções alternativas abaixo?|
+|P4_a_1	|Categórico|	Atuação|
+|P4_b	|Texto (com subcategorias categóricas)|	Quais das fontes de dados envolvidas você já analisou ou processou no trabalho?|
+|P4_b_1	|Categórico|	Dados relacionais (estruturados em bancos SQL)|
+|P4_b_2	|Categórico|	Dados armazenados em bancos NoSQL|
+|P4_b_3	|Categórico|	Imagens|
+|P4_b_4	|Categórico|	Textos/Documentos|
+|P4_b_5	|Categórico|	Vídeos|
+|P4_b_6	|Categórico|	Áudios|
+|P4_b_7	|Categórico|	Planilhas|
+|P4_b_8	|Categórico|	Dados georreferenciados|
+|P4_c	|Texto (com subcategorias categóricas)|	Entre as fontes de dados específicas, quais você utiliza na maior parte do tempo?|
+|P4_c_1	|Categórico|	Dados relacionais (estruturados em bancos SQL)|
+|P4_c_2	|Categórico|	Dados armazenados em bancos NoSQL|
+|P4_c_3	|Categórico|	Imagens|
+|P4_c_4	|Categórico|	Textos/Documentos|
+|P4_c_5	|Categórico|	Vídeos|
+|P4_c_6	|Categórico|	Áudios|
+|P4_c_7	|Categórico|	Planilhas|
+|P4_c_8	|Categórico|	Dados georreferenciados|
+|P4_d	|Texto (com subcategorias categóricas)|	Quais das linguagens específicas abaixo de você utiliza no trabalho?|
+|P4_d_1	|Categórico|	SQL|
+|P4_d_2	|Categórico|	R|
+|P4_d_3	|Categórico|	Python|
+|P4_d_4	|Categórico|	C/C++/C#|
+|P4_d_5	|Categórico|	.NET|
+|P4_d_6	|Categórico|	Java|
+|P4_d_7	|Categórico|	Júlia|
+|P4_d_8	|Categórico|	SAS/Stata|
+|P4_d_9	|Categórico|	Visual Basic/VBA|
+|P4_d_10	|Categórico|	Escala|
+|P4_d_11	|Categórico|	Matlab|
+|P4_d_12	|Categórico|	Ferrugem|
+|P4_d_13	|Categórico|	PHP|
+|P4_d_14	|Categórico|	JavaScript|
+|P4_d_15	|Categórico|	Não utilizo nenhuma linguagem|
+|P4_e	|Texto|	Entre as linguagens específicas abaixo, qual é a que você mais utiliza no trabalho?|
+|P4_f	|Texto|	Entre as linguagens específicas abaixo, qual é a sua preferida?|
+|P4_g	|Texto (com subcategorias categóricas)|	Quais dos bancos de dados/fontes de dados listados abaixo você utiliza no trabalho?|
+|P4_g_1	|Categórico|	MySQL|
+|P4_g_2	|Categórico|	Oráculo|
+|P4_g_3	|Categórico|	SERVIDOR SQL|
+|P4_g_4	|Categórico|	Amazon Aurora ou RDS|
+|P4_g_5	|Categórico|	DynamoDB|
+|P4_g_6	|Categórico|	CoachDB|
+|P4_g_7	|Categórico|	Cassandra|
+|P4_g_8	|Categórico|	MongoDB|
+|P4_g_9	|Categórico|	MariaDB|
+|P4_g_10	|Categórico|	Datomic|
+|P4_g_11	|Categórico|	S3|
+|P4_g_12	|Categórico|	PostgreSQL|
+|P4_g_13	|Categórico|	Pesquisa Elástica|
+|P4_g_14	|Categórico|	DB2|
+|P4_g_15	|Categórico|	Microsoft Access|
+|P4_g_16	|Categórico|	SQLite|
+|P4_g_17	|Categórico|	Sybase|
+|P4_g_18	|Categórico|	Firebase|
+|P4_g_19	|Categórico|	Vertical|
+|P4_g_20	|Categórico|	Redis|
+|P4_g_21	|Categórico|	Neo4J|
+|P4_g_22	|Categórico|	Google BigQuery|
+|P4_g_23	|Categórico|	Google Firestore|
+|P4_g_24	|Categórico|	Desvio para o vermelho da Amazon|
+|P4_g_25	|Categórico|	Amazonas Atena|
+|P4_g_26	|Categórico|	Floco de neve|
+|P4_g_27	|Categórico|	Tijolos de dados|
+|P4_g_28	|Categórico|	BaseH|
+|P4_g_29	|Categórico|	Presto|
+|P4_g_30	|Categórico|	Splunk|
+|P4_g_31	|Categórico|	SAP HANA|
+|P4_g_32	|Categórico|	Colmeia|
+|P4_g_33	|Categórico|	Pássaro de fogo|
+|P4_h	|Texto (com subcategorias categóricas)|	Dentre as opções específicas, qual sua nuvem preferida?|
+|P4_h_1	|Categórico|	Azure (Microsoft)|
+|P4_h_2	|Categórico|	Serviços da Web da Amazon (AWS)|
+|P4_h_3	|Categórico|	Google Cloud (GCP)|
+|P4_h_4	|Categórico|	Nuvem Oracle|
+|P4_h_5	|Categórico|	IBM|
+|P4_h_6	|Categórico|	Servidores On Premise/Não utilizamos Cloud|
+|P4_h_7	|Categórico|	Nuvem Própria|
+|P4_i	|Texto|	Nuvem preferida|
+|P4_j	|Texto (com subcategorias categóricas)|	Ferramentas de BI utilizadas no dia a dia|
+|P4_j_1	|Categórico|	Microsoft PowerBI|
+|P4_j_2	|Categórico|	Qlik View/Qlik Sense|
+|P4_j_3	|Categórico|	Quadro|
+|P4_j_4	|Categórico|	Metabase|
+|P4_j_5	|Categórico|	Superconjunto|
+|P4_j_6	|Categórico|	Cinza Vermelho|
+|P4_j_7	|Categórico|	Observador|
+|P4_j_8	|Categórico|	Looker Studio (Google Data Studio)|
+|P4_j_9	|Categórico|	Visão rápida da Amazon|
+|P4_j_10	|Categórico|	Modo|
+|P4_j_11	|Categórico|	Alteryx|
+|P4_j_12	|Categórico|	MicroEstratégia|
+|P4_j_13	|Categórico|	IBM Analytics/Cognos|
+|P4_j_14	|Categórico|	Objetos de negócios SAP/SAP Analytics|
+|P4_j_15	|Categórico|	Inteligência Empresarial Oracle|
+|P4_j_16	|Categórico|	Salesforce/Einstein Analytics|
+|P4_j_17	|Categórico|	Nascimento|
+|P4_j_18	|Categórico|	SAS Visual Analytics|
+|P4_j_19	|Categórico|	Grafana|
+|P4_j_20	|Categórico|	TIBCO Spotfire|
+|P4_j_21	|Categórico|	Pentaho|
+|P4_j_22	|Categórico|	Fazemos todas as análises utilizando apenas Excel ou planilhas do google|
+|P4_j_23	|Categórico|	Não utilizo nenhuma ferramenta de BI no trabalho|
+|P4_k	|Texto|	Qual sua ferramenta de BI preferida?|
+|P4_l	|Texto (com subcategorias categóricas)|	Qual o tipo de uso de AI Generativa e LLMs na empresa|
+|P4_l_1	|Categórico|	Colaboradores usando IA generativa de forma independente e descentralizada|
+|P4_l_2	|Categórico|	Direcionamento centralizado do uso de IA generativa|
+|P4_l_3	|Categórico|	Desenvolvedores utilizando Copilotos|
+|P4_l_4	|Categórico|	AI Generativa e LLMs para melhorar produtos externos para os clientes finais|
+|P4_l_5	|Categórico|	AI Generativa e LLMs para melhorar produtos internos para os colaboradores|
+|P4_l_6	|Categórico|	IA Generativa e LLMs como principal frente do negócio|
+|P4_l_7	|Categórico|	IA Generativa e LLMs não é prioridade|
+|P4_l_8	|Categórico|	Não sei opinar sobre o uso de IA Generativa e LLMs na empresa|
+|P4_m	|Texto (com subcategorias categóricas)|	Utiliza ChatGPT ou LLMs no trabalho?|
+|P4_m_1	|Categórico|	Não uso soluções de IA Generativa com foco em produtividade|
+|P4_m_2	|Categórico|	Uso soluções gratuitas de AI Generativa com foco em produtividade|
+|P4_m_3	|Categórico|	Uso e pagamento pelas soluções de AI Generativa com foco em produtividade|
+|P4_m_4	|Categórico|	A empresa que trabalha paga pelas soluções de IA Generativa com foco em produtividade|
+|P4_m_5	|Categórico|	Uso soluções do tipo Copiloto/GitHub CoPilot|
  
 		Parte 5 - Objetivos na área de dados 
 
 
   
  		Parte 6 - Conhecimentos em Engenharia de Dados/DE Parte 
+
 
    
    		Parte 7 - Conhecimentos em Análise de Dados/DA 
