@@ -194,7 +194,7 @@ diagramas de personas e mapa de stakeholders.
 |P3_b_7	|Categórico|	Arquiteto de Dados/Data Architect.|
 |P3_b_8	|Categórico|	Gerente de Produto de Dados/DPM.|
 |P3_b_9	|Categórico|	Analista de Negócios.|
-|P3_c	Texto	Quais essas responsabilidades fazem parte da sua rotina atual de trabalho como gestor?|
+|P3_c	|Texto|	Quais essas responsabilidades fazem parte da sua rotina atual de trabalho como gestor?|
 |P3_c_1	|Categórico|	Pensar na visão de longo prazo de dados da empresa e fortalecimento da cultura analítica da companhia.|
 |P3_c_2	|Categórico|	Organização de treinamentos e iniciativas com o objetivo de aumentar a maturidade analítica das áreas de negócios.|
 |P3_c_3	|Categórico|	Atração, seleção e contratação de talentos para o tempo de dados.|
