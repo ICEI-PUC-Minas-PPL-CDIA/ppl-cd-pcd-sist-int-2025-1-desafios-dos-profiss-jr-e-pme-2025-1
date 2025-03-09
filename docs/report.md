@@ -450,7 +450,7 @@ diagramas de personas e mapa de stakeholders.
 |P8_a_10	|Categórico|	Criação e gerenciamento de soluções de Feature Store e cultura de MLOps.|
 |P8_a_11	|Categórico|	Sou responsável por criar e manter a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
 |P8_a_12	|Categórico|	Treino e aplicação LLM's para solucionar problemas de negócio.|
-|P8_b	Texto (com subcategorias categóricas)	Quais as técnicas e métodos listados abaixo que você costuma usar no trabalho?|
+|P8_b	|Texto (com subcategorias categóricas)|	Quais as técnicas e métodos listados abaixo que você costuma usar no trabalho?|
 |P8_b_1	|Categórico|	Utilização de modelos de regressão (linear, logística, GLM)|
 |P8_b_2	|Categórico|	Utilizo redes neurais ou modelos baseados em árvore para criar modelos de classificação|
 |P8_b_3	|Categórico|	Desenvolvimento de sistemas de recomendação (RecSys)|
@@ -465,7 +465,7 @@ diagramas de personas e mapa de stakeholders.
 |P8_b_12	|Categórico|	Utilização de métodos de Visão Computacional|
 |P8_b_13	|Categórico|	Utilizando modelos de detecção de rotatividade|
 |P8_b_14	|Categórico|	Utilizo LLM's para solucionar problemas de negócio|
-|P8_3	Texto (com subcategorias categóricas)	Quais essas tecnologias fazem parte do seu dia a dia como cientista de dados?|
+|P8_3	|Texto (com subcategorias categóricas)|	Quais essas tecnologias fazem parte do seu dia a dia como cientista de dados?|
 |P8_c_1	|Categórico|	Ferramentas de BI (PowerBI, Looker, Tableau, Qlik etc)|
 |P8_c_2	|Categórico|	Planilhas (Excel, Planilhas Google etc)|
 |P8_c_3	|Categórico|	Ambientes de desenvolvimento local (R-studio, JupyterLab, Anaconda)|
@@ -477,7 +477,7 @@ diagramas de personas e mapa de stakeholders.
 |P8_c_9	|Categórico|	Sistemas de controle de versão (Github, DVC, Neptune, Gitlab etc)|
 |P8_c_10	|Categórico|	Plataformas de aplicativos de dados (Streamlit, Shiny, Plotly Dash etc)|
 |P8_c_11	|Categórico|	Ferramentas de estatística avançada como SPSS, SAS, etc.|
-|P8_d	Texto (com subcategorias categóricas)	Em quais das opções abaixo você gasta a maior parte do seu tempo no trabalho?|
+|P8_d	|Texto (com subcategorias categóricas)|	Em quais das opções abaixo você gasta a maior parte do seu tempo no trabalho?|
 |P8_d_1	|Categórico|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
 |P8_d_2	|Categórico|	Coletando e limpando os dados que uso para análise e modelagem.
 |P8_d_3	|Categórico|	Entrando em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
