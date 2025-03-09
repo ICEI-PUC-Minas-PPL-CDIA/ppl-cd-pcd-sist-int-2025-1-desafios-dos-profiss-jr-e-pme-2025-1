@@ -433,8 +433,65 @@ diagramas de personas e mapa de stakeholders.
      
      
      
-     		Parte 8 - Conhecimentos em Ciências de Dados/DS
+		Parte 8 - Conhecimentos em Ciências de Dados/DS
+      
+|   Atribuição   | Tipo de dado  |                      Descrição                                    |
+| -------------  | ------------- |------------------------------------------------------------       |
+|P8_a	|Texto (com subcategorias categóricas)|	Quais das opções abaixo fazem parte da sua rotina no trabalho atual com ciência de dados?|
+|P8_a_1	|Categórico|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
+|P8_a_2	|Categórico|	Sou responsável pela coleta e limpeza dos dados que uso para análise e modelagem.|
+|P8_a_3	|Categórico|	Sou responsável por entrar em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
+|P8_a_4	|Categórico|	Desenvolver modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
+|P8_a_5	|Categórico|	Sou responsável por colocar modelos em produção, criar os pipelines de dados, APIs de consumo e monitoramento.|
+|P8_a_6	|Categórico|	Cuido da manutenção de modelos de Machine Learning já em produção, ocorrendo no monitoramento, ajustes e refatoração quando necessário.|
+|P8_a_7	|Categórico|	Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
+|P8_a_8	|Categórico|	Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises estatísticas e ajustar modelos.|
+|P8_a_9	|Categórico|	Crio e dupla manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
+|P8_a_10	|Categórico|	Criação e gerenciamento de soluções de Feature Store e cultura de MLOps.|
+|P8_a_11	|Categórico|	Sou responsável por criar e manter a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
+|P8_a_12	|Categórico|	Treino e aplicação LLM's para solucionar problemas de negócio.|
+|P8_b	Texto (com subcategorias categóricas)	Quais as técnicas e métodos listados abaixo que você costuma usar no trabalho?|
+|P8_b_1	|Categórico|	Utilização de modelos de regressão (linear, logística, GLM)|
+|P8_b_2	|Categórico|	Utilizo redes neurais ou modelos baseados em árvore para criar modelos de classificação|
+|P8_b_3	|Categórico|	Desenvolvimento de sistemas de recomendação (RecSys)|
+|P8_b_4	|Categórico|	Utilizo métodos estatísticos Bayesianos para analisar dados|
+|P8_b_5	|Categórico|	Utilizo técnicas de PNL (Natural Language Processing) para analisar dados não estruturados|
+|P8_b_6	|Categórico|	Utilizo métodos estatísticos clássicos (Testes de hipóteses, análise multivariada, sobrevivência, dados longitudinais, inferência estatística) para analisar dados
+|P8_b_7	|Categórico|	Utilizo cadeias de Markov ou HMM's para realizar análises de dados|
+|P8_b_8	|Categórico|	Desenvolvimento de técnicas de Clusterização (K-means, Spectral, DBScan etc)|
+|P8_b_9	|Categórico|	Realização abrangente através de modelos de Séries Temporais (Séries Temporais)|
+|P8_b_10	|Categórico|	Utilizando modelos de Aprendizagem por Reforço (aprendizado por reforço)|
+|P8_b_11	|Categórico|	Utilização de modelos de Machine Learning para detecção de fraude|
+|P8_b_12	|Categórico|	Utilização de métodos de Visão Computacional|
+|P8_b_13	|Categórico|	Utilizando modelos de detecção de rotatividade|
+|P8_b_14	|Categórico|	Utilizo LLM's para solucionar problemas de negócio|
+|P8_3	Texto (com subcategorias categóricas)	Quais essas tecnologias fazem parte do seu dia a dia como cientista de dados?|
+|P8_c_1	|Categórico|	Ferramentas de BI (PowerBI, Looker, Tableau, Qlik etc)|
+|P8_c_2	|Categórico|	Planilhas (Excel, Planilhas Google etc)|
+|P8_c_3	|Categórico|	Ambientes de desenvolvimento local (R-studio, JupyterLab, Anaconda)|
+|P8_c_4	|Categórico|	Ambientes de desenvolvimento na nuvem (Google Colab, AWS Sagemaker, Kaggle Notebooks etc)|
+|P8_c_5	|Categórico|	Ferramentas de AutoML (Datarobot, H2O, Auto-Keras etc)|
+|P8_c_6	|Categórico|	Ferramentas de ETL (Apache Airflow, NiFi, Stitch, Fivetran, Pentaho etc)|
+|P8_c_7	|Categórico|	Plataformas de Machine Learning (TensorFlow, Azure Machine Learning, Kubeflow etc)|
+|P8_c_8	|Categórico|	Armazenamento de recursos (Feast, Hopsworks, AWS Feature Store, Databricks Feature Store etc.)|
+|P8_c_9	|Categórico|	Sistemas de controle de versão (Github, DVC, Neptune, Gitlab etc)|
+|P8_c_10	|Categórico|	Plataformas de aplicativos de dados (Streamlit, Shiny, Plotly Dash etc)|
+|P8_c_11	|Categórico|	Ferramentas de estatística avançada como SPSS, SAS, etc.|
+|P8_d	Texto (com subcategorias categóricas)	Em quais das opções abaixo você gasta a maior parte do seu tempo no trabalho?|
+|P8_d_1	|Categórico|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
+|P8_d_2	|Categórico|	Coletando e limpando os dados que uso para análise e modelagem.
+|P8_d_3	|Categórico|	Entrando em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
+|P8_d_4	|Categórico|	Desenvolvendo modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
+|P8_d_5	|Categórico|	Colocando modelos em produção, criando os pipelines de dados, APIs de consumo e monitoramento.|
+|P8_d_6	|Categórico|	Cuidando da manutenção de modelos de Machine Learning já em produção, atuando no monitoramento, ajustes e refatoração quando necessário.|
+|P8_d_7	|Categórico|	Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
+|P8_d_8	|Categórico|	Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises.|
+|P8_d_9	|Categórico|	Criando e dando manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
+|P8_d_10	|Categórico|	Criando e gerenciando soluções de Feature Store e cultura de MLOps.|
+|P8_d_11	|Categórico|	Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
+|P8_d_12	|Categórico|	Treinando e aplicando LLM's para solucionar problemas de negócio.|
 
+       
 ###    Descrição de dados
 
 Utilize a análise descritiva baseada em estatística de primeira ordem para descrever os dados.
