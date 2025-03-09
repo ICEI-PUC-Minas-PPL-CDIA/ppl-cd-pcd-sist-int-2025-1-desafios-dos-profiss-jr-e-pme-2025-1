@@ -243,7 +243,8 @@ diagramas de personas e mapa de stakeholders.
 |P3_g_9	|Categórico|	Preocupações com propriedade intelectual|
 
  		Parte 4 - Conhecimentos na área de dados 
-Atributo	Tipo de dado	Descrição
+|Atributo	|Tipo de dado|	Descrição|
+| -------------  | ------------- |------------------------------------------------------------       |
 |P4_a	|Categórico|	Mesmo que esse não seja sua carga formal, você considera que sua atuação no dia a dia, reflete algumas das opções alternativas abaixo?|
 |P4_a_1	|Categórico|	Atuação|
 |P4_b	|Texto (com subcategorias categóricas)|	Quais das fontes de dados envolvidas você já analisou ou processou no trabalho?|
