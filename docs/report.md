@@ -2,7 +2,7 @@
 
 **Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
-**Caio César de Oliveira, email do aluno 2**
+**Caio César de Oliveira, caio.oliveira.1551586@sga.pucminas.br**
 
 **Caio Baltar Souza Mayllart, email do aluno 3**
 
