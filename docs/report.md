@@ -4,7 +4,7 @@
 
 **Caio César de Oliveira, caio.oliveira.1551586@sga.pucminas.br**
 
-**Caio Baltar Souza Mayllart, email do aluno 3**
+**Caio Baltar Souza Mayllart, caio.baltar@sga.pucminas.br**
 
 **Gabriel Fernandes Souza 3, email do aluno 3**
 
