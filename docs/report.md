@@ -431,7 +431,62 @@ diagramas de personas e mapa de stakeholders.
    
    		Parte 7 - Conhecimentos em Análise de Dados/DA 
      
-     
+Aqui está a tabela formatada conforme solicitado:  
+
+| Atribuição  | Tipo de dado  | Descrição |
+|-------------|--------------|------------------------------------------------------------|
+| P7_1        | Texto        | Quais das opções abaixo fazem parte da sua rotina no trabalho atual com análise de dados? |
+| P7_a_1      | Categórico   | Processo e analiso dados utilizando linguagens de programação como Python, R etc. |
+| P7_a_2      | Categórico   | Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
+| P7_a_3      | Categórico   | Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
+| P7_a_4      | Categórico   | Utilizo APIs para extrair dados e complementar minhas análises. |
+| P7_a_5      | Categórico   | Realizo experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
+| P7_a_6      | Categórico   | Desenvolvo/cuido da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
+| P7_a_7      | Categórico   | Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
+| P7_a_8      | Categórico   | Desenvolvo/cuido da manutenção de planilhas para atender as áreas de negócio. |
+| P7_a_9      | Categórico   | Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc. |
+| P7_a_10     | Categórico   | Nenhuma das opções listadas refletem meu dia a dia. |
+| P7_b        | Texto        | Quais as ferramentas/tecnologias de ETL que você utiliza no trabalho como Data Analyst? |
+| P7_b_1      | Categórico   | Scripts Python |
+| P7_b_2      | Categórico   | SQL & Stored Procedures |
+| P7_b_3      | Categórico   | Apache Airflow |
+| P7_b_4      | Categórico   | Apache NiFi |
+| P7_b_5      | Categórico   | Luigi |
+| P7_b_6      | Categórico   | AWS Glue |
+| P7_b_7      | Categórico   | Talend |
+| P7_b_8      | Categórico   | Pentaho |
+| P7_b_9      | Categórico   | Alteryx |
+| P7_b_10     | Categórico   | Stitch |
+| P7_b_11     | Categórico   | Fivetran |
+| P7_b_12     | Categórico   | Google Dataflow |
+| P7_b_13     | Categórico   | Oracle Data Integrator |
+| P7_b_14     | Categórico   | IBM DataStage |
+| P7_b_15     | Categórico   | SAP BW ETL |
+| P7_b_16     | Categórico   | SQL Server Integration Services (SSIS) |
+| P7_b_17     | Categórico   | SAS Data Integration |
+| P7_b_18     | Categórico   | Qlik Sense |
+| P7_b_19     | Categórico   | Knime |
+| P7_b_20     | Categórico   | Databricks |
+| P7_b_21     | Categórico   | Não utilizo ferramentas de ETL |
+| P7_c        | Texto        | Sua empresa utiliza alguma das ferramentas listadas para dar mais autonomia em análise de dados para as áreas de negócio? |
+| P7_c_1      | Categórico   | Ferramentas de AutoML como H2O.ai, Data Robot, BigML etc. |
+| P7_c_2      | Categórico   | Point and Click Analytics como Alteryx, Knime, Rapidminer etc. |
+| P7_c_3      | Categórico   | Product metrics & Insights como Mixpanel, Amplitude, Adobe Analytics. |
+| P7_c_4      | Categórico   | Ferramentas de análise dentro de ferramentas de CRM como Salesforce Einstein Analytics ou Zendesk dashboards. |
+| P7_c_5      | Categórico   | Minha empresa não utiliza essas ferramentas. |
+| P7_c_6      | Categórico   | Não sei informar. |
+| P7_d        | Texto        | Em qual das opções abaixo você gasta a maior parte do seu tempo de trabalho? |
+| P7_d_1      | Categórico   | Processando e analisando dados utilizando linguagens de programação como Python, R etc. |
+| P7_d_2      | Categórico   | Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
+| P7_d_3      | Categórico   | Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
+| P7_d_4      | Categórico   | Utilizando APIs para extrair dados e complementar minhas análises. |
+| P7_d_5      | Categórico   | Realizando experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
+| P7_d_6      | Categórico   | Desenvolvendo/cuidando da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
+| P7_d_7      | Categórico   | Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
+| P7_d_8      | Categórico   | Desenvolvendo/cuidando da manutenção de planilhas do Excel ou Google Sheets para atender as áreas de negócio. |
+| P7_d_9      | Categórico   | Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises. |
+| P7_d_10     | Categórico   | Nenhuma das opções listadas refletem meu dia a dia. |
+
      
 		Parte 8 - Conhecimentos em Ciências de Dados/DS
       
