@@ -4,10 +4,11 @@ Este diretório mantém os artefatos relatório à modelagem de dados do projeto
 
 Os principais documentos a serem produzidos são:
 
-* `Estado_dos_dados_BR_2023_Kaggle - df_survey_2023.csv'
-	* base principal original. pode ser em qualquer formato tabular
+* `Estado_dos_dados_BR_2023_Kaggle'
+	* base principal original
 
-* `other_data_raw.csv`
+* `Latest_Data_Science_Salaries_Kaggle`
+* `plano_tabular_2022.ods`
 	* outras bases utilizadas no processo de enriquecimento
 
 * `final_processed_data.csv`
