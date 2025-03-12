@@ -42,13 +42,12 @@ Entretanto, a adoção dessas tecnologias ainda enfrenta desafios significativos
 Esse cenário reforça a necessidade de analisar as dificuldades enfrentadas por esses grupos e propor soluções que ampliem o acesso à IA Generativa. A democratização dessas tecnologias pode reduzir desigualdades no setor, facilitar a inserção de novos talentos no mercado e impulsionar o crescimento de pequenos negócios.  
 
 Diante desse contexto, este estudo busca explorar os desafios e oportunidades da IA Generativa para profissionais juniores e microempresas no Brasil. Por meio da análise de dados do mercado de trabalho e do ecossistema empreendedor, pretende-se desenvolver um sistema inteligente que forneça insights e recomendações para facilitar a adoção dessas tecnologias, promovendo um ambiente mais acessível e inclusivo.
+
 ###    Problema
 O objetivo desta análise é identificar e compreender os desafios que profissionais juniores e microempresas enfrentam no uso de tecnologias e IA Generativa. Para isso, buscamos responder às seguintes questões com base em dados: quais são as principais satisfações dos profissionais boas ou rins? Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas? Como a adoção da IA Generativa impacta a competitividade das microempresas? Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
 
 
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
 
 
 ###    Objetivo geral
@@ -60,16 +59,13 @@ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de
 Avaliar o impacto da adoção da IA ​​Generativa na competitividade de microempresas.
 Investigar os fatores que influenciam a valorização profissional na área, como experiência, habilidades e acesso a ferramentas.
 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 
 ###    Justificativas
 
 A IA Generativa representa uma inovação essencial para o crescimento tecnológico e econômico, mas seu acesso ainda é desigual. Profissionais juniores encontram-se para ingressar na área devido a dificuldades elevadas, enquanto microempresas sofrem com limitações financeiras e estruturais. Compreender esses desafios e sugerir soluções pode contribuir para um mercado mais inclusivo, fomentando inovação, oportunidades de trabalho e competitividade no Brasil.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+
 
 
 
@@ -87,14 +83,6 @@ Pequenos empreendedores e startups que desejam incorporar IA Generativa
 Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplicativo
 Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, 
-diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 
 ## Análise exploratórida dos dados
