@@ -600,15 +600,14 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
  |42 |	QT_TEC_DOUTORADO_MASC	 |Quantidade de funcionários técnico-administrativos do sexo masculino com doutorado	 |Num |	8 |	 |
  |43 |	IN_ACESSO_PORTAL_CAPES	 |Informa se as bibliotecas da IES têm acesso ao portal Capes de periódicos	 |Num	 |1 |	"0.  Não 1. Sim " | 
  |44 |	IN_ACESSO_OUTRAS_BASES |	Informa se as bibliotecas da IES têm acesso a outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não 1. Sim" |
- |45| IN_ASSINA_OUTRA_BASE	 |Informa se as bibliotecas da IES assinam outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não 1. Sim" |
- |46 |	IN_REPOSITORIO_INSTITUCIONAL	 |Informa se a IES possui base de dados online que reúne de maneira organizada a produção científica da instituição	 |Num |	1	 |"0. Não
-1. Sim" |
+ |45 | IN_ASSINA_OUTRA_BASE	 |Informa se as bibliotecas da IES assinam outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não 1. Sim" |
+ |46 |	IN_REPOSITORIO_INSTITUCIONAL	 |Informa se a IES possui base de dados online que reúne de maneira organizada a produção científica da instituição	 |Num |	1	 |"0. Não 1. Sim" |
  |47 |	IN_BUSCA_INTEGRADA	 |Informa se a IES oferece ferramenta eletrônica que possibilita pesquisar simultaneamente diversas fontes de informação e obter resultado em uma única interface |	Num |	1 |	"0. Não 1. Sim" |
- |48	 |IN_SERVICO_INTERNET	 |Informa se as bibliotecas da IES oferecem serviços pela internet	 |Num  |	1	 | "0. Não 1. Sim" |
+ |48 |  IN_SERVICO_INTERNET	 |Informa se as bibliotecas da IES oferecem serviços pela internet | Num  |	1	 | "0. Não 1. Sim" |
  |49 |	IN_PARTICIPA_REDE_SOCIAL	 |Informa se as bibliotecas participam de Redes Sociais |	Num |	1	 | "0. Não 1. Sim" |
  |50 |	IN_CATALOGO_ONLINE	 |Informa se a IES possui ferramenta de recuperação de informação que permite ao usuário consultar, de forma local ou remota, a existência e disponibilidade de itens do acervo das bibliotecas	 |Num	 |1	 |"0. Não 1. Sim" |
- |51	 |QT_PERIODICO_ELETRONICO	 |Quantidade de títulos de periódicos eletrônicos adquiridos pelas bibliotecas por meio de compra, doação ou permuta  |	Num	 |8 |	 |
- |52	 |QT_LIVRO_ELETRONICO	 |Quantidade de títulos de livros eletrônicos disponibilizados pelas bibliotecas convertidos ao formato digital ou originalmente produzidos nesse formato para serem lidos em computador ou outros dispositivos |	Num	 |8 |  |
+ |51 | QT_PERIODICO_ELETRONICO	 |Quantidade de títulos de periódicos eletrônicos adquiridos pelas bibliotecas por meio de compra, doação ou permuta  |	Num	 |8 |	 |
+ |51 | QT_LIVRO_ELETRONICO	 |Quantidade de títulos de livros eletrônicos disponibilizados pelas bibliotecas convertidos ao formato digital ou originalmente produzidos nesse formato para serem lidos em computador ou outros dispositivos |	Num	 |8 |  |
 
 
 
