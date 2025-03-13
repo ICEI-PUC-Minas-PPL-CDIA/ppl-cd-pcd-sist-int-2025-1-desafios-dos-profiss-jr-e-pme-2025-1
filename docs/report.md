@@ -571,7 +571,7 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |13 |	CO_MICRORREGIAO_IES	 |Código da Microrregião da sede administrativa ou reitoria da IES |	Num	 |5	 |  |
 |14 |	TP_ORGANIZACAO_ACADEMICA  |	Tipo de Organização Acadêmica da IES |	Num |	1 |	"1. Universidade 2. Centro Universitário 3. Faculdade 4. Instituto Federal de Educação, Ciênc ia e Tecnologia  5. Centro Federal de Educação Tecnológica" |
 |13 |	 TP_REDE |	Rede de Ensino  |	Num	 |1 | 	"1. Pública 2. Privada" |
-|15 |	TP_CATEGORIA_ADMINISTRATIVA |	Tipo de Categoria Administrativa da IES	Num	 |1 |	"1. Pública Federal 2. Pública Estadual 3. Pública Municipal 4. Privada com fins lucrativos 5. Privada sem fins lucrativos 6. Privada - Particular em sentido estrito 7. Especial 8. Privada comunitária 9. Privada confessional" |
+|15 |	TP_CATEGORIA_ADMINISTRATIVA |	Tipo de Categoria Administrativa da IES  |	Num	 |1 |	"1. Pública Federal 2. Pública Estadual 3. Pública Municipal 4. Privada com fins lucrativos 5. Privada sem fins lucrativos 6. Privada - Particular em sentido estrito 7. Especial 8. Privada comunitária 9. Privada confessional" |
 |16 |	 |IN_COMUNITARIA |	Informa se a instituição privada é comunitária |	Num |	 |1	 |Informa se a instituição privada é comunitária |
 |17 |	 |IN_CONFESSIONAL |	Informa se a instituição privada é confessional |	Num |	 |1	 |Informa se a instituição privada é confessional |
  |18 |	NO_MANTENEDORA	 |Nome da mantenedora da IES	 |Char	 |100	 |    |
@@ -599,21 +599,17 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
  |40 |	QT_TEC_MESTRADO_MASC	 |Quantidade de funcionários técnico-administrativos do sexo masculino com mestrado	 |Num |	8 |	 |
  |41 |	QT_TEC_DOUTORADO_FEM	 |Quantidade de funcionários técnico-administrativos do sexo feminino com doutorado	 |Num |	8 |	 |
  |42 |	QT_TEC_DOUTORADO_MASC	 |Quantidade de funcionários técnico-administrativos do sexo masculino com doutorado	 |Num |	8 |	 |
- |43 |	IN_ACESSO_PORTAL_CAPES	 |Informa se as bibliotecas da IES têm acesso ao portal Capes de periódicos	 |Num	 |1 |	"0.  Não 
-1. Sim " | 
- |44 |	IN_ACESSO_OUTRAS_BASES |	Informa se as bibliotecas da IES têm acesso a outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não
-1. Sim" |
- |45| IN_ASSINA_OUTRA_BASE	 |Informa se as bibliotecas da IES assinam outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não
-1. Sim" |
+ |43 |	IN_ACESSO_PORTAL_CAPES	 |Informa se as bibliotecas da IES têm acesso ao portal Capes de periódicos	 |Num	 |1 |	"0.  Não 1. Sim " | 
+ |44 |	IN_ACESSO_OUTRAS_BASES |	Informa se as bibliotecas da IES têm acesso a outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não 1. Sim" |
+ |45| IN_ASSINA_OUTRA_BASE	 |Informa se as bibliotecas da IES assinam outras bases de dados licenciadas ou compradas	 |Num	 |1 |	"0. Não 1. Sim" |
  |46 |	IN_REPOSITORIO_INSTITUCIONAL	 |Informa se a IES possui base de dados online que reúne de maneira organizada a produção científica da instituição	 |Num |	1	 |"0. Não
 1. Sim" |
- |47 |	IN_BUSCA_INTEGRADA	 |Informa se a IES oferece ferramenta eletrônica que possibilita pesquisar simultaneamente diversas fontes de informação e obter resultado em uma única interface |	Num |	1 |	"0. Não |
-1. Sim" |
- |48	 |IN_SERVICO_INTERNET	 |Informa se as bibliotecas da IES oferecem serviços pela internet	 |Num  |	1	 |"0. Não 1. Sim" |
- |49 |	IN_PARTICIPA_REDE_SOCIAL	 |Informa se as bibliotecas participam de Redes Sociais |	Num |	1	 |"0. Não 1. Sim" |
+ |47 |	IN_BUSCA_INTEGRADA	 |Informa se a IES oferece ferramenta eletrônica que possibilita pesquisar simultaneamente diversas fontes de informação e obter resultado em uma única interface |	Num |	1 |	"0. Não 1. Sim" |
+ |48	 |IN_SERVICO_INTERNET	 |Informa se as bibliotecas da IES oferecem serviços pela internet	 |Num  |	1	 | "0. Não 1. Sim" |
+ |49 |	IN_PARTICIPA_REDE_SOCIAL	 |Informa se as bibliotecas participam de Redes Sociais |	Num |	1	 | "0. Não 1. Sim" |
  |50 |	IN_CATALOGO_ONLINE	 |Informa se a IES possui ferramenta de recuperação de informação que permite ao usuário consultar, de forma local ou remota, a existência e disponibilidade de itens do acervo das bibliotecas	 |Num	 |1	 |"0. Não 1. Sim" |
  |51	 |QT_PERIODICO_ELETRONICO	 |Quantidade de títulos de periódicos eletrônicos adquiridos pelas bibliotecas por meio de compra, doação ou permuta  |	Num	 |8 |	 |
- |52	 |QT_LIVRO_ELETRONICO	 |Quantidade de títulos de livros eletrônicos disponibilizados pelas bibliotecas convertidos ao formato digital ou originalmente produzidos nesse formato para serem lidos em computador ou outros dispositivos |	Num	 |8 |
+ |52	 |QT_LIVRO_ELETRONICO	 |Quantidade de títulos de livros eletrônicos disponibilizados pelas bibliotecas convertidos ao formato digital ou originalmente produzidos nesse formato para serem lidos em computador ou outros dispositivos |	Num	 |8 |  |
 
 
 
