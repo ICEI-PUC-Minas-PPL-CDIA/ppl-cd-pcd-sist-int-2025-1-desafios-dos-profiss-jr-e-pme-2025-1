@@ -418,8 +418,7 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |P6_h_9	|Categórico|	Nenhuma das opções específicas refletem meu dia a dia.|
    
    		Parte 7 - Conhecimentos em Análise de Dados/DA 
-     
-Aqui está a tabela formatada conforme solicitado:  
+  
 
 | Atribuição  | Tipo de dado  | Descrição |
 |-------------|--------------|------------------------------------------------------------|
@@ -536,8 +535,10 @@ Aqui está a tabela formatada conforme solicitado:
 
 **_Bases auxiliares_**
 **Latest_Data_Science_Salaries_Kaggle**
-|Atributo |	Descrição|	Tipo|	Valores Mais Comuns	|Valores Únicos|
-| -------------  | ------------- |------------------------------------------------------------       |
+
+-
+|   Atribuição | Descrição | Tipo |	Valores Mais Comuns	| Valores Únicos |
+| -------------| ------------- |----------|----------------------|----------------------------       |
 |Job Title	Cargo ocupado pelo profissional|	Categórico (texto)|	Data Engineer (21%), Data Scientist (19%)|	111|
 |Employment Type|	Tipo de contrato do profissional|	Categórico (texto)|	Full-Time (99%)|4|
 |Experience Level|	Nível de experiência do profissional|	Categórico (texto)|	Senior (63%), Mid (24%)|	4|
