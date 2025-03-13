@@ -89,7 +89,7 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ###    Dicionário de dados
 
-**State of Data Brazil 2023**
+####**State of Data Brazil 2023**####
 
 		Parte 1: Dados Demograficos
 
@@ -533,8 +533,10 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |P8_d_11	|Categórico|	Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
 |P8_d_12	|Categórico|	Treinando e aplicando LLM's para solucionar problemas de negócio.
 
-**_Bases auxiliares_**
-**Latest_Data_Science_Salaries_Kaggle**
+###**_Bases auxiliares_**###
+
+####**Latest_Data_Science_Salaries_Kaggle**####
+
 
 -
 |   Atribuição | Descrição | Tipo |	Valores Mais Comuns	| Valores Únicos |
@@ -552,7 +554,9 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |Year|	Ano em que os dados foram coletados|	Contínuo |(real)	|Faixa: 2020 a 2023| -|	
 
 
-**MICRODADOS_ED_SUP_IES_2023**
+####**MICRODADOS_ED_SUP_IES_2023**####
+
+
 |N     |  Nome da Variável|	Descrição da Variável|	Tipo|	Tam.	|Categoria|
 | -----|----------------|----------------------|---------------|-------------------|-------------- |		
 |1|	NU_ANO_CENSO|	Ano de referência do Censo da Educação Superior|	Num|	4| |
