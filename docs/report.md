@@ -639,6 +639,10 @@ Uma conclusão deve ter 3 partes:
 
 
 **[1]** Kaggle: State of  Data Brazil-2023, o mapeamento mais completo do mercado brasileiro de dados [Data Hackers + Bain]. Disponível em: https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data. Acesso em: 01 mar. 2025.
+**[2]** Latest Data Science Salaries:  Charting Data Science's Wage Journey: Salaries 2020-2024. Disponível em: [https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data](https://www.kaggle.com/datasets/iamsouravbanerjee/data-science-salaries-2023). Acesso em: 12 mar. 2025.
+**[3]** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira | Inep: Censo da Educação Superior Microdados do Censo da Educação Superio. Disponível em: [https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior). Acesso em: 13 mar. 2025.
+**[3]** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira | Inep: Censo da Educação Superior Microdados do Censo da Educação Superio. Disponível em: [https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior). Acesso em: 13 mar. 2025.
+
 
 
 
