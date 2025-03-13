@@ -555,16 +555,15 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 **MICRODADOS_ED_SUP_IES_2023**
 |N     |  Nome da Variável|	Descrição da Variável|	Tipo|	Tam.	|Categoria|
 | -----|----------------|----------------------|---------------|-------------------|-------------- |		
-|1|	NU_ANO_CENSO|	Ano de referência do Censo da Educação Superior|	Num|	4| -|
-|2|	NO_REGIAO_IES |	Nome da região geográfica da sede administrativa ou reitoria da IES |	Char |	20 | |	
+|1|	NU_ANO_CENSO|	Ano de referência do Censo da Educação Superior|	Num|	4| |
+|2|	NO_REGIAO_IES |	Nome da região geográfica da sede administrativa ou reitoria da IES |	Char |	20 |  |	
 |3 |	CO_REGIAO_IES	 |Código da região geográfica da sede administrativa ou reitoria da IES	 |Num |	2 |	 |	
 |4 |	 NO_UF_IES	 |Nome da Unidade da Federação da sede administrativa ou reitoria da IES |	Char |	50|	  |
 |5 |	SG_UF_IES	 |Sigla da Unidade da Federação da sede administrativa ou reitoria da IES |	Char |	2|  |
 |6 |	CO_UF_IES	 |Código da Unidade da Federação da sede administrativa ou reitoria da IES |	Num |	2| 	
 |7 |	NO_MUNICIPIO_IES |	Nome do Município da sede administrativa ou reitoria da IES |	Char |	150| |
 |8 |	CO_MUNICIPIO_IES |	Código do Município da sede administrativa ou reitoria da IES |	Num |	7 |	 |
-|9 |	IN_CAPITAL_IES	 |Informa se a sede administrativa ou reitoria da IES está localizada na capital da Unidade da Federação |Num |	2 |	 |"0. Não
-1  . Sim" |
+|9 |	IN_CAPITAL_IES	 |Informa se a sede administrativa ou reitoria da IES está localizada na capital da Unidade da Federação|Num |	2 	 |"0. Não 1  . Sim" |
 |10 |	NO_MESORREGIAO_IES	 |Nome da Mesorregião da sede administrativa ou reitoria da IES |	Char	 |100	 |  |
 |11 |	CO_MESORREGIAO_IES	 |Código da Mesorregião da sede administrativa ou reitoria da IES |	Num	 |4	 |  |
 |12 |	NO_MICRORREGIAO_IES	 |Nome da Microrregião da sede administrativa ou reitoria da IES |	Char	 |100	 |  |
@@ -572,15 +571,15 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |14 |	TP_ORGANIZACAO_ACADEMICA  |	Tipo de Organização Acadêmica da IES |	Num |	1 |	"1. Universidade 2. Centro Universitário 3. Faculdade 4. Instituto Federal de Educação, Ciênc ia e Tecnologia  5. Centro Federal de Educação Tecnológica" |
 |13 |	 TP_REDE |	Rede de Ensino  |	Num	 |1 | 	"1. Pública 2. Privada" |
 |15 |	TP_CATEGORIA_ADMINISTRATIVA |	Tipo de Categoria Administrativa da IES  |	Num	 |1 |	"1. Pública Federal 2. Pública Estadual 3. Pública Municipal 4. Privada com fins lucrativos 5. Privada sem fins lucrativos 6. Privada - Particular em sentido estrito 7. Especial 8. Privada comunitária 9. Privada confessional" |
-|16 |	 |IN_COMUNITARIA |	Informa se a instituição privada é comunitária |	Num |	 |1	 |Informa se a instituição privada é comunitária |
-|17 |	 |IN_CONFESSIONAL |	Informa se a instituição privada é confessional |	Num |	 |1	 |Informa se a instituição privada é confessional |
+|16 |	 IN_COMUNITARIA |	Informa se a instituição privada é comunitária |	Num  |1	 |Informa se a instituição privada é comunitária |
+|17 |	 IN_CONFESSIONAL |	Informa se a instituição privada é confessional |	Num 	 |1	 |Informa se a instituição privada é confessional |
  |18 |	NO_MANTENEDORA	 |Nome da mantenedora da IES	 |Char	 |100	 |    |
  |19 |	CO_MANTENEDORA	 |Código único de identificação da mantenedora da IES |	 |Num |	 |8 |	 |
  |20 |	CO_IES	 |Código único de identificação da IES |	Num |	8 |	 |
  |21 |	NO_IES	 |Nome da IES |	 |Char |	 |200 |	 |
  |22 |	SG_IES	 |Sigla da IES	 |Char	 |20 |  |	
  |23 |	DS_ENDERECO_IES	 |Endereço da sede administrativa/reitoria da IES |	Char |	255 | |
- |24 |	DS_NUMERO_ENDERECO_IES	 |Número do endereço	 |Char |	 |10 |	 |
+ |24 |	DS_NUMERO_ENDERECO_IES	 |Número do endereço	 |Char 	 |10 |	 |
  |25 |	DS_COMPLEMENTO_ENDERECO_IES	 |Complemento do endereço	 |Char	 |20 |	 |
  |26 |	NO_BAIRRO_IES |	Bairro	 |Char |	50 | |
  |27 |	NU_CEP_IES	 |CEP	 |Num	 |8 |	 |
