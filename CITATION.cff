@@ -32,6 +32,15 @@ Authors:
     family-names: Souza
     given-names: Gabriel 
     email: 
+
+- name-suffix: Aluno
+    affiliation: PUC Minas
+    family-names: Duarte
+    given-names: Nicolas 
+    email:
+
+
+
 Region:
    -country: Brazil
     state: Minas Gerais
