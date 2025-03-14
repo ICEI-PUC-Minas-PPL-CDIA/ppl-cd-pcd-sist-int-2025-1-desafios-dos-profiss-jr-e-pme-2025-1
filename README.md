@@ -3,12 +3,12 @@
 Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos.
 
 ## Integrantes
-
-* Thiago Domingos Venturim Ribeiro dos Santos 
 * Caio César de Oliveira
 * Caio Baltar Souza Mayllart
+* Nicolas Rodrigues Duarte
 * Gabriel Fernandes Souza
-
+* Thiago Domingos Venturim Ribeiro dos Santos
+  
 ## Professor
 
 * Prof. Hugo Bastos de Paula
