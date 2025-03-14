@@ -1,12 +1,16 @@
 # Challenges for Junior Professionals and Microenterprises in the Use of Data and Technology, Generative AI and LLM’S.
 
-**Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
+
 
 **Caio César de Oliveira, caio.oliveira.1551586@sga.pucminas.br**
 
 **Caio Baltar Souza Mayllart, caio.baltar@sga.pucminas.br**
 
-**Gabriel Fernandes Souza 3, email do aluno 3**
+**Gabriel Fernandes Souza , email do aluno 3**
+
+**Nicolas Rodrigues Duarte email do aluno 3**
+
+**Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
 ---
 
