@@ -9,6 +9,11 @@ Authors:
     family-names: de Paula
     given-names: Hugo
 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Curto
+    given-names: Hayala 
+
    - name-suffix: Aluno
     affiliation: PUC Minas
     family-names: dos Santos
