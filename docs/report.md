@@ -16,8 +16,8 @@
 
 Professores:
 
-**Prof. Hugo Bastos de Paula vi**
-** Prof. Nome do Prof 2 **
+**Prof. Hugo Bastos de Paula **
+** Prof. Hayala Nepomuceno Curto **
 
 ---
 
