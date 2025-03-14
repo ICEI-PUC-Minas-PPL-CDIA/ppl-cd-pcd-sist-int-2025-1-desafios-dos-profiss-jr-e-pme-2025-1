@@ -8,8 +8,10 @@ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de
 * Nicolas Rodrigues Duarte
 * Gabriel Fernandes Souza
 * Thiago Domingos Venturim Ribeiro dos Santos
-  
-## Professor
+
+## Professores:
+
+* Hayala Nepomuceno Curto
 
 * Prof. Hugo Bastos de Paula
 
