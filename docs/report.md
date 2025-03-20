@@ -545,6 +545,8 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ![Correlacao Variaveis BI](imagens/graficos_state_of_data_2023/correlacao_variaveis_BI.jpeg)
 
+![Correlacao Variaveis De Linguagens](imagens/graficos_state_of_data_2023/correlacao_variaveis_de_linguagens.jpeg)
+
 ![Correlacao Variaveis Em Fontes De Dados](imagens/graficos_state_of_data_2023/correlacao_variaveis_em_fontes_de_dados.jpeg)
 
 ![Cursos](imagens/graficos_state_of_data_2023/cursos.jpeg)
@@ -577,7 +579,6 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ![Salario Medio Por Cargo](imagens/graficos_state_of_data_2023/salario_medio_por_cargo.jpeg)
 
-![Variaveis De Linguagens](imagens/graficos_state_of_data_2023/variaveis_de_linguagens.jpeg)
 
 ###**_Bases auxiliares_**###
 
