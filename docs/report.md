@@ -537,6 +537,48 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |P8_d_11	|Categórico|	Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
 |P8_d_12	|Categórico|	Treinando e aplicando LLM's para solucionar problemas de negócio.
 
+![Aspectos Prejudicados](imagens/graficos_state_of_data_2023/aspectos_prejudicados.jpeg)
+
+![Cor](imagens/graficos_state_of_data_2023/cor.jpeg)
+
+![Correlacao Entre Variaveis Cloud](imagens/graficos_state_of_data_2023/correlacao_entre_variaveis_cloud.jpeg)
+
+![Correlacao Variaveis BI](imagens/graficos_state_of_data_2023/correlacao_variaveis_BI.jpeg)
+
+![Correlacao Variaveis Em Fontes De Dados](imagens/graficos_state_of_data_2023/correlacao_variaveis_em_fontes_de_dados.jpeg)
+
+![Cursos](imagens/graficos_state_of_data_2023/cursos.jpeg)
+
+![Distribuicao E Faixa De Idade](imagens/graficos_state_of_data_2023/distribuicao_e_faixa_de_idade.jpeg)
+
+![Experiencia Prejudicada](imagens/graficos_state_of_data_2023/experiencia_prejudicada.jpeg)
+
+![Experiencia Profissional Prejudicada](imagens/graficos_state_of_data_2023/experiencia_profissional_prejudicada.jpeg)
+
+![Experiencia X Faixa Salarial](imagens/graficos_state_of_data_2023/experiencia_x_faixa_salarial.jpeg)
+
+![Ferramentas Mais Utilizadas](imagens/graficos_state_of_data_2023/ferramentas_mais_utilizadas.jpeg)
+
+![Ferramentas](imagens/graficos_state_of_data_2023/ferramentas.jpeg)
+
+![Linguagens Utilizadas](imagens/graficos_state_of_data_2023/linguagens_utilizadas.jpeg)
+
+![Motivo De Experiencia Prejudicada](imagens/graficos_state_of_data_2023/motivo_de_experiencia_prejudicada.jpeg)
+
+![N Pessoas Genero](imagens/graficos_state_of_data_2023/n_pessoas_genero.jpeg)
+
+![Nivel De Ensino Por Genero](imagens/graficos_state_of_data_2023/nivel_de_ensino_por_genero.jpeg)
+
+![Nivel De Ensino](imagens/graficos_state_of_data_2023/nivel_de_ensino.jpeg)
+
+![Quantidade De Profissionais](imagens/graficos_state_of_data_2023/quantidade_de_profissionais.jpeg)
+
+![Salario Medio Cargo E Nivel](imagens/graficos_state_of_data_2023/salario_medio_cargo_e_nivel.jpeg)
+
+![Salario Medio Por Cargo](imagens/graficos_state_of_data_2023/salario_medio_por_cargo.jpeg)
+
+![Variaveis De Linguagens](imagens/graficos_state_of_data_2023/variaveis_de_linguagens.jpeg)
+
 ###**_Bases auxiliares_**###
 
 ####**Latest_Data_Science_Salaries_Kaggle**####
