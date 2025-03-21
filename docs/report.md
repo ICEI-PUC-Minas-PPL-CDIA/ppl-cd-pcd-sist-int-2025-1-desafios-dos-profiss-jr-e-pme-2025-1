@@ -65,19 +65,19 @@ Essas perguntas permitirão uma análise mais precisa da realidade enfrentada po
 
 ###    Objetivo geral
 
-Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos
+ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos
 
 ####    Objetivos específicos
 
-Avaliar o impacto da adoção da IA ​​Generativa na competitividade de microempresas.
+ Avaliar o impacto da adoção da IA ​​Generativa na competitividade de microempresas.
 Investigar os fatores que influenciam a valorização profissional na área, como experiência, habilidades e acesso a ferramentas.
 
 
 
 ###    Justificativas
-
-A IA Generativa representa uma inovação essencial para o crescimento tecnológico e econômico, mas seu acesso ainda é desigual. Profissionais juniores encontram-se para ingressar na área devido a dificuldades elevadas, enquanto microempresas sofrem com limitações financeiras e estruturais. Compreender esses desafios e sugerir soluções pode contribuir para um mercado mais inclusivo, fomentando inovação, oportunidades de trabalho e competitividade no Brasil.
-
+ A IA Generativa não é apenas uma tendência – é uma revolução que está transformando a forma como empresas inovam, automatizam processos e se destacam no mercado. No entanto, o acesso a essa tecnologia de ponta ainda é restrito para dois grupos com enorme potencial de crescimento: profissionais juniores e microempresas.
+ Por isso, desenvolvemos uma Inteligência Artificial exclusiva projetada para quebrar essas barreiras e tornar a IA Generativa acessível a todos. Imagine um sistema que capacita profissionais em início de carreira com ferramentas avançadas, permitindo que eles se destaquem no mercado de trabalho, e que oferece a microempresas soluções inteligentes para automatizar processos, reduzir custos e competir de igual para igual com grandes corporações.
+ Com essa IA inovadora, facilitamos o acesso a tecnologias de ponta, impulsionamos a competitividade de pequenos negócios e abrimos novas oportunidades para talentos emergentes. Estamos criando um futuro mais inclusivo, eficiente e preparado para os desafios da transformação digital no Brasil.
 
 
 
