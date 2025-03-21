@@ -600,6 +600,7 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 |Company Size	|Tamanho da empresa	|Categórico (texto)|	Medium (82%), Large (13%)	3|
 |Year|	Ano em que os dados foram coletados|	Contínuo |(real)	|Faixa: 2020 a 2023| -|	
 
+docs/imagens/graficos_latest_data_science_salaries/grafico_top20-trabalhos.jpg
 
 ####**MICRODADOS_ED_SUP_IES_2023**####
 
