@@ -602,6 +602,8 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ![Top 20 job titles](imagens/graficos_latest_data_science_salaries/grafico_top20-trabalhos.jpg)
 
+![tamanho_da_companhia](imagens/graficos_latest_data_science_salaries/tamanho_da_companhia.jpg)
+
 ####**MICRODADOS_ED_SUP_IES_2023**####
 
 
