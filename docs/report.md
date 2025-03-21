@@ -53,9 +53,15 @@ A pesquisa foi realizada entre 16 de outubro de 2023 e 6 de dezembro de 2023 atr
 
 
 ###    Problema
-O objetivo desta análise é identificar e compreender os desafios que profissionais juniores e microempresas enfrentam no uso de tecnologias e IA Generativa. Para isso, buscamos responder às seguintes questões com base em dados: quais são as principais satisfações dos profissionais boas ou rins? Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas? Como a adoção da IA Generativa impacta a competitividade das microempresas? Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
+As dificuldades de acesso e implementação de tecnologias de IA Generativa por profissionais juniores e microempresas no Brasil, devido a barreiras financeiras, estruturais e à exigência de experiência prévia no mercado. Esse problema destaca como a falta de recursos e a exigência de qualificação avançada dificultam a adoção dessas tecnologias por grupos com menos capital e experiência, limitando sua competitividade e crescimento no setor de Inteligência Artificial.
 
-
+###    Pergunta Direcionada a Dados 
+Quais são as principais satisfações dos profissionais boas ou rins? 
+Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? 
+As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas?
+Como a adoção da IA Generativa impacta a competitividade das microempresas? 
+Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? 
+Essas perguntas permitirão uma análise mais precisa da realidade enfrentada por esses grupos, auxiliando na formulação de estratégias para mitigar essas dificuldades.
 
 ###    Objetivo geral
 
