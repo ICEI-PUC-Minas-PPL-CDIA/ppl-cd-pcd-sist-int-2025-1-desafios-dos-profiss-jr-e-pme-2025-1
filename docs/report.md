@@ -83,7 +83,6 @@ Investigar os fatores que influenciam a valorização profissional na área, com
 
 
 ##    Público alvo
-Público-Alvo
 A aplicação será utilizada principalmente por dois perfis principais: profissionais juniores da área de tecnologia e inteligência artificial e microempresas que trabalham com dados e tecnologias e buscam adotar IA Generativa.
 
 Profissionais Juniores em IA e Tecnologia:
