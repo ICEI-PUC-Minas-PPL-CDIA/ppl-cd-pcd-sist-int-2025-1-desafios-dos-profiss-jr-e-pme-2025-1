@@ -113,7 +113,7 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 ####**Latest_Data_Science_Salaries_Kaggle**####
 
-Sobre a base de dados
+A base "Latest Data Science Salaries Kaggle" fornece informações sobre salários de profissionais de ciência de dados, incluindo cargos, nível de experiência, tipo de contrato e a localização da empresa. Ela é essencial para entender como variáveis como experiência e especialização influenciam a remuneração, ajudando a identificar desigualdades entre profissionais juniores e sêniores.
 
 [Acesse o dicionario de dados de Latest_Data_Science_Salaries_Kaggle](data_dictionary/latest_data_science_salaries_dictionary.md)
 
