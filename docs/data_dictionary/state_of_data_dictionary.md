@@ -4,34 +4,34 @@
 
 |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
-| P1_a           |   Quantitativo discreto    |   Idade do participante.    |
-| P1_a_1         |   Qualitativo ordinal        | Faixa etária.     |
-| P1_b           |   Qualitativo binário    | Gênero do participante.                 | 
-| P1_c           |   Qualitativo não ordinal    | Cor/raça/etnia do participante.    | 
+| P1_a  |   Quantitativo discreto  | Idade do participante.    |
+| P1_a_1|   Qualitativo ordinal    | Faixa etária.     |
+| P1_b  |   Qualitativo binário    | Gênero do participante.                 | 
+| P1_c  |   Qualitativo não ordinal| Cor/raça/etnia do participante.    | 
 | P1_d  |   Qualitativo binário    | Se uma pessoa se identifica como PCD (Pessoa com Deficiência).|
-| P1_e |   Qualitativo binário  | 	Experiência profissional foi prejudicada? |
-| P1_e_1 |    Qualitativo binário     |   Não acredita que sua experiência foi afetada.  |
-| P1_e_2 |    Qualitativo binário    |Experiência prejudicada por Cor/Raça/Etnia. |
-| P1_e_3 |    Qualitativo binário | Experiência prejudicada por Identidade de Gênero. |
-| P1_e_4  |    Qualitativo binário  | 	Experiência prejudicada por ser PCD.  |
-| P1_f  |   Qualitativo não ordinal    | Aspectos da carreira que foram prejudicados.  |
-| P1_f_1  |   Qualitativo binário    |Número de oportunidades de emprego/vagas recebidas. |
-| P1_f_2  |   Qualitativo binário  |Senioridade das vagas recebidas em relação à experiência.  |
-| P1_f_3 |   Qualitativo binário  | Aprovação em processos seletivos/entrevistas.  |
-| P1_f_4 |   Qualitativo binário  | Oportunidades de progressão na carreira.   |
-| P1_f_5 |   Qualitativo binário  | Velocidade de progressão na carreira.  |
-| P1_f_6 |   Qualitativo binário  |  Nível de cobrança/trabalho e estresse no trabalho. |
-| P1_f_7 |   Qualitativo binário  | Atenção dada às opiniões e ideias dos participantes. |
-| P1_f_8  |   Qualitativo binário    | 	Relação com membros da empresa no ambiente de trabalho.  |
-| P1_f_9  |   Qualitativo binário    |	Relacionamento com membros da empresa em momentos de integração e fóruns de trabalho. |
+| P1_e  |   Qualitativo binário    | Experiência profissional foi prejudicada? |
+| P1_e_1|   Qualitativo binário    | Não acredita que sua experiência foi afetada.  |
+| P1_e_2|   Qualitativo binário    | Experiência prejudicada por Cor/Raça/Etnia. |
+| P1_e_3|   Qualitativo binário    | Experiência prejudicada por Identidade de Gênero. |
+| P1_e_4|   Qualitativo binário    | Experiência prejudicada por ser PCD.  |
+| P1_f  |   Qualitativo não ordinal| Aspectos da carreira que foram prejudicados.  |
+| P1_f_1|   Qualitativo binário    | Número de oportunidades de emprego/vagas recebidas. |
+| P1_f_2|   Qualitativo binário    | Senioridade das vagas recebidas em relação à experiência.  |
+| P1_f_3|   Qualitativo binário    | Aprovação em processos seletivos/entrevistas.  |
+| P1_f_4|   Qualitativo binário    | Oportunidades de progressão na carreira.   |
+| P1_f_5|   Qualitativo binário    | Velocidade de progressão na carreira.  |
+| P1_f_6|   Qualitativo binário    | Nível de cobrança/trabalho e estresse no trabalho. |
+| P1_f_7|   Qualitativo binário    | Atenção dada às opiniões e ideias dos participantes. |
+| P1_f_8|   Qualitativo binário    | Relação com membros da empresa no ambiente de trabalho.  |
+| P1_f_9|   Qualitativo binário    | Relacionamento com membros da empresa em momentos de integração e fóruns de trabalho. |
 | P1_g  |   Qualitativo binário    | O participante vive no Brasil? |
-| P1_i |   Qualitativo não ordinal    | 	Estado onde o participante mora. |
-| P1_i_1 |   Qualitativo não ordinal    | Unidade Federativa onde o participante mora.   |
-| P1_i_2  |   Qualitativo não ordinal    |	Região do Brasil onde mora (Norte, Nordeste, etc). |
-| P1_j	 |   Qualitativo binário    | O participante mudou de estado ao longo da vida?.   |
-| P1_k  |   Qualitativo não ordinal    | Região de origem do participante.  |
+| P1_i  |   Qualitativo não ordinal| Estado onde o participante mora. |
+| P1_i_1|   Qualitativo não ordinal| Unidade Federativa onde o participante mora.   |
+| P1_i_2|   Qualitativo não ordinal| Região do Brasil onde mora (Norte, Nordeste, etc). |
+| P1_j	|   Qualitativo binário    | O participante mudou de estado ao longo da vida?.   |
+| P1_k  |   Qualitativo não ordinal| Região de origem do participante.  |
 | P1_l  |   Qualitativo ordinal    | Nível de ensino concluído.   |
-|P1_m  |   Qualitativo não ordinal    |Área de Formação.  |
+|P1_m   |   Qualitativo não ordinal| Área de Formação.  |
 
 
 		Parte 2 - Dados sobre carreira 
