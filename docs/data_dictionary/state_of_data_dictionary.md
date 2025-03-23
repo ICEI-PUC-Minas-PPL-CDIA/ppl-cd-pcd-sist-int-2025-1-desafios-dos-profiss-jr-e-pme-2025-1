@@ -5,7 +5,7 @@
 |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
 | P1_a           |   Quantitativo discreto    |   Idade do participante.    |
-| P1_a_1         |   Qualitativo ordinal        | Indica ausência de idade informada.     |
+| P1_a_1         |   Qualitativo ordinal        | Faixa etária.     |
 | P1_b           |   Qualitativo binário    | Gênero do participante.                 | 
 | P1_c           |   Qualitativo não ordinal    | Cor/raça/etnia do participante.    | 
 | P1_d  |   Qualitativo binário    | Se uma pessoa se identifica como PCD (Pessoa com Deficiência).|
@@ -39,42 +39,42 @@
 
 | Atributo	| Tipo de dado| 	Descrição| 
 | -------------  | ------------- |------------------------------------------------------------       |
-|P2_a	|Categórico|	Qual sua situação atual de trabalho?|
-|P2_b	|Categórico|	Setor.|
-|P2_c	|Numérico|	Número de Funcionários.|
-|P2_d	|Categórico|	Gestor? (Sim/Não)|
-|P2_e	|Categórico|	Carga como Gestor.|
-|P2_f	|Numérico|	Carga Atual (horas).|
-|P2_g	|Categórico|	Nível (Júnior, Pleno, Sênior, etc.).|
-|P2_h	|Numérico|	Fixe salarial.|
-|P2_i	|Numérico|	Quanto tempo de experiência na área de dados você tem? (meses/anos)|
-|P2_j	|Numérico|	Quanto tempo de experiência na área de TI/Engenharia de Software você teve antes de começar a trabalhar na área de dados? (meses/anos)|
-|P2_k	|Categórico|	Você está satisfeito com sua empresa atual? (Sim/Não)|
-|P2_l	|Texto|	Qual o principal motivo da sua insatisfação com a empresa atual?|
-|P2_l_1	|Categórico|	Falta de oportunidade de crescimento no emprego atual.|
-|P2_l_2	|Categórico|	Salário atual não corresponde ao mercado.|
-|P2_l_3	|Categórico|	Não tenho uma boa relação com meu líder/gestor.|
-|P2_l_4	|Categórico|	Gostaria de trabalhar em outra área de atuação.|
-|P2_l_5	|Categórico|	Gostaria de receber mais benefícios.|
-|P2_l_6	|Categórico|	O clima de trabalho/ambiente não é bom.|
-|P2_l_7	|Categórico|	Falta de atualização analítica na empresa.|
-|P2_m	|Categórico|	Você participou de entrevistas de emprego nos últimos 6 meses? (Sim/Não)|
-|P2_n	|Categórico|	Você pretende mudar de emprego nos próximos 6 meses? (Sim/Não)|
-|P2_o	|Texto|	Quais os principais critérios que você leva em consideração no momento de decidir onde trabalhar?|
-|P2_o_1	|Categórico|	Remuneração/Salário.|
-|P2_o_2	|Categórico|	Benefícios.|
-|P2_o_3	|Categórico|	Propósito de trabalho e da empresa.|
-|P2_o_4	|Categórico|	Flexibilidade de trabalho remoto.|
-|P2_o_5	|Categórico|	Ambiente e clima de trabalho.|
-|P2_o_6	|Categórico|	Oportunidade de aprendizagem e trabalho com referências na área.|
-|P2_o_7	|Categóricov|	Plano de carreira e oportunidades de crescimento profissional.|
-|P2_o_8	|Categórico|	Maturidade da empresa em termos de tecnologia e dados.|
-|P2_o_9	|Categórico|	Qualidade dos gestores e líderes.|
-|P2_o_10	|Categórico|	Reputação que a empresa tem no mercado.|
-|P2_q	|Categórico|	Empresa que trabalhou passou por layoff em 2023. (Sim/Não)|
-|P2_r	|Categórico|	Atualmente qual a sua forma de trabalho? (Presencial, Híbrido, Remoto)|
-|P2_s	|Categórico|	Qual a forma de trabalho ideal para você? (Presencial, Híbrido, Remoto)|
-|P2_t	|Texto|	Caso sua empresa decidida:|
+|P2_a	|Qualitativo não ordinal|	Qual sua situação atual de trabalho?|
+|P2_b	|Qualitativo não ordinal|	Setor.|
+|P2_c	|Qualitativo ordinal|	Número de Funcionários.|
+|P2_d	|Qualitativo binário|	Gestor? (Sim/Não)|
+|P2_e	|Qualitativo não ordinal|	Cargo como Gestor.|
+|P2_f	|Qualitativo não ordinal|	Cargo Atual (horas).|
+|P2_g	|Qualitativo oridnal|	Nível (Júnior, Pleno, Sênior, etc.).|
+|P2_h	|Qualitativo ordinal|	Faixa salarial.|
+|P2_i	|Qualitativo ordinal|	Quanto tempo de experiência na área de dados você tem? (meses/anos)|
+|P2_j	|Qualitativo ordinal|	Quanto tempo de experiência na área de TI/Engenharia de Software você teve antes de começar a trabalhar na área de dados? (meses/anos)|
+|P2_k	|Qualitativo binário|	Você está satisfeito com sua empresa atual? (Sim/Não)|
+|P2_l	|Qualitativo não ordinal|	Qual o principal motivo da sua insatisfação com a empresa atual?|
+|P2_l_1	|Qualitativo binário|	Falta de oportunidade de crescimento no emprego atual.|
+|P2_l_2	|Qualitativo binário|	Salário atual não corresponde ao mercado.|
+|P2_l_3	|Qualitativo binário|	Não tenho uma boa relação com meu líder/gestor.|
+|P2_l_4	|Qualitativo binário|	Gostaria de trabalhar em outra área de atuação.|
+|P2_l_5	|Qualitativo binário|	Gostaria de receber mais benefícios.|
+|P2_l_6	|Qualitativo binário|	O clima de trabalho/ambiente não é bom.|
+|P2_l_7	|Qualitativo binário|	Falta de atualização analítica na empresa.|
+|P2_m	|Qualitativo não ordinal|	Você participou de entrevistas de emprego nos últimos 6 meses? (Sim/Não)|
+|P2_n	|Qualitativo não ordinal|	Você pretende mudar de emprego nos próximos 6 meses? (Sim/Não)|
+|P2_o	|Qualitativo não ordinal|	Quais os principais critérios que você leva em consideração no momento de decidir onde trabalhar?|
+|P2_o_1	|Qualitativo binário|	Remuneração/Salário.|
+|P2_o_2	|Qualitativo binário|	Benefícios.|
+|P2_o_3	|Qualitativo binário|	Propósito de trabalho e da empresa.|
+|P2_o_4	|Qualitativo binário|	Flexibilidade de trabalho remoto.|
+|P2_o_5	|Qualitativo binário|	Ambiente e clima de trabalho.|
+|P2_o_6	|Qualitativo binário|	Oportunidade de aprendizagem e trabalho com referências na área.|
+|P2_o_7	|Qualitativo binário|	Plano de carreira e oportunidades de crescimento profissional.|
+|P2_o_8	|Qualitativo binário|	Maturidade da empresa em termos de tecnologia e dados.|
+|P2_o_9	|Qualitativo binário|	Qualidade dos gestores e líderes.|
+|P2_o_10|Qualitativo binário|	Reputação que a empresa tem no mercado.|
+|P2_q	|Qualitativo binário|	Empresa que trabalhou passou por layoff em 2023. (Sim/Não)|
+|P2_r	|Qualitativo não ordinal|	Atualmente qual a sua forma de trabalho? (Presencial, Híbrido, Remoto)|
+|P2_s	|Qualitativo não ordinal|	Qual a forma de trabalho ideal para você? (Presencial, Híbrido, Remoto)|
+|P2_t	|Qualitativa não ordinal|	Caso sua empresa decida pelo modelo 100% presencial qual será sua atitude?|
 
 		Parte 3 - Desafios dos gestores de tempos de dados
 
