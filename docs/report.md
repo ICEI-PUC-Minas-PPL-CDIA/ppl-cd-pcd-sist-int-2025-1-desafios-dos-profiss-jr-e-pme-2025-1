@@ -153,13 +153,15 @@ Sobre a base de dados
 
 ####**Latest_Data_Science_Salaries_Kaggle**####
 Sobre a base de dados
-[Acesse o dicionario de dados de Data Science Salaries Kaggle](data_dictionary/latest_data_science_salaries_dictionary.md)
+[Acesse o dicionario de dados de Latest_Data_Science_Salaries_Kaggle](data_dictionary/latest_data_science_salaries_dictionary.md)
 
 ![Top 20 job titles](imagens/graficos_latest_data_science_salaries/grafico_top20-trabalhos.jpg)
 
 ![tamanho_da_companhia](imagens/graficos_latest_data_science_salaries/tamanho_da_companhia.jpg)
 
 ####**MICRODADOS_ED_SUP_IES_2023**####
+Sobre a base de dados
+[Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
 
 
 |N     |  Nome da Variável|	Descrição da Variável|	Tipo|	Tam.	|Categoria|
