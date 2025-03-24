@@ -101,9 +101,9 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ###    Dicionário de dados
 
-#### **Base principal** ####
+#### Base principal ####
 
-### **State of Data Brazil 2023** ###
+##### **State of Data Brazil 2023** #####
 
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
@@ -111,9 +111,9 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 
 
-### **Bases auxiliares** *###
+#### **Bases auxiliares** ####
 
-#### **Latest_Data_Science_Salaries_Kaggle** ####
+##### **Latest_Data_Science_Salaries_Kaggle** #####
 
 A base "Latest Data Science Salaries Kaggle" fornece informações sobre salários de profissionais de ciência de dados, incluindo cargos, nível de experiência, tipo de contrato e a localização da empresa. Ela é essencial para entender como variáveis como experiência e especialização influenciam a remuneração, ajudando a identificar desigualdades entre profissionais juniores e sêniores.
 
