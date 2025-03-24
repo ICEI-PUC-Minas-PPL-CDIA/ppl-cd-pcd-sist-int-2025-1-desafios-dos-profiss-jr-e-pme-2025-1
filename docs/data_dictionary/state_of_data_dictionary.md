@@ -331,113 +331,113 @@
 
 | Atribuição  | Tipo de dado  | Descrição |
 |-------------|--------------|------------------------------------------------------------|
-| P7_1        | Texto        | Quais das opções abaixo fazem parte da sua rotina no trabalho atual com análise de dados? |
-| P7_a_1      | Categórico   | Processo e analiso dados utilizando linguagens de programação como Python, R etc. |
-| P7_a_2      | Categórico   | Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
-| P7_a_3      | Categórico   | Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
-| P7_a_4      | Categórico   | Utilizo APIs para extrair dados e complementar minhas análises. |
-| P7_a_5      | Categórico   | Realizo experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
-| P7_a_6      | Categórico   | Desenvolvo/cuido da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
-| P7_a_7      | Categórico   | Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
-| P7_a_8      | Categórico   | Desenvolvo/cuido da manutenção de planilhas para atender as áreas de negócio. |
-| P7_a_9      | Categórico   | Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc. |
-| P7_a_10     | Categórico   | Nenhuma das opções listadas refletem meu dia a dia. |
-| P7_b        | Texto        | Quais as ferramentas/tecnologias de ETL que você utiliza no trabalho como Data Analyst? |
-| P7_b_1      | Categórico   | Scripts Python |
-| P7_b_2      | Categórico   | SQL & Stored Procedures |
-| P7_b_3      | Categórico   | Apache Airflow |
-| P7_b_4      | Categórico   | Apache NiFi |
-| P7_b_5      | Categórico   | Luigi |
-| P7_b_6      | Categórico   | AWS Glue |
-| P7_b_7      | Categórico   | Talend |
-| P7_b_8      | Categórico   | Pentaho |
-| P7_b_9      | Categórico   | Alteryx |
-| P7_b_10     | Categórico   | Stitch |
-| P7_b_11     | Categórico   | Fivetran |
-| P7_b_12     | Categórico   | Google Dataflow |
-| P7_b_13     | Categórico   | Oracle Data Integrator |
-| P7_b_14     | Categórico   | IBM DataStage |
-| P7_b_15     | Categórico   | SAP BW ETL |
-| P7_b_16     | Categórico   | SQL Server Integration Services (SSIS) |
-| P7_b_17     | Categórico   | SAS Data Integration |
-| P7_b_18     | Categórico   | Qlik Sense |
-| P7_b_19     | Categórico   | Knime |
-| P7_b_20     | Categórico   | Databricks |
-| P7_b_21     | Categórico   | Não utilizo ferramentas de ETL |
-| P7_c        | Texto        | Sua empresa utiliza alguma das ferramentas listadas para dar mais autonomia em análise de dados para as áreas de negócio? |
-| P7_c_1      | Categórico   | Ferramentas de AutoML como H2O.ai, Data Robot, BigML etc. |
-| P7_c_2      | Categórico   | Point and Click Analytics como Alteryx, Knime, Rapidminer etc. |
-| P7_c_3      | Categórico   | Product metrics & Insights como Mixpanel, Amplitude, Adobe Analytics. |
-| P7_c_4      | Categórico   | Ferramentas de análise dentro de ferramentas de CRM como Salesforce Einstein Analytics ou Zendesk dashboards. |
-| P7_c_5      | Categórico   | Minha empresa não utiliza essas ferramentas. |
-| P7_c_6      | Categórico   | Não sei informar. |
-| P7_d        | Texto        | Em qual das opções abaixo você gasta a maior parte do seu tempo de trabalho? |
-| P7_d_1      | Categórico   | Processando e analisando dados utilizando linguagens de programação como Python, R etc. |
-| P7_d_2      | Categórico   | Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
-| P7_d_3      | Categórico   | Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
-| P7_d_4      | Categórico   | Utilizando APIs para extrair dados e complementar minhas análises. |
-| P7_d_5      | Categórico   | Realizando experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
-| P7_d_6      | Categórico   | Desenvolvendo/cuidando da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
-| P7_d_7      | Categórico   | Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
-| P7_d_8      | Categórico   | Desenvolvendo/cuidando da manutenção de planilhas do Excel ou Google Sheets para atender as áreas de negócio. |
-| P7_d_9      | Categórico   | Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises. |
-| P7_d_10     | Categórico   | Nenhuma das opções listadas refletem meu dia a dia. |
+| P7_1        | Qualitativo não ordinal        | Quais das opções abaixo fazem parte da sua rotina no trabalho atual com análise de dados? |
+| P7_a_1      | Qualitativo binário   | Processo e analiso dados utilizando linguagens de programação como Python, R etc. |
+| P7_a_2      | Qualitativo binário   | Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
+| P7_a_3      | Qualitativo binário   | Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
+| P7_a_4      | Qualitativo binário   | Utilizo APIs para extrair dados e complementar minhas análises. |
+| P7_a_5      | Qualitativo binário   | Realizo experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
+| P7_a_6      | Qualitativo binário   | Desenvolvo/cuido da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
+| P7_a_7      | Qualitativo binário   | Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
+| P7_a_8      | Qualitativo binário   | Desenvolvo/cuido da manutenção de planilhas para atender as áreas de negócio. |
+| P7_a_9      | Qualitativo binário   | Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc. |
+| P7_a_10     | Qualitativo binário   | Nenhuma das opções listadas refletem meu dia a dia. |
+| P7_b        | Qualitativo não ordinal        | Quais as ferramentas/tecnologias de ETL que você utiliza no trabalho como Data Analyst? |
+| P7_b_1      | Qualitativo binário   | Scripts Python |
+| P7_b_2      | Qualitativo binário   | SQL & Stored Procedures |
+| P7_b_3      | Qualitativo binário   | Apache Airflow |
+| P7_b_4      | Qualitativo binário   | Apache NiFi |
+| P7_b_5      | Qualitativo binário   | Luigi |
+| P7_b_6      | Qualitativo binário   | AWS Glue |
+| P7_b_7      | Qualitativo binário   | Talend |
+| P7_b_8      | Qualitativo binário   | Pentaho |
+| P7_b_9      | Qualitativo binário   | Alteryx |
+| P7_b_10     | Qualitativo binário   | Stitch |
+| P7_b_11     | Qualitativo binário   | Fivetran |
+| P7_b_12     | Qualitativo binário   | Google Dataflow |
+| P7_b_13     | Qualitativo binário   | Oracle Data Integrator |
+| P7_b_14     | Qualitativo binário   | IBM DataStage |
+| P7_b_15     | Qualitativo binário   | SAP BW ETL |
+| P7_b_16     | Qualitativo binário   | SQL Server Integration Services (SSIS) |
+| P7_b_17     | Qualitativo binário   | SAS Data Integration |
+| P7_b_18     | Qualitativo binário   | Qlik Sense |
+| P7_b_19     | Qualitativo binário   | Knime |
+| P7_b_20     | Qualitativo binário   | Databricks |
+| P7_b_21     | Qualitativo binário   | Não utilizo ferramentas de ETL |
+| P7_c        | Qualitativo não ordinal        | Sua empresa utiliza alguma das ferramentas listadas para dar mais autonomia em análise de dados para as áreas de negócio? |
+| P7_c_1      | Qualitativo binário   | Ferramentas de AutoML como H2O.ai, Data Robot, BigML etc. |
+| P7_c_2      | Qualitativo binário   | Point and Click Analytics como Alteryx, Knime, Rapidminer etc. |
+| P7_c_3      | Qualitativo binário   | Product metrics & Insights como Mixpanel, Amplitude, Adobe Analytics. |
+| P7_c_4      | Qualitativo binário   | Ferramentas de análise dentro de ferramentas de CRM como Salesforce Einstein Analytics ou Zendesk dashboards. |
+| P7_c_5      | Qualitativo binário   | Minha empresa não utiliza essas ferramentas. |
+| P7_c_6      | Qualitativo binário   | Não sei informar. |
+| P7_d        | Qualitativo não ordinal        | Em qual das opções abaixo você gasta a maior parte do seu tempo de trabalho? |
+| P7_d_1      | Qualitativo binário   | Processando e analisando dados utilizando linguagens de programação como Python, R etc. |
+| P7_d_2      | Qualitativo binário   | Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc. |
+| P7_d_3      | Qualitativo binário   | Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio. |
+| P7_d_4      | Qualitativo binário   | Utilizando APIs para extrair dados e complementar minhas análises. |
+| P7_d_5      | Qualitativo binário   | Realizando experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc. |
+| P7_d_6      | Qualitativo binário   | Desenvolvendo/cuidando da manutenção de ETLs utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc. |
+| P7_d_7      | Qualitativo binário   | Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc. |
+| P7_d_8      | Qualitativo binário   | Desenvolvendo/cuidando da manutenção de planilhas do Excel ou Google Sheets para atender as áreas de negócio. |
+| P7_d_9      | Qualitativo binário   | Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises. |
+| P7_d_10     | Qualitativo binário   | Nenhuma das opções listadas refletem meu dia a dia. |
 
      
 		Parte 8 - Conhecimentos em Ciências de Dados/DS
       
 |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
-|P8_a	|Texto (com subcategorias categóricas)|	Quais das opções abaixo fazem parte da sua rotina no trabalho atual com ciência de dados?|
-|P8_a_1	|Categórico|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
-|P8_a_2	|Categórico|	Sou responsável pela coleta e limpeza dos dados que uso para análise e modelagem.|
-|P8_a_3	|Categórico|	Sou responsável por entrar em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
-|P8_a_4	|Categórico|	Desenvolver modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
-|P8_a_5	|Categórico|	Sou responsável por colocar modelos em produção, criar os pipelines de dados, APIs de consumo e monitoramento.|
-|P8_a_6	|Categórico|	Cuido da manutenção de modelos de Machine Learning já em produção, ocorrendo no monitoramento, ajustes e refatoração quando necessário.|
-|P8_a_7	|Categórico|	Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
-|P8_a_8	|Categórico|	Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises estatísticas e ajustar modelos.|
-|P8_a_9	|Categórico|	Crio e dupla manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
-|P8_a_10	|Categórico|	Criação e gerenciamento de soluções de Feature Store e cultura de MLOps.|
-|P8_a_11	|Categórico|	Sou responsável por criar e manter a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
-|P8_a_12	|Categórico|	Treino e aplicação LLM's para solucionar problemas de negócio.|
-|P8_b	|Texto (com subcategorias categóricas)|	Quais as técnicas e métodos listados abaixo que você costuma usar no trabalho?|
-|P8_b_1	|Categórico|	Utilização de modelos de regressão (linear, logística, GLM)|
-|P8_b_2	|Categórico|	Utilizo redes neurais ou modelos baseados em árvore para criar modelos de classificação|
-|P8_b_3	|Categórico|	Desenvolvimento de sistemas de recomendação (RecSys)|
-|P8_b_4	|Categórico|	Utilizo métodos estatísticos Bayesianos para analisar dados|
-|P8_b_5	|Categórico|	Utilizo técnicas de PNL (Natural Language Processing) para analisar dados não estruturados|
-|P8_b_6	|Categórico|	Utilizo métodos estatísticos clássicos (Testes de hipóteses, análise multivariada, sobrevivência, dados longitudinais, inferência estatística) para analisar dados
-|P8_b_7	|Categórico|	Utilizo cadeias de Markov ou HMM's para realizar análises de dados|
-|P8_b_8	|Categórico|	Desenvolvimento de técnicas de Clusterização (K-means, Spectral, DBScan etc)|
-|P8_b_9	|Categórico|	Realização abrangente através de modelos de Séries Temporais (Séries Temporais)|
-|P8_b_10	|Categórico|	Utilizando modelos de Aprendizagem por Reforço (aprendizado por reforço)|
-|P8_b_11	|Categórico|	Utilização de modelos de Machine Learning para detecção de fraude|
-|P8_b_12	|Categórico|	Utilização de métodos de Visão Computacional|
-|P8_b_13	|Categórico|	Utilizando modelos de detecção de rotatividade|
-|P8_b_14	|Categórico|	Utilizo LLM's para solucionar problemas de negócio|
-|P8_3	|Texto (com subcategorias categóricas)|	Quais essas tecnologias fazem parte do seu dia a dia como cientista de dados?|
-|P8_c_1	|Categórico|	Ferramentas de BI (PowerBI, Looker, Tableau, Qlik etc)|
-|P8_c_2	|Categórico|	Planilhas (Excel, Planilhas Google etc)|
-|P8_c_3	|Categórico|	Ambientes de desenvolvimento local (R-studio, JupyterLab, Anaconda)|
-|P8_c_4	|Categórico|	Ambientes de desenvolvimento na nuvem (Google Colab, AWS Sagemaker, Kaggle Notebooks etc)|
-|P8_c_5	|Categórico|	Ferramentas de AutoML (Datarobot, H2O, Auto-Keras etc)|
-|P8_c_6	|Categórico|	Ferramentas de ETL (Apache Airflow, NiFi, Stitch, Fivetran, Pentaho etc)|
-|P8_c_7	|Categórico|	Plataformas de Machine Learning (TensorFlow, Azure Machine Learning, Kubeflow etc)|
-|P8_c_8	|Categórico|	Armazenamento de recursos (Feast, Hopsworks, AWS Feature Store, Databricks Feature Store etc.)|
-|P8_c_9	|Categórico|	Sistemas de controle de versão (Github, DVC, Neptune, Gitlab etc)|
-|P8_c_10	|Categórico|	Plataformas de aplicativos de dados (Streamlit, Shiny, Plotly Dash etc)|
-|P8_c_11	|Categórico|	Ferramentas de estatística avançada como SPSS, SAS, etc.|
-|P8_d	|Texto (com subcategorias categóricas)|	Em quais das opções abaixo você gasta a maior parte do seu tempo no trabalho?|
-|P8_d_1	|Categórico|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
-|P8_d_2	|Categórico|	Coletando e limpando os dados que uso para análise e modelagem.
-|P8_d_3	|Categórico|	Entrando em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
-|P8_d_4	|Categórico|	Desenvolvendo modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
-|P8_d_5	|Categórico|	Colocando modelos em produção, criando os pipelines de dados, APIs de consumo e monitoramento.|
-|P8_d_6	|Categórico|	Cuidando da manutenção de modelos de Machine Learning já em produção, atuando no monitoramento, ajustes e refatoração quando necessário.|
-|P8_d_7	|Categórico|	Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
-|P8_d_8	|Categórico|	Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises.|
-|P8_d_9	|Categórico|	Criando e dando manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
-|P8_d_10	|Categórico|	Criando e gerenciando soluções de Feature Store e cultura de MLOps.|
-|P8_d_11	|Categórico|	Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
-|P8_d_12	|Categórico|	Treinando e aplicando LLM's para solucionar problemas de negócio.
+|P8_a	|Qualitativo não ordinal|	Quais das opções abaixo fazem parte da sua rotina no trabalho atual com ciência de dados?|
+|P8_a_1	|Qualitativo binário|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
+|P8_a_2	|Qualitativo binário|	Sou responsável pela coleta e limpeza dos dados que uso para análise e modelagem.|
+|P8_a_3	|Qualitativo binário|	Sou responsável por entrar em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
+|P8_a_4	|Qualitativo binário|	Desenvolver modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
+|P8_a_5	|Qualitativo binário|	Sou responsável por colocar modelos em produção, criar os pipelines de dados, APIs de consumo e monitoramento.|
+|P8_a_6	|Qualitativo binário|	Cuido da manutenção de modelos de Machine Learning já em produção, ocorrendo no monitoramento, ajustes e refatoração quando necessário.|
+|P8_a_7	|Qualitativo binário|	Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
+|P8_a_8	|Qualitativo binário|	Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises estatísticas e ajustar modelos.|
+|P8_a_9	|Qualitativo binário|	Crio e dupla manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
+|P8_a_10	|Qualitativo binário|	Criação e gerenciamento de soluções de Feature Store e cultura de MLOps.|
+|P8_a_11	|Qualitativo binário|	Sou responsável por criar e manter a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
+|P8_a_12	|Qualitativo binário|	Treino e aplicação LLM's para solucionar problemas de negócio.|
+|P8_b	|Qualitativo não ordinal|	Quais as técnicas e métodos listados abaixo que você costuma usar no trabalho?|
+|P8_b_1	|Qualitativo binário|	Utilização de modelos de regressão (linear, logística, GLM)|
+|P8_b_2	|Qualitativo binário|	Utilizo redes neurais ou modelos baseados em árvore para criar modelos de classificação|
+|P8_b_3	|Qualitativo binário|	Desenvolvimento de sistemas de recomendação (RecSys)|
+|P8_b_4	|Qualitativo binário|	Utilizo métodos estatísticos Bayesianos para analisar dados|
+|P8_b_5	|Qualitativo binário|	Utilizo técnicas de PNL (Natural Language Processing) para analisar dados não estruturados|
+|P8_b_6	|Qualitativo binário|	Utilizo métodos estatísticos clássicos (Testes de hipóteses, análise multivariada, sobrevivência, dados longitudinais, inferência estatística) para analisar dados
+|P8_b_7	|Qualitativo binário|	Utilizo cadeias de Markov ou HMM's para realizar análises de dados|
+|P8_b_8	|Qualitativo binário|	Desenvolvimento de técnicas de Clusterização (K-means, Spectral, DBScan etc)|
+|P8_b_9	|Qualitativo binário|	Realização abrangente através de modelos de Séries Temporais (Séries Temporais)|
+|P8_b_10	|Qualitativo binário|	Utilizando modelos de Aprendizagem por Reforço (aprendizado por reforço)|
+|P8_b_11	|Qualitativo binário|	Utilização de modelos de Machine Learning para detecção de fraude|
+|P8_b_12	|Qualitativo binário|	Utilização de métodos de Visão Computacional|
+|P8_b_13	|Qualitativo binário|	Utilizando modelos de detecção de rotatividade|
+|P8_b_14	|Qualitativo binário|	Utilizo LLM's para solucionar problemas de negócio|
+|P8_3	|Qualitativo não ordinal|	Quais essas tecnologias fazem parte do seu dia a dia como cientista de dados?|
+|P8_c_1	|Qualitativo binário|	Ferramentas de BI (PowerBI, Looker, Tableau, Qlik etc)|
+|P8_c_2	|Qualitativo binário|	Planilhas (Excel, Planilhas Google etc)|
+|P8_c_3	|Qualitativo binário|	Ambientes de desenvolvimento local (R-studio, JupyterLab, Anaconda)|
+|P8_c_4	|Qualitativo binário|	Ambientes de desenvolvimento na nuvem (Google Colab, AWS Sagemaker, Kaggle Notebooks etc)|
+|P8_c_5	|Qualitativo binário|	Ferramentas de AutoML (Datarobot, H2O, Auto-Keras etc)|
+|P8_c_6	|Qualitativo binário|	Ferramentas de ETL (Apache Airflow, NiFi, Stitch, Fivetran, Pentaho etc)|
+|P8_c_7	|Qualitativo binário|	Plataformas de Machine Learning (TensorFlow, Azure Machine Learning, Kubeflow etc)|
+|P8_c_8	|Qualitativo binário|	Armazenamento de recursos (Feast, Hopsworks, AWS Feature Store, Databricks Feature Store etc.)|
+|P8_c_9	|Qualitativo binário|	Sistemas de controle de versão (Github, DVC, Neptune, Gitlab etc)|
+|P8_c_10	|Qualitativo binário|	Plataformas de aplicativos de dados (Streamlit, Shiny, Plotly Dash etc)|
+|P8_c_11	|Qualitativo binário|	Ferramentas de estatística avançada como SPSS, SAS, etc.|
+|P8_d	|Qualitativo não ordinal|	Em quais das opções abaixo você gasta a maior parte do seu tempo no trabalho?|
+|P8_d_1	|Qualitativo binário|	Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, previsões, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.|
+|P8_d_2	|Qualitativo binário|	Coletando e limpando os dados que uso para análise e modelagem.
+|P8_d_3	|Qualitativo binário|	Entrando em contato com os tempos de negócio para definição do problema, identificar a solução e apresentação de resultados.|
+|P8_d_4	|Qualitativo binário|	Desenvolvendo modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).|
+|P8_d_5	|Qualitativo binário|	Colocando modelos em produção, criando os pipelines de dados, APIs de consumo e monitoramento.|
+|P8_d_6	|Qualitativo binário|	Cuidando da manutenção de modelos de Machine Learning já em produção, atuando no monitoramento, ajustes e refatoração quando necessário.|
+|P8_d_7	|Qualitativo binário|	Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc.|
+|P8_d_8	|Qualitativo binário|	Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises.|
+|P8_d_9	|Qualitativo binário|	Criando e dando manutenção em ETLs, DAGs e automatizações de pipelines de dados.|
+|P8_d_10	|Qualitativo binário|	Criando e gerenciando soluções de Feature Store e cultura de MLOps.|
+|P8_d_11	|Qualitativo binário|	Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)|
+|P8_d_12	|Qualitativo binário|	Treinando e aplicando LLM's para solucionar problemas de negócio.
