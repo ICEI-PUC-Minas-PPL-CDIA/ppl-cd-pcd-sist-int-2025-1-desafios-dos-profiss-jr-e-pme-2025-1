@@ -1,15 +1,16 @@
 ####**Latest_Data_Science_Salaries_Kaggle**####
 
-|   Atribuição | Descrição | Tipo |	Valores Mais Comuns	| Valores Únicos |
-| -------------| ------------- |----------|----------------------|----------------------------       |
-|Job Title	Cargo ocupado pelo profissional|	Categórico (texto)|	Data Engineer (21%), Data Scientist (19%)|	111|
-|Employment Type|	Tipo de contrato do profissional|	Categórico (texto)|	Full-Time (99%)|4|
-|Experience Level|	Nível de experiência do profissional|	Categórico (texto)|	Senior (63%), Mid (24%)|	4|
-|Expertise Level|	Grau de especialização do profissional|	Categórico (texto)|	Expert (63%), Intermediate (24%)| 4|
-|Salary|	Faixa salarial recebida pelo profissional|	Contínuo (real)|	Faixa: 14,000.00 a 30,400,000.00|	-|
-|Salary Currency	|Moeda na qual o salário é pago|	Categórico (texto)|	United States Dollar (84%), Euro (7%)|	22|
-|Company Location|	Localização da empresa	|Categórico (texto)|	United States (76%)|	71|
-|Salary in USD|	Salário convertido para dólares americanos|	Contínuo (real)|	Faixa: 15,000.00 a 450,000.00|	-|
-|Employee Residence	|Localização de residência do profissional|	Categórico (texto)|	United States (74%)|	83|
-|Company Size	|Tamanho da empresa	|Categórico (texto)|	Medium (82%), Large (13%)	3|
-|Year|	Ano em que os dados foram coletados|	Contínuo |(real)	|Faixa: 2020 a 2023| -|	
+
+| N  | Nome da Variável          | Descrição                                                                                         | Tipo de Dado              |
+|----|---------------------------|---------------------------------------------------------------------------------------------------|---------------------------|
+| 1  | Job Title                  | Título ou posição ocupada pelo profissional                                                        | Qualitativo não ordinal    |
+| 2  | Employment Type            | Tipo de vínculo empregatício (full-time, freelancer, contrato)                                     | Qualitativo não ordinal    |
+| 3  | Experience Level           | Nível de experiência do profissional (por exemplo, Júnior, Pleno, Sênior)                         | Qualitativo ordinal        |
+| 4  | Expertise Level            | Grau de especialização ou qualificação técnica (por exemplo, especialista, generalista)            | Qualitativo ordinal        |
+| 5  | Salary                     | Valor do salário recebido pelo profissional                                                        | Quantitativo discreto      |
+| 6  | Salary Currency            | Moeda em que o salário é pago (por exemplo, USD, EUR)                                             | Qualitativo não ordinal    |
+| 7  | Company Location           | Localização da empresa (cidade, estado ou país)                                                   | Qualitativo não ordinal    |
+| 8  | Salary in USD              | Salário convertido em dólares americanos (USD) para padronização                                  | Quantitativo discreto      |
+| 9  | Employee Residence         | Local de residência do empregado (cidade, estado ou país)                                         | Qualitativo não ordinal    |
+| 10 | Company Size               | Tamanho da empresa baseado no número de funcionários (por exemplo, pequena, média, grande)        | Qualitativo ordinal        |
+| 11 | Year                       | Ano de referência dos dados                                                                       | Quantitativo discreto      |
