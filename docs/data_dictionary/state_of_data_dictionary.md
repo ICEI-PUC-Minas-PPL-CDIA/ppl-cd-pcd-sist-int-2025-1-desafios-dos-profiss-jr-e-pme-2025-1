@@ -269,62 +269,62 @@
 
   |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
- | P5_a	 | Texto | 	Qual seu objetivo na área de dados? | 
- | P5_b	 | Texto | 	Qual oportunidade você está buscando? | 
- | P5_c	 | Numérico | 	Há quanto tempo você busca uma oportunidade na área de dados? (meses/anos) | 
- | P5_d	 | Texto | 	Como tem sido a busca por uma oportunidade na área de dados? | 
+ | P5_a	 | Qualitativo não ordinal | 	Qual seu objetivo na área de dados? | 
+ | P5_b	 | Qualitativo não ordinal | 	Qual oportunidade você está buscando? | 
+ | P5_c	 | Qualitativo ordinal | 	Há quanto tempo você busca uma oportunidade na área de dados? (meses/anos) | 
+ | P5_d	 | Qualitativo não ordinal | 	Como tem sido a busca por uma oportunidade na área de dados? | 
  
  		Parte 6 - Conhecimentos em Engenharia de Dados/DE Parte  
    
   |   Atribuição   | Tipo de dado  |                      Descrição                                    |
 | -------------  | ------------- |------------------------------------------------------------       |
-|P6_a	|Texto (com subcategorias categóricas)|	Quais das opções abaixo fazem parte da sua rotina no trabalho atual como engenheiro de dados?|
-|P6_a_1	|Categórico|	Desenvolve pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc.|
-|P6_a_2	|Categórico|	Realizo construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc.|
-|P6_a_3	|Categórico|	Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.|
-|P6_a_4	|Categórico|	Atuo na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc.|
-|P6_a_5	|Categórico|	Modelo soluções de arquitetura de dados, criando componentes de coleta de dados, transformação e recuperação da informação.|
-|P6_a_6	|Categórico|	Desenvolvo/cuido da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.|
-|P6_a_7	|Categórico|	Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc.|
-|P6_a_8	|Categórico|	Cuido da qualidade dos dados, metadados e dicionário de dados.|
-|P6_a_9	|Categórico|	Nenhuma das opções específicas refletem meu dia a dia.|
-|P6_b	|Texto (com subcategorias categóricas)|	Quais são as ferramentas/tecnologias de ETL que você utiliza no trabalho como Engenheiro de Dados?|
-|P6_b_1	|Categórico|	Scripts Python|
-|P6_b_2	|Categórico|	SQL e procedimentos armazenados|
-|P6_b_3	|Categórico|	Fluxo de ar Apache|
-|P6_b_4	|Categórico|	Apache NiFi|
-|P6_b_5	|Categórico|	Luigi|
-|P6_b_6	|Categórico|	Cola AWS|
-|P6_b_7	|Categórico|	Talendário|
-|P6_b_8	|Categórico|	Pentaho|
-|P6_b_9	|Categórico|	Alteryx|
-|P6_b_10	|Categórico|	Ponto|
-|P6_b_11	|Categórico|	Fivetran|
-|P6_b_12	|Categórico|	Fluxo de dados do Google|
-|P6_b_13	|Categórico|	Integrador de Dados Oracle|
-|P6_b_14	|Categórico|	IBM DataStage|
-|P6_b_15	|Categórico|	ETL SAP BW|
-|P6_b_16	|Categórico|	Serviços de Integração do SQL Server (SSIS)|
-|P6_b_17	|Categórico|	Integração de dados SAS|
-|P6_b_18	|Categórico|	Senso Qlik|
-|P6_b_19	|Categórico|	Faca|
-|P6_b_20	|Categórico|	Tijolos de dados|
-|P6_b_21	|Categórico|	Não utilizo ferramentas de ETL|
-|P6_c	|Categórico|	Sua organização possui um Data Lake?|
-|P6_d	|Texto|	Qual tecnologia utilizada como plataforma do Data Lake?|
-|P6_e	|Categórico|	Sua organização possui um Data Warehouse?|
-|P6_f	|Texto|	Qual tecnologia utilizada como plataforma do Data Warehouse?|
-|P6_g	|Texto|	Quais as ferramentas de gestão de Qualidade de dados, Metadados e catálogo de dados que você utiliza no trabalho?|
-|P6_h	|Texto (com subcategorias categóricas)|	Em quais das opções abaixo você gasta a maior parte do seu tempo?|
-|P6_h_1	|Categórico|	Desenvolvendo pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc.|
-|P6_h_2	|Categórico|	Realizando construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc.|
-|P6_h_3	|Categórico|	Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.|
-|P6_h_4	|Categórico|	Atuando na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc.|
-|P6_h_5	|Categórico|	Modelando soluções de arquitetura de dados, criando componentes de coleta de dados, transformação e recuperação da informação.|
-|P6_h_6	|Categórico|	Desenvolvendo/cuidando da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.|
-|P6_h_7	|Categórico|	Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc.|
-|P6_h_8	|Categórico|	Cuidando a qualidade dos dados, metadados e dicionário de dados.|
-|P6_h_9	|Categórico|	Nenhuma das opções específicas refletem meu dia a dia.|
+|P6_a	|Qualitativo não ordinal|	Quais das opções abaixo fazem parte da sua rotina no trabalho atual como engenheiro de dados?|
+|P6_a_1	|Qualitativo binário|	Desenvolve pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc.|
+|P6_a_2	|Qualitativo binário|	Realizo construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc.|
+|P6_a_3	|Qualitativo binário|	Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.|
+|P6_a_4	|Qualitativo binário|	Atuo na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc.|
+|P6_a_5	|Qualitativo binário|	Modelo soluções de arquitetura de dados, criando componentes de coleta de dados, transformação e recuperação da informação.|
+|P6_a_6	|Qualitativo binário|	Desenvolvo/cuido da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.|
+|P6_a_7	|Qualitativo binário|	Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc.|
+|P6_a_8	|Qualitativo binário|	Cuido da qualidade dos dados, metadados e dicionário de dados.|
+|P6_a_9	|Qualitativo binário|	Nenhuma das opções específicas refletem meu dia a dia.|
+|P6_b	|Qualitativo não ordinal|	Quais são as ferramentas/tecnologias de ETL que você utiliza no trabalho como Engenheiro de Dados?|
+|P6_b_1	|Qualitativo binário|	Scripts Python|
+|P6_b_2	|Qualitativo binário|	SQL e procedimentos armazenados|
+|P6_b_3	|Qualitativo binário|	Fluxo de ar Apache|
+|P6_b_4	|Qualitativo binário|	Apache NiFi|
+|P6_b_5	|Qualitativo binário|	Luigi|
+|P6_b_6	|Qualitativo binário|	Cola AWS|
+|P6_b_7	|Qualitativo binário|	Talendário|
+|P6_b_8	|Qualitativo binário|	Pentaho|
+|P6_b_9	|Qualitativo binário|	Alteryx|
+|P6_b_10	|Qualitativo binário|	Ponto|
+|P6_b_11	|Qualitativo binário|	Fivetran|
+|P6_b_12	|Qualitativo binário|	Fluxo de dados do Google|
+|P6_b_13	|Qualitativo binário|	Integrador de Dados Oracle|
+|P6_b_14	|Qualitativo binário|	IBM DataStage|
+|P6_b_15	|Qualitativo binário|	ETL SAP BW|
+|P6_b_16	|Qualitativo binário|	Serviços de Integração do SQL Server (SSIS)|
+|P6_b_17	|Qualitativo binário|	Integração de dados SAS|
+|P6_b_18	|Qualitativo binário|	Senso Qlik|
+|P6_b_19	|Qualitativo binário|	Faca|
+|P6_b_20	|Qualitativo binário|	Tijolos de dados|
+|P6_b_21	|Qualitativo binário|	Não utilizo ferramentas de ETL|
+|P6_c	|Qualitativo binário|	Sua organização possui um Data Lake?|
+|P6_d	|Qualitativo não ordinal|	Qual tecnologia utilizada como plataforma do Data Lake?|
+|P6_e	|Qualitativo binário|	Sua organização possui um Data Warehouse?|
+|P6_f	|Qualitativo não ordinal|	Qual tecnologia utilizada como plataforma do Data Warehouse?|
+|P6_g	|Qualitativo não ordinal|	Quais as ferramentas de gestão de Qualidade de dados, Metadados e catálogo de dados que você utiliza no trabalho?|
+|P6_h	|Qualitativo não ordinal|	Em quais das opções abaixo você gasta a maior parte do seu tempo?|
+|P6_h_1	|Qualitativo binário|	Desenvolvendo pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc.|
+|P6_h_2	|Qualitativo binário|	Realizando construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc.|
+|P6_h_3	|Qualitativo binário|	Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.|
+|P6_h_4	|Qualitativo binário|	Atuando na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc.|
+|P6_h_5	|Qualitativo binário|	Modelando soluções de arquitetura de dados, criando componentes de coleta de dados, transformação e recuperação da informação.|
+|P6_h_6	|Qualitativo binário|	Desenvolvendo/cuidando da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.|
+|P6_h_7	|Qualitativo binário|	Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc.|
+|P6_h_8	|Qualitativo binário|	Cuidando a qualidade dos dados, metadados e dicionário de dados.|
+|P6_h_9	|Qualitativo binário|	Nenhuma das opções específicas refletem meu dia a dia.|
    
    		Parte 7 - Conhecimentos em Análise de Dados/DA 
   
