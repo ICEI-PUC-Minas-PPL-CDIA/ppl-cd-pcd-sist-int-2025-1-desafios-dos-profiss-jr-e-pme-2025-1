@@ -130,7 +130,7 @@ A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino 
 ####**Contributions_to_AI_projects_by_country_and_project_impact**
 A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados sobre a participação de diferentes países em projetos de Inteligência Artificial, com foco na fração de contribuição baseada no impacto dos projetos. Ela é crucial para entender a distribuição global dos esforços em IA e o papel de cada país no avanço dessa tecnologia.
 
-[Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
+[Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](docs/data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
 
 
 ###    Descrição de dados
