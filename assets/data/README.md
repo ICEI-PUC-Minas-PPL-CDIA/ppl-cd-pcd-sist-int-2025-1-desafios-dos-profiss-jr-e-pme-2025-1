@@ -9,6 +9,8 @@ Os principais documentos a serem produzidos são:
 
 * `Latest_Data_Science_Salaries_Kaggle`
 * `MICRODADOS_ED_SUP_IES_2023.CSV`
+* `Between-country AI skills migration.csv`
+* `Contributions_to_AI_projects_by_country_and_project_impact.csv`
 	* outras bases utilizadas no processo de enriquecimento
 
 * `final_processed_data.csv`
