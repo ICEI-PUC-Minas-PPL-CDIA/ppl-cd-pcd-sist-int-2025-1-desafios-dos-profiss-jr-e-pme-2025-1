@@ -132,6 +132,10 @@ A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados
 
 [Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](docs/data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
 
+####**Contributions_to_AI_projects_by_country_and_project_impact**
+A base "Between-country AI skills migration" reúne dados sobre a migração de profissionais com habilidades em Inteligência Artificial entre diferentes países. Ela é crucial para entender os fluxos globais de talentos em IA e identificar quais nações estão atraindo ou perdendo especialistas nessa área
+
+[Acesse o dicionario de dados de Between-country AI skills migration_dictionary](docs/data_dictionary/Between-country AI skills migration_dictionary.md)
 
 ###    Descrição de dados
 
