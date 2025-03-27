@@ -111,9 +111,9 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 
 
-#### **Bases auxiliares** ####
+### **Bases auxiliares** 
 
-##### **Latest_Data_Science_Salaries_Kaggle** #####
+##### **Latest_Data_Science_Salaries_Kaggle** 
 
 A base "Latest Data Science Salaries Kaggle" fornece informações sobre salários de profissionais de ciência de dados, incluindo cargos, nível de experiência, tipo de contrato e a localização da empresa. Ela é essencial para entender como variáveis como experiência e especialização influenciam a remuneração, ajudando a identificar desigualdades entre profissionais juniores e sêniores.
 
@@ -121,12 +121,16 @@ A base "Latest Data Science Salaries Kaggle" fornece informações sobre salári
 
 
 
-#### **MICRODADOS_ED_SUP_IES_2023** ####
+#### **MICRODADOS_ED_SUP_IES_2023** 
 
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
 
+####**Contributions_to_AI_projects_by_country_and_project_impact**
+A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados sobre a participação de diferentes países em projetos de Inteligência Artificial, com foco na fração de contribuição baseada no impacto dos projetos. Ela é crucial para entender a distribuição global dos esforços em IA e o papel de cada país no avanço dessa tecnologia.
+
+[Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
 
 
 ###    Descrição de dados
