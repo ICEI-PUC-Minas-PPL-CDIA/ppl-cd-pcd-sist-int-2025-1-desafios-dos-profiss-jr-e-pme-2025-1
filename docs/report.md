@@ -152,6 +152,10 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 #### **MICRODADOS_ED_SUP_IES_2023** 
 
 
+![image](https://github.com/user-attachments/assets/ad5f4a00-ccc9-49d6-8b21-64484b827c5e)
+
+
+
 #### **Contributions_to_AI_projects_by_country_and_project_impact**
 
 
