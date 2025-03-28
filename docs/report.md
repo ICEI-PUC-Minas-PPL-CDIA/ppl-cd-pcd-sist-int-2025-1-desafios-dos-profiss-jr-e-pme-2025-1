@@ -123,6 +123,8 @@ A base "Latest Data Science Salaries Kaggle" fornece informações sobre salári
 
 #### **MICRODADOS_ED_SUP_IES_2023** 
 
+
+
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
@@ -153,6 +155,12 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 
 
 ![image](https://github.com/user-attachments/assets/ad5f4a00-ccc9-49d6-8b21-64484b827c5e)
+
+###**DISTRIBUICAO_GN_PROFICIONAIS
+
+
+![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
+
 
 
 
