@@ -101,9 +101,9 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ###    Dicionário de dados
 
-#### Base principal ####
+#### Base principal
 
-##### **State of Data Brazil 2023** #####
+##### **State of Data Brazil 2023**
 
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
@@ -132,17 +132,30 @@ A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados
 
 [Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](/data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
 
-####**Contributions_to_AI_projects_by_country_and_project_impact**
+####**Between-country AI skills migration**
 A base "Between-country AI skills migration" reúne dados sobre a migração de profissionais com habilidades em Inteligência Artificial entre diferentes países. Ela é crucial para entender os fluxos globais de talentos em IA e identificar quais nações estão atraindo ou perdendo especialistas nessa área
 
 [Acesse o dicionario de dados de Between-country AI skills migration_dictionary](/data_dictionary/Between-country AI skills migration_dictionary.md)
 
 ###    Descrição de dados
 
-Utilize a análise descritiva baseada em estatística de primeira ordem para descrever os dados.
-Como descrever dados numéricos: média, desvio padrão, mínimo, máximo, quartis, histograma, etc.
-Como descrever dados qualitativos (categóricos): moda (valor mais frequente), quantidade de valores distintos (categorias), distribuição das categorias (histograma), etc.
 
+#### Base principal
+##### **State of Data Brazil 2023**
+
+
+
+### **Bases auxiliares** 
+##### **Latest_Data_Science_Salaries_Kaggle** 
+
+
+#### **MICRODADOS_ED_SUP_IES_2023** 
+
+
+####**Contributions_to_AI_projects_by_country_and_project_impact**
+
+
+####**Cetween-country AI skills migration**
 
 ## Preparação dos dados
 
