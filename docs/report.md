@@ -127,12 +127,12 @@ A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino 
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
 
-####**Contributions_to_AI_projects_by_country_and_project_impact**
+#### **Contributions_to_AI_projects_by_country_and_project_impact**
 A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados sobre a participação de diferentes países em projetos de Inteligência Artificial, com foco na fração de contribuição baseada no impacto dos projetos. Ela é crucial para entender a distribuição global dos esforços em IA e o papel de cada país no avanço dessa tecnologia.
 
 [Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc_dictionary](/data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
 
-####**Between-country AI skills migration**
+#### **Between-country AI skills migration**
 A base "Between-country AI skills migration" reúne dados sobre a migração de profissionais com habilidades em Inteligência Artificial entre diferentes países. Ela é crucial para entender os fluxos globais de talentos em IA e identificar quais nações estão atraindo ou perdendo especialistas nessa área
 
 [Acesse o dicionario de dados de Between-country AI skills migration_dictionary](/data_dictionary/Between-country AI skills migration_dictionary.md)
@@ -140,8 +140,8 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 ###    Descrição de dados
 
 
-#### Base principal
-##### **State of Data Brazil 2023**
+### Base principal
+#### **State of Data Brazil 2023**
 
 
 
@@ -152,10 +152,10 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 #### **MICRODADOS_ED_SUP_IES_2023** 
 
 
-####**Contributions_to_AI_projects_by_country_and_project_impact**
+#### **Contributions_to_AI_projects_by_country_and_project_impact**
 
 
-####**Cetween-country AI skills migration**
+#### **Cetween-country AI skills migration**
 
 ## Preparação dos dados
 
