@@ -162,6 +162,29 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 ![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
 
 
+###**DISTRIBUICAO_DATA_ROLES_EXPERIENCE**
+
+
+![image](https://github.com/user-attachments/assets/e6d193c8-eeb0-47f4-b859-319f65ecc74c)
+
+
+###**VARIACAO_SALARIAL**
+
+
+![image](https://github.com/user-attachments/assets/5272c5ba-d6e5-4044-b7b2-1e042bf18569)
+
+
+###**VARIACAO_CARGO_EXPERIENCIA**
+
+![image](https://github.com/user-attachments/assets/d8f3c8e9-a968-444e-a40a-1125eef2c758)
+
+
+###**DISTRIBUICAO_SALARIO_PROFISSIONAIS_DE_DADOS**
+
+
+![image](https://github.com/user-attachments/assets/309ee464-8512-49f8-937f-31f32170932d)
+
+
 
 
 #### **Contributions_to_AI_projects_by_country_and_project_impact**
