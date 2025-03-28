@@ -141,13 +141,9 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 
 ###    Descrição de dados
 
-
-### Base principal
-#### **State of Data Brazil 2023**
+#### **Latest_Data_Science_Salaries_Kaggle** 
 
 
-
-### **Bases auxiliares** 
 
 
 #### **MICRODADOS_ED_SUP_IES_2023** 
@@ -155,7 +151,7 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 
 ![image](https://github.com/user-attachments/assets/ad5f4a00-ccc9-49d6-8b21-64484b827c5e)
 
-#### **Latest_Data_Science_Salaries_Kaggle** 
+######## **State of Data Brazil 2023**
 
 ##### **DISTRIBUICAO_GN_PROFICIONAIS**
 ![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
