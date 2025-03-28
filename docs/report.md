@@ -6,7 +6,7 @@
 
 **Caio Baltar Souza Mayllart, caio.baltar@sga.pucminas.br**
 
-**Gabriel Fernandes Souza , email do aluno 3**
+**Gabriel Fernandes Souza , gabriel.souza@sga.pucminas.br**
 
 **Nicolas Rodrigues Duarte email do aluno 3**
 
