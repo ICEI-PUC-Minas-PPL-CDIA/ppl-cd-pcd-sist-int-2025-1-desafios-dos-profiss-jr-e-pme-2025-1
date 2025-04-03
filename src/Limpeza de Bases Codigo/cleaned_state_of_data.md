@@ -1,3 +1,6 @@
+# Análise de Dados - State of Data BR 2023
+
+```python
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -469,7 +472,6 @@ def main():
         print("\nTecnologias mais usadas por quem ganha acima da mediana:")
         print(tech_salario_alto.head(10))
 
-
         # Plotar comparação
         plt.title('Uso de Tecnologia por Tamanho da Empresa')
         plt.ylabel('Proporção de Uso')
@@ -512,8 +514,6 @@ def main():
         print("\nLinguagens principais entre profissionais que usam IA Generativa:")
         print(linguagens_ia.head(10))
 
-
-
         # Análise mais detalhada por nível de adoção de IA
         print("\n=== Análise Detalhada por Nível de Adoção de IA ===")
 
@@ -535,13 +535,10 @@ def main():
         df_balanceado['nivel_ia'] = df_balanceado.apply(categorizar_uso_ia, axis=1)
 
         # Tecnologias por nível de adoção de IA
-
         print("\nUso de tecnologias por nível de adoção de IA:")
-
 
         # Visualização
         plt.figure(figsize=(12, 6))
-
         plt.title('Adoção de Tecnologias por Nível de Maturidade em IA Generativa')
         plt.ylabel('Nível de Adoção de IA')
         plt.xlabel('Tecnologias')
