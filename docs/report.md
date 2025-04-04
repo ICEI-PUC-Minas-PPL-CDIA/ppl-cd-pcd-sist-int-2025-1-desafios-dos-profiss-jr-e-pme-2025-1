@@ -262,7 +262,9 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 [Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
 
-[Acesse os gráficos da Análise dos Dados Unidos](imagens\graficos_bases_unificadas)
+[Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos_bases_unificadas/graficos.md)
+
+
 
 
 ## Indução de modelos
