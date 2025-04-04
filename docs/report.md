@@ -244,20 +244,25 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 
 ## Preparação dos dados
 
-### Análise do Ensino Superior Consolidada
-Limpeza e Seleção de dados da base MICRODADOS_ED_SUP_IES_2023
 
-[Acesse o dicionario de dados da Análise do Ensino Superior Consolidada](data_dictionary/Analise_Ensino_Superior_Consolidada.md)
-
-### Dados Processados
+### Dados Processados State of Data 2023
 Limpeza e Seleção de dados da base State of Data Brazil 2023
 
-[Acesse o dicionario de dados de Dados_processados](data_dictionary/dados_processados.md)
+[Acesse o dicionario de dados do State of Data](data_dictionary/cleaned_dictionary/state_of_data_cleaned_dictionary.md)
 
-### Dados Unidos
-Lunção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas e selecionadas: Análise do Ensino Superior Consolidada e Dados_processados
 
-[Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/dados_unidos.md)
+### Dados Processados Microdrados Educação Superior
+Limpeza e Seleção de dados da base MICRODADOS_ED_SUP_IES_2023
+
+[Acesse o dicionario de dados da Análise do MICRODADOS_ED_SUP_IES_2023](data_dictionary/cleaned_dictionary/microdados_cleaned_dictionary.md)
+
+
+### Unificação das bases acima
+Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas e selecionadas: Análise do Ensino Superior Consolidada e Dados_processados
+
+[Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
+
+[Acesse os gráficos da Análise dos Dados Unidos](imagens\graficos_bases_unificadas)
 
 
 ## Indução de modelos
