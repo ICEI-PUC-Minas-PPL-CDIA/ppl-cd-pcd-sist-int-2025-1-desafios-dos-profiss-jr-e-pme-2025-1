@@ -100,53 +100,53 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ## Análise exploratórida dos dados
 
-##    Dicionário de dados base principal
+###    Dicionário de dados base principal
 
-### **State of Data Brazil 2023**
+#### **State of Data Brazil 2023**
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
 [Acesse o dicionario de dados de State of Data Brazil 2023](data_dictionary/state_of_data_dictionary.md)
 
 
-##    Dicionário de dados bases auxiliares
+###    Dicionário de dados bases auxiliares
 
-### **MICRODADOS_ED_SUP_IES_2023** 
+#### **MICRODADOS_ED_SUP_IES_2023** 
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
 
 
-##    Descrição de dados
+###    Descrição de dados
 
 
-### **State of Data Brazil 2023**
+#### **State of Data Brazil 2023**
 Gráficos da base State of Data Brazil 2023
 
 [Acesse os gráficos da base State of Data Brazil 2023](imagens/graficos/graficos_state_of_data.md)
 
 
-### *MICRODADOS_ED_SUP_IES_2023**
+#### *MICRODADOS_ED_SUP_IES_2023**
 Gráficos da base MICRODADOS_ED_SUP_IES_2023
 
 [Acesse os gráficos da base MICRODADOS_ED_SUP_IES_2023](imagens/graficos/graficos_microdados.md)
 
 
-## Preparação dos dados
+### Preparação dos dados
 
 
-### Dados Processados State of Data 2023
+#### Dados Processados State of Data 2023
 Limpeza e Seleção de dados da base State of Data Brazil 2023
 
 [Acesse o dicionario de dados do State of Data](data_dictionary/cleaned_dictionary/state_of_data_cleaned_dictionary.md)
 
 
-### Dados Processados Microdrados Educação Superior
+#### Dados Processados Microdrados Educação Superior
 Limpeza e Seleção de dados da base MICRODADOS_ED_SUP_IES_2023
 
 [Acesse o dicionario de dados da Análise do MICRODADOS_ED_SUP_IES_2023](data_dictionary/cleaned_dictionary/microdados_cleaned_dictionary.md)
 
 
-### Unificação das bases acima
+#### Unificação das bases acima
 Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas e selecionadas: Análise do Ensino Superior Consolidada e Dados_processados
 
 [Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
