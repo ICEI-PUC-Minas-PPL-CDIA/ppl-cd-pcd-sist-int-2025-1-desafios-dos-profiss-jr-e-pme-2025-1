@@ -1,4 +1,4 @@
-### ***Distribuição de genêro dos profissionais de dados**
+### **Distribuição de genêro dos profissionais de dados**
 
 
 ![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
