@@ -1,67 +1,64 @@
-### *DISTRIBUICAO_GN_PROFICIONAIS*
+### ***Distribuição de genêro dos profissionais de dados**
 
 
 ![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
 
-### *DISTRIBUICAO_DATA_ROLES_EXPERIENCE*
+### **Distribuição data roles por nivel de experiência**
 
 
 ![image](https://github.com/user-attachments/assets/e6d193c8-eeb0-47f4-b859-319f65ecc74c)
 
-### *VARIACAO_SALARIAL*
+### **Variação Salarial X Experiência/Cargo**
 
 
 ![image](https://github.com/user-attachments/assets/5272c5ba-d6e5-4044-b7b2-1e042bf18569)
 
-### *VARIACAO_CARGO_EXPERIENCIA*
-
-
 ![image](https://github.com/user-attachments/assets/d8f3c8e9-a968-444e-a40a-1125eef2c758)
 
-### *DISTRIBUICAO_SALARIO_PROFISSIONAIS_DE_DADOS*
+### **Distribuição Salarial**
 
 
 ![image](https://github.com/user-attachments/assets/309ee464-8512-49f8-937f-31f32170932d)
 
 
-### *ADOCAO_IA-GENERATIVA_PROFISSIONAIS_DE_DADOS*
+### **Uso de IA por profissionais de dados**
 
 
 ![image](https://github.com/user-attachments/assets/ea3ec284-54e7-4330-aaf1-45b594cb31d3)
 
 
-### *USO_DE_IA_GENERATIVA_NIVEL_EXPERIENCIA*
+### **Uso de IA X Experiência**
 
 
 ![image](https://github.com/user-attachments/assets/2c91693d-e04b-41c3-87eb-0edf69a43b16)
 
 
-### *ADOCAO_IA_GENERATIVA_SETOR_ECONOMICO*
+### **Uso de IA X Setor Econômico**
 
 
 ![image](https://github.com/user-attachments/assets/bc39e1e4-43e4-48af-8068-99f8259bf294)
 
-### **ADOCAO_IA_GENERATIVA_TAMANHO_DA_EMPRESA**
+### **Uso de IA X Tamanho de Empresa**
 
 
 ![image](https://github.com/user-attachments/assets/4469f0c5-27e2-4764-bf24-9c49736276d0)
 
-### *EVOLUCAO_TRABALHO_REMOTO_SETOR_DE_DADOS_2023*
+### **Evolução do Trabalho Remoto e Layoffs no Setor de Dados**
 
 
 ![image](https://github.com/user-attachments/assets/44c9c39b-264d-4007-adbb-f1bb0d31aef1)
 
-### *TRABALHO_REMOTO_VS_LAYOFFS_NIVEL_DE_EXPERIENCIA*
+### **Remoto/Hibrído e Layoffs X Nivel de Experiência**
 
 
 ![image](https://github.com/user-attachments/assets/c26a4e46-5327-43c2-9058-1823777e5875)
 
-### *CORELACAO_ENTRE_VARIAVEIS_NO_MERCADO_DE_DADOS_BR*
+### **Correlação entre Variáveis no Mercado de Dados**
 
 
 ![image](https://github.com/user-attachments/assets/6c819405-839b-4a70-9b47-6c2bad20629d)
 
-### *PRINCIPAIS_DESAFIOS_NA_ADOCAO_IA_GENERATIVA_POR_SEGMENTO*
+### **Desafios na Adoção de IA por Segmento**
 
 
 ![image](https://github.com/user-attachments/assets/2a2432f3-b33b-410e-b2c9-eec8ac80b957)
