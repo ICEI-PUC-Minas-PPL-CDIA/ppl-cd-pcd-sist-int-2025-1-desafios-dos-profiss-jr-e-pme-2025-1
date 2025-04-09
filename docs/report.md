@@ -107,6 +107,7 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
 [**Dicionário de dados - State of Data Brazil 2023**](data_dictionary/state_of_data_dictionary.md)
+
 [**Descrição de dados - State of Data Brazil 2023**](imagens/graficos/graficos_state_of_data.md)
 
 
@@ -117,6 +118,7 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](data_dictionary/microdados_ed_sup_ies_dictionary.md)
+
 [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](imagens/graficos/graficos_microdados.md)
 
 
