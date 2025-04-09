@@ -100,63 +100,35 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 
 ## Análise exploratórida dos dados
 
-###    Dicionário de dados
+##    Dicionário de dados base principal
 
-#### Base principal
-
-##### **State of Data Brazil 2023**
-
+### **State of Data Brazil 2023**
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
 [Acesse o dicionario de dados de State of Data Brazil 2023](data_dictionary/state_of_data_dictionary.md)
 
 
+##    Dicionário de dados bases auxiliares
 
-### **Bases auxiliares** 
-
-##### **Latest_Data_Science_Salaries_Kaggle** 
-
-A base "Latest Data Science Salaries Kaggle" fornece informações sobre salários de profissionais de ciência de dados, incluindo cargos, nível de experiência, tipo de contrato e a localização da empresa. Ela é essencial para entender como variáveis como experiência e especialização influenciam a remuneração, ajudando a identificar desigualdades entre profissionais juniores e sêniores.
-
-[Acesse o dicionario de dados de Latest_Data_Science_Salaries_Kaggle](data_dictionary/latest_data_science_salaries_dictionary.md)
-
-#### **MICRODADOS_ED_SUP_IES_2023** 
+### **MICRODADOS_ED_SUP_IES_2023** 
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
 
-#### **Contributions_to_AI_projects_by_country_and_project_impact**
-A base "Contributions_to_AI_projects_by_country_and_project_impact" reúne dados sobre a participação de diferentes países em projetos de Inteligência Artificial, com foco na fração de contribuição baseada no impacto dos projetos. Ela é crucial para entender a distribuição global dos esforços em IA e o papel de cada país no avanço dessa tecnologia.
 
-[Acesse o dicionario de dados de Contributions_to_AI_projects_by_country_and_project_impactc](data_dictionary/Contributions_to_AI_projects_by_country_and_project_impactc_dictionary.md)
-
-#### **Between-country AI skills migration**
-A base "Between-country AI skills migration" reúne dados sobre a migração de profissionais com habilidades em Inteligência Artificial entre diferentes países. Ela é crucial para entender os fluxos globais de talentos em IA e identificar quais nações estão atraindo ou perdendo especialistas nessa área
-
-[Acesse o dicionario de dados de Between-country AI skills migration](data_dictionary/Between_country_AI_skills_migration_dictionary.md)
-
-###    Descrição de dados
-
-## *MICRODADOS_ED_SUP_IES_2023**
-Análise exploratoria da base MICRODADOS_ED_SUP_IES_2023
-
-[Acesse a análise exploratória da base MICRODADOS_ED_SUP_IES_2023](imagens/graficos/graficos_microdados.md)
-
-## **State of Data Brazil 2023**
-Análise exploratória da base State of Data Brazil 2023
-
-[Acesse a análise exploratória da base State of Data Brazil 2023](imagens/graficos/graficos_state_of_data.md)
-
-#### *Contributions_to_AI_projects_by_country_and_project_impact*
+##    Descrição de dados
 
 
-## **Between-country AI skills migration**
-![download](https://github.com/user-attachments/assets/a3c7f20b-a669-44aa-a481-a07b2162babd)
-![download](https://github.com/user-attachments/assets/3db4a6b8-5711-41ce-a8fe-c9c10765133a)
-![download](https://github.com/user-attachments/assets/6ebc18a0-5cce-4831-9fc8-19d858c46393)
-![download](https://github.com/user-attachments/assets/4ac2589f-e8a6-4fe8-86de-87b90851c8eb)
-![download](https://github.com/user-attachments/assets/79d882bf-f3c5-46ee-9895-f78f8df78b22)
+#### **State of Data Brazil 2023**
+Gráficos da base State of Data Brazil 2023
 
+[Acesse os gráficos da base State of Data Brazil 2023](imagens/graficos/graficos_state_of_data.md)
+
+
+### *MICRODADOS_ED_SUP_IES_2023**
+Gráficos da base MICRODADOS_ED_SUP_IES_2023
+
+[Acesse os gráficos da base MICRODADOS_ED_SUP_IES_2023](imagens/graficos/graficos_microdados.md)
 
 
 ## Preparação dos dados
@@ -180,8 +152,6 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 [Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
 
 [Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos/graficos_bases_unificadas.md)
-
-
 
 
 ## Indução de modelos
