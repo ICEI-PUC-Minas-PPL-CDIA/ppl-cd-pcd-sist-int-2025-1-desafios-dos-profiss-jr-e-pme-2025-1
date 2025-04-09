@@ -120,12 +120,7 @@ A base "Latest Data Science Salaries Kaggle" fornece informações sobre salári
 
 [Acesse o dicionario de dados de Latest_Data_Science_Salaries_Kaggle](data_dictionary/latest_data_science_salaries_dictionary.md)
 
-
-
 #### **MICRODADOS_ED_SUP_IES_2023** 
-
-
-
 A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
 [Acesse o dicionario de dados de MICRODADOS_ED_SUP_IES](data_dictionary/microdados_ed_sup_ies_dictionary.md)
@@ -142,93 +137,15 @@ A base "Between-country AI skills migration" reúne dados sobre a migração de 
 
 ###    Descrição de dados
 
-#### **Latest_Data_Science_Salaries_Kaggle** 
-
-
-
-
 ## *MICRODADOS_ED_SUP_IES_2023**
+Análise exploratoria da base MICRODADOS_ED_SUP_IES_2023
 
-![image](https://github.com/user-attachments/assets/ad5f4a00-ccc9-49d6-8b21-64484b827c5e)
-
-![download](https://github.com/user-attachments/assets/a0f56f8c-37cf-499a-bf11-b22244684dfb)
-
-![download](https://github.com/user-attachments/assets/7ab0041f-75df-47bb-a57b-d092cf9a90cb)
-
-![download](https://github.com/user-attachments/assets/507ac87a-07c5-4693-971d-9c9d5a3b92b8)
-
+[Acesse a análise exploratória da base MICRODADOS_ED_SUP_IES_2023](imagens/graficos/graficos_microdados.md)
 
 ## **State of Data Brazil 2023**
+Análise exploratória da base State of Data Brazil 2023
 
-### *DISTRIBUICAO_GN_PROFICIONAIS*
-
-
-![image](https://github.com/user-attachments/assets/abbe9de6-e4a2-4b08-97b5-fd7792ac636f)
-
-### *DISTRIBUICAO_DATA_ROLES_EXPERIENCE*
-
-
-![image](https://github.com/user-attachments/assets/e6d193c8-eeb0-47f4-b859-319f65ecc74c)
-
-### *VARIACAO_SALARIAL*
-
-
-![image](https://github.com/user-attachments/assets/5272c5ba-d6e5-4044-b7b2-1e042bf18569)
-
-### *VARIACAO_CARGO_EXPERIENCIA*
-
-
-![image](https://github.com/user-attachments/assets/d8f3c8e9-a968-444e-a40a-1125eef2c758)
-
-### *DISTRIBUICAO_SALARIO_PROFISSIONAIS_DE_DADOS*
-
-
-![image](https://github.com/user-attachments/assets/309ee464-8512-49f8-937f-31f32170932d)
-
-
-### *ADOCAO_IA-GENERATIVA_PROFISSIONAIS_DE_DADOS*
-
-
-![image](https://github.com/user-attachments/assets/ea3ec284-54e7-4330-aaf1-45b594cb31d3)
-
-
-### *USO_DE_IA_GENERATIVA_NIVEL_EXPERIENCIA*
-
-
-![image](https://github.com/user-attachments/assets/2c91693d-e04b-41c3-87eb-0edf69a43b16)
-
-
-### *ADOCAO_IA_GENERATIVA_SETOR_ECONOMICO*
-
-
-![image](https://github.com/user-attachments/assets/bc39e1e4-43e4-48af-8068-99f8259bf294)
-
-### **ADOCAO_IA_GENERATIVA_TAMANHO_DA_EMPRESA**
-
-
-![image](https://github.com/user-attachments/assets/4469f0c5-27e2-4764-bf24-9c49736276d0)
-
-### *EVOLUCAO_TRABALHO_REMOTO_SETOR_DE_DADOS_2023*
-
-
-![image](https://github.com/user-attachments/assets/44c9c39b-264d-4007-adbb-f1bb0d31aef1)
-
-### *TRABALHO_REMOTO_VS_LAYOFFS_NIVEL_DE_EXPERIENCIA*
-
-
-![image](https://github.com/user-attachments/assets/c26a4e46-5327-43c2-9058-1823777e5875)
-
-### *CORELACAO_ENTRE_VARIAVEIS_NO_MERCADO_DE_DADOS_BR*
-
-
-![image](https://github.com/user-attachments/assets/6c819405-839b-4a70-9b47-6c2bad20629d)
-
-### *PRINCIPAIS_DESAFIOS_NA_ADOCAO_IA_GENERATIVA_POR_SEGMENTO*
-
-
-![image](https://github.com/user-attachments/assets/2a2432f3-b33b-410e-b2c9-eec8ac80b957)
-
-
+[Acesse a análise exploratória da base State of Data Brazil 2023](imagens/graficos/graficos_state_of_data.md)
 
 #### *Contributions_to_AI_projects_by_country_and_project_impact*
 
@@ -262,7 +179,7 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 [Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
 
-[Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos_bases_unificadas/graficos.md)
+[Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos/graficos_bases_unificadas.md)
 
 
 
