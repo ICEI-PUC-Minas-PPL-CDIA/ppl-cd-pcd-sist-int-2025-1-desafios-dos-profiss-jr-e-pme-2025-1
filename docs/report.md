@@ -48,19 +48,19 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 [7. Público alvo](#Público_alvo)
 
-[8. Análise exploratórida dos dados](Análise_exploratórida_dos_dados)
+[8. Análise exploratórida dos dados](#Análise_exploratórida_dos_dados)
 
-[9. Preparação dosdados](Preparação_dos_dados)
+[9. Preparação dosdados](#Preparação_dos_dados)
 
-[10. Indução de modelos](Indução_de_modelos)
+[10. Indução de modelos](#Indução_de_modelos)
 
-[11. Resultados ](Resultados)
+[11. Resultados ](#Resultados)
 
-[12. Conclusão ](Conclusão)
+[12. Conclusão ](#Conclusão)
 
-[13. Referências ](REFERÊNCIAS)
+[13. Referências ](#REFERÊNCIAS)
 
-[14. Apêndices](APÊNDICES)
+[14. Apêndices](#APÊNDICES)
 
 
 
