@@ -33,7 +33,8 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 
 *******
-##      <h3 align="center"><strong> SUMARIO </strong></h3>
+   <h3 align="center"><strong> SUMARIO </strong></h3>
+   
 [1. Introdução](#Introdução)   
 
 [2. Contextualização](#Contextualização)
@@ -67,14 +68,14 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 *******
 <div id='Introdução'/>  
 
-##  <h3 align="center"><strong> Introdução </strong></h3>
+ <h3 align="center"><strong> ## Introdução </strong></h3>
 
 A Inteligência Artificial Generativa transformou profundamente diversos setores, impulsionando a automação e a inovação na criação de conteúdo. Modelos avançados, como os Large Language Models (LLMs), vêm sendo incorporados ao cotidiano de empresas e profissionais, ampliando possibilidades e redefinindo o uso de dados no mercado de tecnologia. No entanto, apesar do avanço dessas soluções, sua adoção ainda enfrenta barreiras significativas, especialmente para profissionais juniores e microempresas no Brasil.
 
 
 <div id='Contextualização'/>  
 
-##      <h3 align="center"><strong> Contextualização </strong></h3>
+   <h3 align="center"><strong> Contextualização </strong></h3>
 
 A Inteligência Artificial (IA) tem se tornado uma das tecnologias mais disruptivas da atualidade, impactando setores como saúde, finanças, indústria e educação. Dentro desse campo, a Inteligência Artificial Generativa (IA Generativa) destaca-se pela capacidade de criar conteúdos inéditos, como textos, imagens, códigos e até modelos preditivos. Ferramentas baseadas em Large Language Models (LLMs), como os ChatBots, vêm sendo amplamente adotadas por empresas para otimizar processos, melhorar a comunicação e impulsionar a inovação.
 
@@ -90,12 +91,12 @@ A pesquisa foi realizada entre 16 de outubro de 2023 e 6 de dezembro de 2023 atr
 
 
 <div id='Problema'/>  
-##    <h3 align="center"><strong>  Problema </strong></h3>
+  <h3 align="center"><strong>  Problema </strong></h3>
 
 As dificuldades de acesso e implementação de tecnologias de IA Generativa por profissionais juniores e microempresas no Brasil, devido a barreiras financeiras, estruturais e à exigência de experiência prévia no mercado. Esse problema destaca como a falta de recursos e a exigência de qualificação avançada dificultam a adoção dessas tecnologias por grupos com menos capital e experiência, limitando sua competitividade e crescimento no setor de Inteligência Artificial.
 
 <div id='Pergunta_Direcionada_a_Dados'/>  
-##    <h3 align="center"><strong>  Pergunta Direcionada a Dados  </strong></h3> 
+    <h3 align="center"><strong>  Pergunta Direcionada a Dados  </strong></h3> 
 
 * Quais são as principais satisfações dos profissionais boas ou rins? 
 * Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? 
@@ -104,7 +105,7 @@ As dificuldades de acesso e implementação de tecnologias de IA Generativa por 
 * Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? 
 
 <div id='Objetivos'/>  
-##    <h3 align="center"><strong> Objetivo geral  </strong></h3> 
+   <h3 align="center"><strong> Objetivo geral  </strong></h3> 
 
  Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos
 
@@ -115,7 +116,7 @@ Investigar os fatores que influenciam a valorização profissional na área, com
 
 
 <div id='Justificativas'/>  
-##     <h3 align="center"><strong> Justificativas  </strong></h3> 
+   <h3 align="center"><strong> Justificativas  </strong></h3> 
  A IA Generativa não é apenas uma tendência – é uma revolução que está transformando a forma como empresas inovam, automatizam processos e se destacam no mercado. No entanto, o acesso a essa tecnologia de ponta ainda é restrito para dois grupos com enorme potencial de crescimento: profissionais juniores e microempresas.
  Por isso, desenvolvemos uma Inteligência Artificial exclusiva projetada para quebrar essas barreiras e tornar a IA Generativa acessível a todos. Imagine um sistema que capacita profissionais em início de carreira com ferramentas avançadas, permitindo que eles se destaquem no mercado de trabalho, e que oferece a microempresas soluções inteligentes para automatizar processos, reduzir custos e competir de igual para igual com grandes corporações.
  Com essa IA inovadora, facilitamos o acesso a tecnologias de ponta, impulsionamos a competitividade de pequenos negócios e abrimos novas oportunidades para talentos emergentes. Estamos criando um futuro mais inclusivo, eficiente e preparado para os desafios da transformação digital no Brasil.
@@ -123,7 +124,7 @@ Investigar os fatores que influenciam a valorização profissional na área, com
 
 
 <div id='Público_alvo'/>  
-##     <h3 align="center"><strong>  Público alvo   </strong></h3> 
+    <h3 align="center"><strong>  Público alvo   </strong></h3> 
 A aplicação será utilizada principalmente por dois perfis principais: profissionais juniores da área de tecnologia e inteligência artificial e microempresas que trabalham com dados e tecnologias e buscam adotar IA Generativa.
 
 * Profissionais Juniores em IA e Tecnologia:
@@ -139,7 +140,7 @@ Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplica
 Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
 
 <div id='Análise_exploratórida_dos_dados'/>  
-  # <h3 align="center"><strong>  Análise exploratórida dos dados  </strong></h3>
+  <h3 align="center"><strong>  Análise exploratórida dos dados  </strong></h3>
   
 ---
 
@@ -161,7 +162,7 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 
 <div id='Preparação_dos_dados'/>  
-## <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
+ <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
 
 ---
 
@@ -186,7 +187,7 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 ---
 <div id='Indução_de_modelos'/>  
-##  <h3 align="center"><strong> Indução de modelos  </strong></h3> 
+ <h3 align="center"><strong> Indução de modelos  </strong></h3> 
 
 
 ### Modelo 1: Algoritmo
@@ -204,7 +205,7 @@ Repita os passos anteriores para o segundo modelo.
 
 
 <div id='Resultados'/>  
-##  <h3 align="center"><strong> Resultados  </strong></h3> 
+<h3 align="center"><strong> Resultados  </strong></h3> 
 
 ### Resultados obtidos com o modelo 1.
 
@@ -243,7 +244,7 @@ Tende criar um pacote de distribuição para o modelo construído, para ser apli
 em um sistema inteligente.
 
 <div id='Conclusão'/>  
-## 	 <h3 align="center"><strong> 8. Conclusão  </strong></h3> 
+	 <h3 align="center"><strong> Conclusão  </strong></h3> 
 
 Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, 
 onde se verifica as observações pessoais de cada aluno.
@@ -255,7 +256,7 @@ Uma conclusão deve ter 3 partes:
 	 * Limitações e possibilidades de melhoria
 
 <div id='REFERÊNCIAS'/>  
-#   <h3 align="center"><strong> REFERÊNCIAS   </strong></h3> 
+   <h3 align="center"><strong> REFERÊNCIAS   </strong></h3> 
 
 
 *[1]* Kaggle: State of  Data Brazil-2023, o mapeamento mais completo do mercado brasileiro de dados [Data Hackers + Bain]. Disponível em: https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023/data. Acesso em: 01 mar. 2025.
@@ -270,7 +271,7 @@ Uma conclusão deve ter 3 partes:
 
 
 <div id='APÊNDICES'/>  
-#  <h3 align="center"><strong> APÊNDICES  </strong></h3> 
+ <h3 align="center"><strong> APÊNDICES  </strong></h3> 
 
 **Colocar link:**
 
