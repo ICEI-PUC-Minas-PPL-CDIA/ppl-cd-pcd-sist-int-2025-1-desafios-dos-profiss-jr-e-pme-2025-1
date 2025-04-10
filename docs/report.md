@@ -31,7 +31,7 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 _**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
 mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
----
+
 *******
 ##      <h3 align="center"><strong> SUMARIO </strong></h3>
 [1. Introdução](#Introdução)   
