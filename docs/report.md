@@ -50,6 +50,20 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 [8. Análise exploratórida dos dados](Análise_exploratórida_dos_dados)
 
+[9. Preparação dosdados](Preparação_dos_dados)
+
+[10. Indução de modelos](Indução_de_modelos)
+
+[11. Resultados ](Resultados)
+
+[12. Conclusão ](Conclusão)
+
+[13. Referências ](REFERÊNCIAS)
+
+[14. Apêndices](APÊNDICES)
+
+
+
 *******
 <div id='Introdução'/>  
 
@@ -124,7 +138,7 @@ Pequenos empreendedores e startups que desejam incorporar IA Generativa
 Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplicativo
 Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
 
-<div id='Análise_exploratórida_dos_dados '/>  
+<div id='Análise_exploratórida_dos_dados'/>  
   # <h3 align="center"><strong>  Análise exploratórida dos dados  </strong></h3>
   
 ---
