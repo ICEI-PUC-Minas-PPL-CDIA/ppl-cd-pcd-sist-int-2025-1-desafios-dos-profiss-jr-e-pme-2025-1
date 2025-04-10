@@ -68,7 +68,7 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 *******
 <div id='Introdução'/>  
 
- <h3 align="center"><strong> ## Introdução </strong></h3>
+ <h3 align="center"><strong> Introdução </strong></h3>
 
 A Inteligência Artificial Generativa transformou profundamente diversos setores, impulsionando a automação e a inovação na criação de conteúdo. Modelos avançados, como os Large Language Models (LLMs), vêm sendo incorporados ao cotidiano de empresas e profissionais, ampliando possibilidades e redefinindo o uso de dados no mercado de tecnologia. No entanto, apesar do avanço dessas soluções, sua adoção ainda enfrenta barreiras significativas, especialmente para profissionais juniores e microempresas no Brasil.
 
