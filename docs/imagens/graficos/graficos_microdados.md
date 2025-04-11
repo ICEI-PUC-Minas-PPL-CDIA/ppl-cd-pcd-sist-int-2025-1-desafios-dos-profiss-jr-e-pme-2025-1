@@ -1,4 +1,4 @@
-#  Analise Exploratóriad da base de dados Microdados do Censo da Educação Superior 2023
+#  Analise Exploratória da base de dados Microdados do Censo da Educação Superior 2023
 
 ### <h3 align="center"><strong>Descrição dos Gráficos</strong></h3>
 Os gráficos a seguir foram produzidos a partir dos microdados do ensino superior no Brasil e trazem insights sobre a distribuição institucional, qualificação docente e infraestrutura acadêmica:
