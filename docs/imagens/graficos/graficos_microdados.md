@@ -3,7 +3,7 @@
 ### <h3 align="center"><strong>Descrição dos Gráficos</strong></h3>
 Os gráficos a seguir foram produzidos a partir dos microdados do ensino superior no Brasil e trazem insights sobre a distribuição institucional, qualificação docente e infraestrutura acadêmica:
 
-[Codigo em Python](base_auxiliar/Analise_Exploratoria_de_Dados_do_MEC.md)
+[Codigo em Python](/src/AnaliseExploratoriaDeDadosCodigo/base_auxiliar/Analise_Exploratoria_de_Dados_do_MEC.md)
 
 ## **IES por Região**
 
