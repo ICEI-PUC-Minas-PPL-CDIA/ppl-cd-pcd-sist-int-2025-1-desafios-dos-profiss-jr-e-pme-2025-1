@@ -4,7 +4,8 @@
 ###     **Descrição dos Gráficos**
 
   Os gráficos a seguir trazem uma visão abrangente sobre o cenário dos profissionais de dados no Brasil, com base na pesquisa *State of Data Brasil 2023*. A análise cobre desde perfis demográficos até uso de tecnologias emergentes e transformações no ambiente de trabalho:
-[Codigo Python](base_principal/Explicação_Analise_Exploratoria_de_dados_State_of_base_Brazil_2023.md)
+  
+[Codigo Python](/src/AnaliseExploratoriaDeDadosCodigo/base_principal/Explicação_Analise_Exploratoria_de_dados_State_of_base_Brazil_2023.md)
 
 ## **Distribuição de genêro dos profissionais de dados**
 
