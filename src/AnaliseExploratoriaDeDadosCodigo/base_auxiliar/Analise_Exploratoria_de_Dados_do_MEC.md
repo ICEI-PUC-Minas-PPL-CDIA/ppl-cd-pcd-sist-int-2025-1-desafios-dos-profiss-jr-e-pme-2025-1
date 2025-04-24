@@ -2,9 +2,9 @@
 
 # 📊 Análise Exploratória de Dados do MEC (2023)
 
-Este script em Python realiza uma análise exploratória utilizando os microdados de Instituições de Ensino Superior (IES) fornecidos pelo MEC. Os dados são extraídos, processados e visualizados por meio de gráficos.
+Este script em Python realiza uma análise exploratória utilizando os microdados de Instituições de Ensino Superior (IES) fornecidos pelo MEC. Os dados são extraídos, processados e visualizados por meio de gráficos:
 
-[Codigo Python](base_auxiliar/Analise_Exploratoria_de_Dados_Microdados.ipynb)
+[Codigo Python](/src/AnaliseExploratoriaDeDadosCodigo/base_auxiliar/Analise_Exploratoria_de_Dados_Microdados.ipynb)
 
 ## 🧩 1. Importação de Bibliotecas
 
