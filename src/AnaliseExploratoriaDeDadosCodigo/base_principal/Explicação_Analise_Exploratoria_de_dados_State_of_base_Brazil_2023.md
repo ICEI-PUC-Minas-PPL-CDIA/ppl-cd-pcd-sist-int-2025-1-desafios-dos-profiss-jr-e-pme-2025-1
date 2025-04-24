@@ -4,7 +4,7 @@
 
 A seguir, realizamos uma análise exploratória dos dados da pesquisa, abordando informações demográficas, profissionais e o uso de IA generativa no mercado de dados.
 
-[Codigo Python](base_principal/Analise_Exploratoria_de_Dados_State_of_Data.ipynb)
+[Codigo Python](/src/AnaliseExploratoriaDeDadosCodigo/base_principal/Analise_Exploratoria_de_Dados_State_of_Data.ipynb)
 
 ---
 
