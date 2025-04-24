@@ -1,82 +1,120 @@
 
 
-# 📊 Análise de Microdados do Ensino Superior 2023
+# 🧼 Explicação Limpeza de Dados – MICRODADOS (State of Data Brasil 2023)
 
-Esta análise utiliza dados abertos do ensino superior no Brasil para explorar aspectos como qualificação docente, acesso a tecnologia e estrutura das instituições. O processo é dividido em duas partes: uma análise automatizada com exportação em Excel e uma análise exploratória interativa com gráficos.
+Este notebook trata da **limpeza, padronização e preparação dos microdados** da pesquisa *State of Data Brasil 2023*. O foco está em garantir que os dados estejam prontos para análises refinadas, especialmente voltadas para recortes demográficos, socioeconômicos e regionais.
+
+[Codigo Python](LimpezaMICRODADOS.ipynb)
 
 ---
 
-## ✅ **Parte 1: Análise Consolidada e Exportação para Excel**
+## 📦 1. Bibliotecas Importadas
 
 ```python
-Arquivo: Analise_Ensino_Superior_Consolidada.py
+import pandas as pd
+import numpy as np
 ```
 
-### 🔍 Objetivo
-
-Automatizar o processamento dos microdados do ensino superior, gerar análises estatísticas e exportar os resultados (inclusive gráficos) para um arquivo Excel organizado por abas.
-
-### 🧩 Etapas do Processo
-
-- **Importação de bibliotecas**: uso de `pandas`, `numpy`, `matplotlib`, `seaborn` e `xlsxwriter`.
-- **Carregamento e limpeza dos dados**:
-  - Leitura do arquivo CSV com separador `;` e codificação `latin-1`.
-  - Conversão de colunas numéricas e remoção de *outliers* usando o método do Z-score.
-- **Análises realizadas**:
-  - Estatísticas descritivas.
-  - Acesso tecnológico por estado (Portal CAPES, repositório institucional, internet).
-  - Qualificação docente por estado (proporção de mestres e doutores).
-  - Comparações por tipo de instituição (privada/pública).
-  - Matriz de correlação entre variáveis quantitativas.
-  - Identificação das 10 IES com maior número de doutores.
-- **Exportação**: todos os resultados são salvos em abas no Excel, junto com gráficos gerados e inseridos como imagens nas planilhas.
+Bibliotecas essenciais para:
+- Manipulação de dados tabulares (`pandas`)
+- Operações matemáticas e de array (`numpy`)
 
 ---
 
-## 🔎 **Parte 2: Análise Exploratória Interativa**
+## 📥 2. Carregando os Dados
 
 ```python
-Arquivo: Analise_Exploratoria_IES.py
+df_microdados = pd.read_csv('MICRODADOS.csv')
 ```
 
-### 🎯 Objetivo
-
-Realizar uma análise interativa e visual dos microdados para investigar padrões em categorias administrativas, acesso a tecnologia e qualificação docente.
-
-### 📌 Componentes da Análise
-
-#### 1. **Carregamento e Limpeza**
-
-- Seleção de colunas-chave relacionadas à infraestrutura e pessoal docente.
-- Conversão de colunas para valores numéricos e limpeza de outliers via Z-score.
-
-#### 2. **Análise Descritiva**
-
-- Geração de estatísticas básicas (`describe()`).
-- Matriz de correlação entre variáveis quantitativas com `seaborn.heatmap`.
-
-#### 3. **Análise por Categoria Administrativa**
-
-- Agrupamento das instituições por tipo (ex: públicas, privadas).
-- Cálculo da média de doutores e mestres por grupo.
-- Visualização comparativa com gráfico de barras.
-
-#### 4. **Acesso a Recursos Tecnológicos**
-
-- Cálculo da proporção de instituições com acesso a:
-  - Portal de Periódicos CAPES.
-  - Repositório institucional.
-  - Serviço de internet.
-- Visualização de dispersão para verificar relação entre número de periódicos e número de doutores, colorido por tipo de instituição.
+Importa o arquivo contendo os microdados da pesquisa.
 
 ---
 
-## 🧠 Conclusões e Aplicações
+## 👀 3. Primeira Visão Geral
 
-Este código serve como base para **diagnósticos educacionais** e **análises institucionais**, sendo útil para:
+```python
+df_microdados.head()
+```
 
-- Órgãos públicos e reguladores da educação.
-- Pesquisadores interessados em infraestrutura e qualificação docente.
-- Análises comparativas entre instituições e estados.
+Mostra os primeiros registros do dataset, ajudando a identificar colunas, tipos de dados e possíveis ruídos.
+
+---
+
+## 🧾 4. Listando as Colunas
+
+```python
+df_microdados.columns
+```
+
+Lista todas as colunas presentes no dataset. Útil para identificar variáveis que:
+- Precisam ser renomeadas
+- Devem ser removidas
+- Contêm dados repetitivos ou não padronizados
+
+---
+
+## 🧹 5. Limpeza e Redução
+
+```python
+df_microdados = df_microdados.drop(columns=[...])
+```
+
+Remove colunas irrelevantes ou redundantes. Isso:
+- Reduz o ruído
+- Facilita a análise posterior
+- Elimina dados não essenciais (ex: colunas de timestamp ou ID que não serão usadas)
+
+---
+
+## 🔁 6. Renomeando Colunas com Dicionário
+
+```python
+dic_renomear = {...}
+df_microdados = df_microdados.rename(columns=dic_renomear)
+```
+
+Aplica um dicionário de renomeação para tornar os nomes das colunas mais legíveis e padronizados:
+- `'Qual sua idade?'` → `'idade'`
+- `'Você se considera uma pessoa negra?'` → `'identidade_etnica'`
+
+---
+
+## 🧠 7. Padronizações de Conteúdo
+
+Essa etapa realiza:
+- Normalização de texto (minúsculas, remoção de espaços, acentos)
+- Agrupamento de respostas similares
+- Substituição de categorias incoerentes por valores válidos
+
+---
+
+## 🔢 8. Conversões e Filtros Numéricos
+
+```python
+df_microdados['idade'] = pd.to_numeric(df_microdados['idade'], errors='coerce')
+```
+
+Converte campos como `'idade'` para tipos numéricos, eliminando registros inválidos ou não numéricos.
+
+---
+
+## 🕳️ 9. Tratamento de Nulos
+
+```python
+df_microdados = df_microdados.dropna(subset=['idade', 'genero'])
+```
+
+Remove linhas com valores ausentes em colunas-chave, como idade e gênero. Isso garante que as análises estatísticas e segmentações sejam mais confiáveis.
+
+---
+
+## 🧾 10. Salvando Dataset Limpo
+
+```python
+df_microdados.to_csv('data/df_microdados_limpo.csv', index=False)
+```
+
+Salva o dataset tratado, já pronto para análises demográficas, segmentações e visualizações.
 
 ---
