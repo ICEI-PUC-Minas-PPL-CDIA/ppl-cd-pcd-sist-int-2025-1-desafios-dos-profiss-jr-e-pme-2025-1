@@ -1,4 +1,9 @@
-####**MICRODADOS_ED_SUP_IES_2023**####
+# 🧾Dicinário de Dados - MICRODADOS_ED_SUP_IES_2023
+
+---
+ A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa
+
+ ---
 
 
 | N  | Nome da Variável                      | Descrição                                                                                               | Tipo de Dado              | Tam. |
