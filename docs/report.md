@@ -163,11 +163,12 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 <div id='Preparação_dos_dados'/>  
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
-	
-O código realiza a limpeza dos microdados removendo colunas irrelevantes, renomeando variáveis e padronizando categorias. Também trata valores nulos e converte tipos de dados para análises consistentes. Por fim, exporta o dataset limpo para uso posterior.
 ---
 
+	
+O código realiza a limpeza dos microdados removendo colunas irrelevantes, renomeando variáveis e padronizando categorias. Também trata valores nulos e converte tipos de dados para análises consistentes. Por fim, exporta o dataset limpo para uso posterior.
 ## Dados Processados State of Data 2023
+
 Limpeza e Seleção de dados da base State of Data Brazil 2023, este notebook é responsável por realizar a limpeza, tratamento e pré-processamento dos dados brutos da pesquisa, preparando o dataset para análises exploratórias e estatísticas. 
 
 [Acesse o dicionario de dados do State of Data](data_dictionary/cleaned_dictionary/state_of_data_cleaned_dictionary.md)
