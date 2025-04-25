@@ -2,7 +2,7 @@
 
 # 🧼 Explicação Limpeza de Dados – MICRODADOS (State of Data Brasil 2023)
 
-Este notebook trata da **limpeza, padronização e preparação dos microdados** da pesquisa *State of Data Brasil 2023*. O foco está em garantir que os dados estejam prontos para análises refinadas, especialmente voltadas para recortes demográficos, socioeconômicos e regionais.
+Este notebook trata da **limpeza, padronização e preparação dos microdados** da pesquisa . O foco está em garantir que os dados estejam prontos para análises refinadas, especialmente voltadas para recortes demográficos, socioeconômicos e regionais.
 
 [Codigo Python](LimpezaMICRODADOS.ipynb)
 
