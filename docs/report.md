@@ -1,6 +1,6 @@
-# Desafios para profissionais juniores e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
+# Desafios Para Profissionais Juniores e Microempresas no Uso de Dados e Tecnologia, IA Generativa e LLM’S.
 
-
+---
 
 **Caio César de Oliveira, caio.oliveira.1551586@sga.pucminas.br**
 
@@ -14,11 +14,11 @@
 
 ---
 
-Professores:
+**Professores:**
 
-**Prof. Hugo Bastos de Paula**
+* **Prof. Hugo Bastos de Paula**
 
-**Prof. Hayala Nepomuceno Curto**
+* **Prof. Hayala Nepomuceno Curto**
 
 ---
 
