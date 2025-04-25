@@ -236,9 +236,56 @@ Algoritimo:
 https://colab.research.google.com/drive/1o3ae7j4HLnpyMIZUEGdzZrH_oGm2-c1-?usp=sharing
 
 
-### Modelo 2: Algoritmo
+### Modelo 2: Random Forest.
 
-Repita os passos anteriores para o segundo modelo.
+Pergunta 2: Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?
+
+**Justificativa do Modelo**
+Objetivo: Identificar as habilidades técnicas (e.g., linguagens de programação, ferramentas de dados) e conhecimentos acadêmicos (e.g., nível de ensino, qualidade da instituição) mais associados a profissionais que trabalham com IA Generativa, usando a coluna nivel_ia como indicador.
+
+**Tipo de Problema**: 
+Classificação supervisionada para prever o nível de adoção de IA (nivel_ia) e análise de correlação para identificar habilidades valorizadas.
+
+**Modelo Escolhido**:
+Random Forest: Para prever nivel_ia com base em variáveis como sql, python, powerbi, nivel_ensino, e indicadores da segunda tabela (e.g., QT_DOC_EX_DOUT). Random Forest é robusto para dados com muitas variáveis categóricas e lida bem com desbalanceamento.
+Análise de Correlação: Para identificar quais habilidades (colunas binárias como python, aws) estão mais correlacionadas com altos níveis de adoção de IA.
+
+**Motivo da Escolha**:
+Random Forest combina várias árvores de decisão, reduzindo overfitting e fornecendo uma boa estimativa da importância das features.
+A análise de correlação complementa o modelo ao destacar relações diretas entre habilidades e IA.
+
+##Algoritmo
+
+**Pré-processamento**:
+Carregar e limpar os dados de ambas as tabelas.
+Tratar valores ausentes em nivel_ia e variáveis de habilidades.
+Codificar nivel_ia como variável ordinal (e.g., Baixa adoção=0, IA em produtos=1, Outros=2).
+Cruzar estado com SG_UF_IES para adicionar QT_DOC_EX_DOUT e IN_ACESSO_PORTAL_CAPES.
+
+**Modelo de Random Forest:
+Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
+Treinar um Random Forest com 100 árvores e profundidade máxima limitada.
+Avaliar com acurácia, precisão, recall e F1-score.
+Extrair a importância das features para identificar as habilidades mais valorizadas.
+Análise de Correlação:
+Calcular a correlação de Spearman entre variáveis binárias de habilidades (e.g., python, sql) e nivel_ia.
+
+**Visualização:
+Gráfico de importância das features do Random Forest.
+Heatmap de correlações entre habilidades e nivel_ia.
+
+##Amostragem
+Particionamento: 80% treino, 20% teste, com estratificação para nivel_ia.
+Validação Cruzada: 5-fold cross-validation.
+Tamanho da Amostra: 50 linhas da primeira tabela, filtrando apenas aquelas com nivel_ia preenchido.
+Parâmetros
+Random Forest:
+n_estimators: 100 (número de árvores).
+max_depth: 10 (limita complexidade).
+min_samples_split: 5.
+Algoritimo: 
+
+https://colab.research.google.com/drive/1vJvZWGknyxJrk46pxd3-GOqGuEL0Nt8o?usp=sharing
 
 
 <div id='Resultados'/>  
