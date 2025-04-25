@@ -194,12 +194,38 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 ### Modelo 1: Algoritmo
 
-Substitua o título pelo nome do algoritmo que será utilizado. P. ex. árvore de decisão, rede neural, SVM, etc.
-Justifique a escolha do modelo.
-Apresente o processo utilizado para amostragem de dados (particionamento, cross-validation).
-Descreva os parâmetros utilizados. 
-Apresente trechos do código utilizado comentados. Se utilizou alguma ferramenta gráfica, apresente imagens
-com o fluxo de processamento.
+Pergunta 1: Quais são as principais satisfações dos profissionais (boas ou ruins)?
+Justificativa do Modelo
+Objetivo: Identificar os fatores que influenciam a satisfação dos profissionais (positiva ou negativa) com base nos dados da tabela dados_processados.csv, que contém variáveis como satisfacao_binaria, motivo_insatisfacao, salario_medio, exp_dados_num, modelo_trabalho, entre outras.
+Tipo de Problema: Análise exploratória com elementos de classificação supervisionada (para prever satisfação) e análise de texto (para entender motivos de insatisfação).
+Modelo Escolhido:
+Árvore de Decisão: Para identificar as variáveis mais importantes que influenciam a satisfação (satisfacao_binaria). Árvores de decisão são interpretáveis, ideais para entender quais fatores (como salário, experiência, modelo de trabalho) têm maior impacto na satisfação.
+Análise de Texto (Processamento de Linguagem Natural - PLN): Para processar a coluna motivo_insatisfacao e extrair os principais temas ou palavras-chave associados à insatisfação, usando técnicas como contagem de palavras ou TF-IDF.
+Motivo da Escolha:
+A árvore de decisão é robusta para dados categóricos e numéricos, como os presentes na tabela, e fornece uma visão clara da importância das features.
+A análise de texto é necessária para explorar os motivos qualitativos de insatisfação, complementando a análise quantitativa.
+Algoritmo
+Pré-processamento:
+Carregar e limpar os dados de dados_processados.csv.
+Tratar valores ausentes (preencher ou remover linhas com dados críticos ausentes, como satisfacao_binaria).
+Codificar variáveis categóricas (e.g., genero, modelo_trabalho) usando One-Hot Encoding.
+Normalizar variáveis numéricas como salario_medio e exp_dados_num.
+Cruzar estado com SG_UF_IES para adicionar indicadores como %_Doutores da segunda tabela.
+Modelo de Árvore de Decisão:
+Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
+Treinar uma árvore de decisão com profundidade máxima limitada (e.g., max_depth=5) para evitar overfitting.
+Avaliar o modelo com métricas como acurácia, precisão, recall e F1-score.
+Extrair a importância das features para identificar os principais fatores de satisfação.
+Análise de Texto:
+Processar a coluna motivo_insatisfacao usando a biblioteca NLTK ou scikit-learn.
+Aplicar tokenização, remoção de stop words e vetorização (TF-IDF).
+Identificar as palavras ou frases mais frequentes associadas à insatisfação.
+Visualização:
+Gráfico de importância das features da árvore de decisão.
+Nuvem de palavras para os motivos de insatisfação.
+Algoritimo: 
+https://colab.research.google.com/drive/1o3ae7j4HLnpyMIZUEGdzZrH_oGm2-c1-?usp=sharing
+
 
 ### Modelo 2: Algoritmo
 
