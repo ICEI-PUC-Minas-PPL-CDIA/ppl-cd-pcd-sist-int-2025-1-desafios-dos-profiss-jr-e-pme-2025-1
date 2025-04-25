@@ -72,6 +72,7 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 A Inteligência Artificial Generativa transformou profundamente diversos setores, impulsionando a automação e a inovação na criação de conteúdo. Modelos avançados, como os Large Language Models (LLMs), vêm sendo incorporados ao cotidiano de empresas e profissionais, ampliando possibilidades e redefinindo o uso de dados no mercado de tecnologia. No entanto, apesar do avanço dessas soluções, sua adoção ainda enfrenta barreiras significativas, especialmente para profissionais juniores e microempresas no Brasil.
 
+---
 
 <div id='Contextualização'/>  
 
@@ -89,12 +90,14 @@ A presente pesquisa é o resultado de um esforço conjunto da Data Hackers, a ma
 
 A pesquisa foi realizada entre 16 de outubro de 2023 e 6 de dezembro de 2023 através de um questionário online e contou com 5.293 respondentes em todo o Brasil, um aumento de 24% em relação ao número de respondentes da última edição. Os dados incluem indicadores relacionados a perfil demográfico, formação, atuação no setor, remuneração, rotatividade e fatores de satisfação no ambiente de trabalho, incluindo o impacto do trabalho remoto e layoffs. Uma novidade dessa edição da pesquisa foram perguntas com a intenção de medir o uso de tecnologias de IA Generativa e LLMs pelas empresas e seus profissionais. A amostra reflete a visão de variados papéis de atuação em empresas, como os de analista de dados, cientista de dados e engenheiro de dados, bem como diferentes perfis de experiência profissional, incluindo analistas júnior, pleno, sênior e gestores.
 
+---
 
 <div id='Problema'/>  
   <h3 align="center"><strong>  Problema </strong></h3>
 
 As dificuldades de acesso e implementação de tecnologias de IA Generativa por profissionais juniores e microempresas no Brasil, devido a barreiras financeiras, estruturais e à exigência de experiência prévia no mercado. Esse problema destaca como a falta de recursos e a exigência de qualificação avançada dificultam a adoção dessas tecnologias por grupos com menos capital e experiência, limitando sua competitividade e crescimento no setor de Inteligência Artificial.
 
+---
 <div id='Pergunta_Direcionada_a_Dados'/>  
     <h3 align="center"><strong>  Pergunta Direcionada a Dados  </strong></h3> 
 
@@ -102,18 +105,23 @@ As dificuldades de acesso e implementação de tecnologias de IA Generativa por 
 * Quais fatores (salário, experiência, ferramentas utilizadas) influenciam essas inserções profissionais no mercado? 
 * As microempresas têm acesso às mesmas tecnologias e recursos que as grandes empresas?
 * Como a adoção da IA Generativa impacta a competitividade das microempresas? 
-* Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa? 
+* Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?
+  
+---
 
 <div id='Objetivos'/>  
    <h3 align="center"><strong> Objetivo geral  </strong></h3> 
 
  Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos
 
+---
+
    <h3 align="center"><strong> Objetivos específicos   </strong></h3> 
 
  Avaliar o impacto da adoção da IA ​​Generativa na competitividade de microempresas.
 Investigar os fatores que influenciam a valorização profissional na área, como experiência, habilidades e acesso a ferramentas.
 
+---
 
 <div id='Justificativas'/>  
    <h3 align="center"><strong> Justificativas  </strong></h3> 
@@ -121,7 +129,7 @@ Investigar os fatores que influenciam a valorização profissional na área, com
  Por isso, desenvolvemos uma Inteligência Artificial exclusiva projetada para quebrar essas barreiras e tornar a IA Generativa acessível a todos. Imagine um sistema que capacita profissionais em início de carreira com ferramentas avançadas, permitindo que eles se destaquem no mercado de trabalho, e que oferece a microempresas soluções inteligentes para automatizar processos, reduzir custos e competir de igual para igual com grandes corporações.
  Com essa IA inovadora, facilitamos o acesso a tecnologias de ponta, impulsionamos a competitividade de pequenos negócios e abrimos novas oportunidades para talentos emergentes. Estamos criando um futuro mais inclusivo, eficiente e preparado para os desafios da transformação digital no Brasil.
 
-
+---
 
 <div id='Público_alvo'/>  
     <h3 align="center"><strong>  Público alvo   </strong></h3> 
@@ -139,10 +147,10 @@ Pequenos empreendedores e startups que desejam incorporar IA Generativa
 Geralmente possuem conhecimento limitado sobre as tecnologias de IA e seu aplicativo
 Enfrentam dificuldades financeiras e estruturais para investir em soluções de IA e capacitação da equipe.
 
+---
 <div id='Análise_exploratórida_dos_dados'/>  
   <h3 align="center"><strong>  Análise exploratórida dos dados  </strong></h3>
-  
----
+
 
 ## Base principal: **State of Data Brazil 2023**
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
@@ -160,10 +168,10 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
 📈 [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](imagens/graficos/graficos_microdados.md)
 
+---
 
 <div id='Preparação_dos_dados'/>  
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
----
 
 	
 O código realiza a limpeza dos microdados removendo colunas irrelevantes, renomeando variáveis e padronizando categorias. Também trata valores nulos e converte tipos de dados para análises consistentes. Por fim, exporta o dataset limpo para uso posterior.
@@ -187,14 +195,17 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 [Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos/graficos_bases_unificadas.md)
 
+
 ---
+
 <div id='Indução_de_modelos'/>  
  <h3 align="center"><strong> Indução de modelos  </strong></h3> 
 
 
-### Modelo 1: Ávore de Decisão.
+## Modelo 1: Ávore de Decisão
 
-Pergunta 1: Quais são as principais satisfações dos profissionais (boas ou ruins)?
+**Pergunta 1: Quais são as principais satisfações dos profissionais (boas ou ruins)?**
+
 
 **Justificativa do Modelo**
 Objetivo: Identificar os fatores que influenciam a satisfação dos profissionais (positiva ou negativa) com base nos dados da tabela dados_processados.csv, que contém variáveis como satisfacao_binaria, motivo_insatisfacao, salario_medio, exp_dados_num, modelo_trabalho, entre outras.
@@ -210,7 +221,7 @@ Análise de Texto (Processamento de Linguagem Natural - PLN): Para processar a c
 A árvore de decisão é robusta para dados categóricos e numéricos, como os presentes na tabela, e fornece uma visão clara da importância das features.
 A análise de texto é necessária para explorar os motivos qualitativos de insatisfação, complementando a análise quantitativa.
 
-##Algoritmo
+### Algoritmo: 
 
 **Pré-processamento**:
 Carregar e limpar os dados de dados_processados.csv.
@@ -232,21 +243,21 @@ Identificar as palavras ou frases mais frequentes associadas à insatisfação.
 Visualização:
 Gráfico de importância das features da árvore de decisão.
 Nuvem de palavras para os motivos de insatisfação.
-Algoritimo: 
-https://colab.research.google.com/drive/1o3ae7j4HLnpyMIZUEGdzZrH_oGm2-c1-?usp=sharing
+
+[Acesse o Algoritimo](/src/PrimeiroModeloPreliminar/Explicação_Codigo_ModeloTeste.md)
 
 
-### Modelo 2: Random Forest.
+## Modelo 2: Random Forest
 
-Pergunta 2: Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?
+**Pergunta 2: Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?**
 
 **Justificativa do Modelo**
 Objetivo: Identificar as habilidades técnicas (e.g., linguagens de programação, ferramentas de dados) e conhecimentos acadêmicos (e.g., nível de ensino, qualidade da instituição) mais associados a profissionais que trabalham com IA Generativa, usando a coluna nivel_ia como indicador.
 
-**Tipo de Problema**: 
+**Tipo de Problema:** 
 Classificação supervisionada para prever o nível de adoção de IA (nivel_ia) e análise de correlação para identificar habilidades valorizadas.
 
-**Modelo Escolhido**:
+**Modelo Escolhido:**
 Random Forest: Para prever nivel_ia com base em variáveis como sql, python, powerbi, nivel_ensino, e indicadores da segunda tabela (e.g., QT_DOC_EX_DOUT). Random Forest é robusto para dados com muitas variáveis categóricas e lida bem com desbalanceamento.
 Análise de Correlação: Para identificar quais habilidades (colunas binárias como python, aws) estão mais correlacionadas com altos níveis de adoção de IA.
 
@@ -254,7 +265,7 @@ Análise de Correlação: Para identificar quais habilidades (colunas binárias 
 Random Forest combina várias árvores de decisão, reduzindo overfitting e fornecendo uma boa estimativa da importância das features.
 A análise de correlação complementa o modelo ao destacar relações diretas entre habilidades e IA.
 
-##Algoritmo
+### Algoritmo
 
 **Pré-processamento**:
 Carregar e limpar os dados de ambas as tabelas.
@@ -262,7 +273,7 @@ Tratar valores ausentes em nivel_ia e variáveis de habilidades.
 Codificar nivel_ia como variável ordinal (e.g., Baixa adoção=0, IA em produtos=1, Outros=2).
 Cruzar estado com SG_UF_IES para adicionar QT_DOC_EX_DOUT e IN_ACESSO_PORTAL_CAPES.
 
-**Modelo de Random Forest:
+**Modelo de Random Forest:**
 Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
 Treinar um Random Forest com 100 árvores e profundidade máxima limitada.
 Avaliar com acurácia, precisão, recall e F1-score.
@@ -270,11 +281,11 @@ Extrair a importância das features para identificar as habilidades mais valoriz
 Análise de Correlação:
 Calcular a correlação de Spearman entre variáveis binárias de habilidades (e.g., python, sql) e nivel_ia.
 
-**Visualização:
+**Visualização:**
 Gráfico de importância das features do Random Forest.
 Heatmap de correlações entre habilidades e nivel_ia.
 
-##Amostragem
+**Amostragem:**
 Particionamento: 80% treino, 20% teste, com estratificação para nivel_ia.
 Validação Cruzada: 5-fold cross-validation.
 Tamanho da Amostra: 50 linhas da primeira tabela, filtrando apenas aquelas com nivel_ia preenchido.
@@ -283,10 +294,10 @@ Random Forest:
 n_estimators: 100 (número de árvores).
 max_depth: 10 (limita complexidade).
 min_samples_split: 5.
-Algoritimo: 
 
-https://colab.research.google.com/drive/1vJvZWGknyxJrk46pxd3-GOqGuEL0Nt8o?usp=sharing
+[Acesse o Algoritimo](/src/PrimeiroModeloPreliminar/Explicação_Codigo_ModeloTeste.md)
 
+--- 
 
 <div id='Resultados'/>  
 <h3 align="center"><strong> Resultados  </strong></h3> 
@@ -339,6 +350,7 @@ Uma conclusão deve ter 3 partes:
 	 * Apresenação geral dos resultados obtidos com discussão das vantagens e desvantagens do sistema inteligente
 	 * Limitações e possibilidades de melhoria
 
+---
 <div id='REFERÊNCIAS'/>  
    <h3 align="center"><strong> REFERÊNCIAS   </strong></h3> 
 
@@ -348,6 +360,7 @@ Uma conclusão deve ter 3 partes:
 *[2]* Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira | Inep: Censo da Educação Superior Microdados do Censo da Educação Superio. Disponível em: (https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior). Acesso em: 13 mar. 2025.
 
 
+---
 
 <div id='APÊNDICES'/>  
  <h3 align="center"><strong> APÊNDICES  </strong></h3> 
