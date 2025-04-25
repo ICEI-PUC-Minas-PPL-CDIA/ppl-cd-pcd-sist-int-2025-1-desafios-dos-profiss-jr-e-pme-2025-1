@@ -9,6 +9,7 @@
 <div id='1pergunta'/> 
   
 # 1.Pergunta:
+[Codigo em Python](/src/PrimeiroModeloPreliminar/Pergunta1.ipynb)
 
 # 📊 Análise de Satisfação com Dados de Ensino Superior e Mercado de Dados
 
@@ -219,6 +220,7 @@ plt.savefig('wordcloud_insatisfacao.png')
 
   
 # 2. Pergunta:
+[Codigo em Python](/src/PrimeiroModeloPreliminar/Pergunta_2.ipynb)
 
 ---
 
