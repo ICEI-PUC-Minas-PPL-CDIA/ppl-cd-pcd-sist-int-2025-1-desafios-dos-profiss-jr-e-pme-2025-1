@@ -1,6 +1,8 @@
-# Dicionário de Dados - Análise do Ensino Superior Consolidada
-
+# 🧾 Dicionário de Dados - Após a limpeza da base MICRODADOS_ED_SUP_IES_2023
+---
 Limpeza e Seleção de dados da base MICRODADOS_ED_SUP_IES_2023
+
+---
 
 | Atributo                      | Tipo de dado               | Descrição                                                                 |
 |-------------------------------|----------------------------|---------------------------------------------------------------------------|
