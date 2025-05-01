@@ -244,7 +244,7 @@ Visualização:
 Gráfico de importância das features da árvore de decisão.
 Nuvem de palavras para os motivos de insatisfação.
 
-[Acesse o Algoritimo](/src/PrimeiroModeloPreliminar/Explicação_Codigo_ModeloTeste.md)
+[Acesse o Algoritimo](/src/PrimeiroModeloCorrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
 
 ## Modelo 2: Random Forest
@@ -295,7 +295,7 @@ n_estimators: 100 (número de árvores).
 max_depth: 10 (limita complexidade).
 min_samples_split: 5.
 
-[Acesse o Algoritimo](/src/PrimeiroModeloPreliminar/Explicação_Codigo_ModeloTeste.md)
+[Acesse o Algoritimo](/src/PrimeiroModeloCorrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
 --- 
 

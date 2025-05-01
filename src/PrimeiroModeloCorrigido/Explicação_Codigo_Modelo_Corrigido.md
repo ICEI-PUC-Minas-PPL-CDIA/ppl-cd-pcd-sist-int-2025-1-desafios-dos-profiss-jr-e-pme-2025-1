@@ -12,7 +12,7 @@
 
 # 1. Modelo de Árvore de Decisão - Satisfação Binária
 
-[Arquivo Python](/src/ModeloArvoreDecisao/arvore_decisao_final.py)
+[Arquivo Python](/src/PrimeiroModeloCorrigido/Pergunta1.ipynb)
 
 ---
 
@@ -277,7 +277,7 @@ plt.show()
 
 # 2. Modelo Random Forest - Nível de IA
 
-[Arquivo Python](/src/ModeloRandomForest/random_forest_final.py)
+[Arquivo Python](/src/PrimeiroModeloCorrigido/Pergunta2.ipynb)
 
 ---
 
