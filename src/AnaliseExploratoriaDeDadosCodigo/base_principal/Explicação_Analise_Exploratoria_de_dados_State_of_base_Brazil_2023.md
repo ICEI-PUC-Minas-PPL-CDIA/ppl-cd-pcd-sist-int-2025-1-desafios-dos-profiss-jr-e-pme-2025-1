@@ -1,6 +1,6 @@
 
 
-# 📊 Análise Exploratória State of Data - Brasil 2023
+#  Análise Exploratória State of Data - Brasil 2023
 
 A seguir, realizamos uma análise exploratória dos dados da pesquisa, abordando informações demográficas, profissionais e o uso de IA generativa no mercado de dados.
 
@@ -8,7 +8,7 @@ A seguir, realizamos uma análise exploratória dos dados da pesquisa, abordando
 
 ---
 
-## 📌 Setup Inicial
+##  Setup Inicial
 
 ```python
 import matplotlib.pyplot as plt
@@ -23,7 +23,7 @@ sns.set(style="whitegrid")
 
 ---
 
-## 🧠 Q1: Distribuição por Faixa Etária
+##  Q1: Distribuição por Faixa Etária
 
 ```python
 idade_series = df_tratado['faixa_idade'].value_counts(normalize=True).sort_values(ascending=False) * 100
@@ -44,7 +44,7 @@ plt.show()
 
 ---
 
-## 👥 Q2: Gênero dos Respondentes
+##  Q2: Gênero dos Respondentes
 
 ```python
 genero_series = df_tratado['genero'].explode().value_counts(normalize=True) * 100
@@ -65,7 +65,7 @@ plt.show()
 
 ---
 
-## 💼 Q3: Cargos Atuais
+##  Q3: Cargos Atuais
 
 ```python
 cargo_series = df_tratado['cargo_atual'].explode().value_counts(normalize=True) * 100
@@ -84,7 +84,7 @@ plt.show()
 
 ---
 
-## 🧭 Q4: Nível de Experiência
+##  Q4: Nível de Experiência
 
 ```python
 experiencia_series = df_tratado['nivel_experiencia'].value_counts(normalize=True).sort_values(ascending=False) * 100
@@ -104,7 +104,7 @@ plt.show()
 
 ---
 
-## 💰 Q5: Faixa Salarial
+##  Q5: Faixa Salarial
 
 ```python
 salario_series = df_tratado['faixa_salarial'].value_counts(normalize=True).sort_values(ascending=False) * 100
@@ -124,7 +124,7 @@ plt.show()
 
 ---
 
-## 🤖 Q6: Acesso à IA Generativa
+##  Q6: Acesso à IA Generativa
 
 ```python
 ia_series = df_tratado['uso_ia_generativa'].value_counts(normalize=True) * 100
@@ -142,7 +142,7 @@ plt.show()
 - **Visualização direta** para entendimento rápido do nível de adoção da tecnologia.
 
 
-## 🎯 Q7: Setores de Atuação
+##  Q7: Setores de Atuação
 
 ```python
 setores_series = df_tratado['setor_empresa'].explode().value_counts(normalize=True) * 100
@@ -162,7 +162,7 @@ plt.show()
 
 ---
 
-## 🎓 Q8: Formação Acadêmica
+##  Q8: Formação Acadêmica
 
 ```python
 formacao_series = df_tratado['nivel_formacao'].value_counts(normalize=True).sort_values(ascending=False) * 100
@@ -182,7 +182,7 @@ plt.show()
 
 ---
 
-## 🧑‍💻 Q9: Ferramentas mais utilizadas
+##  Q9: Ferramentas mais utilizadas
 
 ```python
 ferramentas_series = df_tratado['ferramentas_utilizadas'].explode().value_counts(normalize=True) * 100
@@ -203,7 +203,7 @@ plt.show()
 
 ---
 
-## 🧠 Q10: Habilidades Mais Valorizadas
+##  Q10: Habilidades Mais Valorizadas
 
 ```python
 habilidades_series = df_tratado['habilidades_valorizadas'].explode().value_counts(normalize=True) * 100
@@ -223,7 +223,7 @@ plt.show()
 
 ---
 
-## 🧮 Q11: Linguagens de Programação mais usadas
+##  Q11: Linguagens de Programação mais usadas
 
 ```python
 linguagens_series = df_tratado['linguagens_programacao'].explode().value_counts(normalize=True) * 100
