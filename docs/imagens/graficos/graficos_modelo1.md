@@ -82,8 +82,6 @@ A importância é baseada em quanto cada feature reduziu a impureza em toda a á
 
 Ajuda a responder: “O que mais influencia a satisfação?”
 
- ![download](https://github.com/user-attachments/assets/52ca93a9-b9d4-4668-ad61-700ad385e00a)
-
 
 
 ## Nuvem de Palavras - Motivos de Insatisfação
@@ -103,8 +101,8 @@ Ajuda a responder: “O que mais influencia a satisfação?”
 
 ## Curva de Aprendizado
 **Objetivo: Verificar se o modelo está sofrendo com overfitting ou underfitting.**
-![download](https://github.com/user-attachments/assets/245bd8bd-ef9e-4fab-aeae-3661bdf57161)
 
+ ![download](https://github.com/user-attachments/assets/52ca93a9-b9d4-4668-ad61-700ad385e00a)
 Eixos:
 * X: Tamanho do conjunto de treino.
 * Y: Acurácia média (tanto no treino quanto no teste).
