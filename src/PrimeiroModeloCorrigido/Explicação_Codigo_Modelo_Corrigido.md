@@ -1,4 +1,4 @@
-# 🧠 Explicação dos Códigos Finais: Modelos de Árvore de Decisão e Random Forest
+#  Explicação dos Códigos Finais: Modelos de Árvore de Decisão e Random Forest
 
 ---
 
@@ -12,266 +12,258 @@
 
 # 1. Modelo de Árvore de Decisão - Satisfação Binária
 
-[Arquivo Python](/src/PrimeiroModeloCorrigido/Pergunta1.ipynb)
+---
+
+## OBJETIVO PRINCIPAL DO CÓDIGO
+
+**Responder às perguntas:**
+
+1. Quem tende a estar satisfeito ou insatisfeito no mercado de dados?
+2. Quais variáveis mais influenciam a satisfação?
+3. Quais são os principais motivos de insatisfação?
 
 ---
 
-## 📊 Análise de Satisfação com Dados de Ensino Superior e Mercado de Dados
+## EXPLICAÇÃO POR BLOCO (COM JUSTIFICATIVA)
 
-Este pipeline utiliza uma **Árvore de Decisão** para prever a satisfação binária (`satisfacao_binaria`) de profissionais da área de dados, com base em variáveis como salário, experiência, percentual de doutores, modelo de trabalho e nível de cargo. Inclui análise de texto para motivos de insatisfação e visualizações adicionais para explorar o modelo.
+###  **Bibliotecas utilizadas**
 
----
+Essenciais para cada parte da análise:
 
-## 📦 Importações de Bibliotecas
+* `pandas`, `numpy`: manipulação de dados (DataFrames, cálculos, valores nulos).
+* `sklearn`: tudo relacionado à modelagem (árvore de decisão, validação, pré-processamento, métricas, visualizações).
+* `nltk`, `TfidfVectorizer`, `WordCloud`: análise textual dos motivos de insatisfação.
+* `matplotlib`, `seaborn`, `graphviz`: visualizações para facilitar a interpretação dos resultados.
 
-```python
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split, cross_val_score, learning_curve
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.corpus import stopwords
-import nltk
-import matplotlib.pyplot as plt
-import seaborn as sns
-from wordcloud import WordCloud
-import graphviz
-from sklearn.tree import export_graphviz
-```
-
-### Descrição
-- Bibliotecas como `pandas`, `numpy`, `matplotlib` e `seaborn` são usadas para manipulação e visualização de dados.
-- `scikit-learn` fornece ferramentas de machine learning e avaliação de modelos.
-- `nltk` e `TfidfVectorizer` são usados para processamento de linguagem natural.
-- `WordCloud` cria nuvens de palavras com termos relevantes.
-- `graphviz` visualiza a estrutura da árvore de decisão.
-
----
-
-## 🧠 Preparação de Recursos Linguísticos
+###  **Download de Stopwords**
 
 ```python
 nltk.download('stopwords')
 stop_words = stopwords.words('portuguese')
 ```
 
-- Baixa e define a lista de **palavras irrelevantes (stopwords)** em português para ignorar na análise de texto.
+**Por quê?** Para remover palavras comuns irrelevantes ("de", "para", "com", etc.) da análise textual dos motivos de insatisfação.
 
 ---
 
-## 📥 Carregamento de Dados
+###  **Leitura dos Dados**
 
 ```python
-dados = pd.read_csv('dados_processados.csv')
-ensino = pd.read_excel('Analise_Ensino_Superior_Consolidada.xlsx')
+dados = pd.read_csv(...)
+ensino = pd.read_excel(...)
 ```
 
-- Carrega dois conjuntos de dados:
-  - `dados_processados.csv`: Dados de profissionais (salário, experiência, etc.).
-  - `Analise_Ensino_Superior_Consolidada.xlsx`: Informações sobre instituições de ensino superior (doutores por IES).
+**Por quê?**
+
+* `dados`: informações dos profissionais (salário, experiência, satisfação, etc.).
+* `ensino`: dados externos sobre percentual de doutores por estado, para enriquecer a análise (feature engineering).
 
 ---
 
-## 🔍 Verificar Colunas
+###  **Engenharia de Variáveis**
 
 ```python
-print("Colunas disponíveis em ensino:", ensino.columns.tolist())
+ensino['pct_doutores'] = ...
+estado_doutores = ensino.groupby(...)...
+dados = dados.merge(...)
 ```
 
-- Mostra as colunas do DataFrame `ensino` para inspeção.
+**Por quê?**
+
+* A **presença de doutores na região** foi usada como proxy para medir a **qualidade do ambiente educacional**, que pode influenciar oportunidades e satisfação.
 
 ---
 
-## 🧹 Pré-processamento e Enriquecimento de Dados
+###  **Tratamento de Valores Ausentes**
 
 ```python
-if '%_Doutores' not in ensino.columns:
-    ensino['pct_doutores'] = (ensino['QT_DOC_EX_DOUT'] / ensino['QT_DOC_TOTAL'] * 100).fillna(0)
-else:
-    ensino['pct_doutores'] = ensino['%_Doutores']
-estado_doutores = ensino.groupby('SG_UF_IES')['pct_doutores'].mean().reset_index()
-dados = dados.merge(estado_doutores, left_on='estado', right_on='SG_UF_IES', how='left')
+.fillna(...)
 ```
 
-- Calcula a **porcentagem de doutores** por IES, se não existir, e agrega por estado.
-- Faz o **merge** com `dados` para adicionar `pct_doutores` por estado.
+**Por quê?**
 
-```python
-dados['salario_medio'].fillna(dados['salario_medio'].median(), inplace=True)
-dados['exp_dados_num'].fillna(0, inplace=True)
-dados['motivo_insatisfacao'].fillna('', inplace=True)
-dados['pct_doutores'].fillna(dados['pct_doutores'].median(), inplace=True)
-```
+* Impede que o modelo falhe ao encontrar dados ausentes.
+* Estratégias:
 
-- Substitui valores ausentes com **mediana** (para numéricos), **zero** (experiência) ou **string vazia** (texto).
+  * `salario`: usa a mediana para manter tendência central.
+  * `exp_dados`: assume que ausente significa zero (sem experiência).
+  * `motivo_insatisfacao`: texto vazio para permitir o TF-IDF.
+  * `pct_doutores`: completa com a mediana estadual.
 
 ---
 
-## 🎯 Seleção e Preparação de Variáveis
+###  **Seleção de Variáveis**
 
 ```python
-features = ['salario_medio', 'exp_dados_num', 'pct_doutores', 'modelo_trabalho', 'nivel_cargo']
-X = dados[features]
+features = [...]
 y = dados['satisfacao_binaria']
-X = pd.get_dummies(X, columns=['modelo_trabalho', 'nivel_cargo'], drop_first=True)
-scaler = StandardScaler()
-X[['salario_medio', 'exp_dados_num', 'pct_doutores']] = scaler.fit_transform(X[['salario_medio', 'exp_dados_num', 'pct_doutores']])
 ```
 
-- Define os **features (X)** e o **alvo (y)** para modelagem.
-- Transforma variáveis categóricas (`modelo_trabalho`, `nivel_cargo`) em **variáveis dummies**.
-- Normaliza variáveis numéricas com `StandardScaler`.
+**Por quê?**
+As features foram escolhidas por **teoria e lógica de negócio**:
+
+* `salario_medio`: remuneração impacta satisfação.
+* `exp_dados_num`: mais experiência pode significar mais ou menos satisfação.
+* `pct_doutores`: ambiente educacional local.
+* `modelo_trabalho`: remoto, híbrido, presencial.
+* `nivel_cargo`: nível hierárquico pode influenciar na satisfação.
 
 ---
 
-## 🧪 Divisão de Dados
+###  **Dummies e Padronização**
 
 ```python
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+pd.get_dummies(...), StandardScaler(...)
 ```
 
-- Divide os dados em **80% treino** e **20% teste**, mantendo a proporção de classes com `stratify`.
+**Por quê?**
+
+* Modelos de árvore funcionam melhor com **variáveis categóricas convertidas em binárias**.
+* Padronizar ajuda a manter escala semelhante entre variáveis contínuas (ex: salário vs experiência), embora árvores sejam menos sensíveis a isso.
 
 ---
 
-## 🌳 Treinamento de Modelo
+###  **Separação Treino/Teste**
 
 ```python
-clf = DecisionTreeClassifier(max_depth=5, min_samples_split=5, criterion='gini', random_state=42)
-clf.fit(X_train, y_train)
+train_test_split(..., stratify=y)
 ```
 
-- Treina uma **Árvore de Decisão** com profundidade máxima 5, mínimo de 5 amostras por split e critério Gini.
+**Por quê?**
+
+* Separar para **avaliar o desempenho real do modelo**.
+* `stratify`: mantém a proporção original de satisfeitos e insatisfeitos (classes balanceadas).
 
 ---
 
-## 📈 Avaliação do Modelo
+###  **Criação do Modelo de Árvore**
 
 ```python
-y_pred = clf.predict(X_test)
-print("\nRelatório de Classificação:\n", classification_report(y_test, y_pred))
-scores = cross_val_score(clf, X, y, cv=5)
-print("Acurácia média (validação cruzada):", scores.mean())
+DecisionTreeClassifier(...)
 ```
 
-- Gera um **relatório de classificação** com precisão, recall e F1-score.
-- Realiza **validação cruzada** (5 folds) para calcular a acurácia média.
+**Por quê?**
+
+* Árvore de decisão é **intuitiva e explicável**.
+* `max_depth=5`: evita overfitting (modelo muito complexo).
+* `min_samples_split=5`: evita divisões instáveis com poucos dados.
+* `gini`: critério padrão de impureza.
 
 ---
 
-## 🔍 Visualizações e Análises
-
-### Visualização da Árvore
+###  **Predições e Métricas**
 
 ```python
-dot_data = export_graphviz(clf, out_file=None, feature_names=X.columns, 
-                           class_names=['Insatisfeito', 'Satisfeito'], filled=True, rounded=True)
-graph = graphviz.Source(dot_data)
-graph.render("arvore_decisao_satisfacao", format="png", view=False)
+y_pred = clf.predict(...)
+classification_report(...)
 ```
 
-- Gera uma imagem PNG (`arvore_decisao_satisfacao.png`) da estrutura da árvore.
+**Por quê?**
 
-### Heatmap de Correlação
-
-```python
-plt.figure(figsize=(8, 6))
-sns.heatmap(X[['salario_medio', 'exp_dados_num', 'pct_doutores']].corr(), annot=True, cmap='coolwarm', fmt='.2f')
-plt.title('Correlação entre Features Numéricas')
-plt.savefig('heatmap_correlacao.png')
-plt.show()
-```
-
-- Plota a **correlação** entre variáveis numéricas, salva como `heatmap_correlacao.png`.
-
-### Curva de Aprendizado
-
-```python
-train_sizes, train_scores, test_scores = learning_curve(clf, X, y, cv=5, train_sizes=np.linspace(0.1, 1.0, 10))
-plt.figure(figsize=(8, 6))
-plt.plot(train_sizes, train_scores.mean(axis=1), label='Acurácia Treino')
-plt.plot(train_sizes, test_scores.mean(axis=1), label='Acurácia Teste')
-plt.xlabel('Tamanho do Conjunto de Treino')
-plt.ylabel('Acurácia')
-plt.title('Curva de Aprendizado da Árvore de Decisão')
-plt.legend()
-plt.savefig('curva_aprendizado.png')
-plt.show()
-```
-
-- Mostra a variação da acurácia com o tamanho do conjunto de treino, salva como `curva_aprendizado.png`.
-
-### Importância das Features
-
-```python
-importances = pd.Series(clf.feature_importances_, index=X.columns)
-importances.sort_values(ascending=False).plot(kind='bar', figsize=(10, 6))
-plt.title('Importância das Features para Satisfação')
-plt.savefig('importancia_features.png')
-plt.show()
-```
-
-- Visualiza a **importância das variáveis** no modelo, salva como `importancia_features.png`.
-
-### Matriz de Confusão
-
-```python
-cm = confusion_matrix(y_test, y_pred)
-plt.figure(figsize=(6, 5))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Insatisfeito', 'Satisfeito'], 
-            yticklabels=['Insatisfeito', 'Satisfeito'])
-plt.xlabel('Previsto')
-plt.ylabel('Real')
-plt.title('Matriz de Confusão')
-plt.savefig('matriz_confusao.png')
-plt.show()
-```
-
-- Mostra previsões corretas e incorretas, salva como `matriz_confusao.png`.
-
-### Matriz de Probabilidades
-
-```python
-probs = clf.predict_proba(X_test)
-matriz_probs = pd.DataFrame(probs, columns=['Prob_Insatisfeito', 'Prob_Satisfeito'])
-matriz_probs['Real'] = y_test.values
-matriz_probs['Previsto'] = y_pred
-print("\nMatriz de Probabilidades (primeiras 10 linhas):")
-print(matriz_probs.head(10))
-matriz_probs.to_csv('matriz_probabilidades.csv', index=False)
-```
-
-- Gera uma tabela com **probabilidades previstas**, valores reais e previstos, salva como `matriz_probabilidades.csv`.
-
-### Análise de Texto: Motivos de Insatisfação
-
-```python
-tfidf = TfidfVectorizer(max_features=100, stop_words=stop_words)
-tfidf_matrix = tfidf.fit_transform(dados['motivo_insatisfacao'])
-terms = tfidf.get_feature_names_out()
-word_scores = tfidf_matrix.sum(axis=0).A1
-word_importance = pd.Series(word_scores, index=terms).sort_values(ascending=False)
-```
-
-- Aplica **TF-IDF** para extrair termos relevantes de `motivo_insatisfacao`.
-
-### Nuvem de Palavras
-
-```python
-wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(word_importance)
-plt.figure(figsize=(10, 5))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis('off')
-plt.title('Nuvem de Palavras - Motivos de Insatisfação')
-plt.savefig('wordcloud_insatisfacao.png')
-plt.show()
-```
-
-- Gera e salva uma **nuvem de palavras** com os principais motivos de insatisfação.
+* Avaliar se o modelo realmente acerta a satisfação dos respondentes.
+* Métricas como precisão, recall e F1 são mais informativas que só acurácia, especialmente se as classes estiverem desequilibradas.
 
 ---
+
+### **Visualização da Árvore**
+
+```python
+graphviz.export_graphviz(...)
+```
+
+**Por quê?**
+
+* Facilita a interpretação da lógica do modelo.
+* Mostra quais variáveis ele usou e quais caminhos levam à satisfação ou insatisfação.
+
+---
+
+###  **Heatmap de Correlação**
+
+```python
+sns.heatmap(...)
+```
+
+**Por quê?**
+
+* Investigar se há correlação forte entre as variáveis numéricas (ex: salário e doutores).
+
+---
+
+###  **Curva de Aprendizado**
+
+```python
+learning_curve(...)
+```
+
+**Por quê?**
+
+* Diagnóstico de overfitting ou underfitting.
+* Compara acurácia no treino vs teste conforme mais dados são usados.
+
+---
+
+### **Matriz de Confusão**
+
+```python
+confusion_matrix(...)
+```
+
+**Por quê?**
+
+* Entende se o modelo está errando mais em prever satisfação ou insatisfação.
+
+---
+
+###  **Probabilidades**
+
+```python
+clf.predict_proba(...)
+```
+
+**Por quê?**
+
+* Permite ver **o grau de certeza** da árvore nas previsões.
+
+---
+
+###  **Validação Cruzada**
+
+```python
+cross_val_score(...)
+```
+
+**Por quê?**
+
+* Verifica a **robustez do modelo em diferentes divisões dos dados**.
+
+---
+
+###  **Importância das Variáveis**
+
+```python
+clf.feature_importances_
+```
+
+**Por quê?**
+
+* Identifica **o que mais influencia a satisfação** no modelo.
+
+---
+
+###  **TF-IDF e Nuvem de Palavras**
+
+```python
+TfidfVectorizer(...), WordCloud(...)
+```
+
+**Por quê?**
+
+* TF-IDF mede a importância relativa de cada termo textual.
+* A nuvem visualiza os **principais motivos de insatisfação** relatados em texto aberto.
+
+---
+
 
 <div id='2modelo-random-forest'/> 
 
@@ -281,220 +273,264 @@ plt.show()
 
 ---
 
-## 🤖 Classificação do Nível de Acesso à IA com Random Forest
+##  **Importação de bibliotecas**
 
-Este pipeline realiza a classificação do nível de envolvimento com IA (`nivel_ia_encoded`) com base em habilidades técnicas (`sql`, `python`, `powerbi`, `aws`), nível de ensino e quantidade de doutores, utilizando um **Random Forest Classifier**.
-
----
-
-## 📦 Importações
+### Por que cada biblioteca é usada?
 
 ```python
-import pandas as pd
+import pandas as pd 
 import numpy as np
+```
+
+* `pandas` e `numpy` são a base da análise de dados em Python:
+
+  * `pandas` permite leitura, organização e manipulação de dados em tabelas (DataFrames).
+  * `numpy` oferece funções matemáticas e manipulação eficiente de arrays, importante para gráficos e cálculos.
+
+```python
 from sklearn.model_selection import train_test_split, cross_val_score, learning_curve
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
+```
+
+* **Modelagem com qualidade depende de avaliação cuidadosa**:
+
+  * `train_test_split`: separa os dados em treino/teste para testar generalização do modelo.
+  * `cross_val_score`: validação cruzada em K-folds (aqui, 5) para garantir robustez e reduzir viés na avaliação.
+  * `learning_curve`: mostra se o modelo está sofrendo com **underfitting ou overfitting**.
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+```
+
+* A **árvore de decisão** é ideal para problemas onde a **interpretação** das regras de decisão é importante. Aqui, ajuda a entender **quais fatores influenciam a satisfação**.
+
+```python
+from sklearn.preprocessing import StandardScaler
+```
+
+* Embora a árvore **não exija normalização**, você aplicou `StandardScaler` antecipando o uso de modelos futuros como SVM ou Regressão Logística, que são sensíveis à escala.
+
+```python
 from sklearn.metrics import classification_report, confusion_matrix
+```
+
+* Permite medir:
+
+  * Precisão: quantos dos positivos previstos estavam certos.
+  * Recall: quantos dos positivos reais foram capturados.
+  * Matriz de confusão: como os erros estão distribuídos entre classes.
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+```
+
+* Transforma o texto da coluna `motivo_insatisfacao` em uma **representação numérica vetorial**. O TF-IDF valoriza palavras que são raras no corpus geral mas frequentes em um documento, o que **ajuda a identificar termos importantes para a insatisfação**.
+
+```python
+from nltk.corpus import stopwords
+import nltk
+```
+
+* **Stopwords** são palavras irrelevantes para análise textual (como “a”, “de”, “que”). O NLTK fornece uma lista específica para o português.
+
+```python
 import matplotlib.pyplot as plt
 import seaborn as sns
+```
+
+* Geração de gráficos: `seaborn` facilita visualizações estatísticas como **heatmaps** e gráficos de barras, e o `matplotlib` fornece controle completo da renderização.
+
+```python
+from wordcloud import WordCloud
+```
+
+* Produz uma **nuvem de palavras visual**, onde o tamanho indica relevância. Ajuda a **comunicar visualmente os principais motivos de insatisfação**.
+
+```python
 import graphviz
 from sklearn.tree import export_graphviz
 ```
 
-- Importa bibliotecas para manipulação de dados, modelagem, avaliação e visualização.
+* **Visualiza graficamente a estrutura da árvore**, mostrando regras como “Se salário > X e experiência < Y, então...”.
+* Isso **torna o modelo interpretável por humanos** — essencial em estudos sociais.
 
 ---
 
-## 📥 Carregamento de Dados
+##  **Leitura e pré-processamento dos dados**
+
+### Enriquecimento dos dados
 
 ```python
-dados = pd.read_csv('dados_processados.csv')
-ensino = pd.read_excel('Analise_Ensino_Superior_Consolidada.xlsx')
+ensino['pct_doutores'] = (ensino['QT_DOC_EX_DOUT'] / ensino['QT_DOC_TOTAL'] * 100).fillna(0)
 ```
 
-- Carrega os dados principais (`dados_processados.csv`) e os dados de ensino superior (`Analise_Ensino_Superior_Consolidada.xlsx`).
-
----
-
-## 🧬 Enriquecimento dos Dados
+* Cria uma **feature externa contextual**, o percentual de doutores por estado, que pode representar **nível de acesso à educação superior na região**.
 
 ```python
-estado_doutores = ensino.groupby('SG_UF_IES')['QT_DOC_EX_DOUT'].mean().reset_index()
 dados = dados.merge(estado_doutores, left_on='estado', right_on='SG_UF_IES', how='left')
 ```
 
-- Adiciona a **média de doutores por estado** ao DataFrame principal.
+* Junta os dois conjuntos de dados. Isso **aumenta o poder preditivo** ao incluir um fator regional.
+
+### Tratamento de valores ausentes
+
+```python
+dados['salario_medio'].fillna(dados['salario_medio'].median(), inplace=True)
+dados['exp_dados_num'].fillna(0, inplace=True)
+dados['motivo_insatisfacao'].fillna('', inplace=True)
+```
+
+* Preenche valores ausentes com:
+
+  * **Mediana**: boa para variáveis com distribuição assimétrica como salário.
+  * **Zero**: usado em experiência como ausência da habilidade.
+  * **Texto vazio**: em campos textuais para evitar erros na vetorização.
 
 ---
 
-## 🧹 Pré-processamento
+## **Preparação para o modelo**
+
+### Seleção de variáveis relevantes
 
 ```python
-dados['nivel_ia'] = dados['nivel_ia'].fillna('Outros')
-dados['QT_DOC_EX_DOUT'] = dados['QT_DOC_EX_DOUT'].fillna(dados['QT_DOC_EX_DOUT'].median())
-le = LabelEncoder()
-dados['nivel_ia_encoded'] = le.fit_transform(dados['nivel_ia'])
-class_counts = dados['nivel_ia_encoded'].value_counts()
-valid_classes = class_counts[class_counts >= 2].index
-dados = dados[dados['nivel_ia_encoded'].isin(valid_classes)]
+features = ['salario_medio', 'exp_dados_num', 'pct_doutores', 'modelo_trabalho', 'nivel_cargo']
 ```
 
-- Preenche valores ausentes com **"Outros"** (nível de IA) ou **mediana** (doutores).
-- Codifica `nivel_ia` com **LabelEncoder**.
-- Filtra classes com menos de 2 amostras para evitar erros no treinamento.
+* Você escolheu variáveis que representam:
+
+  * Condição econômica (salário).
+  * Experiência técnica.
+  * Formação regional.
+  * Estrutura de trabalho (presencial/remoto).
+  * Hierarquia do cargo.
+
+### Tratamento de variáveis categóricas
+
+```python
+X = pd.get_dummies(X, columns=['modelo_trabalho', 'nivel_cargo'], drop_first=True)
+```
+
+* **Transforma categorias em colunas binárias**.
+* `drop_first=True` evita multicolinearidade.
+
+### Escalonamento
+
+```python
+scaler = StandardScaler()
+```
+
+* Escala as variáveis numéricas para **evitar que diferenças de magnitude distorçam a análise estatística ou modelos futuros**.
 
 ---
 
-## 🧠 Seleção de Features
+##  **Treinamento e avaliação do modelo**
 
 ```python
-habilidades = ['sql', 'python', 'powerbi', 'aws', 'nivel_ensino', 'QT_DOC_EX_DOUT']
-X = dados[habilidades]
-y = dados['nivel_ia_encoded']
-X = pd.get_dummies(X, columns=['nivel_ensino'], drop_first=True)
+clf = DecisionTreeClassifier(max_depth=5, min_samples_split=5, criterion='gini', random_state=42)
 ```
 
-- Define os **features (X)** e o **alvo (y)** para prever o nível de envolvimento com IA.
-- Aplica **one-hot encoding** em `nivel_ensino`.
+* Parâmetros:
+
+  * `max_depth`: limita a profundidade da árvore para **evitar overfitting**.
+  * `min_samples_split`: impede que ramos muito pequenos causem divisões irrelevantes.
+  * `criterion='gini'`: mede a impureza para fazer divisões (alternativa ao `entropy`).
 
 ---
 
-## 📊 Divisão dos Dados
+## **Visualizações analíticas**
+
+### Árvore de decisão
 
 ```python
-try:
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
-except ValueError:
-    print("Stratificação falhou. Usando divisão sem estratificação.")
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+export_graphviz(...) + graphviz.Source(...)
 ```
 
-- Divide em **80% treino** e **20% teste**, com tentativa de estratificação. Se falhar, usa divisão simples.
+* Gera uma imagem que mostra **as regras aprendidas pelo modelo**.
+* Fundamental para **explicar decisões e fazer auditoria ética do modelo**.
+
+### Heatmap de correlação
+
+```python
+sns.heatmap(...)
+```
+
+* Permite **verificar colinearidade** entre variáveis. Correlações muito altas podem indicar redundância.
+
+### Curva de aprendizado
+
+```python
+learning_curve(...)
+```
+
+* Diagnostica **underfitting (linha de treino baixa)** ou **overfitting (gap grande entre treino e teste)**.
+* Ajuda a decidir se vale a pena adicionar mais dados.
 
 ---
 
-## 🌳 Treinamento com Random Forest
+##  **Avaliação dos resultados**
+
+### Matriz de confusão
 
 ```python
-rf = RandomForestClassifier(n_estimators=100, max_depth=10, min_samples_split=5, random_state=42)
-rf.fit(X_train, y_train)
+confusion_matrix(...)
 ```
 
-- Treina um **Random Forest** com 100 árvores, profundidade máxima 10 e mínimo de 5 amostras por split.
+* Permite ver **erros de classificação**. Ex: o modelo erra mais ao classificar insatisfeitos?
+
+### Probabilidades previstas
+
+```python
+clf.predict_proba(...)
+```
+
+* Mostra **nível de confiança** do modelo para cada previsão.
+* Ajuda a entender quando o modelo está "em dúvida".
+
+### Relatório de classificação
+
+```python
+classification_report(...)
+```
+
+* Mostra métricas de precisão, recall, F1 e suporte para cada classe.
+
+### Validação cruzada
+
+```python
+cross_val_score(...)
+```
+
+* Mede **robustez do modelo** ao ser treinado/testado em várias divisões dos dados.
 
 ---
 
-## 📈 Avaliação do Modelo
+##  **Importância das variáveis**
 
 ```python
-y_pred = rf.predict(X_test)
-print("\nRelatório de Classificação:\n", classification_report(y_test, y_pred, target_names=le.classes_[valid_classes]))
-scores = cross_val_score(rf, X, y, cv=5)
-print("Acurácia média (validação cruzada):", scores.mean())
+clf.feature_importances_
 ```
 
-- Gera **métricas de desempenho** (precisão, recall, F1-score) por classe.
-- Calcula **acurácia média** com validação cruzada (5 folds).
+* Mostra **quais variáveis o modelo mais usou para tomar decisões**.
+* Aqui, você pode descobrir se salário é mais importante que experiência, por exemplo.
 
 ---
 
-## 🔍 Visualizações e Análises
-
-### Visualização de uma Árvore
+##   **Análise textual com TF-IDF**
 
 ```python
-tree = rf.estimators_[0]
-dot_data = export_graphviz(tree, out_file=None, feature_names=X.columns, 
-                           class_names=[str(cls) for cls in le.classes_[valid_classes]], 
-                           filled=True, rounded=True)
-graph = graphviz.Source(dot_data)
-graph.render("arvore_random_forest", format="png", view=False)
+tfidf = TfidfVectorizer(...)
 ```
 
-- Plota uma única árvore do Random Forest, salva como `arvore_random_forest.png`.
-
-### Curva de Aprendizado
+* Extrai os termos mais relevantes dos motivos textuais de insatisfação.
+* TF-IDF destaca **termos informativos** que aparecem com frequência, mas não em todo lugar.
 
 ```python
-train_sizes, train_scores, test_scores = learning_curve(rf, X, y, cv=5, train_sizes=np.linspace(0.1, 1.0, 10))
-plt.figure(figsize=(8, 6))
-plt.plot(train_sizes, train_scores.mean(axis=1), label='Acurácia Treino')
-plt.plot(train_sizes, test_scores.mean(axis=1), label='Acurácia Teste')
-plt.xlabel('Tamanho do Conjunto de Treino')
-plt.ylabel('Acurácia')
-plt.title('Curva de Aprendizado da Random Forest')
-plt.legend()
-plt.savefig('curva_aprendizado_rf.png')
-plt.show()
+WordCloud(...).generate_from_frequencies(...)
 ```
 
-- Mostra a **acurácia** em função do tamanho do conjunto de treino, salva como `curva_aprendizado_rf.png`.
-
-### Importância das Features
-
-```python
-importances = pd.Series(rf.feature_importances_, index=X.columns)
-importances.sort_values(ascending=False).plot(kind='bar', figsize=(10, 6))
-plt.title('Importância das Habilidades para IA Generativa')
-plt.savefig('importancia_features_rf.png')
-plt.show()
-```
-
-- Visualiza a **importância de cada feature**, salva como `importancia_features_rf.png`.
-
-### Análise de Correlação
-
-```python
-corr_data = X.copy()
-corr_data['nivel_ia_encoded'] = y
-correlacoes = corr_data.corr(method='spearman')
-plt.figure(figsize=(8, 6))
-sns.heatmap(correlacoes, annot=True, cmap='coolwarm', center=0)
-plt.title('Correlação entre Habilidades e Nível de IA')
-plt.savefig('heatmap_correlacao_rf.png')
-plt.show()
-```
-
-- Gera um **heatmap** com correlações de Spearman, salva como `heatmap_correlacao_rf.png`.
-
-### Matriz de Confusão
-
-```python
-cm = confusion_matrix(y_test, y_pred)
-plt.figure(figsize=(8, 6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
-            xticklabels=le.classes_[valid_classes], yticklabels=le.classes_[valid_classes])
-plt.xlabel('Previsto')
-plt.ylabel('Real')
-plt.title('Matriz de Confusão - Random Forest')
-plt.savefig('matriz_confusao_rf.png')
-plt.show()
-```
-
-- Visualiza previsões corretas e incorretas, salva como `matriz_confusao_rf.png`.
-
-### Matriz de Probabilidades
-
-```python
-probs = rf.predict_proba(X_test)
-matriz_probs = pd.DataFrame(probs, columns=[f'Prob_{cls}' for cls in le.classes_[valid_classes]])
-matriz_probs['Real'] = [le.classes_[i] for i in y_test]
-matriz_probs['Previsto'] = [le.classes_[i] for i in y_pred]
-print("\nMatriz de Probabilidades (primeiras 10 linhas):")
-print(matriz_probs.head(10))
-matriz_probs.to_csv('matriz_probabilidades_rf.csv', index=False)
-```
-
-- Gera uma tabela com **probabilidades previstas**, valores reais e previstos, salva como `matriz_probabilidades_rf.csv`.
+* Gera uma **nuvem visual** com os termos mais fortes da insatisfação.
 
 ---
 
-## 🔍 Notas Adicionais
-- **Modelo de Árvore**: Focado em satisfação binária, com análise de texto para motivos de insatisfação. Ideal para interpretabilidade.
-- **Modelo Random Forest**: Focado em nível de IA (multiclasse), com ênfase em habilidades técnicas. Mais robusto, mas menos interpretável diretamente.
-- **Gráficos adicionais**: Curvas de aprendizado e matrizes de confusão ajudam a avaliar a generalização e erros dos modelos.
-- **Matrizes de solução**: Fornecem insights detalhados sobre previsões e incertezas.
-- **Dependências**: Instale `graphviz` no sistema e bibliotecas Python (`pip install pandas numpy scikit-learn matplotlib seaborn nltk wordcloud graphviz`).
 
----
+
+
