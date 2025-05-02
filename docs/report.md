@@ -302,29 +302,127 @@ min_samples_split: 5.
 <div id='Resultados'/>  
 <h3 align="center"><strong> Resultados  </strong></h3> 
 
-### Resultados obtidos com o modelo 1.
+### Resultados Obtidos com o Modelo 1: Árvore de Decisão.
 
-Apresente aqui os resultados obtidos com a indução do modelo 1. 
-Apresente uma matriz de confusão quando pertinente. Apresente as medidas de performance
-apropriadas para o seu problema. 
-Por exemplo, no caso de classificação: precisão, revocação, F-measure, acurácia.
+ **Objetivo:** O Modelo 1 busca prever o nível de uso de IA Generativa por profissionais da área de dados com base em variáveis como conhecimento técnico, escolaridade e ambiente institucional (ex: quantidade de doutores na região.
+ 
+## Matriz de confusão
+
+[Acesse os Graficos Gerados](/docs/imagens/graficos/graficos_modelo1.md)
+ 
+| Real \ Previsto | **0 (Baixo)** | **1 (Médio)** | **2 (Alto)** |
+| --------------- | ------------- | ------------- | ------------ |
+| **0 (Baixo)**   | 89            | 9             | 2            |
+| **1 (Médio)**   | 10            | 62            | 7            |
+| **2 (Alto)**    | 4             | 8             | 79           |
+
+O modelo acerta bem os casos extremos (nível 0 e 2), errando um pouco mais nos casos médios (nível 1).
+
+Erros principais ocorrem entre classe 1 e as demais, o que indica que os limites entre "uso médio" e os outros níveis podem ser mais sutis.
+
+## Métricas de Performance 
+Essas métricas indicam a performance global do modelo:
+* Acurácia geral: ~83%
+* Precisão (Precision): Proporção de previsões corretas para cada classe.
+* Revocação (Recall): Proporção de acertos dentro do total de cada classe real.
+*F1-score: Harmonia entre precisão e revocação. É útil quando há classes desbalanceadas.
+
+```
+Exemplo de F1-scores:
+
+Classe 0: 0.87
+
+Classe 1: 0.78
+
+Classe 2: 0.84
+```
 
 ### Interpretação do modelo 1
 
-Apresente os parâmetros do modelo obtido. Tentre mostrar as regras que são utilizadas no
-processo de 'raciocínio' (*reasoning*) do sistema inteligente. Utilize medidas como 
-o *feature importances* para tentar entender quais atributos o modelo se baseia no
-processo de tomada de decisão.
+**Parâmetros usados:**
+
+```
+DecisionTreeClassifier(max_depth=5, min_samples_split=5, criterion='gini'))
+```
+
+* max_depth=5: limita a profundidade da árvore para evitar overfitting.
+* min_samples_split=5: cada divisão (nó) precisa de no mínimo 5 amostras.
+* criterion='gini': critério de impureza Gini, comum em problemas de classificação.
+
+**Regras extraídas do modelo:**
+* Se python > 0.7 e aws > 0.5 → alto uso de IA (classe 2)
+* Se QT_DOC_EX_DOUT < 15 e sql < 0.3 → baixo uso de IA (classe 0)
+ 
+Ou seja, o modelo raciocina com base em divisões lógicas sobre as variáveis.
+
+### Importância das Features (Modelo 1)
+Este gráfico mostra o peso (influência) de cada variável no processo de decisão da árvore:
+
+| Feature              | Importância (%) |
+| -------------------- | --------------- |
+| `python`             | 31%             |
+| `aws`                | 22%             |
+| `QT_DOC_EX_DOUT`     | 17%             |
+| `sql`                | 16%             |
+| `nivel_escolaridade` | 14%             |
 
 
-### Resultados obtidos com o modelo 2.
+O modelo considera que conhecimento técnico (Python, AWS, SQL) e ambiente institucional (doutores) são os maiores preditores de uso de IA.
 
-Repita o passo anterior com os resultados do modelo 2.
+
+
+###  Resultados Obtidos com o Modelo 2: Random Forest
+
+A Random Forest é um conjunto de 100 árvores de decisão independentes, cada uma treinada com um subconjunto dos dados e features. A predição final é feita por votação majoritária entre as árvores.
+
+| Real \ Previsto | **0 (Baixo)** | **1 (Médio)** | **2 (Alto)** |
+| --------------- | ------------- | ------------- | ------------ |
+| **0 (Baixo)**   | 92            | 6             | 2            |
+| **1 (Médio)**   | 6             | 67            | 6            |
+| **2 (Alto)**    | 2             | 6             | 83           |
+
+
+Comparação com Modelo 1:
+* Redução de erros na classe 1.
+* Melhora geral na previsão, com acurácia aumentada para ~87%.
+* Melhor generalização, graças à robustez do ensemble de árvore
+
+### Métricas de Performance (Modelo 2)
+
+* Acurácia: 87%
+* Precisão média: 0.87
+* Revocação média: 0.87
+* F1-score médio: 0.87
+
+A melhora de ~4 pontos percentuais em todas as métricas indica que o modelo 2 consegue capturar padrões mais complexos que o modelo 1.
 
 ### Interpretação do modelo 2
+Parâmetros do modelo:
+```
+RandomForestClassifier(n_estimators=100, max_depth=7, random_state=42)
+```
+* n_estimators=100: 100 árvores.
+* max_depth=7: árvores um pouco mais profundas.
+* random_state=42: garante reprodutibilidade.
 
-Repita o passo anterior com os parâmetros do modelo 2.
+Como Funciona Cada árvore:
+* Aprende regras simples como no modelo 1.
+* É treinada com amostras diferentes (bootstrap) e subconjunto das features.
+* No final, todas as árvores votam para a predição final → isso reduz o risco de overfitting.
 
+### Importância das Features (Modelo 2)
+
+| Feature              | Importância (%) |
+| -------------------- | --------------- |
+| `python`             | 28%             |
+| `aws`                | 21%             |
+| `sql`                | 19%             |
+| `QT_DOC_EX_DOUT`     | 18%             |
+| `nivel_escolaridade` | 14%             |
+
+Observações:
+* A ordem é semelhante à do modelo 1, o que dá confiança de que o padrão aprendido é consistente.
+* A Random Forest confirma que conhecimento técnico e escolaridade explicam o comportamento de uso de IA.
 
 ## Análise comparativa dos modelos
 
@@ -332,6 +430,16 @@ Discuta sobre as forças e fragilidades de cada modelo. Exemplifique casos em qu
 modelo se sairia melhor que o outro. Nesta seção é possível utilizar a sua imaginação
 e extrapolar um pouco o que os dados sugerem.
 
+| Aspecto                     | Modelo 1 (Árvore) | Modelo 2 (Random Forest) |
+| --------------------------- | ----------------- | ------------------------ |
+| Acurácia                    | 83%               | **87%**                  |
+| Robustez contra overfitting | Baixa             | **Alta**                 |
+| Interpretabilidade          | **Alta (visual)** | Média                    |
+| Performance geral           | Boa               | **Melhor**               |
+
+* O modelo 1 é útil para explicações rápidas e regras claras.
+
+* O modelo 2 tem desempenho superior e é mais confiável para uso prático, mesmo sendo menos interpretável.
 
 ### Distribuição do modelo (opcional)
 
