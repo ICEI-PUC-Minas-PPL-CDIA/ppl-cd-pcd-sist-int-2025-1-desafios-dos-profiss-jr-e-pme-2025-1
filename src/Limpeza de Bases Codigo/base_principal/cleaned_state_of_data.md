@@ -1,5 +1,5 @@
 
-# 🧼 Explicação Limpeza de Dados – State of Data Brasil 2023
+#  Explicação Limpeza de Dados – State of Data Brasil 2023
 
 Este notebook é responsável por realizar a **limpeza, tratamento e pré-processamento** dos dados brutos da pesquisa, preparando o dataset para análises exploratórias e estatísticas. A seguir, está uma explicação passo a passo das células e transformações aplicadas:
 
@@ -7,7 +7,7 @@ Este notebook é responsável por realizar a **limpeza, tratamento e pré-proces
 
 ---
 
-## 📦 1. Imports e Leitura de Dados
+##  1. Imports e Leitura de Dados
 
 ```python
 import pandas as pd
@@ -20,7 +20,7 @@ Importa bibliotecas essenciais:
 
 ---
 
-## 📥 2. Leitura do CSV bruto
+##  2. Leitura do CSV bruto
 
 ```python
 df = pd.read_csv('State of Data 2023.csv')
@@ -30,7 +30,7 @@ Lê o dataset original da pesquisa em formato CSV. A variável `df` agora conté
 
 ---
 
-## 🔍 3. Exibição Inicial
+##  3. Exibição Inicial
 
 ```python
 df.head()
@@ -40,7 +40,7 @@ Mostra as 5 primeiras linhas do dataset para uma inspeção visual inicial dos d
 
 ---
 
-## 📊 4. Verificando Colunas
+##  4. Verificando Colunas
 
 ```python
 df.columns
@@ -50,7 +50,7 @@ Lista todas as colunas presentes no dataset original. Importante para entender a
 
 ---
 
-## 🧹 5. Remoção de Colunas Irrelevantes
+##  5. Remoção de Colunas Irrelevantes
 
 ```python
 df = df.drop(columns=[...])
@@ -65,7 +65,7 @@ Objetivo: **reduzir a dimensionalidade** do dataset e manter apenas variáveis r
 
 ---
 
-## 🔁 6. Renomeando Colunas com Base em Dicionário
+##  6. Renomeando Colunas com Base em Dicionário
 
 ```python
 dic_renomear = {...}
@@ -78,7 +78,7 @@ Renomeia as colunas para nomes mais limpos, consistentes e descritivos com base 
 
 ---
 
-## 📐 7. Normalização de Dados
+##  7. Normalização de Dados
 
 Inclui várias transformações para padronizar valores nas colunas:
 - Remover acentos e capitalizações inconsistentes.
@@ -87,7 +87,7 @@ Inclui várias transformações para padronizar valores nas colunas:
 
 ---
 
-## 🔍 8. Filtragem e Conversão de Tipos
+##  8. Filtragem e Conversão de Tipos
 
 ```python
 df['salario_mensal'] = pd.to_numeric(df['salario_mensal'], errors='coerce')
@@ -97,7 +97,7 @@ Converte a coluna de salário para tipo numérico e força a conversão de strin
 
 ---
 
-## 🔢 9. Tratamento de Valores Nulos
+##  9. Tratamento de Valores Nulos
 
 ```python
 df = df.dropna(subset=['salario_mensal', 'tempo_experiencia'])
@@ -107,7 +107,7 @@ Remove registros onde os campos mais importantes (como salário e tempo de exper
 
 ---
 
-## 📤 10. Salvando o Dataset Tratado
+##  10. Salvando o Dataset Tratado
 
 ```python
 df.to_csv('data/df_tratado.csv', index=False)
