@@ -155,18 +155,18 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
 ## Base principal: **State of Data Brazil 2023**
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
-🧾 [**Dicionário de dados - State of Data Brazil 2023**](data_dictionary/raw_database/state_of_data_dictionary.md)
+ [**Dicionário de dados - State of Data Brazil 2023**](data_dictionary/raw_database/state_of_data_dictionary.md)
 
-📈 [**Descrição de dados - State of Data Brazil 2023**](imagens/graficos/graficos_state_of_data.md)
+ [**Descrição de dados - State of Data Brazil 2023**](imagens/graficos/graficos_state_of_data.md)
 
 --- 
 
 ## Base auxiliar:  **Microdrados Educação Superior**
  A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
-🧾 [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](data_dictionary/raw_database/microdados_ed_sup_ies_dictionary.md)
+ [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](data_dictionary/raw_database/microdados_ed_sup_ies_dictionary.md)
 
-📈 [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](imagens/graficos/graficos_microdados.md)
+ [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](imagens/graficos/graficos_microdados.md)
 
 ---
 
@@ -204,96 +204,126 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 
 ## Modelo 1: Ávore de Decisão
 
-**Pergunta 1: Quais são as principais satisfações dos profissionais (boas ou ruins)?**
+**Pergunta 1:** 
+
+Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?
 
 
-**Justificativa do Modelo**
-Objetivo: Identificar os fatores que influenciam a satisfação dos profissionais (positiva ou negativa) com base nos dados da tabela dados_processados.csv, que contém variáveis como satisfacao_binaria, motivo_insatisfacao, salario_medio, exp_dados_num, modelo_trabalho, entre outras.
+**Justificativa do Modelo:**
 
-**Tipo de Problema**: 
+_Objetivo:_ Identificar os elementos mais determinantes para a satisfação profissional (positiva ou negativa), explorando variáveis como:
+
+```
+satisfacao_binaria #(variável-alvo),
+
+salario_medio,
+
+exp_dados_num,
+
+modelo_trabalho,
+
+motivo_insatisfacao #(campo de texto livre).
+```
+
+**Tipo de Problema**:
+
 Análise exploratória com elementos de classificação supervisionada (para prever satisfação) e análise de texto (para entender motivos de insatisfação).
 
 **Modelo Escolhido**:
-Árvore de Decisão: Para identificar as variáveis mais importantes que influenciam a satisfação (satisfacao_binaria). Árvores de decisão são interpretáveis, ideais para entender quais fatores (como salário, experiência, modelo de trabalho) têm maior impacto na satisfação.
-Análise de Texto (Processamento de Linguagem Natural - PLN): Para processar a coluna motivo_insatisfacao e extrair os principais temas ou palavras-chave associados à insatisfação, usando técnicas como contagem de palavras ou TF-IDF.
+
+_Árvore de Decisão:_ Escolhida pela sua interpretabilidade e capacidade de lidar bem com variáveis numéricas e categóricas. Ideal para entender, de forma visual, quais fatores impactam mais a satisfação, juntamente com _Análise de Texto (Processamento de Linguagem Natural - PLN):_ Para processar a coluna motivo_insatisfacao e extrair os principais temas ou palavras-chave associados à insatisfação, usando técnicas como contagem de palavras ou TF-IDF.
 
 **Motivo da Escolha**:
-A árvore de decisão é robusta para dados categóricos e numéricos, como os presentes na tabela, e fornece uma visão clara da importância das features.
-A análise de texto é necessária para explorar os motivos qualitativos de insatisfação, complementando a análise quantitativa.
 
-### Algoritmo: 
+A árvore de decisão fornece uma visão clara da importância relativa de cada variável, enquanto o uso de TF-IDF e análise textual permite compreender os aspectos subjetivos da insatisfação, enriquecendo a análise quantitativa.
+
+**Algoritmo:**
 
 **Pré-processamento**:
-Carregar e limpar os dados de dados_processados.csv.
-Tratar valores ausentes (preencher ou remover linhas com dados críticos ausentes, como satisfacao_binaria).
-Codificar variáveis categóricas (e.g., genero, modelo_trabalho) usando One-Hot Encoding.
-Normalizar variáveis numéricas como salario_medio e exp_dados_num.
-Cruzar estado com SG_UF_IES para adicionar indicadores como %_Doutores da segunda tabela.
+* Carregar e limpar os dados das bases de dados.
+* Tratar valores ausentes (preencher ou remover linhas com dados críticos ausentes, como `satisfacao_binaria`).
+* Codificar variáveis categóricas (`e.g., genero, modelo_trabalho`) usando One-Hot Encoding.
+* Normalizar variáveis numéricas como `salario_medio `e `exp_dados_num`.
+* Cruzar estado com `SG_UF_IES` para adicionar indicadores como `%_Doutores `da segunda tabela.
 
 **Modelo de Árvore de Decisão**:
-Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
-Treinar uma árvore de decisão com profundidade máxima limitada (e.g., max_depth=5) para evitar overfitting.
-Avaliar o modelo com métricas como acurácia, precisão, recall e F1-score.
-Extrair a importância das features para identificar os principais fatores de satisfação.
+
+* Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
+* Treinar uma árvore de decisão com profundidade máxima limitada (`e.g., max_depth=5`) para evitar overfitting.
+* Avaliar o modelo com métricas como acurácia, precisão, recall e F1-score.
+* Extrair a importância das features para identificar os principais fatores de satisfação.
 
 **Análise de Texto**:
-Processar a coluna motivo_insatisfacao usando a biblioteca NLTK ou scikit-learn.
-Aplicar tokenização, remoção de stop words e vetorização (TF-IDF).
-Identificar as palavras ou frases mais frequentes associadas à insatisfação.
-Visualização:
-Gráfico de importância das features da árvore de decisão.
-Nuvem de palavras para os motivos de insatisfação.
+
+* Processar a coluna motivo_insatisfacao usando a biblioteca NLTK ou scikit-learn.
+* Aplicar tokenização, remoção de stop words e vetorização `(TF-IDF)`.
+* Identificar as palavras ou frases mais frequentes associadas à insatisfação.
+  
+**Visualização:**
+* Gráfico de importância das features da árvore de decisão.
+* Nuvem de palavras para os motivos de insatisfação.
 
 [Acesse o Algoritimo](/src/PrimeiroModeloCorrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
 
 ## Modelo 2: Random Forest
 
-**Pergunta 2: Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?**
+**Pergunta 2:** 
+
+Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?
 
 **Justificativa do Modelo**
-Objetivo: Identificar as habilidades técnicas (e.g., linguagens de programação, ferramentas de dados) e conhecimentos acadêmicos (e.g., nível de ensino, qualidade da instituição) mais associados a profissionais que trabalham com IA Generativa, usando a coluna nivel_ia como indicador.
+
+_Objetivo:_ Identificar as habilidades técnicas (e.g., linguagens de programação, ferramentas de dados) e conhecimentos acadêmicos (e.g., nível de ensino, qualidade da instituição) mais associados a profissionais que trabalham com IA Generativa, usando a coluna nivel_ia como indicador.
 
 **Tipo de Problema:** 
+
 Classificação supervisionada para prever o nível de adoção de IA (nivel_ia) e análise de correlação para identificar habilidades valorizadas.
 
 **Modelo Escolhido:**
-Random Forest: Para prever nivel_ia com base em variáveis como sql, python, powerbi, nivel_ensino, e indicadores da segunda tabela (e.g., QT_DOC_EX_DOUT). Random Forest é robusto para dados com muitas variáveis categóricas e lida bem com desbalanceamento.
-Análise de Correlação: Para identificar quais habilidades (colunas binárias como python, aws) estão mais correlacionadas com altos níveis de adoção de IA.
+_Random Forest:_ Para prever nivel_ia com base em variáveis como sql, python, powerbi, nivel_ensino, e indicadores da segunda tabela (`e.g., QT_DOC_EX_DOUT`). Random Forest é robusto para dados com muitas variáveis categóricas e lida bem com desbalanceamento, junto a _Análise de Correlação:_ Para identificar quais habilidades (colunas binárias como python, aws) estão mais correlacionadas com altos níveis de adoção de IA.
 
 **Motivo da Escolha**:
-Random Forest combina várias árvores de decisão, reduzindo overfitting e fornecendo uma boa estimativa da importância das features.
-A análise de correlação complementa o modelo ao destacar relações diretas entre habilidades e IA.
 
-### Algoritmo
+Random Forest permite modelar com precisão mesmo com variáveis binárias e categóricas, além de oferecer medidas de importância de cada feature. A análise de correlação traz clareza sobre os fatores individuais mais associados à adoção de IA.
+
+
+**Algoritmo**
+---
 
 **Pré-processamento**:
-Carregar e limpar os dados de ambas as tabelas.
-Tratar valores ausentes em nivel_ia e variáveis de habilidades.
-Codificar nivel_ia como variável ordinal (e.g., Baixa adoção=0, IA em produtos=1, Outros=2).
-Cruzar estado com SG_UF_IES para adicionar QT_DOC_EX_DOUT e IN_ACESSO_PORTAL_CAPES.
+* Carregar e limpar os dados de ambas as tabelas.
+* Tratar valores ausentes em nivel_ia e variáveis de habilidades.
+* Codificar nivel_ia como variável ordinal (e.g., Baixa adoção=0, IA em produtos=1, Outros=2).
+* Cruzar estado com SG_UF_IES para adicionar QT_DOC_EX_DOUT e IN_ACESSO_PORTAL_CAPES.
 
 **Modelo de Random Forest:**
-Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
-Treinar um Random Forest com 100 árvores e profundidade máxima limitada.
-Avaliar com acurácia, precisão, recall e F1-score.
-Extrair a importância das features para identificar as habilidades mais valorizadas.
-Análise de Correlação:
-Calcular a correlação de Spearman entre variáveis binárias de habilidades (e.g., python, sql) e nivel_ia.
+* Dividir os dados em treino (80%) e teste (20%) com validação cruzada (k=5).
+* Treinar um Random Forest com 100 árvores e profundidade máxima limitada.
+* Avaliar com acurácia, precisão, recall e F1-score.
+* Extrair a importância das features para identificar as habilidades mais valorizadas.
+
+**Análise de Correlação:** 
+
+Calcular a correlação de Spearman entre variáveis binárias de habilidades (`e.g., python, sql`) e `nivel_ia`.
 
 **Visualização:**
-Gráfico de importância das features do Random Forest.
-Heatmap de correlações entre habilidades e nivel_ia.
+* Gráfico de importância das features do Random Forest.
+* Heatmap de correlações entre habilidades e nivel_ia.
 
 **Amostragem:**
-Particionamento: 80% treino, 20% teste, com estratificação para nivel_ia.
-Validação Cruzada: 5-fold cross-validation.
-Tamanho da Amostra: 50 linhas da primeira tabela, filtrando apenas aquelas com nivel_ia preenchido.
-Parâmetros
+* Particionamento: 80% treino, 20% teste, com estratificação para nivel_ia.
+* Validação Cruzada: 5-fold cross-validation.
+* Tamanho da Amostra: 50 linhas da primeira tabela, filtrando apenas aquelas com nivel_ia preenchido.
+
+**Parâmetros**
+
+```
 Random Forest:
-n_estimators: 100 (número de árvores).
-max_depth: 10 (limita complexidade).
+n_estimators: 100 #(número de árvores).
+max_depth: 10 #(limita complexidade).
 min_samples_split: 5.
+```
 
 [Acesse o Algoritimo](/src/PrimeiroModeloCorrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
