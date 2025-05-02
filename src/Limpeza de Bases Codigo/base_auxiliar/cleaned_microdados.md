@@ -1,6 +1,6 @@
 
 
-# 🧼 Explicação Limpeza de Dados – MICRODADOS (State of Data Brasil 2023)
+#  Explicação Limpeza de Dados – MICRODADOS (State of Data Brasil 2023)
 
 Este notebook trata da **limpeza, padronização e preparação dos microdados** da pesquisa . O foco está em garantir que os dados estejam prontos para análises refinadas, especialmente voltadas para recortes demográficos, socioeconômicos e regionais.
 
@@ -8,7 +8,7 @@ Este notebook trata da **limpeza, padronização e preparação dos microdados**
 
 ---
 
-## 📦 1. Bibliotecas Importadas
+##  1. Bibliotecas Importadas
 
 ```python
 import pandas as pd
@@ -21,7 +21,7 @@ Bibliotecas essenciais para:
 
 ---
 
-## 📥 2. Carregando os Dados
+##  2. Carregando os Dados
 
 ```python
 df_microdados = pd.read_csv('MICRODADOS.csv')
@@ -31,7 +31,7 @@ Importa o arquivo contendo os microdados da pesquisa.
 
 ---
 
-## 👀 3. Primeira Visão Geral
+##  3. Primeira Visão Geral
 
 ```python
 df_microdados.head()
@@ -41,7 +41,7 @@ Mostra os primeiros registros do dataset, ajudando a identificar colunas, tipos 
 
 ---
 
-## 🧾 4. Listando as Colunas
+##  4. Listando as Colunas
 
 ```python
 df_microdados.columns
@@ -54,7 +54,7 @@ Lista todas as colunas presentes no dataset. Útil para identificar variáveis q
 
 ---
 
-## 🧹 5. Limpeza e Redução
+##  5. Limpeza e Redução
 
 ```python
 df_microdados = df_microdados.drop(columns=[...])
@@ -67,7 +67,7 @@ Remove colunas irrelevantes ou redundantes. Isso:
 
 ---
 
-## 🔁 6. Renomeando Colunas com Dicionário
+##  6. Renomeando Colunas com Dicionário
 
 ```python
 dic_renomear = {...}
@@ -80,7 +80,7 @@ Aplica um dicionário de renomeação para tornar os nomes das colunas mais leg�
 
 ---
 
-## 🧠 7. Padronizações de Conteúdo
+## 7. Padronizações de Conteúdo
 
 Essa etapa realiza:
 - Normalização de texto (minúsculas, remoção de espaços, acentos)
@@ -89,7 +89,7 @@ Essa etapa realiza:
 
 ---
 
-## 🔢 8. Conversões e Filtros Numéricos
+##  8. Conversões e Filtros Numéricos
 
 ```python
 df_microdados['idade'] = pd.to_numeric(df_microdados['idade'], errors='coerce')
@@ -99,7 +99,7 @@ Converte campos como `'idade'` para tipos numéricos, eliminando registros invá
 
 ---
 
-## 🕳️ 9. Tratamento de Nulos
+##  9. Tratamento de Nulos
 
 ```python
 df_microdados = df_microdados.dropna(subset=['idade', 'genero'])
@@ -109,7 +109,7 @@ Remove linhas com valores ausentes em colunas-chave, como idade e gênero. Isso 
 
 ---
 
-## 🧾 10. Salvando Dataset Limpo
+##  10. Salvando Dataset Limpo
 
 ```python
 df_microdados.to_csv('data/df_microdados_limpo.csv', index=False)
