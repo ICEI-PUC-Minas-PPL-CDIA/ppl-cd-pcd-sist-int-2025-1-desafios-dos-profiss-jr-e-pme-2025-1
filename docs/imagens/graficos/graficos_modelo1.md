@@ -116,7 +116,9 @@ Interpretação:
 
   ## Matriz de Confusão
 **Objetivo: Ver quais classes de nivel_ia estão sendo corretamente previstas ou confundidas.**
-![Uploading download.png…]()
+![download](https://github.com/user-attachments/assets/4dc29917-7eae-4b9d-8380-0ba95dc13c65)
+
+
 Eixos:
 * Linhas: Classes reais.
 * Colunas: Classes previstas.
