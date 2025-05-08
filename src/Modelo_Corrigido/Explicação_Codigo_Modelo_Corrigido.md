@@ -199,11 +199,6 @@ Garante que o script só será executado se for chamado diretamente (não quando
 
 ---
 
-```
-
-Se quiser, posso gerar esse conteúdo como um arquivo `.md` ou colá-lo diretamente em um Jupyter Notebook. Deseja isso?
-```
-
 
 
 
