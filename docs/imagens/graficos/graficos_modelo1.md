@@ -32,6 +32,57 @@ Análise da imagem (AUC = 0.72):
 O modelo tem capacidade razoável de distinguir as classes.
 
 
+##Distribuição da Satisfação
+**Objetivo: Mostrar a contagem de clientes insatisfeitos e satisfeitos.
+
+![image](https://github.com/user-attachments/assets/a6a6b92a-7fcb-4ba8-8667-44aed9847eb9)
+Eixos:
+
+X = Satisfação (0=Insatisfeito, 1=Satisfeito)
+
+Y = Contagem
+
+Barras:
+
+Representam a quantidade de clientes em cada categoria de satisfação.
+
+Interpretação:
+
+Barras mais altas indicam uma maior quantidade de clientes naquela categoria.
+
+Análise da imagem fornecida:
+
+A barra para "1 (Satisfeito)" é significativamente mais alta (contagem de 3420) do que a barra para "0 (Insatisfeito)" (contagem de 1873).
+Interpretação:
+
+Há mais clientes satisfeitos do que insatisfeitos no conjunto de dados.
+
+
+##Distribuição por Faixa Salarial (P2_h)
+**Objetivo: Mostrar a contagem de pessoas em diferentes faixas salariais.
+![distribuicao_faixa_salarial](https://github.com/user-attachments/assets/22c92a89-60b9-4b13-8433-79dffb9ae177)
+
+Eixos:
+
+X = Contagem
+
+Y = Faixa Salarial
+
+Barras:
+
+Representam a quantidade de pessoas em cada faixa salarial. Barras mais longas indicam maior número de pessoas.
+
+Interpretação:
+
+As faixas salariais com as barras mais longas concentram o maior número de pessoas.
+
+Análise da imagem fornecida:
+
+A faixa salarial com a maior contagem é "de R$ 8.001/mês a R$ 12.000/mês".
+As faixas salariais com as menores contagens estão nas extremidades inferiores ("Menos de R$ 1.000/mês") e superiores ("de R$ 25.001/mês a R$ 30.000/mês", "de R$ 30.001/mês a R$ 40.000/mês", "Acima de R$ 40.001/mês", "de R$ 101/mês a R$ 2.000/mês").
+Interpretação:
+
+A maior parte das pessoas nesta amostra se concentra na faixa salarial de R$ 8.001 a R$ 12.000 por mês. Há relativamente poucas pessoas nas faixas salariais mais baixas e mais altas.
 
 ---
 # Segunda Pergunta:
