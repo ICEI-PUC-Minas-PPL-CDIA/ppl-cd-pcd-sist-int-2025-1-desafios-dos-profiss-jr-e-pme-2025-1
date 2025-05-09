@@ -90,6 +90,42 @@ Interpretação:
 
 A maior parte das pessoas nesta amostra se concentra na faixa salarial de R$ 8.001 a R$ 12.000 por mês. Há relativamente poucas pessoas nas faixas salariais mais baixas e mais altas.
 
+
+## Matriz de Confusão
+**Objetivo: Avaliar o desempenho de um modelo de classificação, mostrando o número de previsões corretas e incorretas para cada classe.**
+
+![matriz_convusao-mod1](https://github.com/user-attachments/assets/25adea4d-332b-4503-8828-713b62c5bcf8)
+
+Eixos:
+
+X = Predicted label (Rótulo Previsto)
+Y = True label (Rótulo Verdadeiro)
+
+Células:
+
+Cada célula contém a contagem de amostras que pertencem a uma determinada classe verdadeira e foram classificadas como uma determinada classe prevista.
+
+VP: Acerto da classe 1.
+VN: Acerto da classe 0.
+FP: Erro: previu 1, era 0.
+FN: Erro: previu 0, era 1.
+
+Interpretação:
+
+Valores mais altos na diagonal principal (VP e VN) indicam um bom desempenho do modelo.
+
+Análise da imagem fornecida:
+
+Verdadeiros Negativos (VN): 260 amostras foram corretamente classificadas como classe 0.
+Falsos Positivos (FP): 209 amostras que eram da classe 0 foram incorretamente classificadas como classe 1.
+Falsos Negativos (FN): 230 amostras que eram da classe 1 foram incorretamente classificadas como classe 0.
+Verdadeiros Positivos (VP): 625 amostras foram corretamente classificadas como classe 1.
+Interpretação:
+
+O modelo teve um bom desempenho na identificação da classe 1 (maior número de Verdadeiros Positivos). No entanto, houve um número considerável de Falsos Positivos e Falsos Negativos, indicando que o modelo cometeu erros ao classificar ambas as classes.
+
+Em resumo, o modelo é melhor em prever a classe 1 do que a classe 0 nesta amostra.
+
 ---
 # Segunda Pergunta:
 
