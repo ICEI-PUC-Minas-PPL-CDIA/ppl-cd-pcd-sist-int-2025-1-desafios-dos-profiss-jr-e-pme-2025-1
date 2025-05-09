@@ -36,6 +36,35 @@
 * Acurácias muito baixas e próximas → underfitting
 * Curvas altas e próximas → bom desempenho
 
+
+## Curva ROC
+**Objetivo: Avaliar a capacidade do modelo em distinguir entre as classes positiva e negativa.**
+
+![curva_roc](https://github.com/user-attachments/assets/c89ee173-2138-40c9-b990-05ecf2e9a11b)
+
+Eixos:
+
+X = Taxa de Falsos Positivos (FPR)
+
+Y = Taxa de Verdadeiros Positivos (TPR)
+
+Curva:
+
+Mostra o desempenho do modelo em diferentes limiares de classificação.
+
+A diagonal representa um modelo aleatório (sem poder de discriminação).
+
+Interpretação:
+
+Curva próxima do canto superior esquerdo → ótimo desempenho
+
+Curva próxima da diagonal → desempenho ruim
+
+AUC (Área sob a curva) perto de 1 → modelo excelente
+
+AUC ≈ 0.5 → modelo aleatório.
+
+
 ## Matriz de Confusão
 **Objetivo: Avaliar os acertos e erros do modelo em cada classe.**
 
