@@ -142,6 +142,24 @@ A feature 'P2_r' demonstra ser significativamente mais importante do que todas a
 
 Isso sugere que o modelo preditivo é fortemente influenciado pela feature 'P2_r', enquanto as demais features do top 15 têm um impacto relativamente menor no resultado da predição.
 
+
+
+## Ávore de decisão treinada.
+**Objetivo: Visualizar as regras de decisão aprendidas por uma árvore de decisão para classificar a satisfação.**
+
+![arvore de decisao treinada](https://github.com/user-attachments/assets/b0c2b30d-99d1-4968-a8ac-f8813053b127)
+
+Análise:
+
+Cada nó da árvore representa um teste em uma feature. As ramificações representam os resultados do teste, levando a outros nós ou a nós folha. Os nós folha indicam a classe prevista (Satisfeito ou Insatisfeito).
+
+Nós internos: Contêm a condição de teste (ex: P2_r < 3.5), o índice Gini, o número de amostras e o valor (contagem de amostras por classe).
+Nós folha: Contêm o índice Gini, o número de amostras e a classe prevista.
+Interpretação:
+
+A árvore mostra como as decisões são tomadas com base nos valores das features para chegar a uma classificação de satisfação. Percorrendo a árvore a partir do nó raiz, seguindo os caminhos de "True" ou "False" de acordo com os valores das features de uma amostra, chega-se a um nó folha que indica a previsão de satisfação para essa amostra.
+
+
 ---
 # Segunda Pergunta:
 
