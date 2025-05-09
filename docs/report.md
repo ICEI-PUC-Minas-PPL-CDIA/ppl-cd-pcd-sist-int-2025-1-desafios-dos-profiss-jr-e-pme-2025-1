@@ -319,10 +319,11 @@ Calcular a correlação de Spearman entre variáveis binárias de habilidades (`
 **Parâmetros**
 
 ```
-Random Forest:
-n_estimators: 100 #(número de árvores).
-max_depth: 10 #(limita complexidade).
-min_samples_split: 5.
+n_estimators: 200 – número de árvores na floresta (mais árvores = melhor generalização, mas maior custo computacional).
+
+max_depth: None – sem limite de profundidade (árvores crescem até ficarem puras ou até atingir outro critério de parada).
+
+min_samples_split: 2 – o número mínimo de amostras necessário para dividir um nó (quanto menor, mais complexas as árvores podem se tornar).
 ```
 
 [Acesse o Algoritimo](/src/Modelo_Corrigido/Explicação_Codigo_Modelo_Corrigido.md)
