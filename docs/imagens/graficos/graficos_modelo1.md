@@ -82,6 +82,28 @@ Eixos:
 Importante para ver onde o modelo mais erra (ex: mais falsos positivos ou negativos?).
 
 
+## Gráfico de TOP 15 features mias importantes
+**Objetivo: Avaliar a capacidade de cada feature em ser considerada importante.
+
+![top15_features_+importantes](https://github.com/user-attachments/assets/05e742f4-a98d-4900-8f79-8fc45ad982c9)
+
+Eixos:
+
+X (análogo a FPR): Uma medida de "falsa importância" (uma feature que aparece no top 15, mas talvez não seja tão crucial?). Isso é mais difícil de definir diretamente a partir da imagem.
+Y (análogo a TPR): A "taxa de verdadeira importância" (o quão importante a feature realmente é, refletida pelo seu valor no gráfico).
+Curva:
+
+Aqui, não temos uma curva, mas sim os valores das barras. Uma "boa" feature estaria mais para o topo (maior "TPR" - maior importância). Uma feature "ruim" (menos importante) estaria mais para baixo.
+Uma linha "diagonal" aqui seria mais como uma distribuição uniforme de importância, onde todas as features tivessem valores semelhantes. Claramente, não é o caso.
+
+Interpretação:
+
+Features com barras mais altas (próximas ao "topo esquerdo" se imaginarmos um gráfico onde o eixo Y é a importância) seriam análogas a um "ótimo desempenho" em termos de importância para o modelo. 'Databricks' seria um exemplo.
+Features com barras mais baixas (mais próximas de uma "base") seriam análogas a um "desempenho ruim" em termos de importância relativa dentro desse conjunto das top 15. 'nivel_ensino_Graduação/Bacharelado' seria um exemplo.
+Não temos um AUC aqui, mas poderíamos dizer que a distribuição geral dos comprimentos das barras nos dá uma ideia da "capacidade" do conjunto de features de ter algumas realmente dominantes. Uma grande diferença entre a barra mais alta e as mais baixas sugere uma forte distinção na importância.
+
+
+
 ## Matriz de Probabilidades 
 **Objetivo: Mostrar a probabilidade prevista para cada classe, e não só a previsão binária.**
 
