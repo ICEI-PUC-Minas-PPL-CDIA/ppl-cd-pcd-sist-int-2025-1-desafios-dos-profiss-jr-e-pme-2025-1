@@ -206,7 +206,7 @@ Garante que o script só será executado se for chamado diretamente (não quando
 
 # 2. Modelo Random Forest - Nível de IA
 
-[Arquivo Python](/src/PrimeiroModeloCorrigido/Pergunta2.ipynb)
+[Arquivo Python](/src/Modelo_Corrigido/RandonFlorest.ipynb)
 
 
 ---
