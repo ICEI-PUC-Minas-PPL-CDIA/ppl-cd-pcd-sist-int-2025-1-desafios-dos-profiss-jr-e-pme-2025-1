@@ -39,7 +39,8 @@
 ## Matriz de Confusão
 **Objetivo: Avaliar os acertos e erros do modelo em cada classe.**
 
-![download](https://github.com/user-attachments/assets/c86c980d-7b7a-43b4-89c9-7050707330a1)
+![matriz_de_confusao](https://github.com/user-attachments/assets/94e7143f-555e-4db3-8e71-7cddca3f7d11)
+
 
 
 Eixos:
