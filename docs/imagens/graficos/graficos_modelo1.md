@@ -1,7 +1,7 @@
 # Graficos de Resultados do Primeiro Modelo: 
 
 ---
-# Modelo 1.
+# Modelo 1:
 
 
 ## Curva ROC.
@@ -179,34 +179,62 @@ Uma grande lacuna entre as curvas pode indicar overfitting (bom desempenho no tr
 
 
 ---
-# Segunda Pergunta:
+# Modelo 2:
 
-## Curva de Aprendizado
-**Objetivo: Verificar se o modelo está sofrendo com overfitting ou underfitting.**
 
- ![download](https://github.com/user-attachments/assets/52ca93a9-b9d4-4668-ad61-700ad385e00a)
-Eixos:
-* X: Tamanho do conjunto de treino.
-* Y: Acurácia média (tanto no treino quanto no teste).
+## Curva ROC
+**Objetivo: Avaliar a capacidade do modelo em distinguir entre as classes positiva e negativa.**
+
+![image](https://github.com/user-attachments/assets/e601699e-9191-4251-bde1-29109af90bbb)
+
+Análise:
+
+Eixo X: Taxa de Falsos Positivos (FPR).
+Eixo Y: Taxa de Verdadeiros Positivos (TPR).
+Curva: Desempenho do modelo em vários limiares.
+Linha tracejada: Modelo aleatório.
+AUC: Área sob a curva (0 a 1).
+Interpretação:
+
+Curva acima da linha tracejada indica melhor desempenho que aleatório.
+AUC próximo de 1 é um modelo excelente.
+AUC ≈ 0.5 é um modelo aleatório.
+Análise da imagem fornecida:
+
+A curva ROC (em laranja) está bem acima da linha tracejada (modelo aleatório).
+O valor da Área Sob a Curva (AUC) é de 0.83.
+
+
+
+## Matriz de confusão.
+**Objetivo: Avaliar o desempenho do modelo de classificação**
+
+![image](https://github.com/user-attachments/assets/ccf4893d-b603-49eb-8f9a-4183e46d997a)
+
+Análise:
+
+Verdadeiros Negativos (VN): 438 (classe 0 corretamente prevista como 0).
+Falsos Positivos (FP): 92 (classe 0 incorretamente prevista como 1).
+Falsos Negativos (FN): 241 (classe 1 incorretamente prevista como 0).
+Verdadeiros Positivos (VP): 553 (classe 1 corretamente prevista como 1).
+Interpretação:
+
+O modelo teve um bom desempenho na identificação da classe 1 (VP alto). Houve menos erros na previsão da classe 0 (FP menor que FN).
+
+Em resumo, o modelo classifica razoavelmente bem ambas as classes, com um desempenho ligeiramente melhor na identificação da classe positiva (1).
+
+
+
+## Top 15 Features Mais Importantes.
+**Objetivo: Mostrar a importância relativa das 15 principais características para um modelo.**
+
+![image](https://github.com/user-attachments/assets/d9feb14d-7760-41c9-9010-747dd8afd24d)
+
+Análise:
+
+Barras mais longas indicam maior importância da característica.
 
 Interpretação:
-* Se as linhas de treino e teste convergem: modelo está aprendendo bem.
-* Se houver um grande espaço entre elas: pode haver overfitting.
-* Essa curva mostra como a performance muda à medida que mais dados de treino são usado
 
-//$$$
-
-
-## Heatmap de Correlação
-![download](https://github.com/user-attachments/assets/10d2a5d3-f159-4036-8c98-83985fc743f4)
-
-Eixos: Todas as features numéricas + nivel_ia_encoded.
-
-Objetivo: Medir a correlação (Spearman) entre variáveis.
-
-Interpretação:
-* Cores vermelhas = correlação positiva.
-* Cores azuis = correlação negativa
-  
-Pode mostrar, por exemplo, que quanto maior o uso de aws, maior o nivel_ia_encoded.
-
+'databricks' é a característica mais importante.
+A importância das características diminui ao longo da lista.
