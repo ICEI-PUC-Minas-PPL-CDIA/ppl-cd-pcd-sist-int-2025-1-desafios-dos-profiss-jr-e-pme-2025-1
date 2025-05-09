@@ -1,8 +1,11 @@
 # Graficos de Resultados do Primeiro Modelo: 
 
 ---
-Curva ROC
-Objetivo: Avaliar a capacidade do modelo em distinguir entre as classes positiva e negativa.
+#Modelo 1.
+
+
+##Curva ROC.
+**Objetivo: Avaliar a capacidade do modelo em distinguir entre as classes positiva e negativa.**
 
 ![curva_roc_modelo1](https://github.com/user-attachments/assets/55dd85e2-b373-4032-a3a3-1f99632ef774)
 Eixos:
@@ -32,8 +35,9 @@ Análise da imagem (AUC = 0.72):
 O modelo tem capacidade razoável de distinguir as classes.
 
 
-##Distribuição da Satisfação
-**Objetivo: Mostrar a contagem de clientes insatisfeitos e satisfeitos.
+
+##Distribuição da Satisfação.
+**Objetivo: Mostrar a contagem de clientes insatisfeitos e satisfeitos.**
 
 ![image](https://github.com/user-attachments/assets/a6a6b92a-7fcb-4ba8-8667-44aed9847eb9)
 Eixos:
@@ -58,8 +62,9 @@ Interpretação:
 Há mais clientes satisfeitos do que insatisfeitos no conjunto de dados.
 
 
-##Distribuição por Faixa Salarial (P2_h)
-**Objetivo: Mostrar a contagem de pessoas em diferentes faixas salariais.
+
+##Distribuição por Faixa Salarial (P2_h).
+**Objetivo: Mostrar a contagem de pessoas em diferentes faixas salariais.**
 ![distribuicao_faixa_salarial](https://github.com/user-attachments/assets/22c92a89-60b9-4b13-8433-79dffb9ae177)
 
 Eixos:
