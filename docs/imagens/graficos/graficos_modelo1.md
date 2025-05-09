@@ -55,7 +55,7 @@ Interpretação:
 
 Barras mais altas indicam uma maior quantidade de clientes naquela categoria.
 
-Análise da imagem fornecida:
+Análise da imagem:
 
 A barra para "1 (Satisfeito)" é significativamente mais alta (contagem de 3420) do que a barra para "0 (Insatisfeito)" (contagem de 1873).
 Interpretação:
@@ -82,7 +82,7 @@ Interpretação:
 
 As faixas salariais com as barras mais longas concentram o maior número de pessoas.
 
-Análise da imagem fornecida:
+Análise da imagem:
 
 A faixa salarial com a maior contagem é "de R$ 8.001/mês a R$ 12.000/mês".
 As faixas salariais com as menores contagens estão nas extremidades inferiores ("Menos de R$ 1.000/mês") e superiores ("de R$ 25.001/mês a R$ 30.000/mês", "de R$ 30.001/mês a R$ 40.000/mês", "Acima de R$ 40.001/mês", "de R$ 101/mês a R$ 2.000/mês").
@@ -114,7 +114,7 @@ Interpretação:
 
 Valores mais altos na diagonal principal (VP e VN) indicam um bom desempenho do modelo.
 
-Análise da imagem fornecida:
+Análise da imagem:
 
 Verdadeiros Negativos (VN): 260 amostras foram corretamente classificadas como classe 0.
 Falsos Positivos (FP): 209 amostras que eram da classe 0 foram incorretamente classificadas como classe 1.
@@ -158,6 +158,24 @@ Nós folha: Contêm o índice Gini, o número de amostras e a classe prevista.
 Interpretação:
 
 A árvore mostra como as decisões são tomadas com base nos valores das features para chegar a uma classificação de satisfação. Percorrendo a árvore a partir do nó raiz, seguindo os caminhos de "True" ou "False" de acordo com os valores das features de uma amostra, chega-se a um nó folha que indica a previsão de satisfação para essa amostra.
+
+
+
+## Curva de aprendizado.
+**Objetivo: Avaliar como o desempenho do modelo muda com o tamanho do conjunto de treinamento.**
+
+![curva de aprendixagem](https://github.com/user-attachments/assets/7389cbba-f451-418d-9ed0-61cc2885e4fe)
+
+Análise:
+
+O gráfico mostra a acurácia do modelo tanto no conjunto de treino quanto no conjunto de validação para diferentes tamanhos do conjunto de treino.
+
+Linha "Treino": Acurácia no conjunto de treino.
+Linha "Validação": Acurácia no conjunto de validação (dados não vistos durante o treino).
+Interpretação:
+
+Idealmente, ambas as curvas devem convergir para um valor alto.
+Uma grande lacuna entre as curvas pode indicar overfitting (bom desempenho no treino, ruim na validação) ou underfitting (desempenho ruim em ambos).
 
 
 ---
