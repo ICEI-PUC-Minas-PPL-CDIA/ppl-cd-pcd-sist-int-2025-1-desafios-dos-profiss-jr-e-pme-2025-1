@@ -25,7 +25,8 @@
 ## Curva ROC
 **Objetivo: Avaliar a capacidade do modelo em distinguir entre as classes positiva e negativa.**
 
-![curva_roc](https://github.com/user-attachments/assets/c89ee173-2138-40c9-b990-05ecf2e9a11b)
+![curva_roc_modelo1](https://github.com/user-attachments/assets/9e9b4b03-ceaa-427c-9c83-b5bf1da158de)
+
 
 Eixos:
 
@@ -74,18 +75,29 @@ Importante para ver onde o modelo mais erra (ex: mais falsos positivos ou negati
 
 Eixos:
 
-X (análogo a FPR): Uma medida de "falsa importância" (uma feature que aparece no top 15, mas talvez não seja tão crucial?). Isso é mais difícil de definir diretamente a partir da imagem.
-Y (análogo a TPR): A "taxa de verdadeira importância" (o quão importante a feature realmente é, refletida pelo seu valor no gráfico).
+X = Taxa de Falsos Positivos (FPR)
+
+Y = Taxa de Verdadeiros Positivos (TPR)
+
 Curva:
 
-Aqui, não temos uma curva, mas sim os valores das barras. Uma "boa" feature estaria mais para o topo (maior "TPR" - maior importância). Uma feature "ruim" (menos importante) estaria mais para baixo.
-Uma linha "diagonal" aqui seria mais como uma distribuição uniforme de importância, onde todas as features tivessem valores semelhantes. Claramente, não é o caso.
+Mostra o desempenho do modelo em diferentes limiares.
+
+A diagonal representa um modelo aleatório.
 
 Interpretação:
 
-Features com barras mais altas (próximas ao "topo esquerdo" se imaginarmos um gráfico onde o eixo Y é a importância) seriam análogas a um "ótimo desempenho" em termos de importância para o modelo. 'Databricks' seria um exemplo.
-Features com barras mais baixas (mais próximas de uma "base") seriam análogas a um "desempenho ruim" em termos de importância relativa dentro desse conjunto das top 15. 'nivel_ensino_Graduação/Bacharelado' seria um exemplo.
-Não temos um AUC aqui, mas poderíamos dizer que a distribuição geral dos comprimentos das barras nos dá uma ideia da "capacidade" do conjunto de features de ter algumas realmente dominantes. Uma grande diferença entre a barra mais alta e as mais baixas sugere uma forte distinção na importância.
+Curva superior esquerda → ótimo desempenho
+
+Curva próxima à diagonal → desempenho ruim
+
+AUC perto de 1 → modelo excelente
+
+AUC ≈ 0.5 → modelo aleatório.
+
+Análise da imagem (AUC = 0.72):
+
+O modelo tem capacidade razoável de distinguir as classes.
 
 
 
