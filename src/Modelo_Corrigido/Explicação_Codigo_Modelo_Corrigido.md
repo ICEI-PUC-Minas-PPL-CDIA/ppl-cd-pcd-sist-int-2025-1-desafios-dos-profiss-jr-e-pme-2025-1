@@ -208,5 +208,111 @@ Garante que o script só será executado se for chamado diretamente (não quando
 
 [Arquivo Python](/src/PrimeiroModeloCorrigido/Pergunta2.ipynb)
 
+
 ---
+
+
+### 1. Importação de Bibliotecas
+
+Importa bibliotecas para:
+
+* Manipulação de dados (`pandas`, `numpy`)
+* Modelagem e pré-processamento (`scikit-learn`)
+* Visualizações (`matplotlib`, `seaborn`)
+
+---
+
+### 2. Carregamento e Preparação dos Dados
+
+```python
+df = pd.read_csv('dados_selecionados.csv')
+```
+
+Lê os dados de um arquivo CSV.
+
+---
+
+### 3. Criação da Variável-Alvo
+
+```python
+df['target_ia_generativa'] = np.where(conditions, 1, 0)
+```
+
+Define o alvo (target) como 1 se:
+
+* Sabe Python
+* Sabe pelo menos uma das clouds (AWS, Azure, GCP)
+* E sabe Power BI ou Tableau
+
+---
+
+### 4. Seleção de Features "Seguras"
+
+Seleciona colunas que não causam vazamento de dados, ou seja, que não estão diretamente relacionadas à variável alvo.
+
+Adiciona também duas novas colunas:
+
+* `total_linguagens`: número de linguagens que a pessoa sabe
+* `exp_total`: soma da experiência em dados e TI
+
+---
+
+### 5. Pré-processamento dos Dados
+
+Transforma colunas categóricas em numéricas:
+
+* Colunas com "Sim"/"Não" viram 1/0
+* Experiência é convertida para números (por exemplo, "Mais de 10 anos" vira 11)
+
+Cria o `ColumnTransformer`:
+
+* Aplica `OneHotEncoder` em `nivel_ensino`
+* Normaliza as colunas numéricas com `StandardScaler`
+
+---
+
+### 6. Modelagem com Random Forest
+
+Cria `Pipeline` com pré-processamento + classificador:
+
+```python
+pipeline = Pipeline([
+    ('preprocessor', preprocessor),
+    ('classifier', RandomForestClassifier(...))
+])
+```
+
+Realiza tuning de hiperparâmetros com `GridSearchCV` (validação cruzada 5-fold), otimizando para a métrica `f1`.
+
+---
+
+### 7. Avaliação do Modelo
+
+Após o `fit`, avalia com:
+
+* Acurácia
+* Relatório de classificação (precision, recall, f1-score)
+* Matriz de confusão
+* Curva ROC e AUC (mede desempenho com probabilidades)
+
+---
+
+### 8. Importância das Features
+
+Obtém as 15 features mais importantes segundo o modelo `RandomForest`, e plota em um gráfico de barras.
+
+---
+
+### Resumo Geral
+
+Este pipeline:
+
+* Prepara dados reais com engenharia de features
+* Usa uma pipeline com pré-processamento + modelagem
+* Treina e ajusta hiperparâmetros com `GridSearchCV`
+* Avalia com métricas robustas e visualizações
+* Interpreta as variáveis mais importantes para a decisão do modelo
+
+---
+
 
