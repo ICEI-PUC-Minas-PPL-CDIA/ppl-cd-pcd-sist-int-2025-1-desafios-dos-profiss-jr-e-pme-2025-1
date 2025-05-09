@@ -142,31 +142,8 @@ Interpretação:
 * Se houver um grande espaço entre elas: pode haver overfitting.
 * Essa curva mostra como a performance muda à medida que mais dados de treino são usado
 
-  ## Matriz de Confusão
-**Objetivo: Ver quais classes de nivel_ia estão sendo corretamente previstas ou confundidas.**
-![download](https://github.com/user-attachments/assets/4dc29917-7eae-4b9d-8380-0ba95dc13c65)
+//$$$
 
-
-Eixos:
-* Linhas: Classes reais.
-* Colunas: Classes previstas.
-
-Interpretação:
-* Diagonal = acertos.
-* Fora da diagonal = erros.
-
-Útil para entender se o modelo está errando consistentemente em certas classes.
-
-## Gráfico de barras ordenadas.
-**Objetivo: Mostrar quais variáveis (habilidades, escolaridade, doutores) são mais importantes para prever o nivel_ia.**
-
-![download](https://github.com/user-attachments/assets/e855d69c-55d0-495c-a2da-709a639c2b99)
-  
-
-Interpretação:
-* Valores altos significam maior impacto no modelo.
-  
-Por exemplo, se python tiver alto peso, indica forte associação com o uso de IA Generativa.
 
 ## Heatmap de Correlação
 ![download](https://github.com/user-attachments/assets/10d2a5d3-f159-4036-8c98-83985fc743f4)
