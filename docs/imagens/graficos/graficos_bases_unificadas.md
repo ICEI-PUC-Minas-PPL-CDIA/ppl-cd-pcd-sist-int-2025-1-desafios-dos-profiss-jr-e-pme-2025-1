@@ -1,34 +1,92 @@
+# Analise Exploratoria das Bases de Dados Unificadas
 
-### **Satisfação Profissional**
+----
+## **1. Distribuição da Satisfação Profissional**
+*Objetivo:* Mostrar a proporção de profissionais satisfeitos vs. insatisfeitos.
+![download](https://github.com/user-attachments/assets/9cfff94c-05a4-4495-91dd-a6dd472bf4eb)
 
-![Satisfação Profissional](satisfação%20profissional.png)
+Descrição:
 
-### **Experiencia X Satisfação**
+Um gráfico de barras com duas categorias: "Satisfeito" (valor 1) e "Insatisfeito" (valor 0).
 
-![Experiencia X Satisfação](relacao%20satisfacao%20e%20experiencia.png)
+As barras são coloridas em laranja e azul, respectivamente.
 
-### **Salário X Satisfação**
+Os valores absolutos são exibidos no topo de cada barra.
 
-![Salário X Satisfação](relacao%20satisfacao%20e%20salario.png)
+Insights:
 
-### **Tamanho de Empresa X Satisfação**
+Permite comparar quantitativamente a satisfação geral dos profissionais.
 
-![Tamanho de Empresa X Satisfação](relacao%20satisfacao%20tam%20empresa.png)
+Exemplo: Se a barra "Satisfeito" for maior, indica uma tendência positiva na amostra.
 
-### **Linguagem usada X Satisfação**
+## **2. Relação entre Satisfação e Experiência em Dados**
+*Objetivo:* Analisar se a experiência em dados está correlacionada com a satisfação.
+![download](https://github.com/user-attachments/assets/07a14600-902e-45de-9129-ce4d4e1f24e9)
 
-![Linguagem usada X Satisfação](linguagens_profissionais_satisfeitos.png)
+Descrição:
 
-### **Média salarial X Adoção de IA**
+Dois boxplots lado a lado: um para profissionais insatisfeitos e outro para satisfeitos.
 
-![media_salarial_por_nivel_de_adocao_de_ia](https://github.com/user-attachments/assets/a3bb49f8-7812-4eeb-9700-6c2d92303a21)
+Cada caixa representa a distribuição dos anos de experiência (mediana, quartis e outliers).
 
-### **Adoção de IA X Formação acadêmica**
+Insights:
 
-![nivel_de_adocao_de_ia_por_formacao_academica](https://github.com/user-attachments/assets/68def9b6-065d-4026-91f3-ea6de413900b)
+Se a mediana da experiência for maior no grupo "Satisfeitos", sugere que profissionais mais experientes tendem a estar mais satisfeitos.
 
-### **Uso de linguagem X Nível de formação**
+Outliers podem indicar casos atípicos (ex.: profissionais com muita experiência ainda insatisfeitos).
 
-![uso_de_linguagens_por_nivel_formacao](https://github.com/user-attachments/assets/1ece9074-8185-42d5-8fdf-b5bd237450fe)
+## **3. Uso de Tecnologias por Tamanho de Empresa**
+*Objetivo:* Identificar quais tecnologias são mais utilizadas em empresas de diferentes portes.
+![download](https://github.com/user-attachments/assets/8399fb85-ca7c-4931-a7f9-4b9e939aca22)
+
+Descrição:
+
+Gráfico de barras agrupadas, onde cada grupo representa um tamanho de empresa (ex.: pequena, média, grande).
+
+Barras coloridas indicam a proporção média de uso de tecnologias (SQL, Python, Java, etc.).
+
+Insights:
+
+Tecnologias predominantes em empresas grandes (ex.: Python e SQL) podem refletir demandas do mercado.
+
+Empresas menores podem usar tecnologias menos comuns (ex.: R ou JavaScript).
+
+## **4. Proporção de Uso de Tecnologias por Satisfação**
+*Objetivo:* Comparar as tecnologias mais usadas por profissionais satisfeitos e insatisfeitos.
+![download](https://github.com/user-attachments/assets/07aaf5bd-e750-420b-8e64-cf32ddf565b3)
+
+Descrição:
+
+Dois gráficos de barras horizontais lado a lado:
+
+Esquerda: Tecnologias mais usadas por profissionais satisfeitos.
+
+Direita: Tecnologias mais usadas por insatisfeitos.
+
+As barras são ordenadas pela proporção de uso.
+
+Insights:
+
+Se Python é predominante entre satisfeitos, pode indicar que a linguagem está associada a melhores condições de trabalho.
+
+Tecnologias menos valorizadas (ex.: C/C++) podem estar ligadas à insatisfação.
+
+## **5. Satisfação por Tamanho da Empresa**
+
+Objetivo:* Verificar se o tamanho da empresa influencia a satisfação.
+*![download](https://github.com/user-attachments/assets/dcfbc94b-644f-417c-b2ff-f7ee588d3f9e)
+Descrição:
+
+Gráfico de barras empilhadas, onde cada barra representa um porte de empresa.
+
+Cores indicam a quantidade de profissionais insatisfeitos (laranja) e satisfeitos (azul).
+
+Valores totais são exibidos no topo das barras.
+
+Insights:
+
+Empresas grandes podem ter mais insatisfeitos se a barra laranja for predominante.
+
+Startups (pequenas empresas) podem mostrar maior satisfação, dependendo dos dados.
 
 
