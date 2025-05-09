@@ -126,6 +126,22 @@ O modelo teve um bom desempenho na identificação da classe 1 (maior número de
 
 Em resumo, o modelo é melhor em prever a classe 1 do que a classe 0 nesta amostra.
 
+
+## Top 15 Features por Importância
+**Objetivo: Visualizar a importância relativa das 15 principais features para um determinado modelo preditivo.**
+
+![top15_features_+importante_mod1](https://github.com/user-attachments/assets/5e9c4d09-461d-4f8d-b726-94838041e6fe)
+
+Análise:
+
+Este gráfico de barras horizontais exibe as 15 features mais importantes, ordenadas da maior para a menor importância. O comprimento de cada barra representa a magnitude da importância daquela feature.
+
+Interpretação:
+
+A feature 'P2_r' demonstra ser significativamente mais importante do que todas as outras, com um valor de importância em torno de 0.65. A segunda feature mais importante, 'P4_d_1', tem uma importância consideravelmente menor, aproximadamente 0.14. A partir daí, a importância das features subsequentes diminui progressivamente, com as últimas features na lista ('P3_a_', 'P4_j_3', 'P4_j_1') apresentando uma importância muito baixa em comparação com a primeira.
+
+Isso sugere que o modelo preditivo é fortemente influenciado pela feature 'P2_r', enquanto as demais features do top 15 têm um impacto relativamente menor no resultado da predição.
+
 ---
 # Segunda Pergunta:
 
