@@ -4,21 +4,6 @@
 
 # Primeria Pergunta:
 
-
-## Heatmap de Correlação 
-**Objetivo: Verificar o grau de correlação entre variáveis numéricas.**
-![download](https://github.com/user-attachments/assets/7de1413e-8f38-41d7-bfd2-3a3d6b9f1e35)
-
-
- Mostra as correlações entre: salario_medio, exp_dados_num e pct_doutores.
- 
- O valor varia de -1 a 1:
-* 1 = correlação positiva perfeita
-* -1 = correlação negativa perfeita
-* 0 = sem correlação
-  
- É útil para entender relações lineares que podem afetar o modelo.
-
 ## Curva de Aprendizado 
 **Objetivo: Avaliar se o modelo sofre de overfitting ou underfitting**
 ![download](https://github.com/user-attachments/assets/eebb020b-89d8-448a-bce0-0750ddb03298)
