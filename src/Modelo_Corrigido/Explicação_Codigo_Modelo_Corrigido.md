@@ -209,110 +209,144 @@ Garante que o script só será executado se for chamado diretamente (não quando
 [Arquivo Python](/src/Modelo_Corrigido/RandonFlorest.ipynb)
 
 
----
-
-
-### 1. Importação de Bibliotecas
+##   Importação de Bibliotecas
 
 Importa bibliotecas para:
 
-* Manipulação de dados (`pandas`, `numpy`)
-* Modelagem e pré-processamento (`scikit-learn`)
-* Visualizações (`matplotlib`, `seaborn`)
+* Manipulação de dados: `pandas`, `numpy`
+* Pré-processamento e modelagem: `scikit-learn`
+* Visualização: `matplotlib`, `seaborn`
+* Interpretação do modelo: `shap`
 
 ---
 
-### 2. Carregamento e Preparação dos Dados
+## Carregamento e Preparação dos Dados
 
 ```python
 df = pd.read_csv('dados_selecionados.csv')
 ```
 
-Lê os dados de um arquivo CSV.
+Lê os dados do arquivo `.csv` contendo respostas da pesquisa.
 
 ---
 
-### 3. Criação da Variável-Alvo
+##  Criação da Variável-Alvo
 
 ```python
+conditions = (
+    df['python'] &
+    (df['aws'] | df['azure'] | df['gcp']) &
+    (df['powerbi'] | df['tableau'])
+)
 df['target_ia_generativa'] = np.where(conditions, 1, 0)
 ```
 
-Define o alvo (target) como 1 se:
+Define a variável `target_ia_generativa` como 1 para quem:
 
-* Sabe Python
-* Sabe pelo menos uma das clouds (AWS, Azure, GCP)
-* E sabe Power BI ou Tableau
-
----
-
-### 4. Seleção de Features "Seguras"
-
-Seleciona colunas que não causam vazamento de dados, ou seja, que não estão diretamente relacionadas à variável alvo.
-
-Adiciona também duas novas colunas:
-
-* `total_linguagens`: número de linguagens que a pessoa sabe
-* `exp_total`: soma da experiência em dados e TI
+* Sabe Python **e**
+* Sabe pelo menos uma das clouds (AWS, Azure, GCP) **e**
+* Sabe Power BI **ou** Tableau
 
 ---
 
-### 5. Pré-processamento dos Dados
+##  Seleção e Engenharia de Features
 
-Transforma colunas categóricas em numéricas:
+Seleciona features “seguras” que não causam vazamento de informação.
 
-* Colunas com "Sim"/"Não" viram 1/0
-* Experiência é convertida para números (por exemplo, "Mais de 10 anos" vira 11)
+Cria duas novas variáveis:
 
-Cria o `ColumnTransformer`:
+* `total_linguagens`: número de linguagens que a pessoa conhece
+* `exp_total`: soma da experiência em dados e em TI
 
-* Aplica `OneHotEncoder` em `nivel_ensino`
-* Normaliza as colunas numéricas com `StandardScaler`
+Converte experiência para valores numéricos com mapeamento.
 
 ---
 
-### 6. Modelagem com Random Forest
+## Pré-processamento dos Dados
 
-Cria `Pipeline` com pré-processamento + classificador:
+Cria um `ColumnTransformer` com:
+
+* **OneHotEncoder** para a coluna `nivel_ensino`
+* **StandardScaler** para colunas numéricas
+
+Esse passo padroniza os dados e transforma variáveis categóricas.
+
+---
+
+##   Modelagem com Random Forest
+
+Cria um `Pipeline` que junta:
+
+* O pré-processamento
+* Um `RandomForestClassifier` com balanceamento de classes e `n_jobs=-1`
+
+Aplica `GridSearchCV` com validação cruzada (5-fold), otimizando a métrica `f1`.
 
 ```python
-pipeline = Pipeline([
-    ('preprocessor', preprocessor),
-    ('classifier', RandomForestClassifier(...))
-])
+params = {
+    'classifier__n_estimators': [100, 200],
+    'classifier__max_depth': [None, 10],
+    'classifier__min_samples_split': [2, 5]
+}
 ```
 
-Realiza tuning de hiperparâmetros com `GridSearchCV` (validação cruzada 5-fold), otimizando para a métrica `f1`.
+---
+
+##  Avaliação do Modelo
+
+Após o ajuste com `GridSearchCV`, o modelo é avaliado com:
+
+* **Acurácia** no treino e no teste
+* **Relatório de Classificação** (`precision`, `recall`, `f1-score`)
+* **Matriz de Confusão**
+* **Curva ROC** comparando treino vs. teste
+* **Curva Precision-Recall**
+* **Histograma** da distribuição das probabilidades de classe positiva
 
 ---
 
-### 7. Avaliação do Modelo
+##  Importância das Features
 
-Após o `fit`, avalia com:
+O modelo Random Forest permite extrair as **features mais importantes** para a predição.
 
-* Acurácia
-* Relatório de classificação (precision, recall, f1-score)
-* Matriz de confusão
-* Curva ROC e AUC (mede desempenho com probabilidades)
+É exibido um gráfico com as **15 variáveis mais influentes** no modelo final.
 
 ---
 
-### 8. Importância das Features
+## Curva de Aprendizado
 
-Obtém as 15 features mais importantes segundo o modelo `RandomForest`, e plota em um gráfico de barras.
+A curva de aprendizado mostra o desempenho (F1 Score) do modelo em diferentes tamanhos de conjunto de treino:
+
+* Detecta **overfitting** (quando a linha de treino está bem acima da de validação)
+* Verifica se mais dados poderiam melhorar o modelo
+
+---
+
+## Interpretação com SHAP
+
+O SHAP permite interpretar a contribuição de cada variável para as predições individuais.
+
+```python
+explainer = shap.Explainer(best_model.named_steps['classifier'])
+shap_values = explainer(X_transformed)
+shap.summary_plot(shap_values, X_transformed, feature_names=feature_names)
+```
+
+Exibe um **summary plot** com as features que mais impactam as predições.
 
 ---
 
-### Resumo Geral
+##  Resumo Final
 
-Este pipeline:
-
-* Prepara dados reais com engenharia de features
-* Usa uma pipeline com pré-processamento + modelagem
-* Treina e ajusta hiperparâmetros com `GridSearchCV`
-* Avalia com métricas robustas e visualizações
-* Interpreta as variáveis mais importantes para a decisão do modelo
+* Leitura e limpeza de dados reais
+* Criação de variável alvo com base em lógica analítica
+* Engenharia de variáveis relevantes
+* Pré-processamento robusto (normalização + codificação)
+* Modelagem com Random Forest + tuning de hiperparâmetros
+* Avaliação rigorosa com múltiplas métricas
+* Interpretação dos resultados com SHAP e importância de features
 
 ---
+
 
 
