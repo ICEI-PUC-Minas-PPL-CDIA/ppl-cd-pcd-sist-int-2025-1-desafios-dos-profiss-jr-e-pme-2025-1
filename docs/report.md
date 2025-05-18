@@ -201,10 +201,11 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 <div id='Indução_de_modelos'/>  
  <h3 align="center"><strong> Indução de modelos  </strong></h3> 
 
+## Pergunta 1: 
 
-## Modelo 1: Ávore de Decisão
+**Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?**
 
-**Pergunta 1:** 
+### Modelo 1: Ávore de Decisão
 
 Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?
 
@@ -265,12 +266,15 @@ A árvore de decisão fornece uma visão clara da importância relativa de cada 
 
 [Acesse o Algoritimo](/src/Modelo_Corrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
+### Modelo 2: Random Forest
 
-## Modelo 2: Random Forest
+---
 
-**Pergunta 2:** 
+## Pergunta 2:
 
-Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?
+**Quais habilidades e conhecimentos são mais valorizados no mercado para quem deseja atuar com IA Generativa?**
+
+### Modelo 1: Random Forest
 
 **Justificativa do Modelo**
 
@@ -325,6 +329,9 @@ max_depth: None – sem limite de profundidade (árvores crescem até ficarem pu
 
 min_samples_split: 2 – o número mínimo de amostras necessário para dividir um nó (quanto menor, mais complexas as árvores podem se tornar).
 ```
+
+### Modelo 2: Arvore de Decisão
+
 
 [Acesse o Algoritimo](/src/Modelo_Corrigido/Explicação_Codigo_Modelo_Corrigido.md)
 
