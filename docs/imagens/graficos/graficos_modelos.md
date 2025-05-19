@@ -1,6 +1,11 @@
-# Graficos de Resultados do Primeiro Modelo: 
+# Graficos de Resultados dos  Modelos: 
 
 ---
+
+
+
+# Pergunta 1:
+
 # Modelo 1:
 
 
@@ -179,7 +184,9 @@ Uma grande lacuna entre as curvas pode indicar overfitting (bom desempenho no tr
 
 
 ---
-# Modelo 2:
+
+# Pergunta 2:  
+# Modelo 1:
 
 
 ## Curva ROC
