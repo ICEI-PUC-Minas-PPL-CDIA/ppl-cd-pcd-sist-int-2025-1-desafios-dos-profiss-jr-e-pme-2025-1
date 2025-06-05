@@ -102,7 +102,7 @@ Este relatório apresenta a análise dos resultados de um modelo de classificaç
 
 ### 2.1. Distribuição da Variável Alvo (Satisfação)
 
-![Distribuição Satisfação](/graficos_modelo2/distribuição_da_satisfação.png)
+![Distribuição Satisfação](graficos_modelo2/distribuição_da_satisfação.png)
 
 O gráfico de distribuição da variável alvo revela um desbalanceamento significativo entre as classes:
 
@@ -113,7 +113,7 @@ Este desbalanceamento é um fator crítico a ser considerado na avaliação do m
 
 ### 2.2. Distribuição por Faixa Salarial
 
-![Distribuição Faixa Salarial](/graficos_modelo2/distribuição_por_faixa_salaria.png)
+![Distribuição Faixa Salarial](graficos_modelo2/distribuição_por_faixa_salaria.png)
 
 A análise da distribuição da feature "Faixa Salarial (P2_h)" mostra a contagem de indivíduos em diferentes categorias salariais. As faixas mais representadas no dataset são:
 
@@ -158,15 +158,15 @@ As matrizes corroboram as observações dos relatórios de classificação. O al
 
 ### Matriz de confusão treino
 
-![Matriz de Confusão Treino](/graficos_modelo2/matriz_treino.png)
+![Matriz de Confusão Treino](graficos_modelo2/matriz_treino.png)
 
 ### Matriz de confusão teste
 
-![Matriz de confusão Teste](/graficos_modelo2/matriz_teste.png)
+![Matriz de confusão Teste](graficos_modelo2/matriz_teste.png)
 
 ### 3.3. Curva ROC (Receiver Operating Characteristic)
 
-![Curva ROC](/graficos_modelo2/curva_roc_treino&teste.png)
+![Curva ROC](graficos_modelo2/curva_roc_treino&teste.png)
 
 A Curva ROC avalia a capacidade discriminatória do modelo, plotando a Taxa de Verdadeiros Positivos (Recall) contra a Taxa de Falsos Positivos em diferentes limiares de classificação. A Área Sob a Curva (AUC) resume essa capacidade.
 
@@ -179,7 +179,7 @@ Os valores de AUC indicam que o modelo tem uma capacidade razoável de distingui
 
 ### 3.4. Curva de Aprendizagem
 
-![Curva de Aprendizagem](/graficos_modelo2/curva_de_aprendizagem.png)
+![Curva de Aprendizagem](graficos_modelo2/curva_de_aprendizagem.png)
 
 A Curva de Aprendizagem mostra como o desempenho do modelo (acurácia) varia com o tamanho do conjunto de treino.
 
