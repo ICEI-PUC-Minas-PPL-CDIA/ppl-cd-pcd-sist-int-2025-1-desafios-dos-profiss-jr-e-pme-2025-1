@@ -247,7 +247,7 @@ O modelo de Árvore de Decisão foi desenvolvido para lidar com problemas de cla
 
 O problema é de classificação, mudando prever uma variável categórica que representa a satisfação dos profissionais. O modelo escolhido para esta abordagem inicial foi a Árvore de Decisão.
 
-#### Funcionamento do Algoritmo: [Árvore de Decisão](/src/Modelos_Corrigidos/ArvoreDeDecisao.ipynb_)
+#### Funcionamento do Algoritmo: [Árvore de Decisão](/src/Modelos_Corrigidos/ArvoreDeDecisao.ipynb)
 A Árvore de Decisão é um algoritmo de aprendizagem supervisionado não-paramétrico. Para classificação, seu funcionamento se baseia em um processo de divisão recursiva dos dados:
 
 - **Nó Raiz e Divisão Recursiva**: O processo se inicia com um nó único (a raiz) que engloba a totalidade dos dados. Em cada nó, o algoritmo busca os melhores classificações (ou "pergunta") para particionar os dados em subconjuntos mais homogêneos em relação à variável alvo.
@@ -296,6 +296,8 @@ A combinação desses mecanismos permite que o Random Forest supere a propensão
 #### Objetivo do Modelo (Random Forest):
 
 O objetivo é classificar novas instâncias com alta precisão e capacidade de generalização, mitigando o *overfitting* e fornecendo mais confiável em dados não vistos, graças à sua arquitetura de conjunto.
+
+
 ---
 
  <div id='Resultados'/>
