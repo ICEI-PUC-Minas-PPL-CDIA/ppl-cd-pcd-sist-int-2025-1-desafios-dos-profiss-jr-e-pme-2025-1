@@ -28,8 +28,13 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Mi
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+_**Resumo**:
+
+Este trabalho analisa os desafios enfrentados por profissionais juniores e microempresas brasileiras na adoção da Inteligência Artificial Generativa (IA Generativa) e Large Language Models (LLMs). Com base em dados do "State of Data Brazil 2023" e microdados da educação superior, o estudo investiga fatores que influenciam a satisfação profissional e a competitividade das microempresas no contexto da IA.
+
+Para isso, foram induzidos modelos de machine learning, como a Árvore de Decisão, para identificar os principais fatores que explicam a satisfação dos profissionais da área de dados. O processo envolveu rigoroso pré-processamento dos dados, treinamento, validação e otimização dos modelos, além da comparação entre diferentes abordagens para garantir resultados confiáveis e interpretáveis.
+
+Os resultados indicam que fatores como experiência, acesso a ferramentas avançadas e capacitação são determinantes para a inserção e satisfação no mercado de IA Generativa, especialmente para perfis juniores e pequenos negócios_
 
 
 *******
@@ -210,13 +215,13 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
 	
  <h3 align="center"><strong> Indução de modelos  </strong></h3> 
 
-## Pergunta 1: 
-### **Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?**
+**A pergunta escolhida foi: Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?**
 
 ## 1\. Modelo de Árvore de Decisão
 
 <div id='Indução_de_modelos_1'/>  
-### 1.1. Indução do Modelo
+	
+###  Indução do Modelo
 
 O modelo de Árvore de Decisão é desenvolvido para lidar com problemas de classificação, conforme implementado no notebook "Pergunta1ArvoreDeDecisao.ipynb". O processo de indução (treinamento) do modelo segue as seguintes etapas rigorosas:
 
@@ -231,12 +236,12 @@ O modelo de Árvore de Decisão é desenvolvido para lidar com problemas de clas
 6.  **Otimização de Hiperparâmetros:** Para aprimorar o desempenho do modelo, emprega-se `GridSearchCV`. Esta técnica explora sistematicamente diferentes combinações de hiperparâmetros (e.g., `max_depth`, `min_samples_split`, `criterion`) e seleciona aquelas que resultam no melhor desempenho, geralmente medido por validação cruzada.
 7.  **Visualização da Árvore:** Um aspecto distintivo do modelo de Árvore de Decisão é sua interpretabilidade. O notebook permite a visualização gráfica da árvore de decisão treinada, o que é inestimável para compreender as regras lógicas que o modelo estabelece para classificar as instâncias.
 
-### 1.2. Tipo de Problema e Modelo Escolhido
+### Tipo de Problema e Modelo Escolhido
 
   * **Tipo de Problema:** O problema em questão é de **classificação**. A utilização de `DecisionTreeClassifier` e as métricas de avaliação empregadas confirmam que o objetivo é prever uma variável categórica.
   * **Modelo Escolhido:** **Árvore de Decisão**.
 
-### 1.3. Funcionamento do Algoritmo: Árvore de Decisão
+###  Funcionamento do Algoritmo: Árvore de Decisão
 
 A Árvore de Decisão é um algoritmo de aprendizado supervisionado não-paramétrico, capaz de resolver tanto problemas de classificação quanto de regressão. Para problemas de classificação, seu funcionamento baseia-se em um processo de divisão recursiva dos dados:
 
@@ -249,7 +254,8 @@ A Árvore de Decisão é um algoritmo de aprendizado supervisionado não-paramé
 
 
 <div id='Resultado_1'/>  
-### 1.4. Resultados Obtidos (Árvore de Decisão)
+	
+### Resultados Obtidos (Árvore de Decisão)
 
 O notebook evidencia que a avaliação do modelo de Árvore de Decisão foi realizada por meio de `accuracy_score`, `classification_report` e `confusion_matrix`. A utilização de `GridSearchCV` para otimização de hiperparâmetros indica um esforço sistemático para encontrar a configuração ótima do modelo.
 
@@ -261,9 +267,11 @@ O objetivo primordial do modelo de Árvore de Decisão, neste contexto, é **des
 
 -----
 
-## 2\. Modelo Random Forest
+## 2. Modelo Random Forest
+
 <div id='Indução_de_modelo_2'/>  
-### 2.1. Indução do Modelo
+	
+### Indução do Modelo
 
 O modelo Random Forest, implementado no notebook "Pergunta1RandonFlorest.ipynb", também é projetado para problemas de classificação. A indução deste modelo, um método de *ensemble*, incorpora as seguintes fases:
 
@@ -278,12 +286,12 @@ O modelo Random Forest, implementado no notebook "Pergunta1RandonFlorest.ipynb",
 6.  **Otimização de Hiperparâmetros:** A otimização de hiperparâmetros para o `RandomForestClassifier` é realizada via `GridSearchCV`. Hiperparâmetros como `n_estimators` (número de árvores), `max_depth` (profundidade máxima de cada árvore), `min_samples_split` e `criterion` são ajustados para maximizar o desempenho do modelo.
 7.  **Curva de Aprendizagem:** A inclusão de uma curva de aprendizagem é um diagnóstico valioso. Ela ilustra como o desempenho do modelo varia com o aumento do volume de dados de treinamento, auxiliando na identificação de problemas de viés ou variância e na determinação se mais dados seriam benéficos.
 
-### 2.2. Tipo de Problema e Modelo Escolhido
+###  Tipo de Problema e Modelo Escolhido
 
   * **Tipo de Problema:** Assim como no caso da Árvore de Decisão, o problema abordado é de **classificação**, visando a predição de uma variável categórica.
   * **Modelo Escolhido:** **Random Forest**.
 
-### 2.3. Funcionamento do Algoritmo: Random Forest
+###  Funcionamento do Algoritmo: Random Forest
 
 Random Forest é um algoritmo de *ensemble* que aprimora a robustez e a acurácia das previsões ao combinar a força de múltiplas Árvores de Decisão. Ele opera com base em dois princípios fundamentais:
 
@@ -304,7 +312,7 @@ Random Forest é um algoritmo de *ensemble* que aprimora a robustez e a acuráci
 A combinação desses mecanismos permite que o Random Forest supere a propensão ao *overfitting* e à alta variância das Árvores de Decisão individuais, resultando em um modelo mais estável e com maior poder preditivo.
 
 <div id='Resultado_2'/>  
-### 2.4. Resultados Obtidos (Random Forest)
+###  Resultados Obtidos (Random Forest)
 
 O notebook demonstra que o modelo Random Forest foi avaliado por meio de validação cruzada estratificada e otimização de hiperparâmetros via `GridSearchCV`. A inclusão de uma curva de aprendizagem oferece *insights* valiosos sobre o comportamento do modelo em relação ao volume de dados de treinamento.
 
@@ -316,7 +324,7 @@ O objetivo do modelo Random Forest é análogo ao da Árvore de Decisão: **clas
 
 -----
 
-## 3\. Justificativa da Escolha do Modelo
+##  Justificativa da Escolha do Modelo
 
 Diante da análise dos dois modelos, e considerando um cenário típico de projetos de Machine Learning onde a **robustez e a acurácia preditiva são prioritárias**, o **Random Forest** emerge como a escolha mais vantajosa para o problema de classificação em questão.
 
@@ -337,7 +345,7 @@ Para um problema de classificação onde a performance preditiva e a robustez s�
 
 <div id='Comparacoes'/>  
 	
-## 4\. Comparação Final entre Árvore de Decisão e Random Forest
+##  Comparação Final entre Árvore de Decisão e Random Forest
 
 A tabela a seguir resume as principais características e diferenças entre os modelos de Árvore de Decisão e Random Forest, consolidando os pontos abordados.
 
