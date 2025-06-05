@@ -101,6 +101,9 @@ Este relatório apresenta a análise dos resultados de um modelo de classificaç
 ## 2. Análise Exploratória de Dados (AED) - Variáveis Chave
 
 ### 2.1. Distribuição da Variável Alvo (Satisfação)
+
+![Distribuição Satisfação](\graficos_modelo2\distribuição_da_satisfação.png)
+
 O gráfico de distribuição da variável alvo revela um desbalanceamento significativo entre as classes:
 
 - Classe 0 (Insatisfeito): 1873 instâncias
@@ -109,6 +112,8 @@ O gráfico de distribuição da variável alvo revela um desbalanceamento signif
 Este desbalanceamento é um fator crítico a ser considerado na avaliação do modelo, pois algoritmos de classificação tendem a ter um desempenho melhor na classe majoritária, podendo negligenciar a classe minoritária. A acurácia, por exemplo, pode ser uma métrica enganosa em tais cenários.
 
 ### 2.2. Distribuição por Faixa Salarial
+
+![Distribuição Faixa Salarial](\graficos_modelo2\distribuição_por_faixa_salaria.png)
 
 A análise da distribuição da feature "Faixa Salarial (P2_h)" mostra a contagem de indivíduos em diferentes categorias salariais. As faixas mais representadas no dataset são:
 
@@ -120,7 +125,6 @@ Esta feature, entre as 28 utilizadas para modelagem, fornece contexto sobre o pe
 ## 3. Avaliação do Modelo Random Forest
 
 O desempenho do modelo foi avaliado utilizando relatórios de classificação, matrizes de confusão, curva ROC e curva de aprendizagem, tanto nos conjuntos de treino quanto de teste.
-
 
 ### 3.1. Relatórios de Classificação
 
@@ -152,7 +156,17 @@ Os relatórios de classificação fornecem métricas por classe (Precision, Reca
 
 As matrizes corroboram as observações dos relatórios de classificação. O alto número de Falsos Positivos (948 no treino, 242 no teste) para a classe "Insatisfeito" (ou seja, instâncias reais de "Insatisfeito" que foram erroneamente classificadas como "Satisfeito") é a principal causa do baixo Recall da classe minoritária. O modelo, em sua configuração atual, está enviesado a prever a classe majoritária.
 
+### Matriz de confusão treino
+
+![Matriz de Confusão Treino](\graficos_modelo2\matriz_treino.png)
+
+### Matriz de confusão teste
+
+![Matriz de confusão Teste](\graficos_modelo2\matriz_teste.png)
+
 ### 3.3. Curva ROC (Receiver Operating Characteristic)
+
+![Curva ROC](\graficos_modelo2\curva_roc_treino&teste.png)
 
 A Curva ROC avalia a capacidade discriminatória do modelo, plotando a Taxa de Verdadeiros Positivos (Recall) contra a Taxa de Falsos Positivos em diferentes limiares de classificação. A Área Sob a Curva (AUC) resume essa capacidade.
 
@@ -164,6 +178,9 @@ Análise:
 Os valores de AUC indicam que o modelo tem uma capacidade razoável de distinguir entre as classes. A proximidade entre o AUC de treino e teste sugere que o modelo generaliza bem. A curva, embora acima da linha de base de um classificador aleatório, não atinge o canto superior esquerdo (ideal), o que é consistente com a dificuldade de classificar a classe minoritária.
 
 ### 3.4. Curva de Aprendizagem
+
+![Curva de Aprendizagem](\graficos_modelo2\curva_de_aprendizagem.png)
+
 A Curva de Aprendizagem mostra como o desempenho do modelo (acurácia) varia com o tamanho do conjunto de treino.
 
 Análise:
