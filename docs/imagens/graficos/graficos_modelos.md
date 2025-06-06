@@ -18,6 +18,9 @@ Este relatório tem como objetivo fornecer uma análise aprofundada de um conjun
 
 ### 2.1. Distribuição da Satisfação (Imagem 1)
 
+![image](https://github.com/user-attachments/assets/8229376d-abb6-4f76-9991-5123c8ff9c8f)
+
+
 O gráfico de barras intitulado **"Distribuição da Satisfação"** foi concebido para visualizar a proporção de indivíduos satisfeitos e insatisfeitos no conjunto de dados. Ele quantifica a variável alvo, "Satisfação", que é binária, onde o valor 0 representa "Insatisfeito" e 1 representa "Satisfeito".
 
 O gráfico exibe duas barras distintas, cada uma correspondendo a uma categoria de satisfação. A altura de cada barra indica a "Contagem" de indivíduos pertencentes a essa categoria.
@@ -39,6 +42,8 @@ Este gráfico é fundamental para compreender a composição da variável que o 
 
 ### 2.2. Distribuição por Faixa Salarial (P2_h) (Imagem 2)
 
+![image](https://github.com/user-attachments/assets/767cece2-4ec4-413b-8b04-2d206271bd68)
+
 O gráfico de barras horizontais **"Distribuição por Faixa Salarial (P2_h)"** apresenta a distribuição dos participantes por faixa de renda.
 
 - Faixa mais comum: **R$8.001/mês a R$12.000/mês** (mais de 1000 indivíduos)
@@ -52,6 +57,9 @@ O gráfico de barras horizontais **"Distribuição por Faixa Salarial (P2_h)"** 
 ## 3. valiação do Modelo de Machine LearningA
 
 ### 3.1. Matriz de Confusão (Imagem 3)
+
+![image](https://github.com/user-attachments/assets/f1a1ed02-90f8-43f4-a3c4-0d9df59a7266)
+
 
 A matriz de confusão é uma tabela 2x2 que mostra as classificações corretas e incorretas feitas pelo modelo:
 
@@ -67,7 +75,10 @@ A matriz de confusão é uma tabela 2x2 que mostra as classificações corretas 
 >
 > O modelo tem **viés para prever "Satisfeito"**, devido ao desbalanceamento. Isso é crítico se o objetivo for identificar insatisfeitos. O custo de um Falso Positivo (ignorar um insatisfeito) é maior do que o de um Falso Negativo (abordar um satisfeito indevidamente).
 
-### 3.2. Relatório de Classificação (Imagem 4)
+### 3.2. Top 15 Features por Importância (Imagem 4)
+
+
+
 
 Métricas detalhadas por classe:
 
@@ -90,6 +101,8 @@ Métricas gerais:
 >
 > - Apenas **49%** dos insatisfeitos foram corretamente identificados (Recall)
 > - Quando o modelo prevê insatisfação, está correto em **65%** das vezes (Precisão)
+
+
 
 
 
