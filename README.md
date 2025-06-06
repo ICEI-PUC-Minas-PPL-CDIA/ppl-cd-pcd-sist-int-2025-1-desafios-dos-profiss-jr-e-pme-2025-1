@@ -19,6 +19,17 @@ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
+## Conteúdo: 
+
+| [Assets](/assets/)                   | [Docs](/docs/)              | [Src](/src/)           |
+|--------------------------------------|-----------------------------|------------------------|
+| [Cleaned Data](/assets/cleaned_data) |[Imagens](/docs/imagens)    | [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo) | 
+| [Data](/assets/data)                 |[Data Dictionary](/docs/data_dictionary)| [Junção](/src/Codigo_Juncao)                                 |  
+|                                      |[Report](/docs/report.md)    | [Limpeza de Bases Codigo]   | 
+|                                      |                             | [Modelos](/src/Modelos_Corrigidos)                                         | 
+
+
+
 ## Histórico de versões
 
 * 0.1.1
