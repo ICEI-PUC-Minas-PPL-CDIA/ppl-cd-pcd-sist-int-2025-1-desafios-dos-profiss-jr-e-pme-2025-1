@@ -308,7 +308,7 @@ Esta seção apresenta os resultados quantitativos obtidos pelos modelos de Árv
 
 <div id='Resultado_1'/>
 	
-### Resultado Modelo 1 - Árvore de Decisão
+### [Resultado Modelo 1 - Árvore de Decisão](/docs/imagens/graficos/graficos_modelos.md)
 
 #### Resultados Obtidos
 
@@ -341,7 +341,7 @@ O modelo alcançou uma acurácia de 72%, com bom desempenho na classe majoritár
 
 <div id='Resultado_2'/>
 	
-### 11.2. Resultados Modelo 2 - Floresta Aleatória
+### [Resultados Modelo 2 - Floresta Aleatória](/docs/imagens/graficos/graficos_modelos.md)
 
 #### Resultados Obtidos
 
