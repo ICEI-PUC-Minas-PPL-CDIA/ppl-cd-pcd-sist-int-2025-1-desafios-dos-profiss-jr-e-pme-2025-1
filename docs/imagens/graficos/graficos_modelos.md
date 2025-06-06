@@ -78,7 +78,23 @@ A matriz de confusão é uma tabela 2x2 que mostra as classificações corretas 
 ### 3.2. Top 15 Features por Importância (Imagem 4)
 
 
+![image](https://github.com/user-attachments/assets/701aa27a-2683-4600-9b5a-82d448624e37)
 
+O gráfico de barras horizontais "Top 15 Features por Importância" ilustra a relevância de diferentes características para um modelo ou análise. Ele apresenta a "Importância" de cada feature em uma escala de 0 a aproximadamente 0.7.
+Este gráfico é fundamental para compreender quais features são mais influentes no modelo ou na análise, permitindo identificar as variáveis-chave que impulsionam os resultados e possivelmente informando decisões sobre seleção de features ou engenharia de features.
+
+Impacto no Modelo:
+As features com maior importância, como "Forma de Trabalho Atual" e "Novos Talentos", são as que mais contribuem para o desempenho do modelo. Focar na qualidade e relevância dessas features pode otimizar significativamente a performance. Por outro lado, features com importância muito baixa (ex: GCP, AWS, Azure) podem ser candidatas a serem removidas do modelo para reduzir complexidade e ruído, a menos que haja razões específicas para mantê-las (ex: interpretabilidade ou domínio de negócios). A identificação das features mais importantes pode guiar futuras coletas de dados ou esforços de engenharia de features.
+
+Feature        -----------------------   Importância(Aproximada)
+Forma de Trabalho Atual	                         0.69
+Novos Talentos	                                 0.14
+Tableau	                                         0.03
+Empresa Atual Investir em Dados	                 0.03
+Pessoas que Trabalham com Dados	                 0.02
+
+
+####.3.3 Detalhamento:
 
 Métricas detalhadas por classe:
 
