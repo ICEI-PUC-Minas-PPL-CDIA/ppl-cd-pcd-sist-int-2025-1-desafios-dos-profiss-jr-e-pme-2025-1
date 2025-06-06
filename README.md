@@ -21,6 +21,8 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 ## Conteúdo: 
 
+Acesse o [Report](/docs/report.md)  para uma apresentação completa do projeto.
+
 | [Assets](/assets/)                   | [Docs](/docs/)                           | [Src](/src/)                                                 |
 |--------------------------------------|------------------------------------------|--------------------------------------------------------------|
 | [Cleaned Data](/assets/cleaned_data) | [Imagens](/docs/imagens)                 | [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo) | 
