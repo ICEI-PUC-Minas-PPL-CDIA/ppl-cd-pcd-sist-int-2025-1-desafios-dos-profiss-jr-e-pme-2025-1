@@ -21,12 +21,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 ## Conteúdo: 
 
-| [Assets](/assets/)                   | [Docs](/docs/)              | [Src](/src/)           |
-|--------------------------------------|-----------------------------|------------------------|
-| [Cleaned Data](/assets/cleaned_data) |[Imagens](/docs/imagens)    | [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo) | 
-| [Data](/assets/data)                 |[Data Dictionary](/docs/data_dictionary)| [Junção](/src/Codigo_Juncao)                                 |  
-|                                      |[Report](/docs/report.md)    | [Limpeza de Bases Codigo]   | 
-|                                      |                             | [Modelos](/src/Modelos_Corrigidos)                                         | 
+| [Assets](/assets/)                   | [Docs](/docs/)                           | [Src](/src/)                                                 |
+|--------------------------------------|------------------------------------------|--------------------------------------------------------------|
+| [Cleaned Data](/assets/cleaned_data) | [Imagens](/docs/imagens)                 | [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo) | 
+| [Data](/assets/data)                 | [Data Dictionary](/docs/data_dictionary) | [Junção](/src/Codigo_Juncao)                                 |  
+| [Models](/assets/models)             | [Report](/docs/report.md)                | [Limpeza de Bases Codigo]                                    | 
+| [results](/assets/results)           |                                          | [Modelos](/src/Modelos_Corrigidos)                           | 
 
 
 
