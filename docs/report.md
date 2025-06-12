@@ -599,55 +599,7 @@ Com certeza. Segue a análise detalhada de cada gráfico gerado para a avaliaç�
 
 -----
 
-### **Análise das Visualizações do Modelo LightGBM**
 
-#### **1. Matrizes de Confusão Comparativas**
-
-**Objetivo:**
-A matriz de confusão é uma tabela que permite a visualização do desempenho de um algoritmo de classificação. Ela compara os valores reais com os valores previstos pelo modelo, dividindo as previsões em Verdadeiros Positivos (VP), Verdadeiros Negativos (VN), Falsos Positivos (FP) e Falsos Negativos (FN). O objetivo deste gráfico é avaliar a acurácia do modelo nos dados de treino (o que ele aprendeu) e nos dados de teste (sua capacidade de generalizar).
-
-**Resultado e Análise:**
-
-  * **Conjunto de Treino (Verde):** O modelo demonstrou um ajuste muito forte aos dados de treino, classificando corretamente 842 profissionais como "Insatisfeitos" (VN) e 2394 como "Satisfeitos" (VP). Cometeu apenas 91 erros do tipo Falso Negativo e 0 erros do tipo Falso Positivo.
-  * **Conjunto de Teste (Azul):** Em dados não vistos, o modelo identificou corretamente 348 "Insatisfeitos" (VN) e 1026 "Satisfeitos" (VP). Cometeu 52 erros do tipo Falso Negativo, ou seja, previu "Insatisfeito" para profissionais que estavam "Satisfeitos". Notavelmente, assim como no treino, não houve Falsos Positivos.
-
-A performance no teste é extremamente robusta e muito próxima à do treino. O fato de não haver Falsos Positivos para a classe "Insatisfeito" é um resultado excelente, indicando que quando o modelo identifica um profissional como insatisfeito, a confiança nessa previsão é máxima.
-
------
-
-#### **2. Curva de Aprendizagem do Modelo**
-
-**Objetivo:**
-A curva de aprendizado é uma ferramenta de diagnóstico que plota o desempenho do modelo (neste caso, a pontuação F1-Macro) em relação ao número de amostras de treinamento. Ela ajuda a entender se o modelo se beneficia de mais dados e se está sofrendo de sobreajuste (overfitting) ou subajuste (underfitting).
-
-**Resultado e Análise:**
-
-  * **Score de Treino (Laranja):** A pontuação nos dados de treino começa muito alta e diminui ligeiramente à medida que mais dados são apresentados, o que é um comportamento esperado.
-  * **Score de Validação Cruzada (Azul):** A pontuação em dados de validação aumenta com o volume de dados e se estabiliza em um platô, indicando que o modelo atinge seu desempenho máximo com a quantidade de dados disponível.
-
-O aspecto mais importante é que as duas curvas **convergem** para um ponto onde a diferença (gap) entre elas é pequena. Isso significa que o modelo aprendeu os padrões dos dados de forma eficaz e consegue generalizar esse conhecimento para novos dados, sem estar sobreajustado aos dados de treino.
-
------
-
-### **3. Curva ROC Comparativa**
-
-**Objetivo:**
-A curva ROC (Receiver Operating Characteristic) avalia a capacidade de um modelo de classificação em distinguir entre as classes. Ela plota a Taxa de Verdadeiros Positivos (sensibilidade) contra a Taxa de Falsos Positivos (1 - especificidade). Um modelo ideal teria uma curva que se aproxima do canto superior esquerdo. A Área sob a Curva (AUC) quantifica essa capacidade: 1.0 é um classificador perfeito e 0.5 é um modelo sem capacidade de discriminação.
-
-**Resultado e Análise:**
-
-  * **Curva de Treino (Azul tracejado):** O AUC de **0.982** é extremamente alto, quase perfeito, mostrando o excelente ajuste do modelo aos dados de treinamento.
-  * **Curva de Teste (Laranja):** O AUC no conjunto de teste é de **0.955**, um valor excepcional que indica um alto poder de discriminação do modelo em dados que ele nunca viu antes.
-  * **Classificador Aleatório (Cinza pontilhado):** Representa a linha de base (AUC = 0.5), onde o modelo não teria poder preditivo.
-
-A proximidade entre as curvas de treino e teste e os altos valores de AUC reforçam a conclusão de que o modelo LightGBM é robusto, preciso e generaliza muito bem.
-
------
-
-### **4. Top 20 Features Mais Importantes**
-
-**Objetivo:**
-Este gráfico de barras mostra quais variáveis (features) o modelo LightGBM considerou mais influentes ao tomar suas decisões de classificação. A importância de uma feature é uma medida de quão útil ela foi na construção das árvores de decisão que compõem o modelo.
 
 **Resultado e Análise:**
 O gráfico fornece insights valiosos sobre os principais fatores que impulsionam a satisfação profissional:
