@@ -4,7 +4,6 @@ Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de
 
 ## Integrantes
 * Caio César de Oliveira
-* Caio Baltar Souza Mayllart
 * Nicolas Rodrigues Duarte
 * Gabriel Fernandes Souza
 * Thiago Domingos Venturim Ribeiro dos Santos
