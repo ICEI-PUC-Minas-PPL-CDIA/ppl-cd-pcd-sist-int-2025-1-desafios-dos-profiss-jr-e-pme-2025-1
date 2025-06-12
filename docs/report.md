@@ -56,22 +56,17 @@ Os resultados indicam que fatores como satisfação com a remuneração, tempo d
 [9. Preparação dosdados](#Preparação_dos_dados)
 
 [10. Indução de modelos](#Indução_de_modelos)
-* [10.1 Indução de Modelo 1](#Indução_de_modelo_1)
-* [10.2 Indução de  Modelo 2](#Indução_de_modelo_2))
 
-[11. Resultados ](#Resultados)
-* [11.1 Resultado Modelo 1 ](#Resultado_1)
-* [11.2 Resultados Modelo 2 ](#Resultados_2)
-  
+[11. Resultados ](#Resultados)  
+
 [12. Comparaçôes ](#Comparacoes)
-
-
 
 [13. Conclusão ](#Conclusão)
 
 [14. Referências ](#REFERÊNCIAS)
 
 [15. Apêndices](#APÊNDICES)
+
 
 
 
@@ -171,48 +166,145 @@ Enfrentam dificuldades financeiras e estruturais para investir em soluções de 
   <h3 align="center"><strong>  Análise exploratórida dos dados  </strong></h3>
 
 
-## Base principal: **State of Data Brazil 2023**
+## Base principal: [**State of Data Brazil 2023**](/assets/data/state-of-data-brazil-2023)
 A base "State of Data Brazil 2023" coleta informações demográficas e sobre a carreira de profissionais de dados no Brasil, como idade, gênero, cor/raça/etnia, experiência profissional e aspectos da carreira, como oportunidades de emprego e progressão na carreira. Esses dados ajudam a analisar as dificuldades de inclusão e as barreiras enfrentadas por profissionais juniores, permitindo um foco nos desafios de inserção no mercado de IA Generativa, como a falta de acesso a oportunidades e a desigualdade em processos seletivos.
 
- [**Dicionário de dados - State of Data Brazil 2023**](data_dictionary/raw_database/state_of_data_dictionary.md)
 
- [**Descrição de dados - State of Data Brazil 2023**](imagens/graficos/graficos_state_of_data.md)
+ [**Dicionário de dados - State of Data Brazil 2023**](/assets/data/state-of-data-brazil-2023/dicionario_state.md)
+
+ [**Descrição de dados - State of Data Brazil 2023**](/imagens/graficos/graficos_state_of_data.md)
 
 --- 
 
-## Base auxiliar:  **Microdrados Educação Superior**
+## Base auxiliar:  [**Microdrados Educação Superior**](/assets/data/microdados_ed_sup_ies_2023)
  A base "MICRODADOS_ED_SUP_IES 2023" reúne dados sobre instituições de ensino superior no Brasil, como localização geográfica, tipo de instituição e rede de ensino (pública ou privada). Ela é crucial para entender a distribuição e a oferta de cursos de educação superior, especialmente em áreas relacionadas à IA Generativa.
 
- [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](data_dictionary/raw_database/microdados_ed_sup_ies_dictionary.md)
+ [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](/assets/data/microdados_ed_sup_ies_2023/dicionario_micro.md)
 
- [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](imagens/graficos/graficos_microdados.md)
+ [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](/imagens/graficos/graficos_microdados.md)
 
 ---
 
 <div id='Preparação_dos_dados'/>  
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
-
 	
-O código realiza a limpeza dos microdados removendo colunas irrelevantes, renomeando variáveis e padronizando categorias. Também trata valores nulos e converte tipos de dados para análises consistentes. Por fim, exporta o dataset limpo para uso posterior.
-## Dados Processados State of Data 2023
-
-Limpeza e Seleção de dados da base State of Data Brazil 2023, este notebook é responsável por realizar a limpeza, tratamento e pré-processamento dos dados brutos da pesquisa, preparando o dataset para análises exploratórias e estatísticas. 
-
-[Acesse o dicionario de dados do State of Data](data_dictionary/cleaned_dictionary/state_of_data_cleaned_dictionary.md)
+[Base Tratada](/assets/data/dados_tratados_combinados/dados_tratados_combinados.csv)
+[Codigo](/src/limpeza_e_combinacao.ipynb)
 
 
-## Dados Processados Microdrados Educação Superior
-Limpeza e Seleção de dados da base Microdrados Educação Superior 2023, este notebook trata da limpeza, padronização e preparação dos microdados da pesquisa. O foco está em garantir que os dados estejam prontos para análises refinadas, especialmente voltadas para recortes demográficos, socioeconômicos e regionais.
+## 1. Introdução
 
-[Acesse o dicionario de dados da Análise do MICRODADOS_ED_SUP_IES_2023](data_dictionary/cleaned_dictionary/microdados_cleaned_dictionary.md)
+Este documento detalha o processo de limpeza, transformação, seleção e combinação de dados realizado pelo script `LimpezaCombinacao.ipynb`. O objetivo deste pipeline de preparação é consolidar duas fontes de dados distintas em um único conjunto de dados coeso e enriquecido, pronto para análises exploratórias e para o treinamento de modelos preditivos.
 
+As fontes de dados são:
+1.  **Pesquisa "State of Data 2023"**: Um arquivo CSV contendo respostas de uma pesquisa com profissionais da área de dados no Brasil.
+2.  **Microdados do Censo da Educação Superior (IES)**: Um arquivo CSV com dados sobre Instituições de Ensino Superior no Brasil.
 
-## Unificação das bases
-Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas e selecionadas: Análise do Ensino Superior Consolidada e Dados_processados
+O processo é dividido em quatro partes principais:
+1.  Configuração e Processamento dos dados da pesquisa.
+2.  Processamento e Agregação dos dados das IES.
+3.  União dos dois conjuntos de dados.
+4.  Salvamento do resultado final.
 
-[Acesse o dicionario de dados da Análise dos Dados Unidos](data_dictionary/cleaned_dictionary/bases_unidas_dictionary.md)
+## 2. Configuração Inicial e Bibliotecas
 
-[Acesse os gráficos da Análise dos Dados Unidos](imagens/graficos/graficos_bases_unificadas.md)
+A primeira célula do notebook é responsável por importar as bibliotecas essenciais para a manipulação e processamento dos dados.
+
+```python
+import pandas as pd
+import re
+import numpy as np
+```
+
+- **`pandas`**: Biblioteca fundamental para a manipulação e análise de dados em Python. É utilizada para carregar os dados dos arquivos CSV para DataFrames, que são estruturas de dados tabulares otimizadas, e para realizar a maioria das operações de limpeza, transformação e agregação.
+- **`re`**: Módulo de expressões regulares do Python. Neste script, é crucial para a limpeza e padronização dos nomes das colunas, que originalmente possuem um formato complexo.
+- **`numpy`**: Biblioteca para computação numérica. É utilizada aqui para a criação da feature `emprego_status` através da função `np.where`.
+
+## 3. Parte 1 - Processamento do Dataset "State of Data"
+
+Esta seção foca em limpar e estruturar os dados da pesquisa.
+
+### 3.1. Carregamento e Seleção de Colunas
+
+O processo inicia com o carregamento dos dados da pesquisa e a seleção de colunas relevantes.
+
+```python
+df_survey = pd.read_csv('State_of_data_BR_2023_Kaggle - df_survey_2023.csv')
+```
+
+- **Seleção de Colunas**: O código define uma lista de colunas (`fixed_columns`) que contêm informações demográficas e profissionais chave, como idade, gênero, cargo, faixa salarial e o estado de residência (`uf onde mora`), que é fundamental para a posterior união dos dados.
+- **Seleção Dinâmica**: Utilizando compreensão de listas, o código seleciona dinamicamente grupos de colunas que seguem um padrão de prefixo. Isso é feito para capturar todas as respostas de perguntas de múltipla escolha, como:
+    - `P2_l_` e `P2_o_`: Motivos de satisfação/insatisfação no trabalho.
+    - `P4_j_`, `P4_k_`, `P4_l_`: Ferramentas de IA/ML, serviços de nuvem e tecnologias de IA Generativa utilizadas.
+    - `P3_d_`, `P3_e_`: Habilidades técnicas e comportamentais.
+- **Criação do DataFrame Selecionado**: As listas de colunas são combinadas e utilizadas para criar um novo DataFrame, `df_selected`, contendo apenas os dados de interesse. O método `.copy()` é usado para garantir que o DataFrame original (`df_survey`) não seja modificado.
+
+### 3.2. Limpeza da Variável Alvo e Tratamento de Nulos
+
+Esta etapa garante a qualidade da variável alvo (satisfação) e trata valores ausentes.
+
+- **Variável Alvo**: A coluna de satisfação profissional (`'P2_k '`) é identificada. As linhas onde este valor é nulo ou "Desconhecido" são removidas com o método `.dropna()` para garantir que todas as entradas no dataset final tenham uma resposta válida para a variável que se deseja prever.
+- **Tratamento de Nulos**: O script itera sobre as colunas do DataFrame `df_cleaned_survey`:
+    - Para as colunas dinâmicas (ferramentas, habilidades, etc.), valores nulos (`NaN`) são preenchidos com `0`. Isso assume que um valor ausente significa que o respondente não usa a ferramenta ou não possui a habilidade.
+    - Para as colunas fixas (demográficas), valores nulos são preenchidos com a string `'Desconhecido'`, tratando a ausência de informação como uma categoria distinta.
+
+### 3.3. Renomeação Inteligente de Colunas
+
+Os nomes das colunas no dataset original são complexos e inadequados para análise (ex: `("('P1_a ', 'Idade')"`). Uma função customizada, `get_clean_column_name`, foi criada para resolver isso.
+
+- **Lógica da Função**: A função utiliza expressões regulares (`re.search`) para extrair a parte descritiva do nome da coluna (ex: 'Idade'). Em seguida, padroniza este nome, convertendo-o para minúsculas e substituindo espaços e caracteres especiais por underscores (`_`).
+    - **Exemplo**: `("('P4_j_1 ', 'Azure Machine Learning')")` se torna `azure_machine_learning`.
+- **Aplicação**: Esta função é aplicada a todas as colunas do DataFrame, criando um mapa de renomeação que é utilizado pelo método `.rename()` para padronizar todos os nomes de uma só vez, resultando em um DataFrame com colunas limpas e fáceis de manipular.
+
+### 3.4. Criação de Novas Features (Engenharia de Atributos)
+
+Para facilitar análises futuras, uma nova coluna é criada.
+
+- **`emprego_status`**: Utilizando a função `np.where`, o código cria a coluna `emprego_status`. Se o valor na coluna `cargo_atual` for '14' (código para "Outra situação"), o status é definido como 'Desempregado'; caso contrário, é 'Empregado'. Esta é uma forma simples e eficaz de engenharia de features.
+
+## 4. Parte 2 - Processamento e Agregação dos Dados das IES
+
+Esta parte do script prepara os dados contextuais sobre o ambiente educacional em cada estado.
+
+### 4.1. Carregamento e Seleção
+
+O dataset `MICRODADOS_ED_SUP_IES_2023.CSV` é carregado. O código especifica o delimitador como `;` e a codificação como `latin1`, comum em arquivos de dados governamentais brasileiros. Apenas as colunas de interesse são selecionadas e renomeadas para maior clareza:
+- `SG_UF_IES` → `uf_ies` (UF da instituição)
+- `QT_TEC_TOTAL` → `Qtd_Tecnicos_IES` (Quantidade de técnicos)
+- `QT_DOC_TOTAL` → `Qtd_Docentes_IES` (Quantidade de docentes)
+
+### 4.2. Agregação por Estado (UF)
+
+O objetivo aqui é transformar os dados do nível de instituição para o nível de estado.
+- **`groupby('uf_ies').agg({...})`**: Este é o comando central da agregação. Ele agrupa o DataFrame por estado e aplica as seguintes funções de agregação:
+    - **`sum`**: Para as colunas `Qtd_Tecnicos_IES` e `Qtd_Docentes_IES`, calculando o total de profissionais por estado.
+    - **`count`**: Para a coluna `uf_ies`, contando o número de instituições em cada estado.
+- **Renomeação Final**: As colunas agregadas são renomeadas para refletir seu novo significado (ex: `Qtd_Tecnicos_IES` torna-se `Total_Tecnicos_Estado`).
+
+## 5. Parte 3 - União dos Datasets (Merge)
+
+Nesta etapa crucial, os dois DataFrames preparados são combinados.
+
+```python
+df_final = pd.merge(df_cleaned_survey, df_ies_aggregated, ...)
+```
+
+- **`pd.merge()`**: Esta função une os dois conjuntos de dados.
+- **Chaves de Junção**: A união é feita conectando a coluna `uf_onde_mora` (do dataset da pesquisa) com a coluna `uf_ies` (do dataset agregado das IES).
+- **Tipo de Junção**: É utilizada uma **mesclagem à esquerda** (`how='left'`). Essa escolha é importante, pois garante que **todos os registros da pesquisa (DataFrame da esquerda) sejam mantidos**. Se um respondente for de um estado para o qual não há dados de IES, as colunas correspondentes no DataFrame final serão preenchidas com valores nulos, preservando a integridade da amostra da pesquisa.
+
+## 6. Parte 4 - Salvamento e Verificação Final
+
+A última parte do script salva o resultado e realiza uma verificação.
+
+- **`df_final.to_csv(...)`**: O DataFrame final e combinado é salvo no arquivo `dados_tratados_combinados.csv`.
+    - `index=False`: Impede que o índice do DataFrame seja salvo como uma coluna no arquivo CSV.
+    - `encoding='utf-8-sig'`: Garante a compatibilidade de caracteres, especialmente com softwares como o Microsoft Excel.
+- **Verificação**: O código imprime as primeiras linhas de algumas colunas chave do DataFrame final como uma verificação visual rápida para confirmar que a união foi bem-sucedida e os dados estão estruturados como esperado.
+
+## Conclusão
+
+Ao final do processo, o script gera um único arquivo CSV, `dados_tratados_combinados.csv`, que serve como uma **Base Analítica de Tabela (Analytical Base Table - ABT)**. Este dataset está limpo, estruturado, enriquecido com dados contextuais e pronto para ser utilizado em análises exploratórias e na construção de modelos de Machine Learning.	
 
 
 ---
@@ -222,182 +314,120 @@ Junção das bases MICRODADOS_ED_SUP_IES_2023 e State of Data Brazil 2023 limpas
  <h3 align="center"><strong> Indução de modelos  </strong></h3> 
 
 
-A pergunta escolhida para a indução de modelos de aprendizado de máquina foi: **Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?** Para responder a essa questão, foram desenvolvidos e comparados dois modelos de classificação: Árvore de Decisão e Random Forest.
+A pergunta escolhida para a indução de modelos de aprendizado de máquina foi: **Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?** Para responder a essa questão, foram desenvolvidos e comparados dois modelos:
 
-<div id='Indução_de_modelos_1'/>  
-	
-###  Indução de Modelo 1 - Árvore de Decisão
+--- 
+<div id='Indução_de_modelos_1'/> 
+### **Modelo 1: Análise do LightGBM com SMOTE**
 
-O modelo de Árvore de Decisão foi desenvolvido para lidar com problemas de classificação, conforme implementado no notebook "Pergunta1ArvoreDeDecisao.ipynb". O processo de indução (treinamento) do modelo seguiu as seguintes etapas rigorosas:
+Esta abordagem utiliza o framework LightGBM em conjunto com a técnica de reamostragem SMOTE para lidar com o desbalanceamento de classes.
 
-- **Importação de Bibliotecas**: Importação de *Pandas*, *NumPy*, *Matplotlib*, *Seaborn*, *NLTK*, *WordCloud* e *Scikit-learn*, incluindo ferramentas para balanceamento de dados (*SMOTE*), trazendo atenção a possíveis desequilíbrios de classe no dataset.
-- **Carregamento e Pré-processamento de Dados**:
-  - Carregamento do conjunto de dados "State_of_data_BR_2023_Kaggle - df_survey_2023.csv".
-  - Execução de pré-processamento crítico, incluindo tratamento de valores ausentes e codificação de variações categóricas (*One-Hot Encoding*), para garantir a integridade e interpretabilidade numérica dos dados.
-- **Definição de Variáveis**: Definição clara das variáveis independentes (*features*, representadas por *X*) e da variável dependente (*target*, representada por *y*), que é a variável a ser prevista pelo modelo (satisfação do profissional).
-- **Divisão de Dados**: Particionamento do conjunto de dados em conjuntos de treinamento e teste para avaliar a capacidade de generalização do modelo e mitigar o risco de *overfitting*.
-- **Treinamento do Modelo**: Uma instância do classificador *DecisionTreeClassifier* foi criada e treinada utilizando os dados de treinamento.
-- **Validação do Modelo**: O desempenho do modelo treinado foi avaliado no conjunto de teste utilizando métricas de classificação padrão, como pontuação de exatidão, precisão, *recall*, pontuação *F1* e a matriz de confusão.
-- **Otimização de Hiperparâmetros**: Uso de *GridSearchCV* para explorar sistematicamente diferentes configurações de hiperparâmetros (por exemplo, *max_depth*, *min_samples_split*, *criterion*) e selecionar aqueles que resultaram no melhor desempenho, calculado por validação cruzada.
-- **Visualização da Árvore**: O caderno permite a visualização gráfica da árvore de decisão treinada, fundamental para compreender as regras lógicas matemáticas pelo modelo.
+#### **3.1. Detalhamento do Código e Metodologia**
 
-#### Tipo de Problema e Modelo Escolhido:
+1.  **Pré-processamento com `ColumnTransformer`**: As variáveis preditoras são processadas para que possam ser utilizadas pelo modelo. Features categóricas (como nível e setor) são transformadas via `OneHotEncoder`, enquanto as numéricas (como anos de experiência) são padronizadas via `StandardScaler`.
 
-O problema é de classificação, mudando prever uma variável categórica que representa a satisfação dos profissionais. O modelo escolhido para esta abordagem inicial foi a Árvore de Decisão.
+2.  **Pipeline com `SMOTE`**: Para tratar o desbalanceamento de classes (72% satisfeitos vs. 28% insatisfeitos), o pipeline foi construído com o `ImbPipeline` da biblioteca `imbalanced-learn`.
+    * **Técnica `SMOTE` (Synthetic Minority Over-sampling Technique)**: Este passo é crucial. O SMOTE gera novas amostras sintéticas da classe minoritária ("Insatisfeito") com base nas características de suas vizinhas mais próximas. O objetivo é criar um conjunto de dados de treino artificialmente balanceado, permitindo que o modelo aprenda os padrões de ambas as classes de forma mais equitativa.
 
-#### Funcionamento do Algoritmo: [Árvore de Decisão](/src/Modelos_Corrigidos/ArvoreDeDecisao.ipynb)
-A Árvore de Decisão é um algoritmo de aprendizagem supervisionado não-paramétrico. Para classificação, seu funcionamento se baseia em um processo de divisão recursiva dos dados:
+3.  **Otimização com `RandomizedSearchCV`**: Um processo de busca por hiperparâmetros foi executado para encontrar a melhor configuração para o `LGBMClassifier`. Foram testadas 30 combinações aleatórias de parâmetros, utilizando validação cruzada de 5 folds e otimizando para a métrica `f1_macro`, que é ideal para cenários com classes desbalanceadas.
 
-- **Nó Raiz e Divisão Recursiva**: O processo se inicia com um nó único (a raiz) que engloba a totalidade dos dados. Em cada nó, o algoritmo busca os melhores classificações (ou "pergunta") para particionar os dados em subconjuntos mais homogêneos em relação à variável alvo.
-- **Critérios de Impureza**: As divisões são determinadas pela otimização de métricas de impureza, como a Entropia ou o Índice Gini. O algoritmo seleciona a divisão que maximiza o ganho de informação ou minimiza a impureza.
-- **Nós Internos e Folhas**: O processo de divisão prossegue recursivamente, formando nós internos que representam testes em atributos específicos e ramos que denotam os resultados. Quando um nó não pode ser mais dividido de forma significativa, ele se torna uma "folha", representando a classe prevista.
-- **Poda (*Poda*)**: Técnicas de poda foram aplicadas para combater o *overfitting*, removendo ramos que não valorizaram significativamente para o desempenho de generalização.
+#### **3.2. Análise dos Resultados**
 
-#### Objetivo do Modelo (Árvore de Decisão):
+O modelo final apresentou um alto poder preditivo, conforme demonstram as métricas abaixo.
 
-O objetivo primordial é desenvolver um sistema preditivo capaz de classificar novas instâncias com base nos padrões e regras de decisão inferidas a partir dos dados de treinamento. Sua característica de "caixa branca" permite a interpretação das regras de decisão, valiosa para a compreensão do domínio do problema.
+##### **Desempenho no Conjunto de Treino:**
+* **Acurácia**: 97%
+* **AUC-ROC**: 0.982
+* **Classe 'Insatisfeito' (minoritária)**:
+    * Precisão: 1.00
+    * Recall: 0.90
+* **Classe 'Satisfeito' (majoritária)**:
+    * Precisão: 0.96
+    * Recall: 1.00
 
+##### **Desempenho no Conjunto de Teste (Validação):**
+* **Acurácia**: 96%
+* **AUC-ROC**: 0.955
+* **Classe 'Insatisfeito' (minoritária)**:
+    * **Precisão: 1.00**: Quando o modelo prevê que um profissional está insatisfeito, ele está sempre correto.
+    * **Recall: 0.87**: O modelo consegue identificar 87% de todos os profissionais que realmente estão insatisfeitos.
+* **Classe 'Satisfeito' (majoritária)**:
+    * **Precisão: 0.95**: Das previsões de "satisfeito", 95% estão corretas.
+    * **Recall: 1.00**: O modelo identifica 100% dos profissionais que de fato estão satisfeitos.
 
+A pequena diferença entre as métricas de treino e teste indica que o modelo **generaliza bem** para dados não vistos, sem sinais de sobreajuste (overfitting) severo. O gráfico de **Importância das Features** destacou que a falta de oportunidade de crescimento e o desalinhamento salarial são os fatores mais determinantes para a previsão.
+
+---
 <div id='Indução_de_modelos_2'/> 
-	
-###  Indução de Modelo 2 - Random Forest
+### **Modelo 2: Análise do XGBoost com Ponderação de Classes**
 
+Esta segunda abordagem emprega o robusto framework XGBoost, utilizando um método interno para o tratamento do desbalanceamento.
 
+#### **4.1. Detalhamento do Código e Metodologia**
 
-O modelo Random Forest, implementado no notebook "Pergunta1RandonFlorest.ipynb", também é projetado para problemas de classificação. A indução deste modelo, um método de conjunto, incorporou as seguintes fases:
+1.  **Pré-processamento**: A etapa de `ColumnTransformer` é idêntica à do modelo anterior, garantindo a mesma preparação das features.
 
-- **Importação de Bibliotecas**: Importação de *Pandas*, *NumPy*, *Matplotlib*, *Seaborn*, *WordCloud* e *Scikit-learn*, com destaque para o *RandomForestClassifier*.
-- **Carregamento e Pré-processamento de Dados**: Utilização do mesmo conjunto de dados ("State_of_data_BR_2023_Kaggle - df_survey_2023.csv") para garantir consistência. O pré-processamento incluiu limpeza e seleção de variações categóricas.
-- **Definição de Variáveis**: As características (*X*) e a variável alvo (*y*) foram definidas de forma análoga ao modelo de Árvore de Decisão.
-- **Divisão de Dados**: O conjunto de dados foi segmentado em conjuntos de treinamento e teste para permitir uma avaliação imparcial da generalização do modelo.
-- **Treinamento do Modelo**: Uma instância do *RandomForestClassifier* foi criada e treinada com os dados de treinamento, envolvendo o treinamento de múltiplas árvores de decisão.
-- **Validação Cruzada Estratificada**: Utilização de *StratifiedKFold* e *cross_val_score* para garantir que as proporções das classes na variável *target* sejam preservadas em cada dobra, fornecendo uma estimativa mais confiável do desempenho.
-- **Otimização de Hiperparâmetros**: Ajuste de hiperparâmetros como *n_estimators*, *max_depth*, *min_samples_split* e *criterion* via *GridSearchCV* para maximizar o desempenho.
-- **Curva de Aprendizagem**: Inclusão de uma curva de aprendizagem para ilustrar como o desempenho do modelo varia com o aumento do volume de dados de treinamento, auxiliando na identificação de problemas de *bias* ou variância.
+2.  **Pipeline com Ponderação de Classe**: A diferença fundamental está no pipeline e no algoritmo. Utiliza-se o `Pipeline` padrão do `scikit-learn`.
+    * **Técnica `scale_pos_weight`**: Em vez de gerar dados sintéticos, o `XGBClassifier` foi configurado com o parâmetro `scale_pos_weight`. Este parâmetro ajusta a importância das classes durante o treinamento, atribuindo um peso maior aos erros cometidos na classe minoritária. O valor de **0.39** foi calculado (`contagem_negativos / contagem_positivos`), instruindo o modelo a penalizar mais fortemente os erros na classificação de profissionais "insatisfeitos".
 
-#### Tipo de Problema e Modelo Escolhido:
+3.  **Otimização com `RandomizedSearchCV`**: O processo de otimização foi mais extenso, testando 50 combinações de hiperparâmetros específicos do XGBoost, como `gamma`, `subsample` e `colsample_bytree`, também com o objetivo de maximizar o `f1_macro`.
 
-O problema é de classificação, mudando a predição de uma variável categórica. O modelo escolhido foi o Random Forest.
+<div id='Resultados'/> 
+#### **4.2. Análise dos Resultados**
 
-#### Funcionamento do Algoritmo: [Random Forest](/src/Modelos_Corrigidos/RandonFlorest.ipynb)
+O modelo XGBoost demonstrou um desempenho de excelência, muito similar ao do LightGBM.
 
-Random Forest é um algoritmo de conjunto que aprimora a robustez e a acurácia das variações ao combinar a força de múltiplas Árvores de Decisão. Ele opera com base em dois princípios fundamentais:
+##### **Desempenho no Conjunto de Treino:**
+* **Acurácia**: 97%
+* **AUC-ROC**: 0.988
+* **Classe 'Insatisfeito' (minoritária)**:
+    * Precisão: 1.00
+    * Recall: 0.91
+* **Classe 'Satisfeito' (majoritária)**:
+    * Precisão: 0.97
+    * Recall: 1.00
 
-- **Ensacamento (*Bootstrap Aggregation*)**:
-  - Amostragem com Reposição: Cada árvore na "floresta" é treinada em um subconjunto aleatório dos dados de treinamento com configuração.
-  - Diversidade das Árvores: O ensacamento garante que cada árvore seja treinada em um conjunto de dados intermediários distintos, promovendo a diversidade.
-  - Seleção Aleatória de Características: Em cada nó de cada árvore, apenas um subconjunto aleatório das características é considerado, aumentando a diversidade das árvores.
-- **Votação Majoritária (para Classificação)**: As variações de todas as árvores são agregadas por votação majoritária para determinar a classe final.
+##### **Desempenho no Conjunto de Teste (Validação):**
+* **Acurácia**: 96%
+* **AUC-ROC**: 0.961
+* **Classe 'Insatisfeito' (minoritária)**:
+    * **Precisão: 1.00**: Performance perfeita na precisão para a classe de maior interesse.
+    * **Recall: 0.87**: Capacidade de identificação dos insatisfeitos idêntica à do LightGBM.
+* **Classe 'Satisfeito' (majoritária)**:
+    * **Precisão: 0.95** e **Recall: 1.00**, novamente em linha com o modelo anterior.
 
-A combinação desses mecanismos permite que o Random Forest supere a propensão ao *overfitting* e à alta variância das Árvores de Decisão individuais, resultando em um modelo mais estável e com maior poder preditivo.
-
-#### Objetivo do Modelo (Random Forest):
-
-O objetivo é classificar novas instâncias com alta precisão e capacidade de generalização, mitigando o *overfitting* e fornecendo mais confiável em dados não vistos, graças à sua arquitetura de conjunto.
-
-
----
-
- <div id='Resultados'/>
-
-<h3 align="center"><strong> Resultados </strong></h3> 
-
-Esta seção apresenta os resultados quantitativos obtidos pelos modelos de Árvore de Decisão e Random Forest na tarefa de classificar a satisfação dos profissionais da área de dados, bem como a otimização de hiperparâmetros e a importância das características.
-
-<div id='Resultado_1'/>
-	
-### [Resultado Modelo 1 - Árvore de Decisão](/docs/imagens/graficos/graficos_modelos.md)
-
-#### Resultados Obtidos
-
-Após o treinamento e otimização, o modelo de Árvore de Decisão foi avaliado no conjunto de teste com 1.324 amostras. Os hiperparâmetros utilizados foram: *max_depth=5*, *min_samples_leaf=10*, e *class_weight='balanced'*, com *SMOTE* aplicado para balanceamento de classes.
-
-- **Distribuição da Satisfação**: 1.873 insatisfeitos (0) e 3.420 satisfeitos (1), totalizando 5.293 amostras.
-- **Acurácia no Teste**: 72%.
-- **Relatório de Classificação**:
-  | Classe           | Precisão | Recall | F1-Score | Suporte |
-  |------------------|----------|--------|----------|---------|
-  | 0 (Insatisfeito) | 0.65     | 0.49   | 0.55     | 469     |
-  | 1 (Satisfeito)   | 0.75     | 0.85   | 0.80     | 855     |
-  | **Acurácia**     |          |        | 0.72     | 1.324   |
-  | **Macro Avg**    | 0.70     | 0.67   | 0.68     | 1.324   |
-  | **Weighted Avg** | 0.71     | 0.72   | 0.71     | 1.324   |
-- **Matriz de Confusão**:
-  | Real \ Predito | 0   | 1   |
-  |----------------|-----|-----|
-  | 0              | 228 | 241 |
-  | 1              | 125 | 730 |
-- **Curva ROC**: AUC = 0.73.
-- **Importância das Features**: As 15 principais features incluem "Forma de Trabalho Atual", "Novos Talentos", "Tableau", entre outras, com valores variando de ~0.05 a ~0.25.
-- **Curva de Aprendizado**: Acurácia de treino estabiliza em ~0.74-0.76, e validação em ~0.70-0.72, indicando bom ajuste com aumento do tamanho do conjunto de treino.
-- **Nuvem de Palavras**: Motivos de insatisfação destacam "falta", "salário", "atual", e "oportunidade".
-
-#### Discussão dos Resultados
-
-O modelo alcançou uma acurácia de 72%, com bom desempenho na classe majoritária (Satisfeito, recall 0.85). A classe minoritária (Insatisfeito, recall 0.49) apresenta desempenho moderado, melhorado pelo uso de *SMOTE*. A AUC de 0.73 indica capacidade razoável de discriminação. A árvore de decisão reflete a importância de fatores como a forma de trabalho e oportunidades de novos talentos.
-
-
-<div id='Resultado_2'/>
-	
-### [Resultados Modelo 2 - Floresta Aleatória](/docs/imagens/graficos/graficos_modelos.md)
-
-#### Resultados Obtidos
-
-O modelo Random Forest foi treinado com hiperparâmetros padrão (*n_estimators=100*, *random_state=42*), utilizando *SMOTE* para balanceamento de classes, e avaliado no conjunto de teste com 1.324 amostras.
-
-- **Distribuição da Satisfação**: 1.873 insatisfeitos (0) e 3.420 satisfeitos (1), totalizando 5.293 amostras.
-- **Acurácia no Teste**: 77%.
-- **Relatório de Classificação**:
-  | Classe           | Precisão | Recall | F1-Score | Suporte |
-  |------------------|----------|--------|----------|---------|
-  | 0 (Insatisfeito) | 0.74     | 0.55   | 0.63     | 469     |
-  | 1 (Satisfeito)   | 0.78     | 0.89   | 0.83     | 855     |
-  | **Acurácia**     |          |        | 0.77     | 1.324   |
-  | **Macro Avg**    | 0.76     | 0.72   | 0.73     | 1.324   |
-  | **Weighted Avg** | 0.77     | 0.77   | 0.76     | 1.324   |
-- **Matriz de Confusão**:
-  | Real \ Predito | 0   | 1   |
-  |----------------|-----|-----|
-  | 0              | 256 | 213 |
-  | 1              | 91  | 764 |
-- **Curva ROC**: AUC = 0.79.
-- **Importância das Features**: As 15 principais features incluem "Faixa Salarial", "Tempo na Área de Dados", "Forma de Trabalho Atual", entre outras, com valores variando de ~0.03 a ~0.15.
-- **Curva de Aprendizado**: Acurácia de treino estabiliza em ~0.90-0.92, e validação em ~0.76-0.78, indicando bom ajuste, mas com leve sobreajuste em relação ao conjunto de treino.
-- **Nuvem de Palavras**: Motivos de insatisfação destacam "falta", "salário", "atual", e "oportunidade".
-
-#### Discussão dos Resultados
-
-O modelo alcançou uma acurácia de 77%, superando a Árvore de Decisão (72%). Apresenta bom desempenho na classe majoritária (Satisfeito, recall 0.89) e melhora na classe minoritária (Insatisfeito, recall 0.55) em relação ao modelo anterior (recall 0.49). A AUC de 0.79 indica melhor capacidade de discriminação. A importância das features destaca fatores como faixa salarial e tempo de experiência, corroborando sua relevância no contexto de satisfação no trabalho.
+O modelo XGBoost também apresentou ótima capacidade de generalização. De forma crucial, a análise de **Importância das Features** confirmou os mesmos fatores como sendo os mais relevantes, o que confere grande robustez às conclusões extraídas.
 
 ---
 
-<div id='Comparacoes'/>
+<div id='Comparacoes'/> 
 
-<h3 align="center"><strong> Comparações </strong></h3> 
+### **5. Análise Comparativa e Conclusão Técnica**
 
- 
+Ao comparar os dois modelos, observamos uma paridade notável em termos de performance de classificação, mas diferenças importantes na metodologia.
 
-O modelo Random Forest (acurácia 77%, AUC 0.79) superou a Árvore de Decisão (acurácia 72%, AUC 0.73) em todas as métricas principais. O Random Forest apresentou melhor desempenho na classe minoritária (Insatisfeito), com recall de 0.55 contra 0.49 da Árvore de Decisão, e na classe majoritária (Satisfeito), com recall de 0.89 contra 0.85. A curva de aprendizado do Random Forest indica leve sobreajuste (acurácia de treino ~0.92 vs. validação ~0.77), enquanto a Árvore de Decisão é mais estável, mas com desempenho inferior (validação ~0.71).
+| Característica | Modelo LightGBM | Modelo XGBoost |
+| :--- | :--- | :--- |
+| **Acurácia (Teste)** | 96% | 96% |
+| **AUC-ROC (Teste)** | 0.955 | **0.961** |
+| **Recall 'Insatisfeito' (Teste)** | 0.87 | 0.87 |
+| **Precisão 'Insatisfeito' (Teste)**| 1.00 | 1.00 |
+| **Técnica de Balanceamento** | SMOTE (Criação de dados sintéticos) | `scale_pos_weight` (Ponderação de erros) |
+| **Complexidade do Pipeline**| Maior (requer `ImbPipeline`) | Menor (usa `Pipeline` padrão) |
 
-Ambos os modelos identificaram fatores como faixa salarial e forma de trabalho como importantes, mas o Random Forest distribuiu melhor a importância entre as features, capturando relações mais complexas. Para aplicações práticas, o Random Forest é preferível devido à maior acurácia e capacidade de discriminação, embora demande mais recursos computacionais.
+#### **Discussão e Recomendação**
 
-## Conclusão
+Ambos os modelos se mostraram extremamente eficazes. As métricas de classificação no conjunto de teste são praticamente idênticas. O XGBoost apresenta uma ligeira vantagem no AUC-ROC, sugerindo uma capacidade marginalmente superior de discriminar corretamente entre as duas classes.
 
-Este trabalho explorou os desafios enfrentados por profissionais juniores e microempresas na adoção de IA Generativa e LLMs, com foco na identificação dos fatores que influenciam a satisfação profissional. Os modelos de aprendizado de máquina desenvolvidos, especialmente o Random Forest, obtiveram alta capacidade preditiva (acurácia de 77%), destacando a faixa salarial, tempo de experiência e forma de trabalho como fatores-chave.
+A principal distinção reside na abordagem ao desbalanceamento de dados.
+* O **LightGBM com SMOTE** é uma abordagem poderosa, mas que envolve a criação de dados sintéticos, o que pode introduzir ruído e aumentar a complexidade do pipeline.
+* O **XGBoost com `scale_pos_weight`** representa uma solução mais elegante e computacionalmente mais eficiente. Ele lida com o desbalanceamento de forma intrínseca, ajustando a função de perda sem alterar o dataset original, o que é metodologicamente mais direto.
 
-### Resumo do Desenvolvimento:
+**Conclusão Final:**
 
-Foram utilizados dados do *State of Data Brazil 2023* e *Microdados Educação Superior 2023* para analisar barreiras e propor soluções. Após pré-processamento rigoroso e unificação das bases, os modelos de Árvore de Decisão e Random Forest foram treinados e otimizados para classificar a satisfação profissional, com o Random Forest superando em desempenho.
+Considerando a performance praticamente idêntica e a superioridade metodológica na abordagem do desbalanceamento, **o modelo XGBoost é a solução tecnicamente preferível para este problema**. Sua implementação é mais limpa e o risco de introduzir artefatos nos dados é nulo.
 
-### Vantagens e Desvantagens do Sistema Inteligente:
-
-O sistema oferece recomendações personalizadas para capacitação e identificação de lacunas de mercado, mas sua natureza de "caixa preta" (Random Forest) dificulta a interpretação detalhada das decisões.
-
-### Limitações e Possibilidades de Melhoria:
-
-- **Limitações**: Dados autodeclarados podem introduzir vieses, e o desbalanceamento de classes impactar a predição de categorias minoritárias.
-- **Melhorias**: Integrar novas fontes de dados, aplicar técnicas avançadas de balanceamento (*SMOTE-NC*, *ADASYN*), testar modelos como *XGBoost*, realizar análise de sentimento em dados textuais, desenvolver um protótipo funcional e validar insights com entrevistas qualitativas.
-
+Ainda assim, o fato de ambos os modelos, com suas diferentes abordagens, terem apontado para os mesmos fatores preditores (oportunidade de crescimento e salário) é a validação mais forte do estudo, fornecendo insights de negócio confiáveis e acionáveis.
 
 
 
