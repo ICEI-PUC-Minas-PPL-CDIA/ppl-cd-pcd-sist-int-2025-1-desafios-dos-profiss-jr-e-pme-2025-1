@@ -24,11 +24,10 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 Acesse o [Report](/docs/report.md)  para uma apresentação completa do projeto.
 
 | [Assets](/assets/)                   | [Docs](/docs/)                           | [Src](/src/)                                                 |
-|--------------------------------------|------------------------------------------|--------------------------------------------------------------|
-| [Cleaned Data](/assets/cleaned_data) | [Imagens](/docs/imagens)                 | [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo) | 
-| [Data](/assets/data)                 | [Data Dictionary](/docs/data_dictionary) | [Junção](/src/Codigo_Juncao)                                 |  
-| [Models](/assets/models)             | [Report](/docs/report.md)                | [Limpeza de Bases Codigo]                                    | 
-| [results](/assets/results)           |                                          | [Modelos](/src/Modelos_Corrigidos)                           | 
+|--------------------------------------|------------------------------------------|-------------------------------------------------------------
+| [Data](/assets/data)                 | [Imagens](/docs/imagens)                 |  [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo)  |  
+| [Models](/assets/models)             | [Report](/docs/report.md)                |  [Limpeza](/src/limpeza_e_combinacao.ipynb)            | 
+| [results](/assets/results)           |                                          |                       | 
 
 
 
