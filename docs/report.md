@@ -373,6 +373,21 @@ Esta segunda abordagem emprega o robusto framework XGBoost, utilizando um métod
 3.  **Otimização com `RandomizedSearchCV`**: O processo de otimização foi mais extenso, testando 50 combinações de hiperparâmetros específicos do XGBoost, como `gamma`, `subsample` e `colsample_bytree`, também com o objetivo de maximizar o `f1_macro`.
 
 <div id='Resultados'/> 
+
+### **Desempenho do Modelo LightGBM: Tabela de Resultados**
+
+| Métrica | Classe | Conjunto de Treino | Conjunto de Teste |
+| :--- | :--- | :--- | :--- |
+| **Acurácia Geral** | N/A | 97% | 96% |
+| **AUC-ROC** | N/A | 0.982 | 0.955 |
+| **Precisão** | Insatisfeito | 1.00 | 1.00 |
+| | Satisfeito | 0.96 | 0.95 |
+| **Recall** | Insatisfeito | 0.90 | 0.87 |
+| | Satisfeito | 1.00 | 1.00 |
+| **F1-Score** | Insatisfeito | 0.95 | 0.93 |
+| | Satisfeito | 0.98 | 0.98 |
+| **F1-Score (Macro Avg)**| N/A | 0.97 | 0.95 |
+ 
 #### **4.2. Análise dos Resultados**
 
 O modelo XGBoost demonstrou um desempenho de excelência, muito similar ao do LightGBM.
