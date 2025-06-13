@@ -657,31 +657,48 @@ A principal distinção reside na abordagem ao desbalanceamento de dados.
 * O **LightGBM com SMOTE** é uma abordagem poderosa, mas que envolve a criação de dados sintéticos, o que pode introduzir ruído e aumentar a complexidade do pipeline.
 * O **XGBoost com `scale_pos_weight`** representa uma solução mais elegante e computacionalmente mais eficiente. Ele lida com o desbalanceamento de forma intrínseca, ajustando a função de perda sem alterar o dataset original, o que é metodologicamente mais direto.
 
-**Conclusão Final:**
 
-Considerando a performance praticamente idêntica e a superioridade metodológica na abordagem do desbalanceamento, **o modelo XGBoost é a solução tecnicamente preferível para este problema**. Sua implementação é mais limpa e o risco de introduzir artefatos nos dados é nulo.
+## **Conclusão Final:**
 
-Ainda assim, o fato de ambos os modelos, com suas diferentes abordagens, terem apontado para os mesmos fatores preditores (oportunidade de crescimento e salário) é a validação mais forte do estudo, fornecendo insights de negócio confiáveis e acionáveis.
+**Conclusão**
+
+Breve Resumo do Desenvolvimento
+
+Este trabalho analisou os desafios enfrentados por profissionais juniores e microempresas no Brasil na adoção de Inteligência Artificial Generativa (IA Generativa) e Large Language Models (LLMs), utilizando dados do State of Data Brazil 2023 e microdados da educação superior. Foram desenvolvidos dois modelos de machine learning, LightGBM com SMOTE e XGBoost com ponderação de classes, para identificar os principais fatores que influenciam a satisfação profissional na área de dados. O processo envolveu a preparação rigorosa dos dados, incluindo limpeza, transformação e combinação de bases, seguido pela indução e otimização dos modelos. Os resultados destacaram que fatores como oportunidade de crescimento, adequação salarial e maturidade analítica da empresa são determinantes para a satisfação profissional, com implicações diretas para a competitividade de microempresas e a inserção de profissionais juniores no mercado de IA.
+
+**Apresentação Geral dos Resultados e Discussão**
+
+Os modelos LightGBM e XGBoost apresentaram desempenho excepcional, com acurácia de 96% e AUC-ROC acima de 0.95 no conjunto de teste, demonstrando robustez e capacidade de generalização. Ambos os modelos identificaram consistentemente a falta de oportunidade de crescimento, salário não correspondente ao mercado e falta de maturidade analítica na empresa como os principais fatores que explicam a insatisfação profissional. Esses insights são cruciais para profissionais juniores, que frequentemente enfrentam barreiras de entrada devido à exigência de experiência, e para microempresas, que lutam para adotar tecnologias avançadas devido a limitações financeiras e estruturais.
+
+**Vantagens do Sistema Inteligente:**
+
+Precisão e Robustez: Ambos os modelos alcançaram alta precisão, especialmente na classe minoritária (Insatisfeito), com precisão de 1.00 no conjunto de teste, garantindo confiabilidade nas previsões.
+Insights Acionáveis: A identificação de fatores como oportunidade de crescimento e salário permite que empresas e profissionais direcionem esforços para melhorar a satisfação e competitividade.
+Flexibilidade Metodológica: A comparação entre LightGBM (com SMOTE) e XGBoost (com scale_pos_weight) oferece uma análise robusta, com o XGBoost destacando-se por sua simplicidade e eficiência computacional.
+Desvantagens do Sistema Inteligente:
+
+Complexidade do Pipeline: O modelo LightGBM, ao usar SMOTE, introduz dados sintéticos, o que pode gerar ruído e aumentar a complexidade do processamento.
+Dependência de Dados: A qualidade dos insights depende da representatividade dos dados do State of Data Brazil 2023, que podem não capturar integralmente a realidade de microempresas em setores menos digitalizados.
+Escopo Limitado: O estudo foca na satisfação profissional, mas não explora diretamente os desafios técnicos de implementação de IA Generativa, como infraestrutura ou conhecimento técnico.
+Limitações e Possibilidades de Melhoria
+
+**Limitações:**
+
+Desbalanceamento de Dados: Apesar das técnicas de balanceamento (SMOTE e scale_pos_weight), a classe minoritária (Insatisfeito) ainda apresenta um recall de 0.87, indicando que alguns casos de insatisfação podem não ser identificados.
+Escopo Geográfico: A análise é baseada em dados brasileiros, o que pode limitar a generalização para outros contextos globais.
+Foco em Profissionais: Embora o estudo aborde microempresas, os dados analisados concentram-se mais em profissionais, limitando insights específicos sobre barreiras estruturais das empresas.
+Ausência de Dados Longitudinais: A base de dados é uma fotografia de 2023, não permitindo análises de tendências ao longo do tempo.
+Possibilidades de Melhoria:
+
+Inclusão de Dados Qualitativos: Incorporar entrevistas ou pesquisas qualitativas com microempresas para complementar os dados quantitativos e entender melhor suas barreiras específicas.
+Expansão do Escopo: Incluir variáveis relacionadas à infraestrutura tecnológica (como acesso a servidores ou ferramentas de IA) para avaliar diretamente os desafios de implementação.
+Modelos Alternativos: Testar outros algoritmos, como redes neurais, ou técnicas avançadas de balanceamento, como ADASYN, para melhorar o recall da classe minoritária.
+Análise Temporal: Utilizar dados de múltiplos anos para identificar tendências e mudanças nos fatores de satisfação e adoção de IA.
+Integração com Sistemas Inteligentes: Desenvolver um sistema interativo que utilize os modelos treinados para fornecer recomendações personalizadas em tempo real para profissionais e microempresas.
+Em síntese, o trabalho alcançou seu objetivo de identificar os principais fatores que influenciam a satisfação profissional na área de dados, oferecendo insights valiosos para promover a inclusão de profissionais juniores e a competitividade de microempresas no mercado de IA Generativa. As melhorias sugeridas podem ampliar o impacto do sistema, tornando-o ainda mais abrangente e aplicável.
 
 
 
------
-### Distribuição do modelo (opcional)
-
-Tende criar um pacote de distribuição para o modelo construído, para ser aplicado 
-em um sistema inteligente.
-
-<div id='Conclusão'/>  
-	 <h3 align="center"><strong> Conclusão  </strong></h3> 
-
-Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, 
-onde se verifica as observações pessoais de cada aluno.
-
-Uma conclusão deve ter 3 partes:
-
-   * Breve resumo do que foi desenvolvido
-	 * Apresenação geral dos resultados obtidos com discussão das vantagens e desvantagens do sistema inteligente
-	 * Limitações e possibilidades de melhoria
 
 ---
 <div id='REFERÊNCIAS'/>  
