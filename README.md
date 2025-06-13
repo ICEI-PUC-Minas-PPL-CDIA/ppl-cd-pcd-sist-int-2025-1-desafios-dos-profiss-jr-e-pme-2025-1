@@ -1,6 +1,70 @@
 # Desafios para profissionais junior e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
 
-Desenvolver um sistema inteligente que analise dados do mercado de trabalho e de microempresas para identificar os principais desafios enfrentados por profissionais juniores e pequenos negócios na adoção da IA ​​Generativa, propondo soluções baseadas em insights obtidos.
+## Contextualização
+
+Este projeto, desenvolvido no âmbito do curso de Ciência de Dados da PUC Minas, analisa os desafios enfrentados por profissionais juniores e microempresas brasileiras na adoção de Inteligência Artificial Generativa (IA Generativa) e *Large Language Models* (LLMs). Com base em dados do *State of Data Brazil 2023* e microdados da educação superior de 2023, o estudo utiliza técnicas de *machine learning* para identificar fatores que influenciam a satisfação profissional e a competitividade no mercado de IA.
+
+## Objetivo
+
+Desenvolver um sistema inteligente que identifique os principais obstáculos para profissionais juniores e microempresas na utilização de IA Generativa, propondo insights para promover maior inclusão e competitividade no setor.
+
+## Metodologia
+
+1. **Fontes de Dados:**
+   - *State of Data Brazil 2023*: Dados demográficos e profissionais de 5.293 respondentes, coletados pela Data Hackers e Bain & Company.
+   - *Microdados da Educação Superior 2023*: Informações sobre instituições de ensino superior no Brasil, fornecidas pelo INEP.
+
+2. **Preparação dos Dados:**
+   - Limpeza, transformação e combinação das bases, resultando em um arquivo unificado (`dados_tratados_combinados.csv`).
+   - Script de pré-processamento disponível em `limpeza_e_combinacao.ipynb`.
+
+3. **Indução de Modelos:**
+   - Dois modelos de *machine learning* foram desenvolvidos para prever a satisfação profissional:
+     - **LightGBM com SMOTE**: Utiliza reamostragem para lidar com desbalanceamento de classes.
+     - **XGBoost com Ponderação de Classes**: Ajusta pesos para a classe minoritária (*Insatisfeito*).
+   - Ambos os modelos foram otimizados com *RandomizedSearchCV* e avaliados por métricas como acurácia, AUC-ROC, precisão e *recall*.
+
+4. **Resultados:**
+   - Acurácia de 96% e AUC-ROC acima de 0.95 em ambos os modelos.
+   - Principais fatores de insatisfação: *falta de oportunidade de crescimento*, *salário não correspondente ao mercado* e *falta de maturidade analítica na empresa*.
+   - Visualizações (matrizes de confusão, curvas ROC, curvas de aprendizado e importância de *features*) disponíveis em `/imagens/graficos/`.
+
+## Estrutura do Repositório
+
+- **`/src`**: Código-fonte, incluindo `limpeza_e_combinacao.ipynb` para preparação dos dados.
+- **`/assets/data`**: Bases de dados originais e tratadas (`dados_tratados_combinados.csv`).
+- **`/imagens/graficos`**: Visualizações geradas (matrizes de confusão, curvas ROC, etc.).
+- **`/apresentacao_final.pptx`**: Slides da apresentação final.
+- **`/video_apresentacao.mp4`**: Vídeo explicativo do projeto (a ser hospedado).
+
+## Resultados e Insights
+
+- **Para Profissionais Juniores**: A falta de oportunidades de crescimento e a exigência de experiência prévia são barreiras significativas. Investir em capacitação e demonstrar habilidades práticas pode aumentar a empregabilidade.
+- **Para Microempresas**: Limitações financeiras e estruturais dificultam a adoção de IA Generativa. Soluções acessíveis e parcerias com instituições educacionais podem impulsionar sua competitividade.
+- O modelo XGBoost foi considerado preferível por sua simplicidade e eficiência, mas ambos os modelos validaram os mesmos fatores preditores, reforçando a confiabilidade dos resultados.
+
+## Limitações e Melhorias Futuras
+
+- **Limitações**: Desbalanceamento de classes, foco em dados de 2023 e ênfase em profissionais em detrimento de microempresas.
+- **Melhorias**: Incluir dados qualitativos, expandir o escopo para infraestrutura tecnológica e realizar análises temporais com dados de outros anos.
+
+## Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-repositorio
+   ```
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Execute o script de pré-processamento:
+   ```bash
+   jupyter notebook src/limpeza_e_combinacao.ipynb
+   ```
+4. Explore os modelos e visualizações nos notebooks correspondentes.
+
+
 
 ## Integrantes
 * Caio César de Oliveira
@@ -69,3 +133,8 @@ Com certeza! Aqui está o texto revisado e formatado para maior clareza e profis
  
  * **Versão 0.1.1**
     * **ALTERAÇÃO:** Atualização da documentação do projeto. O código fonte permaneceu inalterado.
+  
+   ## Referências
+
+- Kaggle: *State of Data Brazil 2023*. Disponível em: [Kaggle](https://www.kaggle.com/datasets/datahackers/state-of-data-brazil-2023).
+- INEP: *Microdados do Censo da Educação Superior 2023*. Disponível em: [INEP](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior).
