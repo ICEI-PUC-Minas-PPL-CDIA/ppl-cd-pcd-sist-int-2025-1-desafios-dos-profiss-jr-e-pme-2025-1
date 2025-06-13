@@ -94,11 +94,6 @@ Acesse o [Report](/docs/report.md)  para uma apresentação completa do projeto.
 
 
 
-## Histórico de versões
-Com certeza! Aqui está o texto revisado e formatado para maior clareza e profissionalismo.
-
-***
-
 
 ## Histórico de Versões
 
