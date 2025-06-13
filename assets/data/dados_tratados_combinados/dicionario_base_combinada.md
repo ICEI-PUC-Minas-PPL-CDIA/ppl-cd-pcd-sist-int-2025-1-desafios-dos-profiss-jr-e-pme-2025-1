@@ -20,33 +20,32 @@ A base de dados é o resultado da combinação de dados de uma pesquisa ('State 
 * Cada linha na planilha corresponde a um respondente individual da pesquisa.
 * As colunas contêm as informações mencionadas acima, combinando os dados específicos do respondente com as informações agregadas sobre as IES no estado de residência desse respondente.
 
-
-| Coluna                                | Descrição                                                                 | Tipo de Dado                        |
-|---------------------------------------|---------------------------------------------------------------------------|-------------------------------------|
-| Idade                                 | Idade do respondente                                                     | Numérico Contínuo                   |
-| Genero                                | Gênero do respondente                                                    | Categórico Nominal                  |
-| Etnia                                 | Identidade étnico-racial do respondente                                  | Categórico Nominal                  |
-| Nivel_Educacao                        | Nível mais alto de escolaridade alcançado                                | Categórico Ordinal                  |
-| Cargo_Atual                           | Cargo ocupado atualmente                                                 | Categórico Nominal                  |
-| Senioridade                           | Nível de senioridade no cargo                                            | Categórico Ordinal                  |
-| Faixa_Salarial                        | Faixa salarial mensal do respondente                                     | Categórico Ordinal                  |
-| Tamanho_Empresa                       | Número de funcionários da empresa onde trabalha                          | Categórico Ordinal                  |
-| Industria                             | Setor ou indústria da empresa                                            | Categórico Nominal                  |
-| Modelo_Trabalho_Atual                 | Modelo de trabalho (remoto, híbrido, presencial)                         | Categórico Nominal                  |
-| Experiencia_Area                      | Tempo de experiência na área de dados                                    | Categórico Ordinal ou Contínuo (*)  |
-| Satisfacao_Atual                      | Nível de satisfação no trabalho atual                                    | Ordinal (1 a 5)                     |
-| IA_Generativa_Utiliza                 | Utiliza IA generativa no trabalho                                        | Binário (Sim/Não)                   |
-| IA_Generativa_Conhece                 | Conhece IA generativa                                                    | Binário (Sim/Não)                   |
-| Estado                                | Estado onde reside                                                       | Categórico Nominal (UF)             |
-| Regiao                                | Região do Brasil                                                         | Categórico Nominal                  |
-| Possui_Doutorado_Estado               | Se há doutorado disponível na região                                     | Binário                             |
-| Criterio_Flexibilidade_Remoto         | Importância da flexibilidade/remoto                                      | Binário                             |
-| Criterio_Ambiente_Clima               | Importância do ambiente de trabalho                                      | Binário                             |
-| Criterio_Aprendizado_Referencias      | Importância de aprendizado e referências                                 | Binário                             |
-| Criterio_Plano_Carreira_Crescimento   | Importância do plano de carreira                                         | Binário                             |
-| Criterio_Maturidade_Tecnologia_Dados  | Importância da maturidade tecnológica                                    | Binário                             |
-| Criterio_Qualidade_Gestores           | Importância da qualidade da gestão                                       | Binário                             |
-| Criterio_Reputacao_Mercado            | Importância da reputação da empresa                                      | Binário                             |
-| Total_Tecnicos_Estado                 | Número de técnicos no estado                                             | Numérico Contínuo                   |
-| Total_Docentes_Estado                 | Número de docentes no estado                                             | Numérico Contínuo                   |
-| Total_IES_no_Estado                   | Número de instituições de ensino superior no estado                      | Numérico Contínuo                   |
+| Nome da Coluna                                 | Descrição                                           | Tipo de Dado                   |
+| ---------------------------------------------- | --------------------------------------------------- | ------------------------------ |
+| `idade`                                        | Idade do respondente                                | Numérico Contínuo              |
+| `genero`                                       | Gênero do respondente                               | Categórico Nominal             |
+| `cor_raca_etnia`                               | Identidade étnico-racial do respondente             | Categórico Nominal             |
+| `nivel_de_ensino`                              | Nível mais alto de escolaridade alcançado           | Categórico Ordinal             |
+| `cargo_atual`                                  | Cargo ocupado atualmente                            | Categórico Nominal             |
+| `nivel`                                        | Nível de senioridade no cargo                       | Categórico Ordinal             |
+| `faixa_salarial`                               | Faixa salarial mensal do respondente                | Categórico Ordinal             |
+| `numero_de_funcionarios`                       | Número de funcionários da empresa                   | Categórico Ordinal             |
+| `setor`                                        | Setor ou indústria da empresa                       | Categórico Nominal             |
+| `atualmente_qual_a_sua_forma_de_trabalho?`     | Modelo de trabalho (remoto, híbrido, presencial)    | Categórico Nominal             |
+| `tempo_de_experiencia_com_dados`               | Tempo de experiência na área de dados               | Categórico Ordinal ou Contínuo |
+| `nivel_de_satisfacao_com_trabalho_atual`       | Nível de satisfação no trabalho atual (1 a 5)       | Ordinal                        |
+| `voce_ja_utilizou_alguma_ferramenta_ia_gen...` | Utiliza IA generativa no trabalho                   | Binário (Sim/Não)              |
+| `voce_conhece_ia_generativa?`                  | Conhece IA generativa                               | Binário (Sim/Não)              |
+| `estado`                                       | Estado onde reside                                  | Categórico Nominal (UF)        |
+| `regiao`                                       | Região do Brasil                                    | Categórico Nominal             |
+| `possui_doutorado_estado`                      | Se há doutorado disponível na região                | Binário (Sim/Não)              |
+| `criterio_flexibilidade_trabalho_remoto`       | Importância da flexibilidade/remoto                 | Binário                        |
+| `criterio_ambiente_e_clima_organizacional`     | Importância do ambiente de trabalho                 | Binário                        |
+| `criterio_aprendizado_e_boas_referencias`      | Importância de aprendizado e referências            | Binário                        |
+| `criterio_plano_de_carreira_e_crescimento`     | Importância do plano de carreira                    | Binário                        |
+| `criterio_maturidade_da_empresa_com_dados`     | Importância da maturidade tecnológica               | Binário                        |
+| `criterio_qualidade_dos_gestores`              | Importância da qualidade da gestão                  | Binário                        |
+| `criterio_reputacao_da_empresa_no_mercado`     | Importância da reputação da empresa                 | Binário                        |
+| `Total_Tecnicos_Estado`                        | Número de técnicos no estado                        | Numérico Contínuo              |
+| `Total_Docentes_Estado`                        | Número de docentes no estado                        | Numérico Contínuo              |
+| `Total_IES_no_Estado`                          | Número de instituições de ensino superior no estado | Numérico Contínuo              |
