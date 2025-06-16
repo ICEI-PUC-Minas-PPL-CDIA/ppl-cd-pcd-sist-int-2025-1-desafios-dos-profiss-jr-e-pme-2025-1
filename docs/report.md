@@ -181,7 +181,7 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
  [**Dicionário de dados - MICRODADOS_ED_SUP_IES**](/assets/data/microdados_ed_sup_ies_2023/dicionario_micro.md)
 
- [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](/imagens/graficos/graficos_microdados.md)
+ [**Descrição de dados - MICRODADOS_ED_SUP_IES_2023**](/docs/imagens/graficos/graficos_microdados.md)
 
 ---
 
