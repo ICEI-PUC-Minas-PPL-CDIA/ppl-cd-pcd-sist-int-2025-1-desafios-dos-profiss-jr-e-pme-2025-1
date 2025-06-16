@@ -172,7 +172,7 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 
  [**Dicionário de dados - State of Data Brazil 2023**](/assets/data/state-of-data-brazil-2023/dicionario_state.md)
 
- [**Descrição de dados - State of Data Brazil 2023**](/imagens/graficos/graficos_state_of_data.md)
+ [**Descrição de dados - State of Data Brazil 2023**](/docs/imagens/graficos/graficos_state_of_data.md)
 
 --- 
 
