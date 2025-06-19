@@ -220,11 +220,11 @@ import numpy as np
 - **`re`**: Módulo de expressões regulares do Python. Neste script, é crucial para a limpeza e padronização dos nomes das colunas, que originalmente possuem um formato complexo.
 - **`numpy`**: Biblioteca para computação numérica. É utilizada aqui para a criação da feature `emprego_status` através da função `np.where`.
 
-## 3. Parte 1 - Processamento do Dataset "State of Data"
+## 3. Processamento do Dataset "State of Data"
 
 Esta seção foca em limpar e estruturar os dados da pesquisa.
 
-### 3.1. Carregamento e Seleção de Colunas
+###  Carregamento e Seleção de Colunas
 
 O processo inicia com o carregamento dos dados da pesquisa e a seleção de colunas relevantes.
 
@@ -239,7 +239,7 @@ df_survey = pd.read_csv('State_of_data_BR_2023_Kaggle - df_survey_2023.csv')
     - `P3_d_`, `P3_e_`: Habilidades técnicas e comportamentais.
 - **Criação do DataFrame Selecionado**: As listas de colunas são combinadas e utilizadas para criar um novo DataFrame, `df_selected`, contendo apenas os dados de interesse. O método `.copy()` é usado para garantir que o DataFrame original (`df_survey`) não seja modificado.
 
-### 3.2. Limpeza da Variável Alvo e Tratamento de Nulos
+### Limpeza da Variável Alvo e Tratamento de Nulos
 
 Esta etapa garante a qualidade da variável alvo (satisfação) e trata valores ausentes.
 
@@ -248,7 +248,7 @@ Esta etapa garante a qualidade da variável alvo (satisfação) e trata valores 
     - Para as colunas dinâmicas (ferramentas, habilidades, etc.), valores nulos (`NaN`) são preenchidos com `0`. Isso assume que um valor ausente significa que o respondente não usa a ferramenta ou não possui a habilidade.
     - Para as colunas fixas (demográficas), valores nulos são preenchidos com a string `'Desconhecido'`, tratando a ausência de informação como uma categoria distinta.
 
-### 3.3. Renomeação Inteligente de Colunas
+###  Renomeação Inteligente de Colunas
 
 Os nomes das colunas no dataset original são complexos e inadequados para análise (ex: `("('P1_a ', 'Idade')"`). Uma função customizada, `get_clean_column_name`, foi criada para resolver isso.
 
@@ -256,24 +256,24 @@ Os nomes das colunas no dataset original são complexos e inadequados para anál
     - **Exemplo**: `("('P4_j_1 ', 'Azure Machine Learning')")` se torna `azure_machine_learning`.
 - **Aplicação**: Esta função é aplicada a todas as colunas do DataFrame, criando um mapa de renomeação que é utilizado pelo método `.rename()` para padronizar todos os nomes de uma só vez, resultando em um DataFrame com colunas limpas e fáceis de manipular.
 
-### 3.4. Criação de Novas Features (Engenharia de Atributos)
+###  Criação de Novas Features (Engenharia de Atributos)
 
 Para facilitar análises futuras, uma nova coluna é criada.
 
 - **`emprego_status`**: Utilizando a função `np.where`, o código cria a coluna `emprego_status`. Se o valor na coluna `cargo_atual` for '14' (código para "Outra situação"), o status é definido como 'Desempregado'; caso contrário, é 'Empregado'. Esta é uma forma simples e eficaz de engenharia de features.
 
-## 4. Parte 2 - Processamento e Agregação dos Dados das IES
+## 4. Processamento e Agregação dos Dados das IES
 
 Esta parte do script prepara os dados contextuais sobre o ambiente educacional em cada estado.
 
-### 4.1. Carregamento e Seleção
+###  Carregamento e Seleção
 
 O dataset `MICRODADOS_ED_SUP_IES_2023.CSV` é carregado. O código especifica o delimitador como `;` e a codificação como `latin1`, comum em arquivos de dados governamentais brasileiros. Apenas as colunas de interesse são selecionadas e renomeadas para maior clareza:
 - `SG_UF_IES` → `uf_ies` (UF da instituição)
 - `QT_TEC_TOTAL` → `Qtd_Tecnicos_IES` (Quantidade de técnicos)
 - `QT_DOC_TOTAL` → `Qtd_Docentes_IES` (Quantidade de docentes)
 
-### 4.2. Agregação por Estado (UF)
+###  Agregação por Estado (UF)
 
 O objetivo aqui é transformar os dados do nível de instituição para o nível de estado.
 - **`groupby('uf_ies').agg({...})`**: Este é o comando central da agregação. Ele agrupa o DataFrame por estado e aplica as seguintes funções de agregação:
@@ -281,7 +281,7 @@ O objetivo aqui é transformar os dados do nível de instituição para o nível
     - **`count`**: Para a coluna `uf_ies`, contando o número de instituições em cada estado.
 - **Renomeação Final**: As colunas agregadas são renomeadas para refletir seu novo significado (ex: `Qtd_Tecnicos_IES` torna-se `Total_Tecnicos_Estado`).
 
-## 5. Parte 3 - União dos Datasets (Merge)
+## 5.  União dos Datasets (Merge)
 
 Nesta etapa crucial, os dois DataFrames preparados são combinados.
 
@@ -293,7 +293,7 @@ df_final = pd.merge(df_cleaned_survey, df_ies_aggregated, ...)
 - **Chaves de Junção**: A união é feita conectando a coluna `uf_onde_mora` (do dataset da pesquisa) com a coluna `uf_ies` (do dataset agregado das IES).
 - **Tipo de Junção**: É utilizada uma **mesclagem à esquerda** (`how='left'`). Essa escolha é importante, pois garante que **todos os registros da pesquisa (DataFrame da esquerda) sejam mantidos**. Se um respondente for de um estado para o qual não há dados de IES, as colunas correspondentes no DataFrame final serão preenchidas com valores nulos, preservando a integridade da amostra da pesquisa.
 
-## 6. Parte 4 - Salvamento e Verificação Final
+## 6. Salvamento e Verificação Final
 
 A última parte do script salva o resultado e realiza uma verificação.
 
@@ -324,7 +324,7 @@ A pergunta escolhida para a indução de modelos de aprendizado de máquina foi:
 
 Esta abordagem utiliza o framework LightGBM em conjunto com a técnica de reamostragem SMOTE para lidar com o desbalanceamento de classes.
 
-### **3.1. Detalhamento do Código e Metodologia**
+### **Detalhamento do Código e Metodologia**
 
 1.  **Pré-processamento com `ColumnTransformer`**: As variáveis preditoras são processadas para que possam ser utilizadas pelo modelo. Features categóricas (como nível e setor) são transformadas via `OneHotEncoder`, enquanto as numéricas (como anos de experiência) são padronizadas via `StandardScaler`.
 
@@ -333,7 +333,7 @@ Esta abordagem utiliza o framework LightGBM em conjunto com a técnica de reamos
 
 3.  **Otimização com `RandomizedSearchCV`**: Um processo de busca por hiperparâmetros foi executado para encontrar a melhor configuração para o `LGBMClassifier`. Foram testadas 30 combinações aleatórias de parâmetros, utilizando validação cruzada de 5 folds e otimizando para a métrica `f1_macro`, que é ideal para cenários com classes desbalanceadas.
 
-###  **3.2. Análise dos Resultados**
+###  **Análise dos Resultados**
 
 O modelo final apresentou um alto poder preditivo, conforme demonstram as métricas abaixo.
 
@@ -369,7 +369,7 @@ A pequena diferença entre as métricas de treino e teste indica que o modelo **
 
 Esta segunda abordagem emprega o robusto framework XGBoost, utilizando um método interno para o tratamento do desbalanceamento.
 
-## **4.1. Detalhamento do Código e Metodologia**
+## **Detalhamento do Código e Metodologia**
 
 1.  **Pré-processamento**: A etapa de `ColumnTransformer` é idêntica à do modelo anterior, garantindo a mesma preparação das features.
 
@@ -706,16 +706,20 @@ Em síntese, o trabalho alcançou seu objetivo de identificar os principais fato
 <div id='APÊNDICES'/>  
 	
  <h3 align="center"><strong> APÊNDICES  </strong></h3> 
-
-**Colocar link:**
-
-Do código (armazenado no repositório);
-
-Dos artefatos (armazenado do repositório);
-
-Da apresentação final (armazenado no repositório);
-
-Do vídeo de apresentação (armazenado no repositório).
+ 
+* [Artefatos armazenado do repositório](/docs)
+  	* [Relatorio do Projeto](/docs/report.md)
+	* [Graficos da Analise Exploratoria](/docs/imagens/graficos)
+* [Ativos armazenados no repositorio](/assets)
+  	*[Base de Dados ](/assets/data)
+	*[Modelos](/assets/models)
+	*[Resultado dos Modelos](/assets/results)
+* [Código armazenado no repositório](/src)
+	* [Código Analise Exploratoria ](/src/AnaliseExploratoriaDeDadosCodigo)
+ 	* [Código Limpeza e Junção](/src/LimpezaCombinacao.ipynb)
+  
+*[Apresentação final armazenado no repositório]()
+	* [Vídeo de apresentação armazenado no repositório]().
 
 
 
