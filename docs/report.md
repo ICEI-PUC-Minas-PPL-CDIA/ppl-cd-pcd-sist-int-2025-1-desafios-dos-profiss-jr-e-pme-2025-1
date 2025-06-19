@@ -317,7 +317,9 @@ Ao final do processo, o script gera um único arquivo CSV, `dados_tratados_combi
 A pergunta escolhida para a indução de modelos de aprendizado de máquina foi: **Quais são os principais fatores que explicam a satisfação (ou insatisfação) dos profissionais da área de dados no Brasil?** Para responder a essa questão, foram desenvolvidos e comparados dois modelos:
 
 --- 
-<div id='Indução_de_modelos_1'/> 
+<div id='Indução_de_modelos_1'/>
+
+ 
 ## **Modelo 1: Análise do LightGBM com SMOTE**
 
 Esta abordagem utiliza o framework LightGBM em conjunto com a técnica de reamostragem SMOTE para lidar com o desbalanceamento de classes.
@@ -378,6 +380,8 @@ Esta segunda abordagem emprega o robusto framework XGBoost, utilizando um métod
 
 
 <div id='Resultados'/> 
+
+ 
 ## Resultados: 
 
 
@@ -550,8 +554,7 @@ O resultado mais importante é a **convergência** das duas curvas. Elas termina
 ### **3. Curva ROC Comparativa**
 
 **Objetivo:**
-A curva ROC (Receiver Operating Characteristic) é uma visualização que mede a capacidade de um modelo em distinguir entre as classes (neste caso, "Satisfeito" e "Insatisfeito"). Ela plota a Taxa de Verdadeiros Positivos (TPR) contra a Taxa de Falsos Positivos (FPR). Quanto mais a curva se aproxima do canto superior esquerdo, melhor é o desempenho do modelo. A área sob a curva (AUC) é uma métrica que resume essa capacidade: um valor de 1.0 representa um classificador perfeito, e 0![download](https://github.com/user-attachments/assets/17dbd4df-f001-4533-a3d7-19ef6bbee6ec)
-.5, um classificador aleatório.
+A curva ROC (Receiver Operating Characteristic) é uma visualização que mede a capacidade de um modelo em distinguir entre as classes (neste caso, "Satisfeito" e "Insatisfeito"). Ela plota a Taxa de Verdadeiros Positivos (TPR) contra a Taxa de Falsos Positivos (FPR). Quanto mais a curva se aproxima do canto superior esquerdo, melhor é o desempenho do modelo. A área sob a curva (AUC) é uma métrica que resume essa capacidade: um valor de 1.0 representa um classificador perfeito, e 0.5, um classificador aleatório.
 
 **Resultado e Análise:**
 
