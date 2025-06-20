@@ -201,8 +201,5 @@ O gráfico revela de forma clara os principais fatores que influenciam a satisfa
 4.  **Fatores Relacionais e Benefícios:** Variáveis como "clima de trabalho", "gostaria de receber mais benefícios" e "não tenho uma boa relação com meu líder" também aparecem com importância significativa, embora menor que os três primeiros.
 
 Este gráfico é fundamental para gerar insights acionáveis, pois aponta exatamente onde uma empresa deve focar seus esforços para melhorar a retenção e satisfação de seus profissionais.
-
-Com certeza. Segue a análise detalhada de cada gráfico gerado para a avaliação do modelo LightGBM.
-
 -----
 
