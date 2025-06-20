@@ -1,6 +1,6 @@
 # Resultados
 
-
+_Resultados do modelo e detalhes do código_
 
 ## **Análise das Visualizações do Modelo LightGBM**
 
@@ -169,12 +169,13 @@ O resultado mais importante é a **convergência** das duas curvas. Elas termina
 ### **3. Curva ROC Comparativa**
 
 **Objetivo:**
-A curva ROC (Receiver Operating Characteristic) é uma visualização que mede a capacidade de um modelo em distinguir entre as classes (neste caso, "Satisfeito" e "Insatisfeito"). Ela plota a Taxa de Verdadeiros Positivos (TPR) contra a Taxa de Falsos Positivos (FPR). Quanto mais a curva se aproxima do canto superior esquerdo, melhor é o desempenho do modelo. A área sob a curva (AUC) é uma métrica que resume essa capacidade: um valor de 1.0 representa um classificador perfeito, e 0![download](https://github.com/user-attachments/assets/17dbd4df-f001-4533-a3d7-19ef6bbee6ec)
-.5, um classificador aleatório.
+A curva ROC (Receiver Operating Characteristic) é uma visualização que mede a capacidade de um modelo em distinguir entre as classes (neste caso, "Satisfeito" e "Insatisfeito"). Ela plota a Taxa de Verdadeiros Positivos (TPR) contra a Taxa de Falsos Positivos (FPR). Quanto mais a curva se aproxima do canto superior esquerdo, melhor é o desempenho do modelo. A área sob a curva (AUC) é uma métrica que resume essa capacidade: um valor de 1.0 representa um classificador perfeito, e 0.5, um classificador aleatório.
 
+
+![download](https://github.com/user-attachments/assets/17dbd4df-f001-4533-a3d7-19ef6bbee6ec)
+.
 **Resultado e Análise:**
 
-![download](https://github.com/user-attachments/assets/6b29ae98-59af-43eb-9c9e-ce12a18ffe47)
 
   * **Curva de Treino (Azul tracejado):** Apresenta um AUC de **0.988**, o que é quase perfeito, indicando um excelente ajuste aos dados de treinamento.
   * **Curva de Teste (Laranja):** O AUC no conjunto de teste é de **0.961**, um valor extremamente alto.
@@ -201,5 +202,4 @@ O gráfico revela de forma clara os principais fatores que influenciam a satisfa
 4.  **Fatores Relacionais e Benefícios:** Variáveis como "clima de trabalho", "gostaria de receber mais benefícios" e "não tenho uma boa relação com meu líder" também aparecem com importância significativa, embora menor que os três primeiros.
 
 Este gráfico é fundamental para gerar insights acionáveis, pois aponta exatamente onde uma empresa deve focar seus esforços para melhorar a retenção e satisfação de seus profissionais.
------
 
