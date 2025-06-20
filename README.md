@@ -34,9 +34,9 @@ Desenvolver um sistema inteligente que identifique os principais obstáculos par
 - **`/src`**: Código-fonte, incluindo `limpeza_e_combinacao.ipynb` para preparação dos dados.
 - **`/assets/data`**: Bases de dados originais e tratadas (`dados_tratados_combinados.csv`).
 - **`/imagens/graficos`**: Visualizações geradas (matrizes de confusão, curvas ROC, etc.).
-- **`/apresentacao_final.pptx`**: Slides da apresentação final.
-- **`/video_apresentacao.mp4`**: Vídeo explicativo do projeto (a ser hospedado).
-
+- **`/SlidePitch.pdf`**: Slides da apresentação final.
+- **`/Pitch.mp4`**: Vídeo explicativo do projeto.
+- 
 ## Resultados e Insights
 
 - **Para Profissionais Juniores**: A falta de oportunidades de crescimento e a exigência de experiência prévia são barreiras significativas. Investir em capacitação e demonstrar habilidades práticas pode aumentar a empregabilidade.
