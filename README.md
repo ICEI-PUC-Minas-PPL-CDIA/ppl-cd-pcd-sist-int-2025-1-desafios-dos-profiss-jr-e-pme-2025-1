@@ -1,10 +1,6 @@
 # Desafios para profissionais junior e microempresas no uso de dados e tecnologia, IA generativa e LLM’S.
 
-## Contextualização
-
 Este projeto, desenvolvido no âmbito do curso de Ciência de Dados da PUC Minas, analisa os desafios enfrentados por profissionais juniores e microempresas brasileiras na adoção de Inteligência Artificial Generativa (IA Generativa) e *Large Language Models* (LLMs). Com base em dados do *State of Data Brazil 2023* e microdados da educação superior de 2023, o estudo utiliza técnicas de *machine learning* para identificar fatores que influenciam a satisfação profissional e a competitividade no mercado de IA.
-
-## Objetivo
 
 Desenvolver um sistema inteligente que identifique os principais obstáculos para profissionais juniores e microempresas na utilização de IA Generativa, propondo insights para promover maior inclusão e competitividade no setor.
 
@@ -34,8 +30,8 @@ Desenvolver um sistema inteligente que identifique os principais obstáculos par
 - **`/src`**: Código-fonte, incluindo `limpeza_e_combinacao.ipynb` para preparação dos dados.
 - **`/assets/data`**: Bases de dados originais e tratadas (`dados_tratados_combinados.csv`).
 - **`/imagens/graficos`**: Visualizações geradas (matrizes de confusão, curvas ROC, etc.).
-- **`/SlidePitch.pdf`**: Slides da apresentação final.
-- **`/Pitch.mp4`**: Vídeo explicativo do projeto.
+- **`/docs/media`**: Pasta para a apresentação final.
+- **`/docs/media/Pitch.mp4`**: Vídeo explicativo do projeto.
 - 
 ## Resultados e Insights
 
@@ -46,7 +42,6 @@ Desenvolver um sistema inteligente que identifique os principais obstáculos par
 ## Limitações e Melhorias Futuras
 
 - **Limitações**: Desbalanceamento de classes, foco em dados de 2023 e ênfase em profissionais em detrimento de microempresas.
-- **Melhorias**: Incluir dados qualitativos, expandir o escopo para infraestrutura tecnológica e realizar análises temporais com dados de outros anos.
 
 ## Como Executar
 
@@ -78,9 +73,6 @@ Desenvolver um sistema inteligente que identifique os principais obstáculos par
 
 * Prof. Hugo Bastos de Paula
 
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
 ## Conteúdo: 
 

@@ -718,8 +718,9 @@ Em síntese, o trabalho alcançou seu objetivo de identificar os principais fato
 	* [Código Analise Exploratoria ](/src/AnaliseExploratoriaDeDadosCodigo)
  	* [Código Limpeza e Junção](/src/LimpezaCombinacao.ipynb)
   
-*[Apresentação final armazenado no repositório](/SlidePitch.pdf)
-	* [Vídeo de apresentação armazenado no repositório](/Pitch.mp4).
+*[Apresentação final armazenado no repositório](/docs/media)
+	* [Vídeo de apresentação armazenado no repositório](/docs/media/Pitch.mp4).
+  * [Slide de apresentação armazenado no repositório](/docs/media/SlidePitch.pdf).
 
 
 
