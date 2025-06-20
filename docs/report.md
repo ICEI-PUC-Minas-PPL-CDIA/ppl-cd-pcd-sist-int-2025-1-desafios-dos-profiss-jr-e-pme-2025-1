@@ -47,13 +47,13 @@ Os resultados indicam que fatores como satisfação com a remuneração, tempo d
 
 [5. Objetivos](#Objetivos)
 
-[6.Justificativas ](#Justificativas)
+[6. Justificativas ](#Justificativas)
 
 [7. Público alvo](#Público_alvo)
 
 [8. Análise exploratórida dos dados](#Análise_exploratórida_dos_dados)
 
-[9. Preparação dosdados](#Preparação_dos_dados)
+[9. Preparação dos dados](#Preparação_dos_dados)
 
 [10. Indução de modelos](#Indução_de_modelos)
 
@@ -188,14 +188,13 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 <div id='Preparação_dos_dados'/>  
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
 	
-[Base Tratada](/assets/data/dados_tratados_combinados/dados_tratados_combinados.csv)
-
-[Codigo](/src/LimpezaCombinacao.ipynb)
-
-
 ## 1. Introdução
 
 Este documento detalha o processo de limpeza, transformação, seleção e combinação de dados realizado pelo script `LimpezaCombinacao.ipynb`. O objetivo deste pipeline de preparação é consolidar duas fontes de dados distintas em um único conjunto de dados coeso e enriquecido, pronto para análises exploratórias e para o treinamento de modelos preditivos.
+
+[Base Tratada](/assets/data/dados_tratados_combinados/dados_tratados_combinados.csv)
+
+[Codigo de tratamento](/src/LimpezaCombinacao.ipynb)
 
 As fontes de dados são:
 1.  **Pesquisa "State of Data 2023"**: Um arquivo CSV contendo respostas de uma pesquisa com profissionais da área de dados no Brasil.
