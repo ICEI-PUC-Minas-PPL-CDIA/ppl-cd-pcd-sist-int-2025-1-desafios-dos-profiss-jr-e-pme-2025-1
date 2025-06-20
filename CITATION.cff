@@ -22,27 +22,21 @@ Authors:
 
  - name-suffix: Aluno
     affiliation: PUC Minas
-    family-names: Mayllart
-    given-names: Caio 
-    email: 
-
- - name-suffix: Aluno
-    affiliation: PUC Minas
     family-names: de Oliveira
     given-names: Caio 
-    email: 
+    email: caio.oliveira.1551586@sga.pucminas.br
 
  - name-suffix: Aluno
     affiliation: PUC Minas
     family-names: Souza
     given-names: Gabriel 
-    email: 
+    email: gabriel.souza@sga.pucminas.br
 
 - name-suffix: Aluno
     affiliation: PUC Minas
     family-names: Duarte
     given-names: Nicolas 
-    email:
+    email: nicolas.duarte.1595779@sga.pucminas.br
 
 
 
