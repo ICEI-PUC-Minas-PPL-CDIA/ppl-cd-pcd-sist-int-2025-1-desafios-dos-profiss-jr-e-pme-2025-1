@@ -6,7 +6,7 @@
 
 **Gabriel Fernandes Souza , gabriel.souza@sga.pucminas.br**
 
-**Nicolas Rodrigues Duarte email do aluno 3**
+**Nicolas Rodrigues Duarte, nicolas.duarte.1595779@sga.pucminas.br
 
 **Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
