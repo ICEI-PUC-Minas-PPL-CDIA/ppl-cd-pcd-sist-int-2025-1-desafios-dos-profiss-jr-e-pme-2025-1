@@ -1,56 +1,41 @@
-cff-version: 1.0.1
-message: Por favor, cite o repositório utilizando estes metadados.
-title: Challenges for Junior Professionals and Microenterprises in the Use of Data and Technology, Generative AI and LLM’S.
-Repositório modelo para a disciplina de Projeto em Ciência de Dados I - Sistemas Inteligentes.
-
-Authors:
-   - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: de Paula
-    given-names: Hugo
-
+cff-version: 1.2.0
+message: "Por favor, cite o repositório utilizando estes metadados."
+title: "Challenges for Junior Professionals and Microenterprises in the Use of Data and Technology, Generative AI and LLM’S"
+abstract: "Repositório modelo para a disciplina de Projeto em Ciência de Dados I - Sistemas Inteligentes."
+authors:
   - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Curto
-    given-names: Hayala 
-
-   - name-suffix: Aluno
-    affiliation: PUC Minas
-    family-names: dos Santos
-    given-names: Thiago
-    email: tdvrsantos@sga.pucminas.br
-
- - name-suffix: Aluno
-    affiliation: PUC Minas
-    family-names: de Oliveira
-    given-names: Caio 
-    email: caio.oliveira.1551586@sga.pucminas.br
-
- - name-suffix: Aluno
-    affiliation: PUC Minas
-    family-names: Souza
-    given-names: Gabriel 
-    email: gabriel.souza@sga.pucminas.br
-
-- name-suffix: Aluno
-    affiliation: PUC Minas
-    family-names: Duarte
-    given-names: Nicolas 
-    email: nicolas.duarte.1595779@sga.pucminas.br
-
-
-
-Region:
-   -country: Brazil
-    state: Minas Gerais
-    city: Belo Horizonte
-
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "de Paula"
+    given-names: "Hugo"
+  - name-suffix: Professor
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "Curto"
+    given-names: "Hayala"
+  - name-suffix: Aluno
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "dos Santos"
+    given-names: "Thiago"
+    email: "tdvrsantos@sga.pucminas.br"
+  - name-suffix: Aluno
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "de Oliveira"
+    given-names: "Caio"
+    email: "caio.oliveira.1551586@sga.pucminas.br"
+  - name-suffix: Aluno
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "Souza"
+    given-names: "Gabriel"
+    email: "gabriel.souza@sga.pucminas.br"
+  - name-suffix: Aluno
+    affiliation: "PUC Minas, Belo Horizonte, Minas Gerais, Brazil"
+    family-names: "Duarte"
+    given-names: "Nicolas"
+    email: "nicolas.duarte.1595779@sga.pucminas.br"
 keywords:
   - Ciência de Dados
   - Jupyter Notebooks
   - Aprendizado de Máquina
-
-repository-code:
+repository-code: "https://github.com/ICEI-PUC-Minas-PPL-CDIA/ppl-cd-pcd-sist-int-2025-1-desafios-dos-profiss-jr-e-pme-2025-1"
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2023-06-30
+date-released: "2023-06-30"
