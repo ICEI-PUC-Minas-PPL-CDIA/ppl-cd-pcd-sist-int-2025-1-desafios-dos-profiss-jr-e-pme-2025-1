@@ -188,8 +188,6 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
 <div id='Preparação_dos_dados'/>  
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
 	
-## 1. Introdução
-
 Este documento detalha o processo de limpeza, transformação, seleção e combinação de dados realizado pelo script `LimpezaCombinacao.ipynb`. O objetivo deste pipeline de preparação é consolidar duas fontes de dados distintas em um único conjunto de dados coeso e enriquecido, pronto para análises exploratórias e para o treinamento de modelos preditivos.
 
 [Base Tratada](/assets/data/dados_tratados_combinados/dados_tratados_combinados.csv)
@@ -206,7 +204,7 @@ O processo é dividido em quatro partes principais:
 3.  União dos dois conjuntos de dados.
 4.  Salvamento do resultado final.
 
-## 2. Configuração Inicial e Bibliotecas
+**2. Configuração Inicial e Bibliotecas**
 
 A primeira célula do notebook é responsável por importar as bibliotecas essenciais para a manipulação e processamento dos dados.
 
@@ -220,11 +218,11 @@ import numpy as np
 - **`re`**: Módulo de expressões regulares do Python. Neste script, é crucial para a limpeza e padronização dos nomes das colunas, que originalmente possuem um formato complexo.
 - **`numpy`**: Biblioteca para computação numérica. É utilizada aqui para a criação da feature `emprego_status` através da função `np.where`.
 
-## 3. Processamento do Dataset "State of Data"
+**3. Processamento do Dataset "State of Data"**
 
 Esta seção foca em limpar e estruturar os dados da pesquisa.
 
-###  Carregamento e Seleção de Colunas
+**Carregamento e Seleção de Colunas**
 
 O processo inicia com o carregamento dos dados da pesquisa e a seleção de colunas relevantes.
 
@@ -239,7 +237,7 @@ df_survey = pd.read_csv('State_of_data_BR_2023_Kaggle - df_survey_2023.csv')
     - `P3_d_`, `P3_e_`: Habilidades técnicas e comportamentais.
 - **Criação do DataFrame Selecionado**: As listas de colunas são combinadas e utilizadas para criar um novo DataFrame, `df_selected`, contendo apenas os dados de interesse. O método `.copy()` é usado para garantir que o DataFrame original (`df_survey`) não seja modificado.
 
-### Limpeza da Variável Alvo e Tratamento de Nulos
+**Limpeza da Variável Alvo e Tratamento de Nulos**
 
 Esta etapa garante a qualidade da variável alvo (satisfação) e trata valores ausentes.
 
@@ -248,7 +246,7 @@ Esta etapa garante a qualidade da variável alvo (satisfação) e trata valores 
     - Para as colunas dinâmicas (ferramentas, habilidades, etc.), valores nulos (`NaN`) são preenchidos com `0`. Isso assume que um valor ausente significa que o respondente não usa a ferramenta ou não possui a habilidade.
     - Para as colunas fixas (demográficas), valores nulos são preenchidos com a string `'Desconhecido'`, tratando a ausência de informação como uma categoria distinta.
 
-###  Renomeação Inteligente de Colunas
+**Renomeação Inteligente de Colunas**
 
 Os nomes das colunas no dataset original são complexos e inadequados para análise (ex: `("('P1_a ', 'Idade')"`). Uma função customizada, `get_clean_column_name`, foi criada para resolver isso.
 
@@ -256,24 +254,24 @@ Os nomes das colunas no dataset original são complexos e inadequados para anál
     - **Exemplo**: `("('P4_j_1 ', 'Azure Machine Learning')")` se torna `azure_machine_learning`.
 - **Aplicação**: Esta função é aplicada a todas as colunas do DataFrame, criando um mapa de renomeação que é utilizado pelo método `.rename()` para padronizar todos os nomes de uma só vez, resultando em um DataFrame com colunas limpas e fáceis de manipular.
 
-###  Criação de Novas Features (Engenharia de Atributos)
+**Criação de Novas Features (Engenharia de Atributos)**
 
 Para facilitar análises futuras, uma nova coluna é criada.
 
 - **`emprego_status`**: Utilizando a função `np.where`, o código cria a coluna `emprego_status`. Se o valor na coluna `cargo_atual` for '14' (código para "Outra situação"), o status é definido como 'Desempregado'; caso contrário, é 'Empregado'. Esta é uma forma simples e eficaz de engenharia de features.
 
-## 4. Processamento e Agregação dos Dados das IES
+**4. Processamento e Agregação dos Dados das IES**
 
 Esta parte do script prepara os dados contextuais sobre o ambiente educacional em cada estado.
 
-###  Carregamento e Seleção
+**Carregamento e Seleção**
 
 O dataset `MICRODADOS_ED_SUP_IES_2023.CSV` é carregado. O código especifica o delimitador como `;` e a codificação como `latin1`, comum em arquivos de dados governamentais brasileiros. Apenas as colunas de interesse são selecionadas e renomeadas para maior clareza:
 - `SG_UF_IES` → `uf_ies` (UF da instituição)
 - `QT_TEC_TOTAL` → `Qtd_Tecnicos_IES` (Quantidade de técnicos)
 - `QT_DOC_TOTAL` → `Qtd_Docentes_IES` (Quantidade de docentes)
 
-###  Agregação por Estado (UF)
+**Agregação por Estado (UF)**
 
 O objetivo aqui é transformar os dados do nível de instituição para o nível de estado.
 - **`groupby('uf_ies').agg({...})`**: Este é o comando central da agregação. Ele agrupa o DataFrame por estado e aplica as seguintes funções de agregação:
@@ -281,7 +279,7 @@ O objetivo aqui é transformar os dados do nível de instituição para o nível
     - **`count`**: Para a coluna `uf_ies`, contando o número de instituições em cada estado.
 - **Renomeação Final**: As colunas agregadas são renomeadas para refletir seu novo significado (ex: `Qtd_Tecnicos_IES` torna-se `Total_Tecnicos_Estado`).
 
-## 5.  União dos Datasets (Merge)
+**5.  União dos Datasets (Merge)**
 
 Nesta etapa crucial, os dois DataFrames preparados são combinados.
 
@@ -293,7 +291,7 @@ df_final = pd.merge(df_cleaned_survey, df_ies_aggregated, ...)
 - **Chaves de Junção**: A união é feita conectando a coluna `uf_onde_mora` (do dataset da pesquisa) com a coluna `uf_ies` (do dataset agregado das IES).
 - **Tipo de Junção**: É utilizada uma **mesclagem à esquerda** (`how='left'`). Essa escolha é importante, pois garante que **todos os registros da pesquisa (DataFrame da esquerda) sejam mantidos**. Se um respondente for de um estado para o qual não há dados de IES, as colunas correspondentes no DataFrame final serão preenchidas com valores nulos, preservando a integridade da amostra da pesquisa.
 
-## 6. Salvamento e Verificação Final
+**6. Salvamento e Verificação Final**
 
 A última parte do script salva o resultado e realiza uma verificação.
 
@@ -302,10 +300,9 @@ A última parte do script salva o resultado e realiza uma verificação.
     - `encoding='utf-8-sig'`: Garante a compatibilidade de caracteres, especialmente com softwares como o Microsoft Excel.
 - **Verificação**: O código imprime as primeiras linhas de algumas colunas chave do DataFrame final como uma verificação visual rápida para confirmar que a união foi bem-sucedida e os dados estão estruturados como esperado.
 
-## Conclusão
+**Conclusão**
 
 Ao final do processo, o script gera um único arquivo CSV, `dados_tratados_combinados.csv`, que serve como uma **Base Analítica de Tabela (Analytical Base Table - ABT)**. Este dataset está limpo, estruturado, enriquecido com dados contextuais e pronto para ser utilizado em análises exploratórias e na construção de modelos de Machine Learning.	
-
 
 ---
 
@@ -586,7 +583,6 @@ O gráfico revela de forma clara os principais fatores que influenciam a satisfa
 
 Este gráfico é fundamental para gerar insights acionáveis, pois aponta exatamente onde uma empresa deve focar seus esforços para melhorar a retenção e satisfação de seus profissionais.
 
-Com certeza. Segue a análise detalhada de cada gráfico gerado para a avaliação do modelo LightGBM.
 
 -----
 
@@ -627,7 +623,7 @@ O modelo XGBoost também apresentou ótima capacidade de generalização. De for
 
 <div id='Comparacoes'/> 
 
-##  **5. Análise Comparativa e Conclusão Técnica**
+##  **Análise Comparativa e Conclusão Técnica**
 
 Ao comparar os dois modelos, observamos uma paridade notável em termos de performance de classificação, mas diferenças importantes na metodologia.
 
@@ -649,11 +645,8 @@ A principal distinção reside na abordagem ao desbalanceamento de dados.
 * O **XGBoost com `scale_pos_weight`** representa uma solução mais elegante e computacionalmente mais eficiente. Ele lida com o desbalanceamento de forma intrínseca, ajustando a função de perda sem alterar o dataset original, o que é metodologicamente mais direto.
 
 
-## **Conclusão Final:**
+ <h3 align="center"><strong> Conclusão Final  </strong></h3> 
 
-**Conclusão**
-
-Breve Resumo do Desenvolvimento
 
 Este trabalho analisou os desafios enfrentados por profissionais juniores e microempresas no Brasil na adoção de Inteligência Artificial Generativa (IA Generativa) e Large Language Models (LLMs), utilizando dados do State of Data Brazil 2023 e microdados da educação superior. Foram desenvolvidos dois modelos de machine learning, LightGBM com SMOTE e XGBoost com ponderação de classes, para identificar os principais fatores que influenciam a satisfação profissional na área de dados. O processo envolveu a preparação rigorosa dos dados, incluindo limpeza, transformação e combinação de bases, seguido pela indução e otimização dos modelos. Os resultados destacaram que fatores como oportunidade de crescimento, adequação salarial e maturidade analítica da empresa são determinantes para a satisfação profissional, com implicações diretas para a competitividade de microempresas e a inserção de profissionais juniores no mercado de IA.
 
