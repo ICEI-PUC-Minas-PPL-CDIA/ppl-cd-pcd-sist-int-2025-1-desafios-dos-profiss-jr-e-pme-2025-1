@@ -6,7 +6,7 @@
 
 **Gabriel Fernandes Souza , gabriel.souza@sga.pucminas.br**
 
-**Nicolas Rodrigues Duarte, nicolas.duarte.1595779@sga.pucminas.br
+**Nicolas Rodrigues Duarte, nicolas.duarte.1595779@sga.pucminas.br**
 
 **Thiago Domingos Venturim Ribeiro dos Santos,  tdvrsantos@sga.pucminas.br**
 
@@ -189,7 +189,8 @@ A base "State of Data Brazil 2023" coleta informações demográficas e sobre a 
  <h3 align="center"><strong> Preparação dos dados  </strong></h3> 
 	
 [Base Tratada](/assets/data/dados_tratados_combinados/dados_tratados_combinados.csv)
-[Codigo](/src/limpeza_e_combinacao.ipynb)
+
+[Codigo](/src/LimpezaCombinacao.ipynb)
 
 
 ## 1. Introdução
