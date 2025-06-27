@@ -715,6 +715,7 @@ Em síntese, o trabalho alcançou seu objetivo de identificar os principais fato
 	* [Vídeo de apresentação armazenado no repositório](/docs/media/Pitch.mp4).
   * [Slide de apresentação do Pitch armazenado no repositório](/docs/media/SlidePitch.pdf).
   * [Slide de apresentação armazenado no repositório](/docs/media/Slide_Apresentação.pdf).
+* [Aplicação Web do Modelo](https://github.com/caioceo/machineLearning-webapp)
   
 
 
