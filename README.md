@@ -39,9 +39,6 @@ Desenvolver um sistema inteligente que identifique os principais obstáculos par
 - **Para Microempresas**: Limitações financeiras e estruturais dificultam a adoção de IA Generativa. Soluções acessíveis e parcerias com instituições educacionais podem impulsionar sua competitividade.
 - O modelo XGBoost foi considerado preferível por sua simplicidade e eficiência, mas ambos os modelos validaram os mesmos fatores preditores, reforçando a confiabilidade dos resultados.
 
-## Limitações e Melhorias Futuras
-
-- **Limitações**: Desbalanceamento de classes, foco em dados de 2023 e ênfase em profissionais em detrimento de microempresas.
 
 ## Como Executar
 
