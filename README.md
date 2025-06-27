@@ -79,7 +79,7 @@ Acesse o [Report](/docs/report.md)  para uma apresentação completa do projeto.
 |--------------------------------------|------------------------------------------|-------------------------------------------------------------
 | [Data](/assets/data)                 | [Imagens](/docs/imagens)                 |  [AnaliseExploratoria](/src/AnaliseExploratoriaDeDadosCodigo)  |  
 | [Models](/assets/models)             | [Report](/docs/report.md)                |  [Limpeza](/src/limpeza_e_combinacao.ipynb)            | 
-| [results](/assets/results)           |                                          |                       | 
+| [results](/assets/results)           |  [Media](/docs/media)                    |                                                        | 
 
 
 
